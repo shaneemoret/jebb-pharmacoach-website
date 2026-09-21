@@ -85,7 +85,7 @@ export function App() {
         </section>
 
         <section className="problem section-pad">
-          <div className="image-frame image-frame--portrait"><img src={`${A}dda3946000c24b11-decoded.png`} alt="Professional frustrated by an unproductive job search" /></div>
+          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-nurse-work-from-home-v2.png`} alt="Healthcare professional in her early thirties planning a career change from her home office" /></div>
           <div className="problem__copy">
             <p className="eyebrow">Your background is not the problem</p>
             <h2>Pharma hiring managers can’t select what they can’t see.</h2>

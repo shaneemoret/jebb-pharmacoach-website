@@ -1,0 +1,389 @@
+{
+  "assets": [
+    {
+      "contentType": "image/avif",
+      "id": "4310ea7e87b3a0cc",
+      "kind": "image",
+      "name": "IMG_0980_JPG.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/4310ea7e87b3a0cc.jpg",
+      "url": "https://static.wixstatic.com/media/4d2730_3a874e167343483da0e033f8633a1dae~mv2.jpg/v1/fill/w_708,h_397,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0980_JPG.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "663b67dc2354c23c",
+      "kind": "image",
+      "name": "4d2730_3de498dd7fa54d5dae60790cffac8751~mv2.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/663b67dc2354c23c.jpg",
+      "url": "https://static.wixstatic.com/media/4d2730_3de498dd7fa54d5dae60790cffac8751~mv2.jpg/v1/fill/w_108,h_131,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/4d2730_3de498dd7fa54d5dae60790cffac8751~mv2.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "4d5461ae55fb0be5",
+      "kind": "image",
+      "name": "4d2730_3ec7e19c358d49d0979620707039a753~mv2.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/4d5461ae55fb0be5.png",
+      "url": "https://static.wixstatic.com/media/4d2730_3ec7e19c358d49d0979620707039a753~mv2.png/v1/fill/w_108,h_133,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/4d2730_3ec7e19c358d49d0979620707039a753~mv2.png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "28392ff74a84fe66",
+      "kind": "image",
+      "name": "4d2730_9778b0fa487944a8a61284ae552c371d~mv2.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/28392ff74a84fe66.jpg",
+      "url": "https://static.wixstatic.com/media/4d2730_9778b0fa487944a8a61284ae552c371d~mv2.jpg/v1/fill/w_88,h_69,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/4d2730_9778b0fa487944a8a61284ae552c371d~mv2.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "c7913f13e2d16be7",
+      "kind": "image",
+      "name": "Facebook.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/c7913f13e2d16be7.png",
+      "url": "https://static.wixstatic.com/media/4057345bcf57474b96976284050c00df.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Facebook.png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "edc1e1fbcff200f6",
+      "kind": "image",
+      "name": "11062b_4b88b89fe4694d949be4919c81f194b4~mv2.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/edc1e1fbcff200f6.png",
+      "url": "https://static.wixstatic.com/media/11062b_4b88b89fe4694d949be4919c81f194b4~mv2.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_4b88b89fe4694d949be4919c81f194b4~mv2.png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "a71a80560deadeb6",
+      "kind": "image",
+      "name": "LinkedIn.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/a71a80560deadeb6.png",
+      "url": "https://static.wixstatic.com/media/aa0402eb9ba2430d9d0620b59556efca.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LinkedIn.png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "596a5840e0e4daa5",
+      "kind": "image",
+      "name": "11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/596a5840e0e4daa5.png",
+      "url": "https://static.wixstatic.com/media/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png/v1/fill/w_40,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6e9638ad803e4099a6116eb750b5a584~mv2.png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "ac01166809d45e77",
+      "kind": "image",
+      "name": "Mentorship%20transforming%20medical%20sales%20careers%20(1).png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/ac01166809d45e77.png",
+      "url": "https://static.wixstatic.com/media/4d2730_593f8d52ed6342179f578b06545c71e8~mv2.png/v1/fill/w_887,h_560,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mentorship%20transforming%20medical%20sales%20careers%20(1).png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "b4e6070e81c96161",
+      "kind": "image",
+      "name": "Doctor.jpeg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/b4e6070e81c96161.jpeg",
+      "url": "https://static.wixstatic.com/media/11062b_06de6a7017df4345a77cb5ba0bc91d84~mv2.jpeg/v1/fill/w_530,h_840,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Doctor.jpeg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "0520d7e36907c9bf",
+      "kind": "image",
+      "name": "Smiling%20Professional%20Woman.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/0520d7e36907c9bf.jpg",
+      "url": "https://static.wixstatic.com/media/11062b_bfb9e60a7d1f4b30b64b9b95311792c6~mv2.jpg/v1/crop/x_986,y_0,w_4829,h_4829/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Smiling%20Professional%20Woman.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "c6758beb301ed8b5",
+      "kind": "image",
+      "name": "IMG_0499_edited_edited.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/c6758beb301ed8b5.jpg",
+      "url": "https://static.wixstatic.com/media/4d2730_deb183dea9464b8ba7f59f7861233ec1~mv2.jpg/v1/crop/x_0,y_46,w_800,h_800/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0499_edited_edited.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "0fc284a385d50a5d",
+      "kind": "image",
+      "name": "Doctor%20and%20Patient.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/0fc284a385d50a5d.jpg",
+      "url": "https://static.wixstatic.com/media/11062b_5c073c07295a4d46a05c51714b7b12c4~mv2.jpg/v1/crop/x_834,y_0,w_3333,h_3333/fill/w_121,h_121,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Doctor%20and%20Patient.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "33b75fee2b2f81a8",
+      "kind": "image",
+      "name": "11062b_57eee0be03fd4f26b8819bc60ef5b3c9f000.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/33b75fee2b2f81a8.jpg",
+      "url": "https://static.wixstatic.com/media/11062b_57eee0be03fd4f26b8819bc60ef5b3c9f000.jpg/v1/fill/w_350,h_256,al_c,q_80,usm_0.33_1.00_0.00,enc_avif,quality_auto/11062b_57eee0be03fd4f26b8819bc60ef5b3c9f000.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "dda3946000c24b11",
+      "kind": "image",
+      "name": "4d2730_5e4d57e99fc143b8a76c6339332f1af1~mv2.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/dda3946000c24b11.png",
+      "url": "https://static.wixstatic.com/media/4d2730_5e4d57e99fc143b8a76c6339332f1af1~mv2.png/v1/fill/w_491,h_716,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4d2730_5e4d57e99fc143b8a76c6339332f1af1~mv2.png"
+    },
+    {
+      "contentType": "image/gif",
+      "id": "b6f89b2e63a4095e",
+      "kind": "image",
+      "name": "panorama",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/b6f89b2e63a4095e",
+      "url": "https://frog.wix.com/panorama?src=11&evid=114700&sessionId=6862ed5f-88a6-4709-a712-09693f4a5873&platform=viewer&batchLength=100&batchSize=66860&batchItems=INFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+runThunderbolt-client+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+component_loader+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+thunderbolt-components-registry%2Fclient_download+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+component_loader+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+load_environment+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+load_environment+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+load_renderer+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadSiteFeatures_renderFeaturesOnly+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadSiteFeatures+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+thunderbolt-components-registry%2Fclient_download+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+createComponentsRegistryCSR+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+create_registry_viewer_client+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+create_registry_viewer_client+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+createComponentsRegistryCSR+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadSiteFeatures_renderFeaturesOnly+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadMasterPageFeaturesConfigs+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+buildLogger+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+execute-thunderbolt-features+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+site-assets-thunderbolt-features+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+fetchClientCss+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+fetchClientCss+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+cdn-hit-google-thunderbolt-features+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+site-assets-thunderbolt-features+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+execute-thunderbolt-features+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadMasterPageFeaturesConfigs+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadDynamicModel+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadSiteFeatures+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadDynamicModel+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+load_renderer+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+tb_client+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+componentsLibraries+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+componentsLibraries+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+componentLoaders+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+componentLoaders+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+container_get_thunderbolt+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+container_get_thunderbolt+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+thunderbolt_ready+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+features_appWillMount+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+structureAPI_addShellStructure+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PageMountUnmount+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DynamicStructureContainer+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DivWithChildren+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+router_navigate+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+init_page+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+page_reflector+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+execute-thunderbolt-features+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+site-assets-thunderbolt-features+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+fetchClientCss+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+fetchClientCss+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadComponents-masterPage+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_tpaWidgetNative_1380bbc4-1485-9d44-4616-92e36b1ead6b+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_AppController+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_tpaWidgetNative_14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DivWithChildren+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_tpaWidgetNative_f6b6e28d-52b2-4de6-aab3-ff2ccad8e229+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+appWillLoadPage_codeEmbed+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+appWillLoadPage_pageMountUnmountSubscriber+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+appWillLoadPage_pageTransitionsHandler+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+appWillLoadPage_platform+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+appWillLoadPage_codeEmbed+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+platform+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+cdn-hit-google-thunderbolt-features+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+site-assets-thunderbolt-features+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+execute-thunderbolt-features+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadComponents-c1dmp+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Repeater_FixedColumns+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PageMountUnmount+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DynamicStructureContainer+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DivWithChildren+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_AppController+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DivWithChildren+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+structureAPI_addShellStructure+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_MasterPage+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_BackgroundGroup+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Anchor+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_SkipToContentButton+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_HeaderContainer_DefaultWithFillLayers+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_StripColumnsContainer_Default+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Column_DesignedColumn+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DropDownMenu_TextOnlyMenuButtonSkin+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PagesContainer+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PageGroup+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_MeshGroup+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Container_DefaultAreaSkin+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_AppWidget_Classic+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_VerticalMenu_VerticalMenuSolidColorSkin+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PinnedLayer+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_FooterContainer_DefaultScreen+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_VerticalMenu_VerticalMenuTextSkin+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_WPhoto_NoSkinPhoto+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_LinkBar_Classic+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_StylableButton_Default+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_WRichText+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Page_TransparentPageSkin+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PageBackground+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Group+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_ClassicSection+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_WRichText+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_WPhoto_NoSkinPhoto+START%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_StylableButton_Default+START&_=1790012544779"
+    },
+    {
+      "contentType": "image/gif",
+      "id": "5f5c993fc3507b55",
+      "kind": "image",
+      "name": "11042081800",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/5f5c993fc3507b55",
+      "url": "https://www.google.com/pagead/1p-user-list/11042081800/?random=1790012545104&cv=11&fst=1790010000000&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45je69i2h2v890709645za200zd890709645xecxf1&gcd=13t3t3t3t5l1&dma=0&tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120469145~120469153~120847433&u_w=1168&u_h=755&url=https%3A%2F%2Fwww.thepharmacoach.com%2F&rcb=3&tiba=How%20to%20Get%20Hired%20in%20Pharmaceutical%20Sales%20%7C%20The%20Pharma%20Coach&frm=0&userId=456178cf-5a22-49ac-91da-c2da43c72287&did=dYzMzMD&gdid=dYzMzMD&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1137135319.1790012494&uaa=arm&uab=64&uafvl=Google%2520Chrome%3B153.0.8010.48%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.48&uamb=0&uam=&uap=macOS&uapv=26.4.1&uaw=0&data=event%3Dpage_view%3Bpage_path%3D%2F&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS4gEAQM4h3P_Reg0myHAYDIkx8lrim_fv9JUbgDbsIXpf0CufUSnu_-JTM3Ztnlk1JOxiqLBjv7p_ftWwGN3udNgXNPkoPqMz0KWfjXsVemZuugwPHrLa7225MSrulE-rNJGUL2AKVdELa46wZ424fi-NBSoR1S1rFXCB_HGu4J7RjX1AHwLz3A1JK_BnelBdx_swZtkiIkTI6Sshd6IJ6K-wLhsW1YN3pqSFM76aXs-kJpA6ulx6-6eGuIOBICjAzqxK9KT2OhIPNW-xnlSEt5grcUALP1vv_TGi3y23vblpJccC&random=1329901484&rmt_tld=0&ipr=y"
+    },
+    {
+      "contentType": "image/gif",
+      "id": "ef37c3f0406bd41b",
+      "kind": "image",
+      "name": "17040528131",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/ef37c3f0406bd41b",
+      "url": "https://www.google.com/pagead/1p-user-list/17040528131/?random=1790012545496&cv=11&fst=1790010000000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be69i2h2za200zb890709645zd890709645xecxf1&gcd=13t3t3t3t5l1&dma=0&tag_exp=115938466~115938468~118897920~118897930~120385423~120469145~120469153~120847433&u_w=1168&u_h=755&url=https%3A%2F%2Fwww.thepharmacoach.com%2F&rcb=16&frm=0&tiba=How%20to%20Get%20Hired%20in%20Pharmaceutical%20Sales%20%7C%20The%20Pharma%20Coach&userId=456178cf-5a22-49ac-91da-c2da43c72287&did=dYzMzMD&gdid=dYzMzMD&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1137135319.1790012494&uaa=arm&uab=64&uafvl=Google%2520Chrome%3B153.0.8010.48%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.48&uamb=0&uam=&uap=macOS&uapv=26.4.1&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS4gEAQM4h3J4UqEm9G_4RD3z9T6tAHobFryzqs8v8umi25AICtGoGZdRHMolPobhTtI-6wEtZ98Ufus4KBIi0CnZmIjvZhv1nO-6GvJkx8vrdrufywmYfEw5LYJxk8Kyoc3gN4XIzVJEgiqEtUFwRAobnJmW07Gj0-EvOiBMM9YI9TPv5Nx2PZT0sxBKwLh_7Dgr1SBn5f9zIcIKPlvfwvdx0QPXDjDwIiH1xHzkQ3SOhIwen8Ynwljlg_ZFYC7BLjbWWjvQ6FjI-dKuEtm3a7ULvlpZBvfOIgHVnHUJE3ZbDtpgy&random=1952746387&rmt_tld=0&ipr=y"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "570bca25963a7ea5",
+      "kind": "image",
+      "name": "4d2730_3de498dd7fa54d5dae60790cffac8751~mv2.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/570bca25963a7ea5.jpg",
+      "url": "https://static.wixstatic.com/media/4d2730_3de498dd7fa54d5dae60790cffac8751~mv2.jpg/v1/fill/w_430,h_693,al_t,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4d2730_3de498dd7fa54d5dae60790cffac8751~mv2.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "cbeae2dcddc36ae8",
+      "kind": "image",
+      "name": "4d2730_3ec7e19c358d49d0979620707039a753~mv2.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/cbeae2dcddc36ae8.png",
+      "url": "https://static.wixstatic.com/media/4d2730_3ec7e19c358d49d0979620707039a753~mv2.png/v1/fill/w_430,h_907,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/4d2730_3ec7e19c358d49d0979620707039a753~mv2.png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "0413688e30712eca",
+      "kind": "image",
+      "name": "4d2730_9778b0fa487944a8a61284ae552c371d~mv2.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/0413688e30712eca.jpg",
+      "url": "https://static.wixstatic.com/media/4d2730_9778b0fa487944a8a61284ae552c371d~mv2.jpg/v1/fill/w_351,h_860,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4d2730_9778b0fa487944a8a61284ae552c371d~mv2.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "65269e83ae2d13e0",
+      "kind": "image",
+      "name": "medical_device_salary_progression.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/65269e83ae2d13e0.jpg",
+      "url": "https://static.wixstatic.com/media/8b31d3_d8bae9235bb1419694bb26793ea12f52~mv2.jpg/v1/fill/w_983,h_1265,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/medical_device_salary_progression.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "459e0f28f048a04c",
+      "kind": "image",
+      "name": "a62844978b9e40bdab4e38815e9ab6bb.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/459e0f28f048a04c.jpg",
+      "url": "https://static.wixstatic.com/media/a62844978b9e40bdab4e38815e9ab6bb.jpg/v1/fill/w_277,h_419,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a62844978b9e40bdab4e38815e9ab6bb.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "0637c601a05e1bf3",
+      "kind": "image",
+      "name": "4d2730_a129d0434aa24cd1a8de1fb7d830b433~mv2.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/0637c601a05e1bf3.png",
+      "url": "https://static.wixstatic.com/media/4d2730_a129d0434aa24cd1a8de1fb7d830b433~mv2.png/v1/fill/w_277,h_419,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4d2730_a129d0434aa24cd1a8de1fb7d830b433~mv2.png"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "0825c99043afa2bd",
+      "kind": "image",
+      "name": "4d2730_573079003ceb4233bc3662dba7a85a4b~mv2.jpg",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/0825c99043afa2bd.jpg",
+      "url": "https://static.wixstatic.com/media/4d2730_573079003ceb4233bc3662dba7a85a4b~mv2.jpg/v1/fill/w_277,h_419,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4d2730_573079003ceb4233bc3662dba7a85a4b~mv2.jpg"
+    },
+    {
+      "contentType": "image/avif",
+      "id": "58fef3cbd3a759bd",
+      "kind": "image",
+      "name": "IMG_1031_PNG.png",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/58fef3cbd3a759bd.png",
+      "url": "https://static.wixstatic.com/media/4d2730_ebdc3f7d33ec4ce19d2824abf04c5813~mv2.png/v1/fill/w_301,h_301,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_1031_PNG.png"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4ce8dcd476357c29",
+      "kind": "image",
+      "name": "svg-1",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/4ce8dcd476357c29.svg",
+      "url": "inline-svg:4ce8dcd476357c29"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "e063a8803694f16f",
+      "kind": "image",
+      "name": "svg-2",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/e063a8803694f16f.svg",
+      "url": "inline-svg:e063a8803694f16f"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "738fe6e00f6ae76a",
+      "kind": "image",
+      "name": "svg-3",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/738fe6e00f6ae76a.svg",
+      "url": "inline-svg:738fe6e00f6ae76a"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "509c6ab77a0e7bf5",
+      "kind": "image",
+      "name": "svg-4",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/509c6ab77a0e7bf5.svg",
+      "url": "inline-svg:509c6ab77a0e7bf5"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "8e65792ddb040cb1",
+      "kind": "image",
+      "name": "svg-5",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/8e65792ddb040cb1.svg",
+      "url": "inline-svg:8e65792ddb040cb1"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4f7fb21bd0983982",
+      "kind": "image",
+      "name": "svg-6",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/4f7fb21bd0983982.svg",
+      "url": "inline-svg:4f7fb21bd0983982"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "7738ea248faa2e0e",
+      "kind": "image",
+      "name": "svg-7",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/7738ea248faa2e0e.svg",
+      "url": "inline-svg:7738ea248faa2e0e"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "db8fdf89e8409b05",
+      "kind": "image",
+      "name": "svg-8",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/db8fdf89e8409b05.svg",
+      "url": "inline-svg:db8fdf89e8409b05"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "12d9e47bc616efaf",
+      "kind": "image",
+      "name": "svg-9",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/12d9e47bc616efaf.svg",
+      "url": "inline-svg:12d9e47bc616efaf"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4c66013217d00960",
+      "kind": "image",
+      "name": "svg-10",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/4c66013217d00960.svg",
+      "url": "inline-svg:4c66013217d00960"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "39e792d8b6224fcb",
+      "kind": "image",
+      "name": "svg-11",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/39e792d8b6224fcb.svg",
+      "url": "inline-svg:39e792d8b6224fcb"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b95f12993190bda0",
+      "kind": "image",
+      "name": "svg-12",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/b95f12993190bda0.svg",
+      "url": "inline-svg:b95f12993190bda0"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "81c30bd8c843512f",
+      "kind": "image",
+      "name": "svg-13",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/81c30bd8c843512f.svg",
+      "url": "inline-svg:81c30bd8c843512f"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "55026262db529361",
+      "kind": "image",
+      "name": "svg-14",
+      "path": "/var/folders/qp/nvvrk9yn2nz_52m5w7yvjzgh0000gn/T/browser-use/assets/493c0452-30da-44c1-a6fd-c589a4421d61/55026262db529361.svg",
+      "url": "inline-svg:55026262db529361"
+    }
+  ],
+  "failures": [
+    {
+      "contentType": null,
+      "id": "a0c96b35b84f53e4",
+      "name": "4d2730_5e4d57e99fc143b8a76c6339332f1af1~mv2.png",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.wixstatic.com/media/4d2730_5e4d57e99fc143b8a76c6339332f1af1~mv2.png/v1/fill/w_106,h_179,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/4d2730_5e4d57e99fc143b8a76c6339332f1af1~mv2.png"
+    },
+    {
+      "contentType": null,
+      "id": "b26f01eea05b7aa8",
+      "name": "nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v37/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2"
+    },
+    {
+      "contentType": null,
+      "id": "a858a1e395dcbdeb",
+      "name": "nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e5j5hNKc.woff2",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e5j5hNKc.woff2"
+    },
+    {
+      "contentType": null,
+      "id": "4459fda0f363dd7c",
+      "name": "helvetica-w01-bold.woff2",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.parastorage.com/fonts/v2/2f12de04-5ca4-4ada-9e66-a958673b12b5/v1/helvetica-w01-bold.woff2"
+    },
+    {
+      "contentType": null,
+      "id": "0334b5644a11eba9",
+      "name": "file.woff2",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.wixstatic.com/ufonts/842c21_911557b91f504ef1aa74d4f187b56557/woff2/file.woff2"
+    },
+    {
+      "contentType": null,
+      "id": "b2a18cf56302c585",
+      "name": "ZqlneECqpsd9SXlmAsD2E1tXRa8TVwTICgirnJhmVJw.woff2",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/barlow/v1/ZqlneECqpsd9SXlmAsD2E1tXRa8TVwTICgirnJhmVJw.woff2"
+    },
+    {
+      "contentType": null,
+      "id": "5582a9e94d609daf",
+      "name": "avenir-lt-w01_35-light1475496.woff2",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.parastorage.com/fonts/v2/af36905f-3c92-4ef9-b0c1-f91432f16ac1/v1/avenir-lt-w01_35-light1475496.woff2"
+    },
+    {
+      "contentType": null,
+      "id": "0af5a94fb54e0552",
+      "name": "4d2730_e9d390513b3448fb9de3368736de84f3%7Emv2.jpeg",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://static.wixstatic.com/media/4d2730_e9d390513b3448fb9de3368736de84f3%7Emv2.jpeg/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/4d2730_e9d390513b3448fb9de3368736de84f3%7Emv2.jpeg"
+    },
+    {
+      "contentType": null,
+      "id": "a3087fa62029e21d",
+      "name": "file.mp4",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch\n    at value (https://www.thepharmacoach.com/:94:5834)\n    at vJ (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://video.wixstatic.com/video/11062b_57eee0be03fd4f26b8819bc60ef5b3c9/480p/mp4/file.mp4"
+    }
+  ]
+}

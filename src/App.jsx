@@ -51,7 +51,7 @@ export function App() {
         <section className="hero section-pad">
           <div className="hero__copy">
             <p className="eyebrow">Pharmaceutical sales career coaching</p>
-            <h1>Turn the experience you already have into a pharmaceutical sales career. <em>Without starting over.</em></h1>
+            <h1>You’re not starting over. <em>You’re repositioning for pharmaceutical sales.</em></h1>
             <p className="lead">For sales professionals, nurses, healthcare workers and educators ready for more income opportunity, autonomy and work-life balance.</p>
             <p className="proof-line"><strong>650+ clients placed.</strong> Learn how to make your sales, clinical or teaching background matter to pharmaceutical hiring managers.</p>
             <div className="button-row">

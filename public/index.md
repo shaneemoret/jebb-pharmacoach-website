@@ -1,6 +1,6 @@
 # The Pharma Coach
 
-## Turn the experience you already have into a pharmaceutical sales career—without starting over.
+## You’re not starting over. You’re repositioning for pharmaceutical sales.
 
 The Pharma Coach helps sales professionals, nurses, healthcare workers and educators translate the experience they already have into a credible pharmaceutical-sales career strategy. The current public site reports 650+ clients placed.
 

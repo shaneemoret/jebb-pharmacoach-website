@@ -61,7 +61,7 @@ export function App() {
             </div>
           </div>
           <div className="hero__visual">
-            <img src={`${A}4310ea7e87b3a0cc-decoded.png`} alt="$100K Med Rep Method with Jebb Ruff" />
+            <img src={`${A}jebb-real-method-banner.jpg`} alt="Jebb Ruff presenting the $100K Med Rep Method" />
             <div className="hero__stamp"><strong>$100K</strong><span>career<br/>method</span></div>
           </div>
         </section>
@@ -85,7 +85,7 @@ export function App() {
         </section>
 
         <section className="problem section-pad">
-          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-nurse-work-from-home-v3-blonde.png`} alt="Blonde healthcare professional in her early thirties planning a career change from her home office" /></div>
+          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-nurse-work-from-home-v6-approved.png`} alt="Blonde healthcare professional in her early thirties working from home beside her laptop" /></div>
           <div className="problem__copy">
             <p className="eyebrow">Your background is not the problem</p>
             <h2>Pharma hiring managers can’t select what they can’t see.</h2>
@@ -107,7 +107,13 @@ export function App() {
               <p>Sales professionals bring prospecting, negotiation and quota discipline. Healthcare workers bring clinical fluency and trusted relationships. Educators know how to make complex information simple. The strategy is showing pharma employers exactly why that matters.</p>
               <Button href="https://www.thepharmacoach.com/pricing-plans/pharmaceutical-sales-interview-help">See how my background fits</Button>
             </div>
-            <img src={`${A}ac01166809d45e77-decoded.png`} alt="Before guidance and after mentorship comparison" />
+            <div className="shift-card" aria-label="From unclear positioning to a focused pharmaceutical sales strategy">
+              <p>From</p>
+              <ul><li>Generic applications</li><li>Unclear positioning</li><li>Scattered effort</li></ul>
+              <span aria-hidden="true">→</span>
+              <p>To</p>
+              <ul><li>A focused target</li><li>A credible pharma story</li><li>Interview readiness</li></ul>
+            </div>
           </div>
         </section>
 
@@ -122,7 +128,7 @@ export function App() {
             <article><span>03</span><h3>A better fit</h3><p>Use your science, relationship and communication strengths in a career built around influence.</p></article>
           </div>
           <div className="photo-band">
-            <img src={`${A}570bca25963a7ea5-decoded.png`} alt="Jebb Ruff, The Pharma Coach" />
+            <img src={`${A}jebb-real-headshot.jpg`} alt="Jebb Ruff, The Pharma Coach" />
             <blockquote><p>Pharmaceutical sales rewards people who understand the science, earn trust and make complex information simple.</p><cite>The Pharma Coach approach</cite></blockquote>
           </div>
         </section>

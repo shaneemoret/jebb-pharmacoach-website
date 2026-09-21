@@ -1,10 +1,17 @@
 # The Pharma Coach
 
-## You’re not starting over. You’re repositioning for pharmaceutical sales.
+## Leverage your healthcare knowledge to start your career in pharma sales.
 
-The Pharma Coach helps sales professionals, nurses, healthcare workers and educators translate the experience they already have into a credible pharmaceutical-sales career strategy. The current public site reports 650+ clients placed.
+Turn your healthcare experience as a nurse into a successful career in pharma sales. The Pharma Coach helps nurses and healthcare professionals translate clinical knowledge, provider communication and patient education into a credible pharmaceutical-sales career strategy. The current public site reports 650+ clients placed.
 
 The owner-stated best-fit groups are professionals with sales experience and a degree, healthcare workers—especially nurses—and educators who can make complex information simple. They are typically seeking more earning opportunity, autonomy and work-life balance, or an exit from rigid shifts and burnout.
+
+## Why Pharma Sales
+
+- Use clinical knowledge and credibility in conversations with healthcare professionals.
+- Pursue greater earning opportunity through salary, incentives and benefits.
+- Build more autonomy into your schedule, territory and professional relationships.
+- Stay connected to healthcare and patient impact while moving beyond bedside burnout.
 
 ## The $100K Med Rep Method
 

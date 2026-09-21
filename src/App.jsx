@@ -9,10 +9,11 @@ const programs = [
 ];
 
 const objections = [
-  ["Do I need pharmaceutical or healthcare experience?", "No. Jebb identified strong-fit clients in traditional sales, healthcare and education. The work is translating the experience you already have into the evidence pharmaceutical hiring managers need to see."],
-  ["I’m a nurse or healthcare professional. How does my background translate?", "Your clinical fluency, provider relationships, patient communication and ability to make complex information understandable can become a strong pharmaceutical-sales story. The missing piece is commercial positioning and sales strategy."],
-  ["I already work in sales. Why am I not breaking in?", "Selling skill alone does not explain your fit for pharma. You need a focused story that connects your results, relationship skills, degree and ability to learn clinical information to the role you want."],
-  ["How do I know pharma fits me better than medical device?", "Pharma often fits people who enjoy science, clinical relationships and making complex information simple. Device tends to reward a more engineering- and procedure-oriented mindset. A diagnosis call helps you choose the path before you chase the wrong role."],
+  ["Do I need pharmaceutical sales experience?", "No. Your nursing and healthcare experience gives you clinical fluency, credibility and an understanding of how providers make decisions. The work is learning how to position those strengths for a commercial role."],
+  ["How does my nursing experience translate to pharma sales?", "You already educate patients, communicate with providers, build trust and make complex clinical information understandable. Those are valuable strengths in pharma sales when they are connected to business outcomes and a clear sales story."],
+  ["What if I have healthcare experience but no formal sales experience?", "You are not starting from zero. Patient education, care coordination, provider communication and influencing better outcomes all demonstrate transferable skills. Coaching helps you translate them into the language hiring managers expect."],
+  ["How do I know pharmaceutical sales is the right fit for me?", "Pharma is often a strong fit for healthcare professionals who enjoy science, relationship-building and explaining how treatments work. A career diagnosis helps you assess the role, the lifestyle and your clearest path before you begin applying."],
+  ["Why pharma instead of medical device sales?", "Pharma often suits people drawn to clinical science, mechanisms of action and long-term provider relationships. Device sales is typically more procedure- and engineering-oriented. The right choice depends on how you think, work and want to spend your day."],
 ];
 
 function Button({ href, children, tone = "orange" }) {
@@ -51,8 +52,8 @@ export function App() {
         <section className="hero section-pad">
           <div className="hero__copy">
             <p className="eyebrow">Pharmaceutical sales career coaching</p>
-            <h1>You’re not starting over. <em>You’re repositioning for pharmaceutical sales.</em></h1>
-            <p className="lead">For sales professionals, nurses, healthcare workers and educators ready for more income opportunity, autonomy and work-life balance.</p>
+            <h1>Leverage your healthcare knowledge to <em>start your career in pharma sales.</em></h1>
+            <p className="lead">Turn your healthcare experience as a nurse into a successful career in pharma sales.</p>
             <p className="proof-line"><strong>650+ clients placed.</strong> Learn how to make your sales, clinical or teaching background matter to pharmaceutical hiring managers.</p>
             <div className="button-row">
               <Button href="https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching">Find my pharma path</Button>
@@ -67,6 +68,20 @@ export function App() {
 
         <section className="brand-strip" aria-label="Program focus">
           <span>Sales professionals</span><span>Nurses</span><span>Healthcare workers</span><span>Educators</span><span>Pharma reps</span>
+        </section>
+
+        <section className="why-pharma section-pad">
+          <div className="why-pharma__intro">
+            <p className="eyebrow">Why Pharma Sales</p>
+            <h2>Keep the healthcare knowledge. Change what your career can give you.</h2>
+            <p className="lead">Pharma sales lets nurses and healthcare professionals bring clinical credibility into a career built around education, influence and trusted provider relationships.</p>
+          </div>
+          <div className="why-pharma__reasons">
+            <article><span>01</span><div><h3>Use your clinical advantage</h3><p>Turn your understanding of treatments, patient needs and provider priorities into relevant conversations with healthcare professionals.</p></div></article>
+            <article><span>02</span><div><h3>Expand your earning opportunity</h3><p>Pursue roles that can combine salary, performance incentives and benefits while building a long-term commercial career.</p></div></article>
+            <article><span>03</span><div><h3>Create more autonomy</h3><p>Move toward a field-based career with greater ownership of your schedule, territory and professional relationships.</p></div></article>
+            <article><span>04</span><div><h3>Move beyond bedside burnout</h3><p>Stay connected to healthcare and patient impact without remaining tied to rigid shifts, physical demands or constant patient load.</p></div></article>
+          </div>
         </section>
 
         <section className="problem section-pad">
@@ -132,7 +147,7 @@ export function App() {
         </section>
 
         <section className="faq section-pad">
-          <div><p className="eyebrow eyebrow--light">Before you decide</p><h2>Does your experience fit pharma?</h2><p>Start with the questions people in sales, healthcare and education ask most often, then book a career diagnosis for personal guidance.</p></div>
+          <div><p className="eyebrow eyebrow--light">Before you decide</p><h2>Can nursing really become a pharma sales career?</h2><p>Start with the questions experienced nurses and healthcare professionals ask when they are serious about making the move.</p></div>
           <div className="accordion">
             {objections.map(([q, a], i) => <article key={q}>
               <button aria-expanded={active === i} onClick={() => setActive(active === i ? -1 : i)}><span>{q}</span><b aria-hidden="true">{active === i ? "−" : "+"}</b></button>

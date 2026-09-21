@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const A = "/assets/source/";
+const A = `${import.meta.env.BASE_URL}assets/source/`;
 
 const programs = [
   { tier: "Break in", name: "Fast Track Academy", price: "$899", note: "Self-paced path to enter medical sales in 10 weeks.", href: "https://medrepcollege.com/fast-track-checkout", cta: "Get hired fast" },

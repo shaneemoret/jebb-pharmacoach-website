@@ -61,7 +61,11 @@ export function App() {
             </div>
           </div>
           <div className="hero__visual">
-            <img src={`${A}jebb-real-method-banner.jpg`} alt="Jebb Ruff presenting the $100K Med Rep Method" />
+            <div className="hero-method-card" role="img" aria-label="$100K Med Rep Method">
+              <span aria-hidden="true">$100K</span>
+              <strong aria-hidden="true">Med Rep</strong>
+              <b aria-hidden="true">Method</b>
+            </div>
             <div className="hero__stamp"><strong>$100K</strong><span>career<br/>method</span></div>
           </div>
         </section>
@@ -128,7 +132,7 @@ export function App() {
             <article><span>03</span><h3>A better fit</h3><p>Use your science, relationship and communication strengths in a career built around influence.</p></article>
           </div>
           <div className="photo-band">
-            <img src={`${A}jebb-real-headshot.jpg`} alt="Jebb Ruff, The Pharma Coach" />
+            <img src={`${A}jebb-authentic-family-candid.jpg`} alt="Jebb Ruff with his mother in a candid family photo" />
             <blockquote><p>Pharmaceutical sales rewards people who understand the science, earn trust and make complex information simple.</p><cite>The Pharma Coach approach</cite></blockquote>
           </div>
         </section>

@@ -1,14 +1,16 @@
 # The Pharma Coach
 
-## Stop wondering how others break into medical sales. Become one of them.
+## Turn the experience you already have into a pharmaceutical sales career—without starting over.
 
-The Pharma Coach provides medical-sales career coaching built around access, strategy and momentum. The current public site reports 650+ clients placed and describes a hiring-manager-built system for professionals seeking pharmaceutical or medical-device sales careers.
+The Pharma Coach helps sales professionals, nurses, healthcare workers and educators translate the experience they already have into a credible pharmaceutical-sales career strategy. The current public site reports 650+ clients placed.
+
+The owner-stated best-fit groups are professionals with sales experience and a degree, healthcare workers—especially nurses—and educators who can make complex information simple. They are typically seeking more earning opportunity, autonomy and work-life balance, or an exit from rigid shifts and burnout.
 
 ## The $100K Med Rep Method
 
-1. Access — land more medical-sales interviews.
-2. Strategy — secure a high-paying medical-sales job.
-3. Momentum — build the skills to maximize a commission career.
+1. Diagnose fit — confirm that pharmaceutical sales matches how you think, work and want to live.
+2. Translate — turn sales, clinical or teaching experience into a credible pharmaceutical story.
+3. Get selected — build the access, interviews and execution discipline required to compete.
 
 ## Program paths
 

@@ -18,8 +18,8 @@ const objections = [
   ["Why pharma instead of medical device sales?", "Pharma often suits people drawn to clinical science, mechanisms of action and long-term provider relationships. Device sales is typically more procedure- and engineering-oriented. The right choice depends on how you think, work and want to spend your day."],
 ];
 
-function Button({ tone = "navy" }) {
-  return <a className={`button button--${tone}`} href={bookingUrl}>Schedule a call<ArrowRight size={18} weight="regular" aria-hidden="true" /></a>;
+function Button() {
+  return <a className="button button--gold" href={bookingUrl}>Schedule a call<ArrowRight size={18} weight="regular" aria-hidden="true" /></a>;
 }
 
 function Header() {
@@ -27,7 +27,6 @@ function Header() {
   const links = [
     ["Programs", "#programs"],
     ["The Method", "#method"],
-    ["Why Pharma", "#why-pharma"],
     ["About", "https://www.thepharmacoach.com/about"],
   ];
   return (
@@ -53,35 +52,20 @@ export function App() {
         <section className="hero" aria-labelledby="hero-title">
           <img className="hero__image" src={`${A}pharma-field-hero.png`} alt="Pharmaceutical sales professional arriving at a healthcare facility" />
           <div className="hero__copy">
-            <p className="eyebrow eyebrow--light">The Pharma Coach <span aria-hidden="true">/</span> Med Rep College</p>
             <h1 id="hero-title">Start or advance your career in pharmaceutical sales.</h1>
             <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles—and advance in the field.</p>
-            <Button tone="gold" />
+            <Button />
           </div>
         </section>
 
         <section className="brand-strip" aria-label="What we help you do">
-          <a href="#why-pharma"><span>01</span><strong>Understand the field</strong><p>See how your sales or healthcare experience translates to pharmaceutical sales.</p><ArrowRight size={19} aria-hidden="true" /></a>
+          <a href="#problem"><span>01</span><strong>Understand the field</strong><p>See how your sales or healthcare experience translates to pharmaceutical sales.</p><ArrowRight size={19} aria-hidden="true" /></a>
           <a href="#method"><span>02</span><strong>Build your strategy</strong><p>Position your strengths with the $100K Med Rep Method.</p><ArrowRight size={19} aria-hidden="true" /></a>
           <a href="#programs"><span>03</span><strong>Make your move</strong><p>Choose the right level of coaching for your next career step.</p><ArrowRight size={19} aria-hidden="true" /></a>
         </section>
 
-        <section id="why-pharma" className="why-pharma section-pad">
-          <div className="why-pharma__intro">
-            <p className="eyebrow">Why Pharma Sales</p>
-            <h2>Bring your experience into a bigger career move.</h2>
-            <p className="lead">Pharma sales gives people from sales and healthcare backgrounds a way to use their existing strengths in a career built around education, influence and trusted provider relationships.</p>
-          </div>
-          <div className="why-pharma__reasons">
-            <article><span>01</span><div><h3>Use your existing advantage</h3><p>Bring sales results or clinical knowledge into relevant conversations with healthcare professionals.</p></div></article>
-            <article><span>02</span><div><h3>Expand your earning opportunity</h3><p>Pursue roles that can combine salary, performance incentives and benefits while building a long-term commercial career.</p></div></article>
-            <article><span>03</span><div><h3>Create more autonomy</h3><p>Move toward a field-based career with greater ownership of your schedule, territory and professional relationships.</p></div></article>
-            <article><span>04</span><div><h3>Move beyond a stalled path</h3><p>Pursue a new challenge or your next level in healthcare without staying tied to the role that no longer fits.</p></div></article>
-          </div>
-        </section>
-
-        <section className="problem section-pad">
-          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-hcp-conversation.png`} alt="Pharmaceutical field representative in a professional conversation with a healthcare provider" /></div>
+        <section id="problem" className="problem section-pad">
+          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-nurse-work-from-home-v6-approved.png`} alt="Blonde healthcare professional planning her next career move at a laptop" /></div>
           <div className="problem__copy">
             <p className="eyebrow">Your background is not the problem</p>
             <h2>Pharma hiring managers can’t select what they can’t see.</h2>
@@ -98,7 +82,7 @@ export function App() {
           <div className="section-pad shift__inner">
             <div>
               <p className="eyebrow eyebrow--light">Reposition—don’t restart</p>
-              <h2>Your experience already belongs in the conversation.</h2>
+              <h2>Your experience and skills are transferable.</h2>
               <p>Sales professionals bring prospecting, negotiation and quota discipline. Healthcare workers bring clinical fluency and trusted relationships. Educators know how to make complex information simple. The strategy is showing pharma employers exactly why that matters.</p>
             </div>
             <div className="shift-card" aria-label="From unclear positioning to a focused pharmaceutical sales strategy">
@@ -122,7 +106,7 @@ export function App() {
             <article><span>03</span><h3>A better fit</h3><p>Use your science, relationship and communication strengths in a career built around influence.</p></article>
           </div>
           <div className="photo-band">
-            <img src={`${A}jebb-executive-portrait-review.png`} alt="Executive-style portrait of Jebb Ruff" />
+            <div className="photo-band__image"><img src={`${A}jebb-authentic-family-candid.jpg`} alt="Jebb Ruff in an authentic candid photograph" /></div>
             <blockquote><p>Pharmaceutical sales rewards people who understand the science, earn trust and make complex information simple.</p><cite>The Pharma Coach approach</cite></blockquote>
           </div>
         </section>

@@ -55,7 +55,7 @@ export function App() {
           <div className="hero__copy">
             <p className="eyebrow eyebrow--light">The Pharma Coach <span aria-hidden="true">/</span> Med Rep College</p>
             <h1 id="hero-title">Start or advance your career in pharmaceutical sales.</h1>
-            <p className="lead">Practical coaching for nurses, healthcare professionals, and sales reps making their next move.</p>
+            <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles—and advance in the field.</p>
             <Button href={bookingUrl} tone="gold">Schedule a call</Button>
           </div>
         </section>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowRight, List, X } from "@phosphor-icons/react";
 
 const A = `${import.meta.env.BASE_URL}assets/source/`;
+const bookingUrl = "https://medrepcollege.com/book-a-call-with-jebb";
 
 const programs = [
   { tier: "Self-paced", name: "Fast Track Academy", price: "$899", note: "A focused path for turning your current experience into a pharmaceutical-sales job search.", href: "https://medrepcollege.com/fast-track-checkout", cta: "Start my pharma path" },
@@ -10,10 +11,10 @@ const programs = [
 ];
 
 const objections = [
-  ["Do I need pharmaceutical sales experience?", "No. Your nursing and healthcare experience gives you clinical fluency, credibility and an understanding of how providers make decisions. The work is learning how to position those strengths for a commercial role."],
-  ["How does my nursing experience translate to pharma sales?", "You already educate patients, communicate with providers, build trust and make complex clinical information understandable. Those are valuable strengths in pharma sales when they are connected to business outcomes and a clear sales story."],
-  ["What if I have healthcare experience but no formal sales experience?", "You are not starting from zero. Patient education, care coordination, provider communication and influencing better outcomes all demonstrate transferable skills. Coaching helps you translate them into the language hiring managers expect."],
-  ["How do I know pharmaceutical sales is the right fit for me?", "Pharma is often a strong fit for healthcare professionals who enjoy science, relationship-building and explaining how treatments work. A career diagnosis helps you assess the role, the lifestyle and your clearest path before you begin applying."],
+  ["Do I need pharmaceutical sales experience?", "No. Sales, healthcare, teaching and other customer-facing backgrounds can bring transferable strengths. The work is showing how your results, relationships and ability to learn complex information fit a pharmaceutical sales role."],
+  ["How does my sales or healthcare experience translate to pharma?", "Sales professionals can show prospecting, relationship-building and performance results. Healthcare professionals can show clinical fluency, provider communication and patient education. Both need a clear story that connects those strengths to pharmaceutical sales."],
+  ["What if I have no formal sales experience?", "You are not necessarily starting from zero. Teaching, patient education, care coordination and other roles can demonstrate communication, influence and follow-through. Coaching helps you identify credible examples and present them in the language hiring managers expect."],
+  ["How do I know pharmaceutical sales is the right fit for me?", "Consider whether you enjoy science, relationship-building, explaining complex information and being accountable for commercial results. A career diagnosis can help you assess the role, the lifestyle and your next step before you apply."],
   ["Why pharma instead of medical device sales?", "Pharma often suits people drawn to clinical science, mechanisms of action and long-term provider relationships. Device sales is typically more procedure- and engineering-oriented. The right choice depends on how you think, work and want to spend your day."],
 ];
 
@@ -37,7 +38,7 @@ function Header() {
       </button>
       <nav id="primary-nav" className={open ? "nav nav--open" : "nav"} aria-label="Primary navigation">
         {links.map(([label, href]) => <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>)}
-        <Button href="https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching">Let's talk</Button>
+        <Button href={bookingUrl}>Schedule a call</Button>
       </nav>
     </header>
   );
@@ -55,12 +56,12 @@ export function App() {
             <p className="eyebrow eyebrow--light">The Pharma Coach <span aria-hidden="true">/</span> Med Rep College</p>
             <h1 id="hero-title">Start or advance your career in pharmaceutical sales.</h1>
             <p className="lead">Practical coaching for nurses, healthcare professionals, and sales reps making their next move.</p>
-            <Button href="#programs" tone="gold">Explore the programs</Button>
+            <Button href={bookingUrl} tone="gold">Schedule a call</Button>
           </div>
         </section>
 
         <section className="brand-strip" aria-label="What we help you do">
-          <a href="#why-pharma"><span>01</span><strong>Understand the field</strong><p>See how your healthcare experience translates to pharmaceutical sales.</p><ArrowRight size={19} aria-hidden="true" /></a>
+          <a href="#why-pharma"><span>01</span><strong>Understand the field</strong><p>See how your sales or healthcare experience translates to pharmaceutical sales.</p><ArrowRight size={19} aria-hidden="true" /></a>
           <a href="#method"><span>02</span><strong>Build your strategy</strong><p>Position your strengths with the $100K Med Rep Method.</p><ArrowRight size={19} aria-hidden="true" /></a>
           <a href="#programs"><span>03</span><strong>Make your move</strong><p>Choose the right level of coaching for your next career step.</p><ArrowRight size={19} aria-hidden="true" /></a>
         </section>
@@ -68,14 +69,14 @@ export function App() {
         <section id="why-pharma" className="why-pharma section-pad">
           <div className="why-pharma__intro">
             <p className="eyebrow">Why Pharma Sales</p>
-            <h2>Keep the healthcare knowledge. Change what your career can give you.</h2>
-            <p className="lead">Pharma sales lets nurses and healthcare professionals bring clinical credibility into a career built around education, influence and trusted provider relationships.</p>
+            <h2>Bring your experience into a bigger career move.</h2>
+            <p className="lead">Pharma sales gives people from sales and healthcare backgrounds a way to use their existing strengths in a career built around education, influence and trusted provider relationships.</p>
           </div>
           <div className="why-pharma__reasons">
-            <article><span>01</span><div><h3>Use your clinical advantage</h3><p>Turn your understanding of treatments, patient needs and provider priorities into relevant conversations with healthcare professionals.</p></div></article>
+            <article><span>01</span><div><h3>Use your existing advantage</h3><p>Bring sales results or clinical knowledge into relevant conversations with healthcare professionals.</p></div></article>
             <article><span>02</span><div><h3>Expand your earning opportunity</h3><p>Pursue roles that can combine salary, performance incentives and benefits while building a long-term commercial career.</p></div></article>
             <article><span>03</span><div><h3>Create more autonomy</h3><p>Move toward a field-based career with greater ownership of your schedule, territory and professional relationships.</p></div></article>
-            <article><span>04</span><div><h3>Move beyond bedside burnout</h3><p>Stay connected to healthcare and patient impact without remaining tied to rigid shifts, physical demands or constant patient load.</p></div></article>
+            <article><span>04</span><div><h3>Move beyond a stalled path</h3><p>Pursue a new challenge or your next level in healthcare without staying tied to the role that no longer fits.</p></div></article>
           </div>
         </section>
 
@@ -114,16 +115,16 @@ export function App() {
 
         <section className="outcomes section-pad">
           <div className="outcomes__intro">
-            <p className="eyebrow">What the career change is really for</p>
-            <h2>More upside. More autonomy. A career beyond shifts and burnout.</h2>
+            <p className="eyebrow">What your next move is really for</p>
+            <h2>More upside. More autonomy. A career with room to grow.</h2>
           </div>
           <div className="outcome-grid">
             <article><span>01</span><h3>Earning upside</h3><p>Compete for roles with salary, commission and benefits—without treating any result as guaranteed.</p></article>
-            <article><span>02</span><h3>More control</h3><p>Pursue a field known for greater schedule autonomy than rigid shifts or constant patient load.</p></article>
+            <article><span>02</span><h3>More control</h3><p>Pursue a field role with more ownership of your territory, schedule and professional relationships.</p></article>
             <article><span>03</span><h3>A better fit</h3><p>Use your science, relationship and communication strengths in a career built around influence.</p></article>
           </div>
           <div className="photo-band">
-            <img src={`${A}jebb-authentic-family-candid.jpg`} alt="Jebb Ruff with his mother in a candid family photo" />
+            <img src={`${A}jebb-executive-portrait-review.png`} alt="Executive-style portrait of Jebb Ruff" />
             <blockquote><p>Pharmaceutical sales rewards people who understand the science, earn trust and make complex information simple.</p><cite>The Pharma Coach approach</cite></blockquote>
           </div>
         </section>
@@ -148,7 +149,7 @@ export function App() {
         </section>
 
         <section className="faq section-pad">
-          <div><p className="eyebrow eyebrow--light">Before you decide</p><h2>Can nursing really become a pharma sales career?</h2><p>Start with the questions experienced nurses and healthcare professionals ask when they are serious about making the move.</p></div>
+          <div><p className="eyebrow eyebrow--light">Before you decide</p><h2>Is pharmaceutical sales the right next step for you?</h2><p>Start with the questions sales professionals, healthcare workers and career changers ask when they are ready to enter or advance in the field.</p></div>
           <div className="accordion">
             {objections.map(([q, a], i) => <article key={q}>
               <button aria-expanded={active === i} onClick={() => setActive(active === i ? -1 : i)}><span>{q}</span><b aria-hidden="true">{active === i ? "−" : "+"}</b></button>
@@ -159,7 +160,7 @@ export function App() {
 
         <section className="final-cta section-pad">
           <div><p className="eyebrow">Your next chapter</p><h2>Ready to make your experience count in pharma?</h2><p>Find out whether pharmaceutical sales fits you—and what your clearest path into the field looks like.</p></div>
-          <Button href="https://medrepcollege.com/book-a-call-with-jebb">Book my career diagnosis</Button>
+          <Button href={bookingUrl}>Book my career diagnosis</Button>
         </section>
       </main>
       <footer>

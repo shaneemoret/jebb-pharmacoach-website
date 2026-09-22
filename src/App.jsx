@@ -5,9 +5,9 @@ const A = `${import.meta.env.BASE_URL}assets/source/`;
 const bookingUrl = "https://medrepcollege.com/book-a-call-with-jebb";
 
 const programs = [
-  { tier: "Self-paced", name: "Fast Track Academy", price: "$899", note: "A focused path for turning your current experience into a pharmaceutical-sales job search.", href: "https://medrepcollege.com/fast-track-checkout", cta: "Start my pharma path" },
-  { tier: "Most popular", name: "Mastermind Accelerator", price: "$2,499", note: "Weekly strategy, mentorship and accountability as you pursue pharmaceutical-sales roles.", href: "https://medrepcollege.com/accelerator-checkout-page", cta: "Get guided support", featured: true },
-  { tier: "High touch", name: "VIP Signature Access", price: "$5,799", note: "A customized pharmaceutical-sales career strategy with direct, high-touch mentorship.", href: "https://medrepcollege.com/vip-access", cta: "Explore VIP support" },
+  { tier: "Self-paced", name: "Fast Track Academy", price: "$899", note: "A focused path for turning your current experience into a pharmaceutical-sales job search." },
+  { tier: "Most popular", name: "Mastermind Accelerator", price: "$2,499", note: "Weekly strategy, mentorship and accountability as you pursue pharmaceutical-sales roles.", featured: true },
+  { tier: "High touch", name: "VIP Signature Access", price: "$5,799", note: "A customized pharmaceutical-sales career strategy with direct, high-touch mentorship." },
 ];
 
 const objections = [
@@ -18,8 +18,8 @@ const objections = [
   ["Why pharma instead of medical device sales?", "Pharma often suits people drawn to clinical science, mechanisms of action and long-term provider relationships. Device sales is typically more procedure- and engineering-oriented. The right choice depends on how you think, work and want to spend your day."],
 ];
 
-function Button({ href, children, tone = "navy" }) {
-  return <a className={`button button--${tone}`} href={href}>{children}<ArrowRight size={18} weight="regular" aria-hidden="true" /></a>;
+function Button({ tone = "navy" }) {
+  return <a className={`button button--${tone}`} href={bookingUrl}>Schedule a call<ArrowRight size={18} weight="regular" aria-hidden="true" /></a>;
 }
 
 function Header() {
@@ -38,7 +38,7 @@ function Header() {
       </button>
       <nav id="primary-nav" className={open ? "nav nav--open" : "nav"} aria-label="Primary navigation">
         {links.map(([label, href]) => <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>)}
-        <Button href={bookingUrl}>Schedule a call</Button>
+        <Button />
       </nav>
     </header>
   );
@@ -56,7 +56,7 @@ export function App() {
             <p className="eyebrow eyebrow--light">The Pharma Coach <span aria-hidden="true">/</span> Med Rep College</p>
             <h1 id="hero-title">Start or advance your career in pharmaceutical sales.</h1>
             <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles—and advance in the field.</p>
-            <Button href={bookingUrl} tone="gold">Schedule a call</Button>
+            <Button tone="gold" />
           </div>
         </section>
 
@@ -91,7 +91,6 @@ export function App() {
               <li><span>02</span><div><strong>You already understand healthcare</strong><p>But clinical experience alone does not prove you can win business.</p></div></li>
               <li><span>03</span><div><strong>You already make complexity simple</strong><p>But your resume and interviews do not make that advantage obvious.</p></div></li>
             </ol>
-            <Button href="https://medrepcollege.com/access" tone="navy">Translate my experience</Button>
           </div>
         </section>
 
@@ -101,7 +100,6 @@ export function App() {
               <p className="eyebrow eyebrow--light">Reposition—don’t restart</p>
               <h2>Your experience already belongs in the conversation.</h2>
               <p>Sales professionals bring prospecting, negotiation and quota discipline. Healthcare workers bring clinical fluency and trusted relationships. Educators know how to make complex information simple. The strategy is showing pharma employers exactly why that matters.</p>
-              <Button href="https://www.thepharmacoach.com/pricing-plans/pharmaceutical-sales-interview-help">See how my background fits</Button>
             </div>
             <div className="shift-card" aria-label="From unclear positioning to a focused pharmaceutical sales strategy">
               <p>From</p>
@@ -136,16 +134,17 @@ export function App() {
             <article><b>02</b><h3>Translate</h3><p>Turn sales, clinical or teaching experience into a credible pharmaceutical story.</p></article>
             <article><b>03</b><h3>Get selected</h3><p>Build the access, interviews and execution discipline required to compete.</p></article>
           </div>
-          <Button href="https://medrepcollege.com/fast-track">Build my pharma plan</Button>
+          <Button />
         </section>
 
         <section id="programs" className="programs section-pad">
-          <div className="centered-heading"><p className="eyebrow">Choose your support level</p><h2>Stop piecing together generic advice. Build one focused pharma strategy.</h2><p>Current program pricing and terms are confirmed on the linked official enrollment pages.</p></div>
+          <div className="centered-heading"><p className="eyebrow">Choose your support level</p><h2>Stop piecing together generic advice. Build one focused pharma strategy.</h2><p>Discuss the current program details and pricing on your call.</p></div>
           <div className="program-grid">
             {programs.map((p) => <article key={p.name} className={p.featured ? "program-card program-card--featured" : "program-card"}>
-              <span>{p.tier}</span><h3>{p.name}</h3><strong>{p.price}</strong><p>{p.note}</p><Button href={p.href} tone={p.featured ? "blue" : "navy"}>{p.cta}</Button>
+              <span>{p.tier}</span><h3>{p.name}</h3><strong>{p.price}</strong><p>{p.note}</p>
             </article>)}
           </div>
+          <div className="programs__action"><Button /></div>
         </section>
 
         <section className="faq section-pad">
@@ -160,13 +159,13 @@ export function App() {
 
         <section className="final-cta section-pad">
           <div><p className="eyebrow">Your next chapter</p><h2>Ready to make your experience count in pharma?</h2><p>Find out whether pharmaceutical sales fits you—and what your clearest path into the field looks like.</p></div>
-          <Button href={bookingUrl}>Book my career diagnosis</Button>
+          <Button />
         </section>
       </main>
       <footer>
         <div className="footer__brand"><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete.</p></div>
         <div className="footer__links"><a href="https://www.thepharmacoach.com/about">About</a><a href="https://www.thepharmacoach.com/academy">Academy</a><a href="https://www.thepharmacoach.com/medical-sales-faq">FAQ</a><a href="https://www.thepharmacoach.com/pharmaceutical-sales-career-advice">Career advice</a></div>
-        <div className="footer__links"><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a><a href="mailto:Jebb@ThePharmaCoach.com">Email</a><a href="tel:713-480-2140">Call or text</a></div>
+        <div className="footer__links"><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a></div>
         <p className="footer__legal">© The Pharma Coach, LLC. All rights reserved. Results vary. Earnings and placement examples are not guarantees.</p>
       </footer>
     </>

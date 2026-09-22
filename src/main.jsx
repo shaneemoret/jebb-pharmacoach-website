@@ -1,7 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.jsx";
-import "@fontsource-variable/public-sans/wght.css";
+import "@fontsource-variable/manrope/wght.css";
+import "@fontsource-variable/source-sans-3/wght.css";
 import "./styles.css";
 
 createRoot(document.getElementById("root")).render(

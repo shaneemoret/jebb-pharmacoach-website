@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowRight, List, X } from "@phosphor-icons/react";
 
 const A = `${import.meta.env.BASE_URL}assets/source/`;
 
@@ -16,28 +17,27 @@ const objections = [
   ["Why pharma instead of medical device sales?", "Pharma often suits people drawn to clinical science, mechanisms of action and long-term provider relationships. Device sales is typically more procedure- and engineering-oriented. The right choice depends on how you think, work and want to spend your day."],
 ];
 
-function Button({ href, children, tone = "orange" }) {
-  return <a className={`button button--${tone}`} href={href}>{children}<span aria-hidden="true">→</span></a>;
+function Button({ href, children, tone = "navy" }) {
+  return <a className={`button button--${tone}`} href={href}>{children}<ArrowRight size={18} weight="regular" aria-hidden="true" /></a>;
 }
 
 function Header() {
   const [open, setOpen] = useState(false);
   const links = [
+    ["Programs", "#programs"],
+    ["The Method", "#method"],
+    ["Why Pharma", "#why-pharma"],
     ["About", "https://www.thepharmacoach.com/about"],
-    ["Academy", "https://www.thepharmacoach.com/academy"],
-    ["Mastermind", "https://www.thepharmacoach.com/pricing-plans/pharmaceutical-sales-interview-help"],
-    ["VIP Access", "https://www.thepharmacoach.com/pharmaceutical-sales-vip-mentorship"],
-    ["Testimonials", "https://www.thepharmacoach.com/pharmaceutical-sales-success-stories"],
   ];
   return (
     <header className="site-header">
-      <a className="wordmark" href="#top" aria-label="The Pharma Coach home"><strong>THE PHARMA</strong><span>COACH</span></a>
+      <a className="wordmark" href="#top" aria-label="The Pharma Coach home"><span>THE</span><strong>PHARMA COACH</strong></a>
       <button className="menu-button" aria-expanded={open} aria-controls="primary-nav" onClick={() => setOpen(!open)}>
-        <span className="sr-only">Toggle navigation</span><i/><i/><i/>
+        <span className="sr-only">Toggle navigation</span>{open ? <X size={25} /> : <List size={25} />}
       </button>
       <nav id="primary-nav" className={open ? "nav nav--open" : "nav"} aria-label="Primary navigation">
-        {links.map(([label, href]) => <a key={label} href={href}>{label}</a>)}
-        <Button href="https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching">Apply now</Button>
+        {links.map(([label, href]) => <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>)}
+        <Button href="https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching">Let's talk</Button>
       </nav>
     </header>
   );
@@ -49,29 +49,23 @@ export function App() {
     <>
       <Header />
       <main id="top">
-        <section className="hero section-pad">
+        <section className="hero" aria-labelledby="hero-title">
+          <img className="hero__image" src={`${A}pharma-field-hero.png`} alt="Pharmaceutical sales professional arriving at a healthcare facility" />
           <div className="hero__copy">
-            <p className="eyebrow">Pharmaceutical sales career coaching</p>
-            <h1>Leverage your healthcare knowledge to <em>start your career in pharma sales.</em></h1>
-            <p className="lead">Turn your healthcare experience as a nurse into a successful career in pharma sales.</p>
-            <div className="button-row">
-              <Button href="https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching">Find my pharma path</Button>
-            </div>
-          </div>
-          <div className="hero__visual">
-            <img src={`${A}pharma-nurse-work-from-home-v6-approved.png`} alt="Blonde healthcare professional preparing for a pharmaceutical sales career from her home office" />
+            <p className="eyebrow eyebrow--light">The Pharma Coach <span aria-hidden="true">/</span> Med Rep College</p>
+            <h1 id="hero-title">Advance the work that advances care.</h1>
+            <p className="lead">Career coaching for nurses and healthcare professionals ready to break into pharmaceutical sales.</p>
+            <Button href="#programs" tone="gold">Explore the programs</Button>
           </div>
         </section>
 
-        <section className="brand-strip" aria-label="Experience and audience focus">
-          <span><strong>650+</strong> clients placed</span>
-          <span><strong>Nurses</strong> clinical credibility</span>
-          <span><strong>Healthcare</strong> experience translated</span>
-          <span><strong>Sales</strong> strengths repositioned</span>
-          <span><strong>Educators</strong> complexity made clear</span>
+        <section className="brand-strip" aria-label="What we help you do">
+          <a href="#why-pharma"><span>01</span><strong>Understand the field</strong><p>See how your healthcare experience translates to pharmaceutical sales.</p><ArrowRight size={19} aria-hidden="true" /></a>
+          <a href="#method"><span>02</span><strong>Build your strategy</strong><p>Position your strengths with the $100K Med Rep Method.</p><ArrowRight size={19} aria-hidden="true" /></a>
+          <a href="#programs"><span>03</span><strong>Make your move</strong><p>Choose the right level of coaching for your next career step.</p><ArrowRight size={19} aria-hidden="true" /></a>
         </section>
 
-        <section className="why-pharma section-pad">
+        <section id="why-pharma" className="why-pharma section-pad">
           <div className="why-pharma__intro">
             <p className="eyebrow">Why Pharma Sales</p>
             <h2>Keep the healthcare knowledge. Change what your career can give you.</h2>
@@ -86,7 +80,7 @@ export function App() {
         </section>
 
         <section className="problem section-pad">
-          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-nurse-work-from-home-v6-approved.png`} alt="Blonde healthcare professional in her early thirties working from home beside her laptop" /></div>
+          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-hcp-conversation.png`} alt="Pharmaceutical field representative in a professional conversation with a healthcare provider" /></div>
           <div className="problem__copy">
             <p className="eyebrow">Your background is not the problem</p>
             <h2>Pharma hiring managers can’t select what they can’t see.</h2>
@@ -134,7 +128,7 @@ export function App() {
           </div>
         </section>
 
-        <section className="method section-pad">
+        <section id="method" className="method section-pad">
           <div className="method__title"><p className="eyebrow eyebrow--light">The $100K Med Rep Method</p><h2>From “Could I do this?” to a focused pharmaceutical-sales plan.</h2></div>
           <div className="method__steps">
             <article><b>01</b><h3>Diagnose fit</h3><p>Confirm that pharmaceutical sales matches how you think, work and want to live.</p></article>
@@ -144,7 +138,7 @@ export function App() {
           <Button href="https://medrepcollege.com/fast-track">Build my pharma plan</Button>
         </section>
 
-        <section className="programs section-pad">
+        <section id="programs" className="programs section-pad">
           <div className="centered-heading"><p className="eyebrow">Choose your support level</p><h2>Stop piecing together generic advice. Build one focused pharma strategy.</h2><p>Current program pricing and terms are confirmed on the linked official enrollment pages.</p></div>
           <div className="program-grid">
             {programs.map((p) => <article key={p.name} className={p.featured ? "program-card program-card--featured" : "program-card"}>

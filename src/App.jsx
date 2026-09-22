@@ -54,24 +54,21 @@ export function App() {
             <p className="eyebrow">Pharmaceutical sales career coaching</p>
             <h1>Leverage your healthcare knowledge to <em>start your career in pharma sales.</em></h1>
             <p className="lead">Turn your healthcare experience as a nurse into a successful career in pharma sales.</p>
-            <p className="proof-line"><strong>650+ clients placed.</strong> Learn how to make your sales, clinical or teaching background matter to pharmaceutical hiring managers.</p>
             <div className="button-row">
               <Button href="https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching">Find my pharma path</Button>
-              <a className="text-link" href="https://medrepcollege.com/book-a-call-with-jebb">Book a career diagnosis <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <div className="hero__visual">
-            <div className="hero-method-card" role="img" aria-label="$100K Med Rep Method">
-              <span aria-hidden="true">$100K</span>
-              <strong aria-hidden="true">Med Rep</strong>
-              <b aria-hidden="true">Method</b>
-            </div>
-            <div className="hero__stamp"><strong>$100K</strong><span>career<br/>method</span></div>
+            <img src={`${A}pharma-nurse-work-from-home-v6-approved.png`} alt="Blonde healthcare professional preparing for a pharmaceutical sales career from her home office" />
           </div>
         </section>
 
-        <section className="brand-strip" aria-label="Program focus">
-          <span>Sales professionals</span><span>Nurses</span><span>Healthcare workers</span><span>Educators</span><span>Pharma reps</span>
+        <section className="brand-strip" aria-label="Experience and audience focus">
+          <span><strong>650+</strong> clients placed</span>
+          <span><strong>Nurses</strong> clinical credibility</span>
+          <span><strong>Healthcare</strong> experience translated</span>
+          <span><strong>Sales</strong> strengths repositioned</span>
+          <span><strong>Educators</strong> complexity made clear</span>
         </section>
 
         <section className="why-pharma section-pad">

@@ -53,8 +53,8 @@ export function App() {
           <img className="hero__image" src={`${A}pharma-field-hero.png`} alt="Pharmaceutical sales professional arriving at a healthcare facility" />
           <div className="hero__copy">
             <p className="eyebrow eyebrow--light">The Pharma Coach <span aria-hidden="true">/</span> Med Rep College</p>
-            <h1 id="hero-title">Advance the work that advances care.</h1>
-            <p className="lead">Career coaching for nurses and healthcare professionals ready to break into pharmaceutical sales.</p>
+            <h1 id="hero-title">Start or advance your career in pharmaceutical sales.</h1>
+            <p className="lead">Practical coaching for nurses, healthcare professionals, and sales reps making their next move.</p>
             <Button href="#programs" tone="gold">Explore the programs</Button>
           </div>
         </section>

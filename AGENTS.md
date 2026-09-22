@@ -11,3 +11,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Owner-approved visual direction (2026-09-22)
 
 Shanee selected the "Advance the work" homepage layout after reviewing Pfizer and Siemens Healthineers as credibility references. Use their restraint and hierarchy as inspiration, not their branding. Jebb's email, "colors for websites and emails + fonts" (2026-09-21), is the palette and type source of truth: inky black `#0B0F14`, white `#FFFFFF`, deep navy `#123B5D`, classic metallic gold `#D4AF37`; Manrope for H1/H2 and titles, Source Sans 3 for paragraphs and supporting copy. Do not revive the prior cobalt/lime palette or the generic nurse-at-home hero. Keep the site about The Pharma Coach and pharmaceutical-sales career transition, not a generic medtech corporation.
+
+Shanee's approved hero message is "Start or advance your career in pharmaceutical sales." Keep the selected layout while making the offer relevant to both newcomers and people moving forward in the field.

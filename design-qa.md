@@ -7,8 +7,8 @@ Final result: passed
 - Source visual truth: `/Users/shanee/.codex/generated_images/01a0ca4c-3874-7e33-bf6b-6e85cbaeeaeb/exec-df940300-767b-4978-81aa-0a6aaae0bc32.png` (the selected "Advance the work" concept), 1586 × 992 pixels.
 - Owner override: Jebb's 2026-09-21 email "colors for websites and emails + fonts" specifies `#0B0F14`, `#FFFFFF`, `#123B5D`, `#D4AF37`, Manrope headings, and Source Sans 3 body. These take precedence over the mockup's copper color and placeholder typography.
 - Browser-rendered implementation: `design-qa-desktop.png`, 1280 × 800 pixels, captured at a 1280 × 800 CSS viewport with Playwright CLI; device scale 1. The in-app Browser was used first, but its resized captures composited duplicate page regions during this copy update, so Playwright supplied the clean QA screenshots.
-- Mobile implementation: `design-qa-mobile.png`, 390 × 844 pixels at a 390 × 844 CSS viewport; device scale 1.
-- Full-view same-input comparison: `design-qa-comparison.png`, source and implementation side-by-side. The 1586 × 992 concept was resized to 1280 × 800 to normalize density and viewport; the resulting comparison is 2560 × 830 with a 30px label strip.
+- Mobile implementation: `design-qa-mobile.png`, 390 × 700 pixels at a short 390 × 700 CSS viewport; device scale 1.
+- Historical comparison: `design-qa-comparison.png` shows the approved concept against the implementation before the later owner-requested headroom and button-position adjustments. Current desktop and mobile renders are in the two standalone screenshots.
 - State: homepage at top, navigation closed. Primary interactions were also tested in the browser.
 
 ## Findings
@@ -31,6 +31,7 @@ Focused review of the hero in the comparison image found the head crop and the b
 2. Fixes: reduced desktop hero to 610px, widened the desktop content frame, moved image crop to top, and closed the mobile menu on navigation.
 3. Post-fix evidence: `design-qa-comparison.png`; mobile screenshot and browser interaction check confirm the menu closes and the `#programs` target appears. FAQ expansion was tested.
 4. Owner copy update: the headline, subhead, and page metadata were changed to address both starting and advancing a pharmaceutical-sales career. Clean 1280 × 800 and 390 × 844 screenshots show no clipping or primary-control obstruction. The only Playwright console error was a pre-existing missing `/favicon.ico` (P3, unrelated to this copy change).
+5. Owner headroom and fold update: the hero photo was raised 30px, roughly halving the space above the subject at the 777px preview width. The complete copy block was then raised 70px on tablet and 80px on narrow mobile. Clean 1280 × 800 and 390 × 700 captures confirm the gold CTA remains visible without scrolling; it ends around y=557 in the short mobile viewport. Navigation, CTA text, and all other above-the-fold copy remain unchanged.
 
 ## Follow-up polish
 

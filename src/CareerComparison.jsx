@@ -5,7 +5,7 @@ const salaries = [
   { name: "Nontechnical B2B sales", tag: "BLS median", value: 72080 },
   { name: "Registered nursing", tag: "BLS median", value: 97550 },
   { name: "Technical & scientific sales", tag: "BLS median", value: 104920 },
-  { name: "Med-sales first-year OTE", tag: "Med Rep College, reported", value: 124600, focus: true },
+  { name: "Pharma sales first-year OTE", tag: "Med Rep College, reported across pharma and related med-sales roles", value: 124600, focus: true },
 ];
 const roles = [
   { name: "Nursing", source: nursingSource },
@@ -28,7 +28,7 @@ export default function CareerComparison() {
     <div className="cost-chart">
       <div className="cost-chart__label">
         <p>Pay comparison:</p>
-        <p>U.S. median annual wages, May 2025, against reported first-year med-sales OTE</p>
+        <p>U.S. median annual wages, May 2025, against reported first-year pharma sales OTE</p>
       </div>
       <div className="cost-chart__plot">
         {salaries.map(salary => <div className={`cost-col${salary.focus ? " cost-col--focus" : ""}`} key={salary.name}>

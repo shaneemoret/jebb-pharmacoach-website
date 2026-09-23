@@ -203,6 +203,12 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
 .footer__links { display: flex; flex-direction: column; gap: 12px; }
 .footer__links a { text-decoration: none; }
 .footer__links a:hover { color: var(--gold); }
+.footer__links > strong { color: var(--gold); font-size: 14px; letter-spacing: .06em; }
+.footer__legal nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 14px; }
+.footer__legal p { margin: 14px 0 0; }
+.program-options__link { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; text-underline-offset: 4px; }
+.final-cta p.booking-note { font-size: 14px; line-height: 1.6; }
+.booking-note a { text-underline-offset: 3px; }
 .footer__legal { grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,.25); padding-top: 25px; margin: 0; font-size: 12px; }
 @media(max-width: 980px) {
   .site-header { padding-inline: 24px; }

@@ -3,7 +3,10 @@ import { ArrowRight, List, X } from "@phosphor-icons/react";
 import CareerComparison from "./CareerComparison";
 
 const A = `${import.meta.env.BASE_URL}assets/source/`;
-const bookingUrl = "https://medrepcollege.com/book-a-call-with-jebb";
+const bookingUrl = "https://medrepcollege.com/secure-your-spot";
+const privacyUrl = "https://medrepcollege.com/privacy";
+const termsUrl = "https://medrepcollege.com/terms";
+const applicationUrl = "https://medrepcollege.com/apply-for-med-rep-college-now";
 const testimonialsUrl = "https://www.thepharmacoach.com/pharmaceutical-sales-success-stories";
 const officialLogos = [
   ["logo-01.jpeg", "Sanofi"],
@@ -28,9 +31,9 @@ const officialLogos = [
 ];
 
 const programs = [
-  { tier: "Self-paced", name: "Fast Track Academy", price: "$899", note: "A focused path for turning your current experience into a pharmaceutical-sales job search." },
-  { tier: "Most popular", name: "Mastermind Accelerator", price: "$2,499", note: "Weekly strategy, mentorship and accountability as you pursue pharmaceutical-sales roles.", featured: true },
-  { tier: "High touch", name: "VIP Signature Access", price: "$5,799", note: "A customized pharmaceutical-sales career strategy with direct, high-touch mentorship." },
+  { tier: "Self-paced", name: "Fast Track Academy", price: "$899", url: "https://www.thepharmacoach.com/academy", note: "A focused path for turning your current experience into a pharmaceutical-sales job search." },
+  { tier: "Most popular", name: "Mastermind Accelerator", price: "$2,499", url: "https://medrepcollege.com/mastermind-accelerator", note: "Weekly strategy, mentorship and accountability as you pursue pharmaceutical-sales roles.", featured: true },
+  { tier: "High touch", name: "VIP Signature Access", price: "$5,799", url: "https://www.thepharmacoach.com/pharmaceutical-sales-vip-mentorship", note: "A customized pharmaceutical-sales career strategy with direct, high-touch mentorship." },
 ];
 
 const objections = [
@@ -148,8 +151,8 @@ export function App() {
           </div>
           <details id="programs" className="program-options">
             <summary>Compare coaching options and prices</summary>
-            <div className="program-options__list">{programs.map(p => <article key={p.name}><div><h3>{p.name}</h3><p>{p.note}</p></div><strong>{p.price}</strong></article>)}</div>
-            <p>Confirm current inclusions, pricing, and terms on your call.</p>
+            <div className="program-options__list">{programs.map(p => <article key={p.name}><div><h3>{p.name}</h3><p>{p.note}</p><a className="program-options__link" href={p.url} aria-label={`View ${p.name} details`}>View program details <ArrowRight size={16} aria-hidden="true" /></a></div><strong>{p.price}</strong></article>)}</div>
+            <p>Review current inclusions, pricing, and terms on each official program page before enrolling.</p>
           </details>
         </section>
 
@@ -179,15 +182,15 @@ export function App() {
         </section>
 
         <section className="final-cta section-pad">
-          <div><h2>Get clear on your next move.</h2><p>A 45-minute discovery call with Jebb. $25. Discuss your fit and next steps before choosing a coaching program.</p></div>
+          <div><h2>Get clear on your next move.</h2><p>A 45-minute discovery call with Jebb. $25. Discuss your fit and next steps before choosing a coaching program.</p><p className="booking-note">Booking continues on Med Rep College, Jebb’s official booking site. <a href={privacyUrl}>Privacy policy</a> · <a href={termsUrl}>Terms & conditions</a></p></div>
           <Button />
         </section>
       </main>
       <footer>
         <div className="footer__brand"><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete.</p></div>
-        <div className="footer__links"><a href="https://www.thepharmacoach.com/about">About</a><a href="https://www.thepharmacoach.com/academy">Academy</a><a href="https://www.thepharmacoach.com/medical-sales-faq">FAQ</a><a href="https://www.thepharmacoach.com/pharmaceutical-sales-career-advice">Career advice</a></div>
-        <div className="footer__links"><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a></div>
-        <p className="footer__legal">© The Pharma Coach, LLC. All rights reserved. Results vary. Earnings and placement examples are not guarantees.</p>
+        <nav className="footer__links" aria-label="Programs and application"><strong>Programs</strong>{programs.map(p => <a key={p.name} href={p.url}>{p.name}</a>)}<a href={applicationUrl}>Coaching application</a></nav>
+        <nav className="footer__links" aria-label="Resources and contact"><strong>Resources & contact</strong><a href="https://medrepcollege.com/access">Free interview guide</a><a href="https://www.thepharmacoach.com/medical-sales-faq">FAQ</a><a href="https://www.thepharmacoach.com/pharmaceutical-sales-career-advice">Career advice</a><a href="mailto:Jebb@ThePharmaCoach.com">Email Jebb</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a></nav>
+        <div className="footer__legal"><nav aria-label="Legal"><a href={privacyUrl}>Privacy policy</a><a href={termsUrl}>Terms & conditions</a></nav><p>© The Pharma Coach, LLC. All rights reserved. Results vary. Earnings and placement examples are not guarantees.</p></div>
       </footer>
     </>
   );

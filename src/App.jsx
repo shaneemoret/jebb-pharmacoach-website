@@ -136,7 +136,7 @@ export function App() {
         <section className="hero" aria-labelledby="hero-title">
           <img className="hero__image" src={`${A}jebb-banner-owner.png`} alt="Jebb Ruff, The Pharma Coach" fetchPriority="high" />
           <div className="hero__copy">
-            <h1 id="hero-title"><span className="hero__soft">Start or advance your career in</span> <span className="hero__accent">pharmaceutical sales</span>.</h1>
+            <h1 id="hero-title"><span className="hero__soft">Start your career in</span> <span className="hero__accent">pharmaceutical sales</span>.</h1>
             <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles and advance in the field.</p>
             <Button />
           </div>

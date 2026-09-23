@@ -483,3 +483,13 @@ footer { padding-top: 36px; padding-bottom: 24px; }
   .program-options__cards .program-card { grid-template-columns: 1fr; gap: 14px; }
   .program-options__cards .program-options__link { margin-top: 8px; }
 }
+@media(max-width:560px) {
+  .hero__image { height: 280px; }
+  .coach__credentials { display: block; }
+  .coach__credentials > div { display: grid; grid-template-columns: 105px minmax(0,1fr); gap: 12px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .coach__credentials dd { margin: 0; }
+  .logo-strip__toggle { display: flex; align-items: center; min-height: 44px; }
+  .student-video > a { display: inline-flex; align-items: center; min-height: 44px; }
+  .testimonial__details summary { min-height: 44px; padding-block: 12px; }
+  .footer__legal a { display: inline-flex; align-items: center; min-height: 44px; }
+}

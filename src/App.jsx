@@ -129,7 +129,7 @@ export function App() {
         <CareerComparison />
 
         <section id="about" className="coach section-pad" aria-labelledby="coach-title">
-          <div className="coach__portrait"><img src={`${A}jebb-official-about-portrait.webp`} alt="Jebb Ruff, The Pharma Coach" width="800" height="971" loading="lazy" /></div>
+          <div className="coach__portrait"><img src={`${A}jebb-headshot-owner.png`} alt="Jebb Ruff, The Pharma Coach" width="1139" height="1381" loading="lazy" /></div>
           <div className="coach__copy">
             <p className="eyebrow">Meet your coach</p>
             <h2 id="coach-title">Jebb Ruff, MBA</h2>

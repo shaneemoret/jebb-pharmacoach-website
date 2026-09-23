@@ -10,6 +10,11 @@ The Pharma Coach helps ambitious professionals position their existing experienc
 - Mastermind: https://www.thepharmacoach.com/pricing-plans/pharmaceutical-sales-interview-help
 - VIP Access: https://www.thepharmacoach.com/pharmaceutical-sales-vip-mentorship
 - Career advice: https://www.thepharmacoach.com/pharmaceutical-sales-career-advice
+- Blog index: /blog
+
+## Blog
+
+The /blog index lists Jebb's published posts. Every post is hosted on this site at /blog/<slug>. Posts adapted from Jebb's social video link to the original clip.
 
 ## Important qualification
 

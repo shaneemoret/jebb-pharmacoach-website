@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build && node scripts/prepare-sites-build.mjs",
     "preview": "vite preview",
-    "test:sites": "node --test tests/sites-worker.test.mjs"
+    "test:sites": "node --test tests/sites-worker.test.mjs",
+    "import:posts": "node scripts/import-posts.mjs",
+    "postbuild": "node -e \"const f=require('fs');f.copyFileSync('dist/client/index.html','dist/client/404.html')\""
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.3.0",

@@ -4,6 +4,7 @@ import CareerComparison from "./CareerComparison";
 
 const A = `${import.meta.env.BASE_URL}assets/source/`;
 const bookingUrl = "https://medrepcollege.com/secure-your-spot";
+export const BOOKING_URL = bookingUrl;
 const privacyUrl = "https://medrepcollege.com/privacy";
 const termsUrl = "https://medrepcollege.com/terms";
 const applicationUrl = "https://medrepcollege.com/apply-for-med-rep-college-now";
@@ -90,7 +91,7 @@ function StudentVideo({ student }) {
   </div>;
 }
 
-function Header() {
+export function Header() {
   const [open, setOpen] = useState(false);
   const links = [
     ["Programs", "#programs"],
@@ -219,12 +220,18 @@ export function App() {
           <Button />
         </section>
       </main>
-      <footer>
-        <div className="footer__brand"><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete.</p></div>
-        <nav className="footer__links" aria-label="Programs and application"><strong>Programs</strong>{programs.map(p => <a key={p.name} href={p.url}>{p.name}</a>)}<a href={applicationUrl}>Coaching application</a></nav>
-        <nav className="footer__links" aria-label="Resources and contact"><strong>Resources & contact</strong><a href="https://medrepcollege.com/access">Free interview guide</a><a href="https://www.thepharmacoach.com/medical-sales-faq">FAQ</a><a href="https://www.thepharmacoach.com/pharmaceutical-sales-career-advice">Career advice</a><a href="mailto:Jebb@ThePharmaCoach.com">Email Jebb</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a></nav>
-        <div className="footer__legal"><nav aria-label="Legal"><a href={privacyUrl}>Privacy policy</a><a href={termsUrl}>Terms & conditions</a></nav><p>© The Pharma Coach, LLC. All rights reserved. Results vary. Earnings and placement examples are not guarantees.</p></div>
-      </footer>
+      <SiteFooter />
     </>
+  );
+}
+
+export function SiteFooter() {
+  return (
+      <footer>
+    <div className="footer__brand"><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete.</p></div>
+    <nav className="footer__links" aria-label="Programs and application"><strong>Programs</strong>{programs.map(p => <a key={p.name} href={p.url}>{p.name}</a>)}<a href={applicationUrl}>Coaching application</a></nav>
+    <nav className="footer__links" aria-label="Resources and contact"><strong>Resources & contact</strong><a href="https://medrepcollege.com/access">Free interview guide</a><a href="https://www.thepharmacoach.com/medical-sales-faq">FAQ</a><a href={`${import.meta.env.BASE_URL}blog`}>Career advice</a><a href="mailto:Jebb@ThePharmaCoach.com">Email Jebb</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a></nav>
+    <div className="footer__legal"><nav aria-label="Legal"><a href={privacyUrl}>Privacy policy</a><a href={termsUrl}>Terms & conditions</a></nav><p>© The Pharma Coach, LLC. All rights reserved. Results vary. Earnings and placement examples are not guarantees.</p></div>
+  </footer>
   );
 }

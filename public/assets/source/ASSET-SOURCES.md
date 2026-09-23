@@ -8,7 +8,11 @@
 - `pharma-field-hero.png` — AI-generated editorial hero image for the 2026-09-22 "Advance the work" design direction. The depicted people and facility are fictional and do not imply a real pharmaceutical company or endorsement.
 - `pharma-hcp-conversation.png` — AI-generated editorial field-conversation image for the same design direction. The depicted people and facility are fictional.
 - `official-logo-strip/logo-01` through `logo-19` — the 19 distinct logo files used in the scrolling strip embedded on the official [The Pharma Coach homepage](https://www.thepharmacoach.com/), retrieved 2026-09-22 from its Wix-hosted HTML component. The source component displays each file twice to make a seamless loop; this implementation duplicates them in markup instead of storing duplicate files. The logos are shown without an added claim of partnership, employment, endorsement, or client status. `logo-16` is a JPEG served with a `.png` URL suffix and stored here with the correct `.jpeg` suffix.
-# Earnings and schedule comparison — September 22, 2026
+# Current comparison: nursing and traditional sales — September 22, 2026
+
+Owner refinement replaces the earlier device comparison and employer salary-range chart below. Current bars use May 2025 U.S. BLS median annual wages on a common zero-based $0–$120,000 scale: nontechnical wholesale/manufacturing sales $72,080; registered nurses $97,550; technical/scientific wholesale/manufacturing sales $104,920. The latter includes pharmaceuticals and other products and is explicitly NOT a pharma-only estimate. Source URLs: https://www.bls.gov/ooh/healthcare/registered-nurses.htm and https://www.bls.gov/ooh/sales/wholesale-and-manufacturing-sales-representatives.htm. Work-demand descriptions are paraphrased from those pages; pharma work example retains the Amgen posting cited below. No assured pay increase, hours saved, or reduction in stress. Earlier details below are history, not current chart values.
+
+# Previous earnings and schedule comparison — September 22, 2026
 
 Design reference: https://trumprx.gov/ — inspected large comparison figures and bars. Local interpretation preserves Jebb's existing navy/gold palette and typography; no government branding or medical pricing claims copied.
 

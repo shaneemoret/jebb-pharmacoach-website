@@ -132,6 +132,15 @@ export function App() {
 
         <LogoStrip />
 
+        <section className="results-strip" aria-label="Results reported by Med Rep College">
+          <dl>
+            <div><dt>650+</dt><dd>Medical-sales placements</dd></div>
+            <div><dt>83 days</dt><dd>Reported average to placement</dd></div>
+            <div><dt>$124,600</dt><dd>Reported average first-year OTE</dd></div>
+          </dl>
+          <p>Reported by <a href="https://www.thepharmacoach.com/about">Med Rep College</a> across pharmaceutical, medical device, dental, diagnostic and animal health sales. OTE means base salary plus commission at target. Not independently verified; individual results vary.</p>
+        </section>
+
         <CareerComparison />
 
         <section id="about" className="coach section-pad" aria-labelledby="coach-title">

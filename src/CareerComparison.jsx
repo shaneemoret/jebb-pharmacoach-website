@@ -5,7 +5,7 @@ const DEMAND_STEPS = 3;
 const payDemand = [
   { name: "Registered nursing", value: 97550, demand: "Highest", steps: 3, tag: "BLS median", source: nursingSource },
   { name: "Traditional B2B sales", value: 72080, demand: "Higher", steps: 2, tag: "BLS median", source: salesSource },
-  { name: "Pharma sales", value: 124600, demand: "Moderate", steps: 1, tag: "First-year OTE, Med Rep College", source: "https://www.thepharmacoach.com/about", focus: true },
+  { name: "Pharma sales", value: 124600, demand: "Moderate", steps: 1, tag: "First-year OTE, Med Rep College", source: `${import.meta.env.BASE_URL}about`, focus: true },
 ];
 const PAY_TOP = Math.max(...payDemand.map(role => role.value));
 const money = value => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);

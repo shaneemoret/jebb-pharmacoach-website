@@ -38,9 +38,9 @@ const officialLogos = [
 ];
 
 const programs = [
-  { tier: "Self-paced", name: "Fast Track Academy", price: "$899", url: "https://www.thepharmacoach.com/academy", note: "A focused path for turning your current experience into a pharmaceutical-sales job search." },
+  { tier: "Self-paced", name: "Fast Track Academy", price: "$899", url: "https://medrepcollege.com/fast-track", note: "A focused path for turning your current experience into a pharmaceutical-sales job search." },
   { tier: "Most popular", name: "Mastermind Accelerator", price: "$2,499", url: "https://medrepcollege.com/mastermind-accelerator", note: "Weekly strategy, mentorship and accountability as you pursue pharmaceutical-sales roles.", featured: true },
-  { tier: "High touch", name: "VIP Signature Access", price: "$5,799", url: "https://www.thepharmacoach.com/pharmaceutical-sales-vip-mentorship", note: "A customized pharmaceutical-sales career strategy with direct, high-touch mentorship." },
+  { tier: "High touch", name: "VIP Signature Access", price: "$5,799", url: "https://medrepcollege.com/vip-access", note: "A customized pharmaceutical-sales career strategy with direct, high-touch mentorship." },
 ];
 
 export const objections = [
@@ -160,7 +160,7 @@ export function App() {
               <div><dt>19 awards</dt><dd>President’s Club recognition</dd></div>
               <div><dt>10+ years</dt><dd>Interviewing and hiring reps</dd></div>
             </dl>
-            <a className="coach__source" href="https://www.thepharmacoach.com/about">Read Jebb’s full background<ArrowRight size={16} aria-hidden="true" /></a>
+            <a className="coach__source" href={`${import.meta.env.BASE_URL}about`}>Read Jebb’s full background<ArrowRight size={16} aria-hidden="true" /></a>
           </div>
         </section>
 
@@ -231,7 +231,7 @@ export function SiteFooter() {
       <footer>
     <div className="footer__brand"><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete.</p></div>
     <nav className="footer__links" aria-label="Programs and application"><strong>Programs</strong>{programs.map(p => <a key={p.name} href={p.url}>{p.name}</a>)}<a href={applicationUrl}>Coaching application</a></nav>
-    <nav className="footer__links" aria-label="Resources and contact"><strong>Resources & contact</strong><a href="https://medrepcollege.com/access">Free interview guide</a><a href="https://www.thepharmacoach.com/medical-sales-faq">FAQ</a><a href={`${import.meta.env.BASE_URL}blog`}>Career advice</a><a href="mailto:Jebb@ThePharmaCoach.com">Email Jebb</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a></nav>
+    <nav className="footer__links" aria-label="Resources and contact"><strong>Resources & contact</strong><a href="https://medrepcollege.com/access">Free interview guide</a><a href="https://medrepcollege.com/medical-sales-faq">FAQ</a><a href={`${import.meta.env.BASE_URL}blog`}>Career advice</a><a href="mailto:Jebb@ThePharmaCoach.com">Email Jebb</a><a href="https://www.linkedin.com/company/the-pharma-coach/">LinkedIn</a><a href="https://www.instagram.com/pharma_coach_jebb_ruff_mba/">Instagram</a></nav>
     <div className="footer__legal"><nav aria-label="Legal"><a href={privacyUrl}>Privacy policy</a><a href={termsUrl}>Terms & conditions</a></nav><p>© The Pharma Coach, LLC. All rights reserved. Results vary. Earnings and placement examples are not guarantees.</p></div>
   </footer>
   );

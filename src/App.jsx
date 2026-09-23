@@ -96,9 +96,11 @@ function Header() {
 }
 
 function LogoStrip() {
+  const [paused, setPaused] = useState(false);
   return (
-    <div className="logo-strip" role="img" aria-label={`Industry logos shown on The Pharma Coach's official site: ${officialLogos.map(([, name]) => name).join(", ")}`}>
-      <div className="logo-strip__track" aria-hidden="true">
+    <div className="logo-strip" role="region" aria-label={`Industry logos shown on The Pharma Coach's official site: ${officialLogos.map(([, name]) => name).join(", ")}`}>
+      <button className="logo-strip__toggle" onClick={() => setPaused(!paused)} aria-label={paused ? "Play logo animation" : "Pause logo animation"}>{paused ? "Play" : "Pause"}</button>
+      <div className="logo-strip__track" style={{ animationPlayState: paused ? "paused" : "running" }} aria-hidden="true">
         {[0, 1].map((copy) => <div className="logo-strip__group" key={copy}>
           {officialLogos.map(([file, name]) => <img key={file} src={`${A}official-logo-strip/${file}`} alt="" title={name} loading="eager" decoding="async" />)}
         </div>)}

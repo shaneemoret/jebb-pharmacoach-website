@@ -3,6 +3,7 @@ import { ArrowRight, List, X } from "@phosphor-icons/react";
 
 const A = `${import.meta.env.BASE_URL}assets/source/`;
 const bookingUrl = "https://medrepcollege.com/book-a-call-with-jebb";
+const testimonialsUrl = "https://www.thepharmacoach.com/pharmaceutical-sales-success-stories";
 
 const programs = [
   { tier: "Self-paced", name: "Fast Track Academy", price: "$899", note: "A focused path for turning your current experience into a pharmaceutical-sales job search." },
@@ -16,6 +17,30 @@ const objections = [
   ["What if I have no formal sales experience?", "You are not necessarily starting from zero. Teaching, patient education, care coordination and other roles can demonstrate communication, influence and follow-through. Coaching helps you identify credible examples and present them in the language hiring managers expect."],
   ["How do I know pharmaceutical sales is the right fit for me?", "Consider whether you enjoy science, relationship-building, explaining complex information and being accountable for commercial results. A career diagnosis can help you assess the role, the lifestyle and your next step before you apply."],
   ["Why pharma instead of medical device sales?", "Pharma often suits people drawn to clinical science, mechanisms of action and long-term provider relationships. Device sales is typically more procedure- and engineering-oriented. The right choice depends on how you think, work and want to spend your day."],
+];
+
+const testimonials = [
+  {
+    path: "Retail sales to pharma",
+    quote: "Working with Jebb changed everything.",
+    story: "After a biology degree and retail-sales work, Rochelle struggled to get interviews. She says she now works in pharmaceutical sales.",
+    name: "Rochelle S.",
+    location: "Dallas, Texas",
+  },
+  {
+    path: "Nursing to pharma",
+    quote: "I successfully navigated six rounds of competitive interviews.",
+    story: "Emily brought six years of bedside nursing experience. She credits Jebb’s resume and interview guidance in her move to a global pharmaceutical company.",
+    name: "Emily T.",
+    location: "Atlanta, Georgia",
+  },
+  {
+    path: "Medical-sales growth",
+    quote: "Jebb helped me uncover the blind spots.",
+    story: "Alex describes improving sales techniques and territory management before reaching President’s Club in medical sales.",
+    name: "Alex J.",
+    location: "Denver, Colorado",
+  },
 ];
 
 function Button() {
@@ -119,6 +144,24 @@ export function App() {
             <article><b>03</b><h3>Get selected</h3><p>Build the access, interviews and execution discipline required to compete.</p></article>
           </div>
           <Button />
+        </section>
+
+        <section id="testimonials" className="testimonials section-pad" aria-labelledby="testimonials-title">
+          <div className="testimonials__intro">
+            <p className="eyebrow">Client stories</p>
+            <h2 id="testimonials-title">What clients say about working with Jebb.</h2>
+            <p>Real career moves from sales, nursing and medical-sales backgrounds.</p>
+          </div>
+          <div className="testimonials__grid">
+            {testimonials.map((item, index) => <article key={item.name} className="testimonial">
+              <span className="testimonial__number">0{index + 1}</span>
+              <p className="testimonial__path">{item.path}</p>
+              <blockquote>“{item.quote}”</blockquote>
+              <p className="testimonial__story">{item.story}</p>
+              <p className="testimonial__person"><strong>{item.name}</strong><span>{item.location}</span></p>
+            </article>)}
+          </div>
+          <p className="testimonials__source">Excerpts and story summaries from <a href={testimonialsUrl}>The Pharma Coach’s client stories</a>. Individual results vary.</p>
         </section>
 
         <section id="programs" className="programs section-pad">

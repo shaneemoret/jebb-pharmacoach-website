@@ -96,6 +96,23 @@ p { line-height: 1.55; }
 .method__steps h3 { margin-top: 26px; font-size: 26px; }
 .method__steps p { color: var(--white); }
 .method .button { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.testimonials { background: var(--white); }
+.testimonials__intro { display: grid; grid-template-columns: 1fr 1.5fr; column-gap: 60px; align-items: end; }
+.testimonials__intro .eyebrow { grid-column: 1/-1; }
+.testimonials__intro h2 { max-width: 650px; }
+.testimonials__intro > p:last-child { max-width: 400px; margin: 0 0 5px; color: var(--navy); font-size: 20px; }
+.testimonials__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: clamp(28px,4vw,64px); margin-top: 62px; }
+.testimonial { display: flex; flex-direction: column; align-items: flex-start; }
+.testimonial__number { color: var(--gold); font: 800 24px var(--head); }
+.testimonial__path { margin: 24px 0 14px; color: var(--navy); font: 750 12px/1.4 var(--head); letter-spacing: .13em; text-transform: uppercase; }
+.testimonial blockquote { margin: 0; font: 700 clamp(21px,2vw,29px)/1.3 var(--head); letter-spacing: -.035em; }
+.testimonial__story { margin: 22px 0 24px; color: var(--navy); font-size: 17px; }
+.testimonial__person { display: flex; flex-direction: column; gap: 2px; margin: auto 0 0; font-size: 15px; }
+.testimonial__person strong { font: 750 15px var(--head); }
+.testimonial__person span { color: var(--navy); }
+.testimonials__source { margin: 48px 0 0; color: var(--navy); font-size: 13px; }
+.testimonials__source a { text-underline-offset: 3px; }
+.testimonials__source a:hover { color: var(--ink); }
 .programs { background: var(--navy); color: var(--white); }
 .programs .eyebrow { color: var(--gold); }
 .centered-heading { max-width: 850px; margin: 0 auto 45px; text-align: center; }
@@ -166,6 +183,12 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
   .photo-band { grid-template-columns: 220px 1fr; }
   .photo-band__image { width: 220px; }
   .method__steps { grid-template-columns: 1fr; }
+  .testimonials__intro { grid-template-columns: 1fr; gap: 18px; }
+  .testimonials__intro .eyebrow { margin-bottom: 0; }
+  .testimonials__intro > p:last-child { margin: 0; }
+  .testimonials__grid { grid-template-columns: 1fr; gap: 54px; margin-top: 44px; }
+  .testimonial blockquote { max-width: 560px; }
+  .testimonial__story { max-width: 560px; }
   .program-grid { grid-template-columns: 1fr; }
   .program-card { min-height: 0; }
   .final-cta { flex-direction: column; align-items: start; }

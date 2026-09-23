@@ -151,11 +151,11 @@ export function App() {
             <article><b>02</b><h3>Build your plan</h3><p>Focus your résumé, networking, and interview preparation.</p></article>
             <article><b>03</b><h3>Make your move</h3><p>Apply your plan with the coaching support you choose.</p></article>
           </div>
-          <details id="programs" className="program-options">
-            <summary>Compare coaching options and prices</summary>
-            <div className="program-options__list">{programs.map(p => <article key={p.name}><div><h3>{p.name}</h3><p>{p.note}</p><a className="program-options__link" href={p.url} aria-label={`View ${p.name} details`}>View program details <ArrowRight size={16} aria-hidden="true" /></a></div><strong>{p.price}</strong></article>)}</div>
+          <section id="programs" className="program-options" aria-labelledby="programs-title">
+            <h2 id="programs-title">Choose your coaching support.</h2>
+            <div className="program-options__cards">{programs.map(p => <article className={`program-card${p.featured ? " program-card--featured" : ""}`} key={p.name}><span>{p.tier}</span><h3>{p.name}</h3><strong>{p.price}</strong><p>{p.note}</p><a className="program-options__link" href={p.url} aria-label={`View ${p.name} details`}>View program details <ArrowRight size={16} aria-hidden="true" /></a></article>)}</div>
             <p>Review current inclusions, pricing, and terms on each official program page before enrolling.</p>
-          </details>
+          </section>
         </section>
 
         <section id="testimonials" className="testimonials section-pad" aria-labelledby="testimonials-title">

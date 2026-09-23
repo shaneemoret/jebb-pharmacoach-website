@@ -4,6 +4,27 @@ import { ArrowRight, List, X } from "@phosphor-icons/react";
 const A = `${import.meta.env.BASE_URL}assets/source/`;
 const bookingUrl = "https://medrepcollege.com/book-a-call-with-jebb";
 const testimonialsUrl = "https://www.thepharmacoach.com/pharmaceutical-sales-success-stories";
+const officialLogos = [
+  ["logo-01.jpeg", "Sanofi"],
+  ["logo-02.png", "Edwards Lifesciences"],
+  ["logo-03.jpeg", "Lilly"],
+  ["logo-04.jpeg", "GSK"],
+  ["logo-05.jpeg", "Medtronic"],
+  ["logo-06.jpeg", "Cardinal Health"],
+  ["logo-07.jpeg", "Johnson & Johnson"],
+  ["logo-08.jpeg", "Amgen"],
+  ["logo-09.jpeg", "Bristol Myers Squibb"],
+  ["logo-10.jpeg", "Novartis"],
+  ["logo-11.png", "Boehringer Ingelheim"],
+  ["logo-12.jpeg", "AbbVie"],
+  ["logo-13.jpeg", "Pfizer"],
+  ["logo-14.png", "Henry Schein Dental"],
+  ["logo-15.png", "Boston Scientific"],
+  ["logo-16.jpeg", "Merck"],
+  ["logo-17.jpeg", "AstraZeneca"],
+  ["logo-18.jpeg", "Stryker"],
+  ["logo-19.png", "Abbott"],
+];
 
 const programs = [
   { tier: "Self-paced", name: "Fast Track Academy", price: "$899", note: "A focused path for turning your current experience into a pharmaceutical-sales job search." },
@@ -68,12 +89,25 @@ function Header() {
   );
 }
 
+function LogoStrip() {
+  return (
+    <div id="top" className="logo-strip" role="img" aria-label={`Industry logos shown on The Pharma Coach's official site: ${officialLogos.map(([, name]) => name).join(", ")}`}>
+      <div className="logo-strip__track" aria-hidden="true">
+        {[0, 1].map((copy) => <div className="logo-strip__group" key={copy}>
+          {officialLogos.map(([file, name]) => <img key={file} src={`${A}official-logo-strip/${file}`} alt="" title={name} loading="eager" decoding="async" />)}
+        </div>)}
+      </div>
+    </div>
+  );
+}
+
 export function App() {
   const [active, setActive] = useState(0);
   return (
     <>
       <Header />
-      <main id="top">
+      <LogoStrip />
+      <main>
         <section className="hero" aria-labelledby="hero-title">
           <img className="hero__image" src={`${A}pharma-field-hero.png`} alt="Pharmaceutical sales professional arriving at a healthcare facility" />
           <div className="hero__copy">

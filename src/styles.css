@@ -41,6 +41,12 @@ p { line-height: 1.55; }
 .nav > a:not(.button):hover { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 8px; }
 .nav .button { min-height: 44px; margin-left: 16px; font-size: 12px; }
 .menu-button { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border: 0; background: none; color: var(--navy); }
+.logo-strip { display: flex; align-items: center; height: 76px; overflow: hidden; background: var(--white); border-bottom: 1px solid var(--line); }
+.logo-strip__track { display: flex; align-items: center; width: max-content; animation: logo-scroll 36s linear infinite; }
+.logo-strip:hover .logo-strip__track { animation-play-state: paused; }
+.logo-strip__group { display: flex; flex: none; align-items: center; gap: 48px; padding-right: 48px; }
+.logo-strip img { display: block; flex: none; width: auto; max-width: none; height: 48px; object-fit: contain; }
+@keyframes logo-scroll { to { transform: translateX(-50%); } }
 .hero { position: relative; display: flex; align-items: center; min-height: 610px; overflow: hidden; background: var(--ink); color: var(--white); }
 .hero__image { position: absolute; top: -30px; left: 0; width: 100%; height: calc(100% + 30px); object-fit: cover; object-position: center top; }
 .hero__copy { position: relative; z-index: 1; width: 100%; max-width: 1600px; margin: auto; padding: 72px max(4.4vw,calc((100vw - var(--max))/2)); transform: translateY(-65px); }
@@ -198,6 +204,9 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
 @media(max-width: 560px) {
   .section-pad { padding-inline: 24px; }
   .wordmark strong { font-size: 17px; }
+  .logo-strip { height: 68px; }
+  .logo-strip__group { gap: 34px; padding-right: 34px; }
+  .logo-strip img { height: 42px; }
   .hero { min-height: 690px; }
   .hero__image { object-position: 62% center; filter: brightness(.48); }
   .hero__copy { padding: 56px 24px 48px; transform: translateY(-100px); }
@@ -219,4 +228,7 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
 @media(prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .button, .brand-strip a { transition: none; }
+  .logo-strip { overflow-x: auto; }
+  .logo-strip__track { animation: none; }
+  .logo-strip__group:nth-child(2) { display: none; }
 }

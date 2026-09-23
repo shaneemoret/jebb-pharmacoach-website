@@ -26,7 +26,6 @@ export default function CareerComparison() {
   return <section id="career-potential" className="career-comparison section-pad" aria-labelledby="career-potential-title">
     <div className="career-comparison__heading">
       <h2 id="career-potential-title">Make more money, without sacrificing lifestyle and family.</h2>
-      <p className="career-comparison__deck">See how pay and time demands compare across nursing, traditional sales, and pharma sales.</p>
     </div>
     <div className={`paydemand${shown ? " is-shown" : ""}`} ref={chartRef}>
       <div className="paydemand__row paydemand__row--pay">

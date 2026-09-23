@@ -79,6 +79,18 @@ function Button() {
   return <a className="button button--gold" href={bookingUrl}>Schedule a call<ArrowRight size={18} weight="regular" aria-hidden="true" /></a>;
 }
 
+function StudentVideo({ student }) {
+  const [state, setState] = useState("loading");
+  return <div className="student-video__media" aria-busy={state === "loading"}>
+    {state === "loading" && <div className="video-placeholder" role="status"><span>Loading {student.name}’s video</span><i /><i /></div>}
+    <video controls playsInline preload="metadata" aria-label={`${student.name}'s video testimonial`} onLoadedMetadata={() => setState("ready")} onError={() => setState("error")}>
+      <source src={`https://assets.cdn.filesafe.space/5Yn78yf8uYk9U7Fl1kJ2/media/${student.file}`} onError={() => setState("error")} />
+      Your browser cannot play this video. <a href={videoTestimonialsUrl}>Watch on Med Rep College</a>.
+    </video>
+    {state === "error" && <p className="video-placeholder" role="status">Video unavailable. <a href={videoTestimonialsUrl}>Watch the original</a>.</p>}
+  </div>;
+}
+
 function Header() {
   const [open, setOpen] = useState(false);
   const links = [
@@ -149,7 +161,7 @@ export function App() {
             <p className="eyebrow">Meet your coach</p>
             <h2 id="coach-title">Jebb Ruff, MBA</h2>
             <p className="coach__role">Medical sales hiring manager, sales trainer, and career coach.</p>
-            <p>Learn from someone who has hired medical sales reps, not just coached them. Jebb helps you turn your experience into a stronger résumé, networking plan, and interview.</p>
+            <p>Jebb brings firsthand experience hiring medical sales reps. He helps you turn your experience into a stronger résumé, networking plan, and interview.</p>
             <dl className="coach__credentials">
               <div><dt>Since 2001</dt><dd>Career in medical sales</dd></div>
               <div><dt>19 awards</dt><dd>President’s Club recognition</dd></div>
@@ -179,10 +191,7 @@ export function App() {
           </div>
           <div className="student-videos" aria-label="Student video testimonials">
             {studentVideos.map(student => <article className="student-video" key={student.name}>
-              <video controls playsInline preload="metadata" aria-label={`${student.name}'s video testimonial`}>
-                <source src={`https://assets.cdn.filesafe.space/5Yn78yf8uYk9U7Fl1kJ2/media/${student.file}`} />
-                Your browser cannot play this video. <a href={videoTestimonialsUrl}>Watch on Med Rep College</a>.
-              </video>
+              <StudentVideo student={student} />
               <h3>{student.name}</h3><p>{student.path}</p>
               <a href={videoTestimonialsUrl}>View original testimonial</a>
             </article>)}

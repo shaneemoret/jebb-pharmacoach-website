@@ -2,9 +2,8 @@ const pharmaSource = "https://careers.amgen.com/en/job/new-york/specialty-repres
 const nursingSource = "https://www.bls.gov/ooh/healthcare/registered-nurses.htm";
 const salesSource = "https://www.bls.gov/ooh/sales/wholesale-and-manufacturing-sales-representatives.htm";
 const salaries = [
-  { name: "Nontechnical B2B sales", tag: "BLS median", value: 72080 },
+  { name: "Traditional B2B sales", tag: "BLS median", value: 72080 },
   { name: "Registered nursing", tag: "BLS median", value: 97550 },
-  { name: "Technical & scientific sales", tag: "BLS median", value: 104920 },
   { name: "Pharma sales first-year OTE", tag: "Med Rep College, reported across pharma and related med-sales roles", value: 124600, focus: true },
 ];
 const roles = [
@@ -17,6 +16,14 @@ const demands = [
   ["Time away from home", ["On-call work can interrupt time at home", "Large territories can mean days or weeks away", "Territory travel with occasional overnights"]],
   ["Workload", ["Patient care, prolonged standing and lifting", "Prospecting and sales quotas", "Clinical knowledge and performance targets"]],
 ];
+const PAY_MIN = 60000, PAY_MAX = 132000;
+const DEMAND_X = { Moderate: 17, Higher: 51, Highest: 84 };
+const positions = [
+  { name: "Registered nursing", pay: 97550, demand: "Highest", basis: "Shifts including nights, weekends and holidays, plus on-call", source: nursingSource },
+  { name: "Traditional B2B sales", pay: 72080, demand: "Higher", basis: "Often more than 40 hours a week; territories can mean days or weeks away", source: salesSource },
+  { name: "Pharma sales", pay: 124600, demand: "Moderate", basis: "Territory schedule with occasional overnights", source: pharmaSource, focus: true },
+];
+const payY = pay => (pay - PAY_MIN) / (PAY_MAX - PAY_MIN) * 100;
 const money = value => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);
 
 export default function CareerComparison() {
@@ -38,7 +45,39 @@ export default function CareerComparison() {
           <p className="cost-col__tag">{salary.tag}</p>
         </div>)}
       </div>
-      <p className="comparison-note">The first three are U.S. Bureau of Labor Statistics medians, not starting pay: <a href={nursingSource}>nursing</a> and <a href={salesSource}>wholesale and manufacturing sales</a>. Technical and scientific sales covers pharma alongside other products, so it is not a pharma-only figure. The fourth is average first-year OTE reported by <a href="https://www.thepharmacoach.com/about">Med Rep College</a>, a different kind of figure from a BLS median.</p>
+      <p className="comparison-note">The first two are U.S. Bureau of Labor Statistics medians, not starting pay: <a href={salesSource}>wholesale and manufacturing sales</a> and <a href={nursingSource}>nursing</a>. The third is average first-year OTE reported by <a href="https://www.thepharmacoach.com/about">Med Rep College</a> across pharma and related med-sales roles, which is a different kind of figure from a BLS median.</p>
+    </div>
+    <div className="tradeoff-chart">
+      <div className="cost-chart__label">
+        <p>Pay against time demand:</p>
+        <p>Higher pay does not have to mean more of your life</p>
+      </div>
+      <div className="tradeoff-plot">
+        <div className="tradeoff-plot__axis-y" aria-hidden="true">
+          <span>$130k</span><span>$100k</span><span>$70k</span>
+        </div>
+        <div className="tradeoff-plot__area">
+          {positions.map(point => <div
+            className={`tradeoff-point${point.focus ? " tradeoff-point--focus" : ""}`}
+            key={point.name}
+            style={{ left: `${DEMAND_X[point.demand]}%`, bottom: `${payY(point.pay)}%` }}
+          >
+            <span className="tradeoff-point__dot" aria-hidden="true" />
+            <span className="tradeoff-point__label">
+              <b>{point.name}</b>
+              <i>{money(point.pay)} · {point.demand.toLowerCase()} time demand</i>
+            </span>
+          </div>)}
+        </div>
+        <div className="tradeoff-plot__axis-x" aria-hidden="true">
+          <span>Moderate</span><span>Higher</span><span>Highest</span>
+        </div>
+        <p className="tradeoff-plot__axis-title" aria-hidden="true">Time demand</p>
+      </div>
+      <ul className="sr-only">
+        {positions.map(point => <li key={point.name}>{point.name}: {money(point.pay)} a year, {point.demand.toLowerCase()} time demand. {point.basis}.</li>)}
+      </ul>
+      <p className="comparison-note">Pay is the sourced figure from the chart above. The horizontal position is ordinal, ranked from how each source describes the role, not a measured score: <a href={nursingSource}>nursing</a> lists nights, weekends, holidays and on-call; <a href={salesSource}>wholesale and manufacturing sales</a> lists 40-plus hours and territories that can mean days or weeks away; the <a href={pharmaSource}>pharma listing</a> lists a territory schedule with occasional overnights.</p>
     </div>
     <section className="demands-comparison" aria-labelledby="demands-title">
       <h3 id="demands-title">What does it ask of your time?</h3>

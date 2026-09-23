@@ -209,7 +209,7 @@ export function App() {
         </section>
 
         <section className="final-cta section-pad">
-          <div><h2>Get clear on your next move.</h2><p>A 45-minute discovery call with Jebb. $25. Discuss your fit and next steps before choosing a coaching program.</p><p className="booking-note">Booking continues on Med Rep College, Jebb’s official booking site. <a href={privacyUrl}>Privacy policy</a> · <a href={termsUrl}>Terms & conditions</a></p></div>
+          <div><h2>Take the next step.</h2><p>A 45-minute discovery call with Jebb. $25. Discuss your fit and next steps before choosing a coaching program.</p><p className="booking-note">Booking continues on Med Rep College, Jebb’s official booking site. <a href={privacyUrl}>Privacy policy</a> · <a href={termsUrl}>Terms & conditions</a></p></div>
           <Button />
         </section>
       </main>

@@ -40,8 +40,6 @@ export default function CareerComparison() {
           <dl>{["Schedule", "Time away from home", "Workload"].map((label, index) => <div className={`demand-bar demand-bar--${index}`} key={label}><dt className="sr-only">{label}</dt><dd>{item.rows[index]}</dd></div>)}</dl>
         </article>)}
       </div>
-      <p className="demands-takeaway">Before accepting an offer, ask: How many overnight trips? Any evenings or weekends? What are the territory and performance expectations?</p>
     </section>
-    <p className="comparison-note comparison-note--footer">A career change does not guarantee higher pay, fewer hours, or less stress. Compare actual offers and schedules.</p>
   </section>;
 }

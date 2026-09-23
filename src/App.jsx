@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, List, X } from "@phosphor-icons/react";
+import CareerComparison from "./CareerComparison";
 
 const A = `${import.meta.env.BASE_URL}assets/source/`;
 const bookingUrl = "https://medrepcollege.com/book-a-call-with-jebb";
@@ -150,17 +151,7 @@ export function App() {
           </div>
         </section>
 
-        <section className="outcomes section-pad">
-          <div className="outcomes__intro">
-            <p className="eyebrow">What your next move is really for</p>
-            <h2>More upside. More autonomy. A career with room to grow.</h2>
-          </div>
-          <div className="outcome-grid">
-            <article><span>01</span><h3>Earning upside</h3><p>Compete for roles with salary, commission and benefits—without treating any result as guaranteed.</p></article>
-            <article><span>02</span><h3>More control</h3><p>Pursue a field role with more ownership of your territory, schedule and professional relationships.</p></article>
-            <article><span>03</span><h3>A better fit</h3><p>Use your science, relationship and communication strengths in a career built around influence.</p></article>
-          </div>
-        </section>
+        <CareerComparison />
 
         <section id="about" className="coach section-pad" aria-labelledby="coach-title">
           <div className="coach__portrait"><img src={`${A}jebb-official-about-portrait.webp`} alt="Jebb Ruff, The Pharma Coach" width="800" height="971" loading="lazy" /></div>
@@ -191,9 +182,7 @@ export function App() {
 
         <section id="testimonials" className="testimonials section-pad" aria-labelledby="testimonials-title">
           <div className="testimonials__intro">
-            <p className="eyebrow">Testimonials</p>
-            <h2 id="testimonials-title">What clients say about working with Jebb.</h2>
-            <p>Real career moves from sales, nursing and medical-sales backgrounds.</p>
+            <h2 id="testimonials-title">Client results</h2>
           </div>
           <div className="testimonials__grid">
             {testimonials.map((item, index) => <article key={item.name} className="testimonial">

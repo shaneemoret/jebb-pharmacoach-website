@@ -28,10 +28,11 @@ h3 { line-height: 1.2; letter-spacing: -.025em; }
 p { line-height: 1.55; }
 .lead { font-size: clamp(19px,1.7vw,24px); line-height: 1.47; }
 .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 52px; padding: 14px 22px; background: var(--navy); color: var(--white); border: 1px solid var(--navy); border-radius: 3px; text-decoration: none; font: 700 14px/1.2 var(--head); transition: background .2s, color .2s, transform .2s; white-space: nowrap; }
-.button svg { flex: none; }
+.button svg { flex: none; width: 34px; height: 34px; padding: 7px; border-radius: 50%; background: var(--navy); color: var(--white); }
 .button:hover { background: var(--ink); border-color: var(--ink); transform: translateY(-2px); }
-.button--gold { background: var(--gold); border-color: var(--gold); color: var(--ink); border-radius: 999px; padding-inline: 28px; }
-.button--gold:hover { background: var(--white); border-color: var(--white); color: var(--ink); }
+.button--gold { background: var(--gold); border: 2px solid var(--gold); color: var(--ink); border-radius: 999px; padding: 10px 12px 10px 28px; box-shadow: 0 4px 0 rgba(11,15,20,.2); font-weight: 800; }
+.button--gold:hover { background: var(--white); border-color: var(--gold); color: var(--ink); }
+.button--gold:focus-visible { outline-color: var(--navy); box-shadow: 0 0 0 6px var(--white); }
 .site-header { position: sticky; top: 0; z-index: 30; height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 0 max(4.4vw,calc((100vw - var(--max))/2)); background: var(--white); border-bottom: 1px solid var(--line); }
 .wordmark { display: flex; flex-direction: column; flex: none; color: var(--navy); text-decoration: none; line-height: 1.12; letter-spacing: .14em; }
 .wordmark span { font: 700 11px var(--head); letter-spacing: .28em; }
@@ -115,7 +116,40 @@ p { line-height: 1.55; }
 .method__stage + h3 { margin-top: 0; }
 .method .button { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 .testimonials { background: var(--white); }
-.testimonials__intro { display: grid; grid-template-columns: 1fr 1.5fr; column-gap: 60px; align-items: end; }
+.career-comparison { background: var(--white); }
+.career-comparison__heading { max-width: 930px; }
+.career-comparison__heading .lead { max-width: 710px; color: var(--navy); }
+.earnings-chart, .schedule-comparison { display: grid; grid-template-columns: .8fr 1.4fr; gap: clamp(32px,5vw,80px); margin-top: 56px; }
+.earnings-chart h3, .schedule-comparison h3 { font-size: clamp(25px,2.5vw,36px); max-width: 340px; color: var(--navy); }
+.earnings-chart__intro p, .schedule-comparison__intro p { font-size: 18px; color: var(--navy); max-width: 350px; }
+.salary-range h4 { margin: 0 0 10px; font: 650 16px var(--head); color: var(--navy); }
+.salary-range__value { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin: 0 0 18px; color: var(--navy); font: 800 clamp(25px,3vw,44px)/1.2 var(--head); letter-spacing: -.045em; }
+.salary-range__value span { font-weight: 400; }
+.salary-range__track { position: relative; height: 34px; border-radius: 999px; background: rgba(18,59,93,.08); overflow: hidden; }
+.salary-range__track > div { position: absolute; height: 100%; border-radius: inherit; background: var(--navy); }
+.salary-range--1 { margin-top: 30px; }
+.salary-range--1 .salary-range__track > div { background: var(--gold); }
+.earnings-chart__axis { display: flex; justify-content: space-between; margin-top: 10px; color: var(--navy); font-size: 13px; }
+.comparison-note { font-size: 14px; line-height: 1.5; color: var(--navy); }
+.comparison-note a, .schedule-comparison a { text-underline-offset: 4px; }
+.schedule-comparison { padding-top: 38px; }
+.schedule-comparison__examples { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+.schedule-comparison__examples article { padding-top: 22px; border-top: 4px solid var(--gold); }
+.schedule-comparison__examples article:last-child { border-color: var(--navy); }
+.schedule-comparison__examples .eyebrow { font-size: 10px; letter-spacing: .1em; }
+.schedule-comparison__examples h4 { margin: 0; font: 750 clamp(20px,2vw,28px)/1.25 var(--head); letter-spacing: -.025em; color: var(--navy); }
+.schedule-comparison__examples p:not(.eyebrow) { font-size: 17px; }
+.schedule-comparison__examples a { color: var(--navy); font-size: 14px; }
+.comparison-note--footer { max-width: 1000px; margin: 38px 0 0; }
+@media (max-width: 760px) {
+  .earnings-chart, .schedule-comparison { grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
+  .earnings-chart__intro p, .schedule-comparison__intro p { max-width: none; }
+  .salary-range__value { font-size: clamp(24px,6.7vw,40px); }
+}
+@media (max-width: 480px) {
+  .schedule-comparison__examples { grid-template-columns: 1fr; gap: 28px; }
+}
+.testimonials__intro { display: block; }
 .testimonials__intro .eyebrow { grid-column: 1/-1; }
 .testimonials__intro h2 { max-width: 650px; }
 .testimonials__intro > p:last-child { max-width: 400px; margin: 0 0 5px; color: var(--navy); font-size: 20px; }

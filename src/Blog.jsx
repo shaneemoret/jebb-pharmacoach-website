@@ -37,16 +37,17 @@ function TikTok({ video }) {
 function Card({ post }) {
   return (
     <article className="post-card">
+      <a className={`post-card__thumb${post.image ? "" : " post-card__thumb--blank"}`} href={blogHref(post.slug)} tabIndex={-1} aria-hidden="true">
+        {post.image
+          ? <img src={post.image} alt="" loading="lazy" decoding="async" />
+          : <span>The Pharma Coach</span>}
+      </a>
       <p className="post-card__meta">
         <time dateTime={post.published}>{longDate(post.published)}</time>
-        {post.tags?.[0] && <span>{post.tags[0]}</span>}
+        <span>{readingTime(post)}</span>
       </p>
       <h2><a href={blogHref(post.slug)}>{post.title}</a></h2>
       <p className="post-card__excerpt">{post.excerpt}</p>
-      <p className="post-card__foot">
-        <span>{post.author}</span>
-        <span>{readingTime(post)}</span>
-      </p>
     </article>
   );
 }
@@ -58,8 +59,8 @@ export function BlogIndex() {
     <main className="blog section-pad" id="top">
       <header className="blog__head">
         <p className="eyebrow">Career advice</p>
-        <h1>Notes on getting hired in pharmaceutical sales.</h1>
-        <p className="lead">Short, practical pieces from Jebb on resumes, interviews, territory work and the moves that actually get candidates in front of hiring managers.</p>
+        <h1>Articles to help you land a pharma sales rep job.</h1>
+        <p className="lead">Practical pieces from Jebb on resumes, interviews and the moves that get candidates in front of hiring managers.</p>
       </header>
       <div className="post-list">{posts.map(post => <Card post={post} key={post.slug} />)}</div>
     </main>

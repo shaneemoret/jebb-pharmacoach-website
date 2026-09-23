@@ -206,9 +206,6 @@ p { line-height: 1.55; }
 .testimonial__person { display: flex; flex-direction: column; gap: 2px; margin: auto 0 0; font-size: 15px; }
 .testimonial__person strong { font: 750 15px var(--head); }
 .testimonial__person span { color: var(--navy); }
-.testimonials__source { margin: 48px 0 0; color: var(--navy); font-size: 13px; }
-.testimonials__source a { text-underline-offset: 3px; }
-.testimonials__source a:hover { color: var(--ink); }
 .programs { background: var(--navy); color: var(--white); }
 .programs .eyebrow { color: var(--gold); }
 .centered-heading { max-width: 850px; margin: 0 auto 45px; text-align: center; }

@@ -7,7 +7,6 @@ const bookingUrl = "https://medrepcollege.com/secure-your-spot";
 const privacyUrl = "https://medrepcollege.com/privacy";
 const termsUrl = "https://medrepcollege.com/terms";
 const applicationUrl = "https://medrepcollege.com/apply-for-med-rep-college-now";
-const testimonialsUrl = "https://www.thepharmacoach.com/pharmaceutical-sales-success-stories";
 const videoTestimonialsUrl = "https://medrepcollege.com/mastermind-accelerator";
 const studentVideos = [
   { name: "Lauren", path: "Business owner to pharmaceutical sales", file: "69ce8c24dd9155358d68e6c8.mov" },
@@ -202,7 +201,6 @@ export function App() {
               <p className="testimonial__person"><strong>{item.name}</strong><span>{item.location}</span></p>
             </article>)}
           </div>
-          <p className="testimonials__source">Videos and student labels from <a href={videoTestimonialsUrl}>Med Rep College</a>. Written excerpts from <a href={testimonialsUrl}>The Pharma Coach’s client stories</a>.</p>
         </section>
 
         <section className="faq section-pad">

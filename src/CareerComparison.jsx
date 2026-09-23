@@ -5,7 +5,7 @@ const salesSource = "https://www.bls.gov/ooh/sales/wholesale-and-manufacturing-s
 const salaries = [
   { name: "Nontechnical B2B sales", detail: "Wholesale and manufacturing; excludes technical/scientific products", value: 72080 },
   { name: "Registered nursing", detail: "Registered nurses across work settings", value: 97550 },
-  { name: "Technical & scientific sales", detail: "Includes pharmaceuticals and other technical products—not pharma alone", value: 104920 },
+  { name: "Technical & scientific sales", detail: "Includes pharmaceuticals and other technical products, not pharma alone", value: 104920 },
 ];
 const money = value => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);
 
@@ -15,7 +15,7 @@ export default function CareerComparison() {
       <h2 id="career-potential-title">Compare the paycheck.<br />And what the job asks of you.</h2>
     </div>
     <div className="earnings-chart">
-      <div className="earnings-chart__intro"><p>U.S. median annual wages, May 2025.</p><p className="comparison-note">Technical/scientific sales includes pharma and other products—not a pharma-only salary estimate.</p></div>
+      <div className="earnings-chart__intro"><p>U.S. median annual wages, May 2025.</p><p className="comparison-note">Technical/scientific sales includes pharma and other products. This is not a pharma-only salary estimate.</p></div>
       <div className="earnings-chart__ranges">
         {salaries.map((salary, index) => <div className={`salary-range salary-median salary-median--${index}`} key={salary.name}>
           <h4>{salary.name}</h4>
@@ -23,12 +23,12 @@ export default function CareerComparison() {
           <div className="salary-range__track" aria-hidden="true"><div style={{ left: 0, width: `${salary.value / 120000 * 100}%` }} /></div>
         </div>)}
         <div className="earnings-chart__axis" aria-hidden="true"><span>$0</span><span>$60k</span><span>$120k</span></div>
-        <p className="comparison-note">BLS: <a href={nursingSource}>nursing</a> / <a href={salesSource}>wholesale and manufacturing sales</a>. Medians—not starting salaries or guaranteed income.</p>
+        <p className="comparison-note">BLS: <a href={nursingSource}>nursing</a> / <a href={salesSource}>wholesale and manufacturing sales</a>. These are medians, not starting salaries or guaranteed income.</p>
       </div>
     </div>
     <section className="demands-comparison" aria-labelledby="demands-title">
       <h3 id="demands-title">What does it ask of your time?</h3>
-      <p className="comparison-note">Compare the trade-offs—not just the paycheck. These are work patterns, not measured scores or guaranteed hours at home.</p>
+      <p className="comparison-note">Compare the trade-offs, not just the paycheck. These are work patterns, not measured scores or guaranteed hours at home.</p>
       <div className="demands-grid">
         {[
           {name: "Nursing", source: nursingSource, rows: ["Hospital shifts can include nights, weekends and holidays.", "On-call work can interrupt time at home; schedules vary by setting.", "Patient care, prolonged standing and lifting."]},

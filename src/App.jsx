@@ -119,7 +119,7 @@ export function App() {
           <img className="hero__image" src={`${A}jebb-banner-owner.png`} alt="Jebb Ruff, The Pharma Coach" fetchPriority="high" />
           <div className="hero__copy">
             <h1 id="hero-title">Start or advance your career in pharmaceutical sales.</h1>
-            <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles—and advance in the field.</p>
+            <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles and advance in the field.</p>
             <Button />
           </div>
         </section>
@@ -134,7 +134,7 @@ export function App() {
             <p className="eyebrow">Meet your coach</p>
             <h2 id="coach-title">Jebb Ruff, MBA</h2>
             <p className="coach__role">Medical sales hiring manager, sales trainer, and career coach.</p>
-            <p>Learn from someone who has hired medical sales reps—not just coached them. Jebb helps you turn your experience into a stronger résumé, networking plan, and interview.</p>
+            <p>Learn from someone who has hired medical sales reps, not just coached them. Jebb helps you turn your experience into a stronger résumé, networking plan, and interview.</p>
             <dl className="coach__credentials">
               <div><dt>Since 2001</dt><dd>Career in medical sales</dd></div>
               <div><dt>19 awards</dt><dd>President’s Club recognition</dd></div>

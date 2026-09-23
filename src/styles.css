@@ -281,6 +281,70 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
   .final-cta .button { width: 100%; }
   footer { grid-template-columns: 1fr 1fr; gap: 38px 22px; padding-inline: 24px; }
 }
+/* Concise landing-page rhythm: detail is available without dominating the scroll. */
+.section-pad { padding-block: clamp(44px,4.5vw,68px); }
+.earnings-chart { margin-top: 26px; }
+.salary-median { display: grid; grid-template-columns: 1fr auto; column-gap: 20px; align-items: center; }
+.salary-median h4 { margin: 0; }
+.salary-median .salary-range__value { margin: 0; font-size: clamp(24px,2.6vw,36px); }
+.salary-median .salary-range__track { grid-column: 1/-1; height: 22px; margin-top: 10px; }
+.salary-median + .salary-median { margin-top: 20px; }
+.workday-details { margin-top: 24px; border-block: 1px solid var(--line); padding: 18px 0; }
+summary { cursor: pointer; font: 700 16px/1.5 var(--head); }
+.workday-details .schedule-comparison__examples { margin-top: 24px; }
+.comparison-note--footer { margin-top: 16px; }
+.coach { grid-template-columns: minmax(220px,.65fr) 1.35fr; gap: 48px; }
+.coach__portrait { max-width: 320px; max-height: 390px; }
+.coach__portrait img { min-height: 0; height: 390px; }
+.coach__role { margin: 16px 0; font-size: 20px; }
+.coach__credentials { margin: 22px 0; padding-top: 18px; }
+.method__title { display: block; }
+.method__title .eyebrow { margin-bottom: 12px; }
+.method__steps { margin: 28px 0; border: 0; background: none; gap: 32px; }
+.method__steps article { padding: 0; }
+.method__steps b { font-size: 28px; }
+.method__steps h3 { margin-top: 12px; font-size: 23px; }
+.method__steps p { margin-bottom: 0; }
+.program-options { border-top: 1px solid rgba(255,255,255,.35); padding-top: 18px; scroll-margin-top: 110px; }
+.program-options__list article { display: flex; gap: 24px; justify-content: space-between; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+.program-options__list h3 { font-size: 20px; }
+.program-options__list p { margin: 8px 0 0; max-width: 700px; }
+.program-options__list strong { color: var(--gold); font: 750 24px var(--head); }
+.testimonials__grid { margin-top: 28px; }
+.testimonial__path { margin-top: 0; }
+.testimonial__details { margin: 16px 0; }
+.testimonial__details summary { color: var(--navy); font: 600 14px var(--body); }
+.testimonial__story { margin: 12px 0; }
+.testimonial__person { margin-top: 12px; }
+.faq { gap: 40px; }
+.faq h2 { max-width: 340px; }
+.accordion article > button { padding-block: 18px; }
+.final-cta p { max-width: 680px; }
+footer { padding-top: 36px; padding-bottom: 24px; }
+@media(max-width:760px) {
+  .coach { grid-template-columns: 140px 1fr; gap: 24px; }
+  .coach__portrait img { height: 180px; object-fit: cover; }
+  .coach__copy h2 { font-size: 30px; }
+  .coach__credentials { gap: 12px; }
+  .coach__credentials dt { font-size: 18px; }
+  .method__steps { gap: 22px; }
+  .method__steps article { display: grid; grid-template-columns: 35px 1fr; column-gap: 14px; }
+  .method__steps b { grid-row: 1/3; }
+  .method__steps h3 { margin: 0; }
+  .method__steps p { margin-top: 8px; }
+  .testimonials__grid { gap: 26px; }
+  .testimonial blockquote { font-size: 21px; }
+  .salary-median h4 { font-size: 14px; }
+  .salary-median .salary-range__value { font-size: 26px; }
+}
+@media(max-width:560px) {
+  .coach { grid-template-columns: 1fr; }
+  .coach__portrait { width: 150px; height: 180px; }
+  .coach__role { font-size: 18px; }
+  .program-options__list article { gap: 12px; }
+  .program-options__list strong { font-size: 20px; }
+  .program-options__list h3 { font-size: 18px; }
+}
 @media(prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .button, .brand-strip a { transition: none; }

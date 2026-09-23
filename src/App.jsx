@@ -34,11 +34,12 @@ const programs = [
 ];
 
 const objections = [
-  ["Do I need pharmaceutical sales experience?", "No. Sales, healthcare, teaching and other customer-facing backgrounds can bring transferable strengths. The work is showing how your results, relationships and ability to learn complex information fit a pharmaceutical sales role."],
-  ["How does my sales or healthcare experience translate to pharma?", "Sales professionals can show prospecting, relationship-building and performance results. Healthcare professionals can show clinical fluency, provider communication and patient education. Both need a clear story that connects those strengths to pharmaceutical sales."],
-  ["What if I have no formal sales experience?", "You are not necessarily starting from zero. Teaching, patient education, care coordination and other roles can demonstrate communication, influence and follow-through. Coaching helps you identify credible examples and present them in the language hiring managers expect."],
-  ["How do I know pharmaceutical sales is the right fit for me?", "Consider whether you enjoy science, relationship-building, explaining complex information and being accountable for commercial results. A career diagnosis can help you assess the role, the lifestyle and your next step before you apply."],
-  ["Why pharma instead of medical device sales?", "Pharma often suits people drawn to clinical science, mechanisms of action and long-term provider relationships. Device sales is typically more procedure- and engineering-oriented. The right choice depends on how you think, work and want to spend your day."],
+  ["Can I move into pharma without pharma experience?", "Yes, some roles accept experience from other fields. Sales, healthcare, and teaching can offer transferable skills. Requirements vary by employer and role."],
+  ["Why am I applying but not getting interviews?", "Your résumé, target roles, or networking approach may not show how your experience fits. Jebb helps you identify the gaps rather than simply send more applications."],
+  ["What makes this different from generic career advice?", "Jebb brings medical-sales hiring and training experience to your résumé, networking, and interview preparation. The focus is on this industry and your next role."],
+  ["Should I start before I’m ready to leave my job?", "You can research roles and prepare your applications while employed. Start when you have time to do the work; you do not need to rush a career decision."],
+  ["Will coaching guarantee a job or a higher salary?", "No. Hiring and compensation depend on employers, your experience, and your execution. Review program terms before paying; do not assume placement or earnings are guaranteed."],
+  ["What does the first call cost?", "The discovery call is $25 for 45 minutes with Jebb. Discuss your fit and next steps before choosing a coaching program. Confirm current booking and cancellation terms before paying."],
 ];
 
 const testimonials = [
@@ -104,7 +105,7 @@ function LogoStrip() {
 }
 
 export function App() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
   return (
     <>
       <Header />
@@ -120,37 +121,6 @@ export function App() {
 
         <LogoStrip />
 
-        <section id="problem" className="problem section-pad">
-          <div className="image-frame image-frame--portrait"><img src={`${A}pharma-nurse-work-from-home-v6-approved.png`} alt="Blonde healthcare professional planning her next career move at a laptop" /></div>
-          <div className="problem__copy">
-            <p className="eyebrow">Your background is not the problem</p>
-            <h2>Get help landing your next pharma sales role.</h2>
-            <p className="lead">Jebb helps you improve your résumé, build a networking strategy, and prepare for interviews. Show hiring managers how your sales or healthcare experience fits the job.</p>
-            <ol className="number-list">
-              <li><span>01</span><div><strong>Make your résumé relevant</strong><p>Show the experience and results that matter for the role you want.</p></div></li>
-              <li><span>02</span><div><strong>Know who to reach out to</strong><p>Build a focused approach to connecting with recruiters and hiring managers.</p></div></li>
-              <li><span>03</span><div><strong>Walk into interviews prepared</strong><p>Explain your strengths through clear examples from your own experience.</p></div></li>
-            </ol>
-          </div>
-        </section>
-
-        <section className="shift">
-          <div className="section-pad shift__inner">
-            <div>
-              <p className="eyebrow eyebrow--light">Reposition—don’t restart</p>
-              <h2>Your experience and skills are transferable.</h2>
-              <p>Sales professionals bring prospecting, negotiation and quota discipline. Healthcare workers bring clinical fluency and trusted relationships. Educators know how to make complex information simple. The strategy is showing pharma employers exactly why that matters.</p>
-            </div>
-            <div className="shift-card" aria-label="From unclear positioning to a focused pharmaceutical sales strategy">
-              <p>From</p>
-              <ul><li>Generic applications</li><li>Unclear positioning</li><li>Scattered effort</li></ul>
-              <span aria-hidden="true">→</span>
-              <p>To</p>
-              <ul><li>A focused target</li><li>A credible pharma story</li><li>Interview readiness</li></ul>
-            </div>
-          </div>
-        </section>
-
         <CareerComparison />
 
         <section id="about" className="coach section-pad" aria-labelledby="coach-title">
@@ -159,8 +129,7 @@ export function App() {
             <p className="eyebrow">Meet your coach</p>
             <h2 id="coach-title">Jebb Ruff, MBA</h2>
             <p className="coach__role">Medical sales hiring manager, sales trainer, and career coach.</p>
-            <p>Jebb built his career in pharmaceutical, medical device, and biotech sales. He has spent more than a decade interviewing and hiring medical sales professionals, giving him a view of what employers look for when they choose a candidate.</p>
-            <p>He also knows what it feels like to be on the outside: his own move into the industry took more than a year. Today, he helps professionals prepare for their next role through interview planning and practical sales coaching.</p>
+            <p>Learn from someone who has hired medical sales reps—not just coached them. Jebb helps you turn your experience into a stronger résumé, networking plan, and interview.</p>
             <dl className="coach__credentials">
               <div><dt>Since 2001</dt><dd>Career in medical sales</dd></div>
               <div><dt>19 awards</dt><dd>President’s Club recognition</dd></div>
@@ -173,11 +142,15 @@ export function App() {
         <section id="method" className="method section-pad">
           <div className="method__title"><p className="eyebrow eyebrow--light">The $100K Med Rep Method</p><h2>How it works.</h2></div>
           <div className="method__steps">
-            <article><b>01</b><p className="method__stage">Access</p><h3>Understand the field</h3><p>Learn what hiring managers look for and how your sales or healthcare experience fits a pharmaceutical sales role.</p></article>
-            <article><b>02</b><p className="method__stage">Strategy</p><h3>Build your strategy</h3><p>Focus your résumé, networking, and interview preparation on the roles you want.</p></article>
-            <article><b>03</b><p className="method__stage">Momentum</p><h3>Make your move</h3><p>Put your plan into practice with the level of training and coaching that fits your next career step.</p></article>
+            <article><b>01</b><h3>Find your fit</h3><p>Identify the roles that match your experience and goals.</p></article>
+            <article><b>02</b><h3>Build your plan</h3><p>Focus your résumé, networking, and interview preparation.</p></article>
+            <article><b>03</b><h3>Make your move</h3><p>Apply your plan with the coaching support you choose.</p></article>
           </div>
-          <Button />
+          <details id="programs" className="program-options">
+            <summary>Compare coaching options and prices</summary>
+            <div className="program-options__list">{programs.map(p => <article key={p.name}><div><h3>{p.name}</h3><p>{p.note}</p></div><strong>{p.price}</strong></article>)}</div>
+            <p>Confirm current inclusions, pricing, and terms on your call.</p>
+          </details>
         </section>
 
         <section id="testimonials" className="testimonials section-pad" aria-labelledby="testimonials-title">
@@ -185,29 +158,18 @@ export function App() {
             <h2 id="testimonials-title">Client results</h2>
           </div>
           <div className="testimonials__grid">
-            {testimonials.map((item, index) => <article key={item.name} className="testimonial">
-              <span className="testimonial__number">0{index + 1}</span>
+            {testimonials.map((item) => <article key={item.name} className="testimonial">
               <p className="testimonial__path">{item.path}</p>
               <blockquote>“{item.quote}”</blockquote>
-              <p className="testimonial__story">{item.story}</p>
+              <details className="testimonial__details"><summary>Read the result</summary><p className="testimonial__story">{item.story}</p></details>
               <p className="testimonial__person"><strong>{item.name}</strong><span>{item.location}</span></p>
             </article>)}
           </div>
           <p className="testimonials__source">Excerpts and story summaries from <a href={testimonialsUrl}>The Pharma Coach’s client stories</a>. Individual results vary.</p>
         </section>
 
-        <section id="programs" className="programs section-pad">
-          <div className="centered-heading"><p className="eyebrow">Choose your support level</p><h2>Stop piecing together generic advice. Build one focused pharma strategy.</h2><p>Discuss the current program details and pricing on your call.</p></div>
-          <div className="program-grid">
-            {programs.map((p) => <article key={p.name} className={p.featured ? "program-card program-card--featured" : "program-card"}>
-              <span>{p.tier}</span><h3>{p.name}</h3><strong>{p.price}</strong><p>{p.note}</p>
-            </article>)}
-          </div>
-          <div className="programs__action"><Button /></div>
-        </section>
-
         <section className="faq section-pad">
-          <div><p className="eyebrow eyebrow--light">Before you decide</p><h2>Is pharmaceutical sales the right next step for you?</h2><p>Start with the questions sales professionals, healthcare workers and career changers ask when they are ready to enter or advance in the field.</p></div>
+          <div><h2>Your questions, answered.</h2></div>
           <div className="accordion">
             {objections.map(([q, a], i) => <article key={q}>
               <button aria-expanded={active === i} onClick={() => setActive(active === i ? -1 : i)}><span>{q}</span><b aria-hidden="true">{active === i ? "−" : "+"}</b></button>
@@ -217,7 +179,7 @@ export function App() {
         </section>
 
         <section className="final-cta section-pad">
-          <div><p className="eyebrow">Your next chapter</p><h2>Ready to make your experience count in pharma?</h2><p>Find out whether pharmaceutical sales fits you—and what your clearest path into the field looks like.</p></div>
+          <div><h2>Get clear on your next move.</h2><p>A 45-minute discovery call with Jebb. $25. Discuss your fit and next steps before choosing a coaching program.</p></div>
           <Button />
         </section>
       </main>

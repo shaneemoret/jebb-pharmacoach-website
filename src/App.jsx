@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ArrowRight, List, X } from "@phosphor-icons/react";
 import CareerComparison from "./CareerComparison";
 
+import { Counter } from "./Counter.jsx";
 const A = `${import.meta.env.BASE_URL}assets/source/`;
 const bookingUrl = "https://medrepcollege.com/secure-your-spot";
 export const BOOKING_URL = bookingUrl;
@@ -42,7 +43,7 @@ const programs = [
   { tier: "High touch", name: "VIP Signature Access", price: "$5,799", url: "https://www.thepharmacoach.com/pharmaceutical-sales-vip-mentorship", note: "A customized pharmaceutical-sales career strategy with direct, high-touch mentorship." },
 ];
 
-const objections = [
+export const objections = [
   ["Can I move into pharma without pharma experience?", "Yes, some roles accept experience from other fields. Sales, healthcare, and teaching can offer transferable skills. Requirements vary by employer and role."],
   ["Why am I applying but not getting interviews?", "Your résumé, target roles, or networking approach may not show how your experience fits. Jebb helps you identify the gaps rather than simply send more applications."],
   ["What makes this different from generic career advice?", "Jebb brings medical-sales hiring and training experience to your résumé, networking, and interview preparation. The focus is on this industry and your next role."],
@@ -98,7 +99,7 @@ export function Header() {
     ["The Method", "#method"],
     ["Testimonials", "#testimonials"],
     ["Blog", `${import.meta.env.BASE_URL}blog`],
-    ["About", "#about"],
+    ["About", `${import.meta.env.BASE_URL}about`],
   ];
   return (
     <header className="site-header">
@@ -183,9 +184,9 @@ export function App() {
           </div>
           <section className="results-strip" aria-label="Results reported by Med Rep College">
             <dl>
-              <div><dt>650+</dt><dd>Medical-sales placements</dd></div>
-              <div><dt>83 days</dt><dd>Reported average to placement</dd></div>
-              <div><dt>$124,600</dt><dd>Reported average first-year OTE</dd></div>
+              <div><dt><Counter value="650+" /></dt><dd>Medical-sales placements</dd></div>
+              <div><dt><Counter value="83 days" /></dt><dd>Reported average to placement</dd></div>
+              <div><dt><Counter value="$124,600" /></dt><dd>Reported average first-year OTE</dd></div>
             </dl>
           </section>
           <div className="student-videos" aria-label="Student video testimonials">

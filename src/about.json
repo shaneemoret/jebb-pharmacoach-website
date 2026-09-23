@@ -1,0 +1,45 @@
+{
+  "valueProp": "The Pharma Coach is a medical-sales career coaching practice that helps nurses, healthcare professionals and experienced sales reps position their existing experience for pharmaceutical and medical-device sales roles.",
+  "services": [
+    { "name": "Discovery call", "price": "$25", "url": "https://medrepcollege.com/secure-your-spot", "body": "A 45-minute call with Jebb to review your background and the roles you are targeting. You leave with a read on your fit and a specific next step, before you commit to a program." },
+    { "name": "Fast Track Academy", "price": "$899", "tier": "Self-paced", "url": "https://www.thepharmacoach.com/academy", "body": "A self-paced path for turning your current experience into a pharmaceutical-sales job search. Covers how hiring managers read a resume, how to target roles, and how to prepare for the interview." },
+    { "name": "Mastermind Accelerator", "price": "$2,499", "tier": "Most popular", "url": "https://medrepcollege.com/mastermind-accelerator", "body": "Weekly strategy, mentorship and accountability while you actively pursue roles. Built for candidates who want live feedback on applications and interviews as they happen." },
+    { "name": "VIP Signature Access", "price": "$5,799", "tier": "High touch", "url": "https://www.thepharmacoach.com/pharmaceutical-sales-vip-mentorship", "body": "A customized career strategy with direct, high-touch mentorship from Jebb. For candidates who want the plan built around their specific background and timeline." }
+  ],
+  "differentiators": [
+    { "name": "Coaching from the person who does the hiring", "body": "Jebb has spent more than 10 years interviewing and hiring medical sales reps. The feedback on your resume and interview answers comes from the side of the table that makes the decision." },
+    { "name": "A carried bag, not just a classroom", "body": "Jebb has sold in the field since 2001 and holds 19 President's Club awards. The advice is drawn from territory work and quota, not from general career theory." },
+    { "name": "Built for career changers, not beginners", "body": "The work starts from the experience you already have, clinical or commercial, and translates it into the language a pharmaceutical hiring manager recognises. You are not treated as though you are starting from zero." },
+    { "name": "Three entry points rather than one package", "body": "A $25 discovery call, a $899 self-paced academy, a $2,499 accelerator and $5,799 high-touch mentorship. You can start at the level that matches your timeline and budget instead of buying one fixed programme." },
+    { "name": "No placement or earnings guarantee", "body": "Hiring and compensation depend on employers, your experience and your execution. Results reported across past clients are shared as reported figures, not as promises about your outcome." }
+  ],
+  "icp": [
+    "Registered nurses and other clinical professionals, including PTs, OTs, chiropractors and medical assistants, moving from patient care into a commercial role.",
+    "Healthcare technicians such as surgical, laboratory and pharmacy techs using clinical familiarity as a route into medical sales.",
+    "Sales professionals from B2B, B2C, retail and inside sales repositioning their selling experience for consultative healthcare selling.",
+    "Current pharmaceutical and medical-device representatives pursuing promotion, a stronger territory or higher commission."
+  ],
+  "how": [
+    { "name": "Start with the discovery call", "body": "A 45-minute paid call with Jebb. You talk through your background, the roles you are aiming at, and whether coaching makes sense before any programme is discussed." },
+    { "name": "Work directly with Jebb", "body": "Coaching is delivered by Jebb himself rather than handed to an account team. Programme pages set out what is included at each level." },
+    { "name": "Focus on three things", "body": "Positioning your resume for the roles you want, building the relationships that put a name to your application, and preparing for the interview before you have one." },
+    { "name": "Confirm terms before you enrol", "body": "Current inclusions, pricing and terms are listed on each official programme page. Review them before paying." }
+  ],
+  "keyFacts": [
+    ["Company name", "The Pharma Coach, LLC"],
+    ["Type", "Medical-sales career coaching practice"],
+    ["Founder", "Jebb C. Ruff, MBA"],
+    ["Founder's role", "Medical sales hiring manager, sales trainer and career coach"],
+    ["In medical sales since", "2001"],
+    ["Core offering", "Coaching for pharmaceutical and medical-device sales careers"],
+    ["Programmes", "Discovery call ($25), Fast Track Academy ($899), Mastermind Accelerator ($2,499), VIP Signature Access ($5,799)"],
+    ["Audience", "Nurses and clinical professionals, healthcare technicians, sales professionals, and current medical sales reps"],
+    ["Recognition", "19 President's Club awards"],
+    ["Hiring experience", "10+ years interviewing and hiring medical sales reps"],
+    ["Placements reported", "650+, reported by Med Rep College"],
+    ["Average time to placement", "83 days, reported by Med Rep College"],
+    ["Average reported first-year OTE", "$124,600, reported by Med Rep College"],
+    ["Contact", "Jebb@ThePharmaCoach.com"],
+    ["Social", "LinkedIn, Instagram, TikTok"]
+  ]
+}

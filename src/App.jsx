@@ -145,7 +145,7 @@ export function App() {
         </section>
 
         <section id="method" className="method section-pad">
-          <div className="method__title"><p className="eyebrow eyebrow--light">The $100K Med Rep Method</p><h2>How it works.</h2></div>
+          <div className="method__title"><h2>How the $100K Med Rep Method works.</h2></div>
           <div className="method__steps">
             <article><b>01</b><h3>Find your fit</h3><p>Identify the roles that match your experience and goals.</p></article>
             <article><b>02</b><h3>Build your plan</h3><p>Focus your résumé, networking, and interview preparation.</p></article>

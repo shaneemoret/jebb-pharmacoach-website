@@ -7,9 +7,9 @@ const salaries = [
   { name: "Pharma sales first-year OTE", tag: "Med Rep College, reported across pharma and related med-sales roles", value: 124600, focus: true },
 ];
 const roles = [
-  { name: "Nursing", source: nursingSource },
+  { name: "Registered nursing", source: nursingSource },
   { name: "Traditional B2B sales", source: salesSource },
-  { name: "Pharma sales example", source: pharmaSource, focus: true },
+  { name: "Pharma sales", source: pharmaSource, focus: true },
 ];
 const demands = [
   ["Schedule", ["Hospital shifts, including nights and weekends", "Many reps work more than 40 hours a week", "Provider visits on a territory schedule"]],

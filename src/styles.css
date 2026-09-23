@@ -435,7 +435,7 @@ footer { padding-top: 36px; padding-bottom: 24px; }
 }
 /* Owner-supplied banner; put copy below the portrait on narrower screens. */
 .hero { background: var(--navy); min-height: 610px; color: var(--navy); }
-.hero__image { top: 0; left: 0; width: calc(100% + 70px); height: 100%; object-position: right top; filter: none; mask-image: none; }
+.hero__image { top: 0; left: 0; width: calc(100% + 70px); max-width: none; height: 100%; object-position: right top; filter: none; mask-image: none; }
 .hero::after { content: ""; position: absolute; inset: 0; background: none; pointer-events: none; }
 .hero__copy { z-index: 1; padding-block: 48px; transform: none; }
 .hero h1 { max-width: 54%; font-size: clamp(45px,4.7vw,68px); position: relative; top: -24px; }
@@ -444,7 +444,7 @@ footer { padding-top: 36px; padding-bottom: 24px; }
 .hero .lead { max-width: 49%; color: var(--navy); font-size: clamp(18px,1.65vw,24px); margin: 24px 0 28px; }
 @media(max-width:1100px) {
   .hero { min-height: 0; color: var(--white); }
-  .hero__image { width: calc(100% + 46px); height: 360px; object-position: 88% top; mask-image: none; }
+  .hero__image { width: calc(100% + 46px); max-width: none; height: 360px; object-position: 88% top; mask-image: none; }
   .hero::after { background: none; }
   .hero__copy { padding: 280px 24px 34px; transform: none; }
   .hero h1 { max-width: 100%; font-size: clamp(38px,9.4vw,52px); }

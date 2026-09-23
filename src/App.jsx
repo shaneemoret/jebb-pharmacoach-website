@@ -204,7 +204,7 @@ export function App() {
         </section>
 
         <section className="faq section-pad">
-          <div><h2>Your questions, answered.</h2></div>
+          <div><h2>Frequently asked questions</h2></div>
           <div className="accordion">
             {objections.map(([q, a], i) => <article key={q}>
               <button aria-expanded={active === i} onClick={() => setActive(active === i ? -1 : i)}><span>{q}</span><b aria-hidden="true">{active === i ? "−" : "+"}</b></button>

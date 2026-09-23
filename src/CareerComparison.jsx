@@ -2,9 +2,10 @@ const pharmaSource = "https://careers.amgen.com/en/job/new-york/specialty-repres
 const nursingSource = "https://www.bls.gov/ooh/healthcare/registered-nurses.htm";
 const salesSource = "https://www.bls.gov/ooh/sales/wholesale-and-manufacturing-sales-representatives.htm";
 const salaries = [
-  { name: "Nontechnical B2B sales", detail: "Wholesale and manufacturing; excludes technical/scientific products", value: 72080 },
-  { name: "Registered nursing", detail: "Registered nurses across work settings", value: 97550 },
-  { name: "Technical & scientific sales", detail: "Includes pharmaceuticals and other technical products, not pharma alone", value: 104920 },
+  { name: "Nontechnical B2B sales", tag: "BLS median", value: 72080 },
+  { name: "Registered nursing", tag: "BLS median", value: 97550 },
+  { name: "Technical & scientific sales", tag: "BLS median", value: 104920 },
+  { name: "Med-sales first-year OTE", tag: "Med Rep College, reported", value: 124600, focus: true },
 ];
 const roles = [
   { name: "Nursing", source: nursingSource },
@@ -24,17 +25,20 @@ export default function CareerComparison() {
       <h2 id="career-potential-title">Make more money, without sacrificing lifestyle and family.</h2>
       <p className="career-comparison__deck">That’s the goal. Compare the pay and the day-to-day demands to find a role that fits your life.</p>
     </div>
-    <div className="earnings-chart">
-      <div className="earnings-chart__intro"><p>U.S. median annual wages, May 2025.</p><p className="comparison-note">Technical and scientific sales covers pharma alongside other products, so it is not a pharma-only figure.</p></div>
-      <div className="earnings-chart__ranges">
-        {salaries.map((salary, index) => <div className={`salary-range salary-median salary-median--${index}`} key={salary.name}>
-          <h4>{salary.name}</h4>
-          <p className="salary-range__value">{money(salary.value)}</p>
-          <div className="salary-range__track" aria-hidden="true"><div style={{ left: 0, width: `${salary.value / 120000 * 100}%` }} /></div>
-        </div>)}
-        <div className="earnings-chart__axis" aria-hidden="true"><span>$0</span><span>$60k</span><span>$120k</span></div>
-        <p className="comparison-note">Source: U.S. Bureau of Labor Statistics, <a href={nursingSource}>nursing</a> and <a href={salesSource}>wholesale and manufacturing sales</a>. Medians, not starting pay.</p>
+    <div className="cost-chart">
+      <div className="cost-chart__label">
+        <p>Pay comparison:</p>
+        <p>U.S. median annual wages, May 2025, against reported first-year med-sales OTE</p>
       </div>
+      <div className="cost-chart__plot">
+        {salaries.map(salary => <div className={`cost-col${salary.focus ? " cost-col--focus" : ""}`} key={salary.name}>
+          <p className="cost-col__value">{money(salary.value)}</p>
+          <div className="cost-col__block" style={{ "--h": salary.value / Math.max(...salaries.map(s => s.value)) }} aria-hidden="true" />
+          <p className="cost-col__name">{salary.name}</p>
+          <p className="cost-col__tag">{salary.tag}</p>
+        </div>)}
+      </div>
+      <p className="comparison-note">The first three are U.S. Bureau of Labor Statistics medians, not starting pay: <a href={nursingSource}>nursing</a> and <a href={salesSource}>wholesale and manufacturing sales</a>. Technical and scientific sales covers pharma alongside other products, so it is not a pharma-only figure. The fourth is average first-year OTE reported by <a href="https://www.thepharmacoach.com/about">Med Rep College</a>, a different kind of figure from a BLS median.</p>
     </div>
     <section className="demands-comparison" aria-labelledby="demands-title">
       <h3 id="demands-title">What does it ask of your time?</h3>
@@ -50,7 +54,7 @@ export default function CareerComparison() {
         <tbody>
           {demands.map(([label, cells]) => <tr key={label}>
             <th scope="row">{label}</th>
-            {cells.map((cell, index) => <td key={index} className={roles[index].focus ? "is-focus" : undefined}>{cell}</td>)}
+            {cells.map((cell, index) => <td key={index} data-role={roles[index].name} className={roles[index].focus ? "is-focus" : undefined}>{cell}</td>)}
           </tr>)}
         </tbody>
       </table>

@@ -15,25 +15,25 @@ const studentVideos = [
   { name: "Kara P.", path: "Advancing in pharmaceutical sales", file: "69b5c395302795ad60dfb409.mov" },
 ];
 const officialLogos = [
-  ["logo-01.jpeg", "Sanofi"],
-  ["logo-02.png", "Edwards Lifesciences"],
-  ["logo-03.jpeg", "Lilly"],
-  ["logo-04.jpeg", "GSK"],
-  ["logo-05.jpeg", "Medtronic"],
-  ["logo-06.jpeg", "Cardinal Health"],
-  ["logo-07.jpeg", "Johnson & Johnson"],
-  ["logo-08.jpeg", "Amgen"],
-  ["logo-09.jpeg", "Bristol Myers Squibb"],
-  ["logo-10.jpeg", "Novartis"],
-  ["logo-11.png", "Boehringer Ingelheim"],
-  ["logo-12.jpeg", "AbbVie"],
-  ["logo-13.jpeg", "Pfizer"],
-  ["logo-14.png", "Henry Schein Dental"],
-  ["logo-15.png", "Boston Scientific"],
-  ["logo-16.jpeg", "Merck"],
-  ["logo-17.jpeg", "AstraZeneca"],
-  ["logo-18.jpeg", "Stryker"],
-  ["logo-19.png", "Abbott"],
+  ["logo-01.jpeg", "Sanofi", 102, 34],
+  ["logo-02.png", "Edwards Lifesciences", 142, 25],
+  ["logo-03.jpeg", "Lilly", 75, 42],
+  ["logo-04.jpeg", "GSK", 98, 35],
+  ["logo-05.jpeg", "Medtronic", 134, 26],
+  ["logo-06.jpeg", "Cardinal Health", 82, 42],
+  ["logo-07.jpeg", "Johnson & Johnson", 129, 27],
+  ["logo-08.jpeg", "Amgen", 111, 31],
+  ["logo-09.jpeg", "Bristol Myers Squibb", 75, 42],
+  ["logo-10.jpeg", "Novartis", 61, 42],
+  ["logo-11.png", "Boehringer Ingelheim", 101, 34],
+  ["logo-12.jpeg", "AbbVie", 132, 26],
+  ["logo-13.jpeg", "Pfizer", 74, 42],
+  ["logo-14.png", "Henry Schein Dental", 138, 25],
+  ["logo-15.png", "Boston Scientific", 99, 35],
+  ["logo-16.jpeg", "Merck", 106, 33],
+  ["logo-17.jpeg", "AstraZeneca", 114, 31],
+  ["logo-18.jpeg", "Stryker", 112, 31],
+  ["logo-19.png", "Abbott", 111, 31],
 ];
 
 const programs = [
@@ -120,7 +120,7 @@ function LogoStrip() {
       <button className="logo-strip__toggle" onClick={() => setPaused(!paused)} aria-label={paused ? "Play logo animation" : "Pause logo animation"}>{paused ? "Play" : "Pause"}</button>
       <div className="logo-strip__track" style={{ animationPlayState: paused ? "paused" : "running" }} aria-hidden="true">
         {[0, 1].map((copy) => <div className="logo-strip__group" key={copy}>
-          {officialLogos.map(([file, name]) => <img key={file} src={`${A}official-logo-strip/${file}`} alt="" title={name} loading="eager" decoding="async" />)}
+          {officialLogos.map(([file, name, w, h]) => <img key={file} src={`${A}official-logo-strip/${file}`} alt="" title={name} loading="eager" decoding="async" style={{ "--lw": w, "--lh": h }} />)}
         </div>)}
       </div>
     </div>
@@ -136,7 +136,7 @@ export function App() {
         <section className="hero" aria-labelledby="hero-title">
           <img className="hero__image" src={`${A}jebb-banner-owner.png`} alt="Jebb Ruff, The Pharma Coach" fetchPriority="high" />
           <div className="hero__copy">
-            <h1 id="hero-title">Start or advance your career in <span className="hero__accent">pharmaceutical sales</span>.</h1>
+            <h1 id="hero-title"><span className="hero__soft">Start or advance your career in</span> <span className="hero__accent">pharmaceutical sales</span>.</h1>
             <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles and advance in the field.</p>
             <Button />
           </div>
@@ -218,7 +218,7 @@ export function App() {
         </section>
 
         <section className="final-cta section-pad">
-          <div><h2>Take the next step.</h2><p>A 45-minute discovery call with Jebb. $25. Discuss your fit and next steps before choosing a coaching program.</p><p className="booking-note">Booking continues on Med Rep College, Jebb’s official booking site. <a href={privacyUrl}>Privacy policy</a> · <a href={termsUrl}>Terms & conditions</a></p></div>
+          <div><h2>Take the next step.</h2><p>A 45-minute discovery call with Jebb. $25. Discuss your fit and next steps before choosing a coaching program.</p></div>
           <Button />
         </section>
       </main>

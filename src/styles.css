@@ -44,10 +44,11 @@ p { line-height: 1.55; }
 .nav .button svg { width: 28px; height: 28px; padding: 6px; }
 .menu-button { display: none; width: 44px; height: 44px; align-items: center; justify-content: center; border: 0; background: none; color: var(--navy); }
 .logo-strip { position: relative; display: flex; align-items: center; height: 76px; overflow: hidden; background: var(--white); border-bottom: 1px solid var(--line); }
-.logo-strip__toggle { position: absolute; right: 6px; bottom: 2px; z-index: 1; padding: 4px 9px; border: 0; border-radius: 12px; background: var(--white); color: var(--navy); font: 12px var(--body); cursor: pointer; }
+.logo-strip__toggle { position: absolute; right: 0; bottom: 0; z-index: 1; padding: 4px 10px 4px 16px; border: 0; background: linear-gradient(90deg,transparent,var(--white) 14px); color: var(--navy); font: 12px var(--body); opacity: .7; cursor: pointer; }
+.logo-strip__toggle:hover, .logo-strip__toggle:focus-visible { opacity: 1; }
 .logo-strip__track { display: flex; align-items: center; width: max-content; animation: logo-scroll 190s linear infinite; }
 .logo-strip__group { display: flex; flex: none; align-items: center; gap: 48px; padding-right: 48px; }
-.logo-strip img { display: block; flex: none; width: 128px; height: 44px; max-width: none; object-fit: contain; object-position: center; }
+.logo-strip img { display: block; flex: none; width: calc(var(--lw,110) * var(--logo-scale,1) * 1px); height: calc(var(--lh,32) * var(--logo-scale,1) * 1px); max-width: none; object-fit: contain; object-position: center; }
 @keyframes logo-scroll { to { transform: translateX(-50%); } }
 @media(prefers-reduced-motion:reduce) { .logo-strip__track { animation: none; } }
 .results-strip { padding: 36px max(32px,calc((100vw - var(--max))/2)); background: var(--navy); color: var(--white); }
@@ -130,23 +131,9 @@ p { line-height: 1.55; }
 .career-comparison__heading h2 { max-width: 15ch; text-wrap: balance; }
 .career-comparison__deck { max-width: 640px; margin: 18px 0 0; color: var(--navy); font-size: clamp(18px,1.5vw,21px); line-height: 1.5; }
 .career-comparison__heading .lead { max-width: 710px; color: var(--navy); }
-.earnings-chart, .schedule-comparison { display: grid; grid-template-columns: .8fr 1.4fr; gap: clamp(32px,5vw,80px); margin-top: 56px; }
-.earnings-chart h3, .schedule-comparison h3 { font-size: clamp(25px,2.5vw,36px); max-width: 340px; color: var(--navy); }
-.earnings-chart__intro p, .schedule-comparison__intro p { font-size: 18px; color: var(--navy); max-width: 350px; }
-.salary-range h4 { margin: 0 0 10px; font: 650 16px var(--head); color: var(--navy); }
-.salary-range__value { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin: 0 0 18px; color: var(--navy); font: 800 clamp(25px,3vw,44px)/1.2 var(--head); letter-spacing: -.045em; }
-.salary-range__value span { font-weight: 400; }
-.salary-range__track { position: relative; height: 34px; border-radius: 999px; background: rgba(18,59,93,.08); overflow: hidden; }
-.salary-range__track > div { position: absolute; height: 100%; border-radius: inherit; background: var(--navy); }
-.salary-range--1 { margin-top: 30px; }
-.salary-median + .salary-median { margin-top: 26px; }
-.salary-median--2 .salary-range__track > div { background: var(--gold); }
-.salary-median__detail { margin: 8px 0 0; color: var(--navy); font-size: 13px; line-height: 1.4; }
 .schedule-comparison:has(.schedule-comparison__examples--three) { grid-template-columns: 1fr; }
 .schedule-comparison__examples.schedule-comparison__examples--three { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .schedule-comparison:has(.schedule-comparison__examples--three) .schedule-comparison__intro p { max-width: 700px; }
-.salary-range--1 .salary-range__track > div { background: var(--gold); }
-.earnings-chart__axis { display: flex; justify-content: space-between; margin-top: 10px; color: var(--navy); font-size: 13px; }
 .comparison-note { font-size: 14px; line-height: 1.5; color: var(--navy); }
 .comparison-note a, .schedule-comparison a { text-underline-offset: 4px; }
 .schedule-comparison { padding-top: 38px; }
@@ -160,9 +147,8 @@ p { line-height: 1.55; }
 .comparison-note--footer { max-width: 1000px; margin: 38px 0 0; }
 @media (max-width: 760px) {
   .schedule-comparison__examples.schedule-comparison__examples--three { grid-template-columns: 1fr; }
-  .earnings-chart, .schedule-comparison { grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
-  .earnings-chart__intro p, .schedule-comparison__intro p { max-width: none; }
-  .salary-range__value { font-size: clamp(24px,6.7vw,40px); }
+  .schedule-comparison { grid-template-columns: 1fr; gap: 24px; margin-top: 36px; }
+  .schedule-comparison__intro p { max-width: none; }
 }
 @media (max-width: 480px) {
   .schedule-comparison__examples { grid-template-columns: 1fr; gap: 28px; }
@@ -278,7 +264,7 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
   .wordmark strong { font-size: 15px; }
   .logo-strip { height: 68px; }
   .logo-strip__group { gap: 34px; padding-right: 34px; }
-  .logo-strip img { width: 104px; height: 38px; }
+  .logo-strip { --logo-scale: .84; }
   .hero { min-height: 690px; }
   .hero__image { object-position: 62% center; filter: brightness(.48); }
   .hero__copy { padding: 56px 24px 48px; transform: translateY(-100px); }
@@ -300,18 +286,33 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
 }
 /* Concise landing-page rhythm: detail is available without dominating the scroll. */
 .section-pad { padding-block: clamp(44px,4.5vw,68px); }
-.earnings-chart { margin-top: 26px; }
-.salary-median { display: grid; grid-template-columns: 1fr auto; column-gap: 20px; align-items: center; }
-.salary-median h4 { margin: 0; }
-.salary-median .salary-range__value { margin: 0; font-size: clamp(24px,2.6vw,36px); }
-.salary-median .salary-range__track { grid-column: 1/-1; height: 22px; margin-top: 10px; }
-.salary-median + .salary-median { margin-top: 20px; }
 .workday-details { margin-top: 24px; border-block: 1px solid var(--line); padding: 18px 0; }
 summary { cursor: pointer; font: 700 16px/1.5 var(--head); }
 .workday-details .schedule-comparison__examples { margin-top: 24px; }
+/* Cost-comparison grammar: hairline rule, a small label, then flat blocks whose
+   height is proportional to the value, with the number set directly above. */
+.cost-chart { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--navy); }
+.cost-chart__label p { margin: 0; color: var(--navy); font: 650 19px/1.35 var(--head); }
+.cost-chart__label p + p { color: rgba(18,59,93,.6); }
+.cost-chart__plot { --plot: clamp(190px,21vw,280px); display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: clamp(12px,2.2vw,34px); align-items: end; margin-top: 34px; }
+.cost-col { display: flex; flex-direction: column; justify-content: end; }
+.cost-col__value { margin: 0 0 10px; color: rgba(18,59,93,.55); font: 700 clamp(22px,2.5vw,36px)/1 var(--head); letter-spacing: -.05em; }
+.cost-col--focus .cost-col__value { color: var(--navy); font-weight: 800; font-size: clamp(26px,3.1vw,46px); }
+.cost-col__block { flex: none; height: calc(var(--h,1) * var(--plot)); background: rgba(18,59,93,.17); }
+.cost-col--focus .cost-col__block { background: var(--navy); box-shadow: inset 0 10px 0 var(--gold); }
+.cost-col__name { margin: 14px 0 0; color: rgba(18,59,93,.72); font: 650 15px/1.4 var(--head); }
+.cost-col__tag { margin: 4px 0 0; color: rgba(18,59,93,.58); font-size: 12.5px; line-height: 1.4; }
+.cost-col--focus .cost-col__name { color: var(--navy); font-weight: 800; }
+.cost-chart .comparison-note { max-width: 760px; margin-top: 26px; }
+@media(max-width:620px) {
+  .cost-chart__plot { --plot: clamp(150px,38vw,200px); grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 30px; gap: 12px; }
+  .cost-col__value { font-size: clamp(19px,5.4vw,28px); }
+  .cost-col__tag { font-size: 11.5px; }
+  .cost-col__name { font-size: 13px; }
+}
 .demands-comparison { margin-top: 36px; }
 .demands-comparison > h3 { font-size: clamp(24px,2.5vw,32px); color: var(--navy); }
-.demand-matrix { width: 100%; margin-top: 22px; border-collapse: collapse; text-align: left; }
+.demand-matrix { width: 100%; margin-top: 26px; border-collapse: collapse; text-align: left; }
 .demand-matrix th, .demand-matrix td { padding: 15px 20px; vertical-align: top; border-bottom: 1px solid var(--line); }
 .demand-matrix thead th { padding-block: 0 12px; border-bottom: 2px solid var(--navy); color: var(--navy); font: 750 16px/1.3 var(--head); }
 .demand-matrix thead th a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
@@ -324,8 +325,9 @@ summary { cursor: pointer; font: 700 16px/1.5 var(--head); }
   .demand-matrix, .demand-matrix thead, .demand-matrix tbody, .demand-matrix tr, .demand-matrix th, .demand-matrix td { display: block; }
   .demand-matrix thead { display: none; }
   .demand-matrix tbody th { width: auto; padding: 18px 0 8px; border-bottom: 0; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
-  .demand-matrix td { padding: 0 0 10px; border-bottom: 0; }
-  .demand-matrix td::before { display: block; margin-bottom: 2px; color: var(--navy); font: 700 13px var(--head); content: attr(data-role); }
+  .demand-matrix td { padding: 0 0 12px; border-bottom: 0; }
+  .demand-matrix td::before { display: block; margin-bottom: 1px; color: var(--navy); font: 700 13px/1.3 var(--head); content: attr(data-role); }
+  .demand-matrix td.is-focus { padding-inline: 10px; }
   .demand-matrix tbody tr { border-bottom: 1px solid var(--line); padding-bottom: 8px; }
 }
 .comparison-note--footer { margin-top: 16px; }
@@ -353,6 +355,8 @@ summary { cursor: pointer; font: 700 16px/1.5 var(--head); }
   .program-options__cards .program-card--featured { margin-block: 0; }
 }
 .testimonials__grid { margin-top: 28px; }
+.testimonial { padding-top: 18px; border-top: 2px solid var(--navy); }
+.testimonial blockquote { margin-top: 2px; color: var(--navy); }
 .student-videos { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; margin: 28px 0 40px; }
 .student-video video { display: block; width: 100%; height: auto; object-fit: contain; background: transparent; }
 .student-video h3 { font-size: 22px; margin-top: 16px; color: var(--navy); }
@@ -360,10 +364,15 @@ summary { cursor: pointer; font: 700 16px/1.5 var(--head); }
 .student-video > a { font-size: 13px; color: var(--navy); text-underline-offset: 3px; }
 @media(max-width:760px) { .student-videos { grid-template-columns: 1fr; gap: 28px; } .student-video__media { max-width: 340px; } }
 .testimonial__path { margin-top: 0; }
-.testimonial__details { margin: 16px 0; }
-.testimonial__details summary { color: var(--navy); font: 600 14px var(--body); }
+.testimonial__details { margin: 14px 0 0; }
+.testimonial__details[open] { margin-bottom: 4px; }
+.testimonial__details summary { display: flex; align-items: center; gap: 8px; color: var(--navy); font: 700 13px var(--head); letter-spacing: .04em; text-transform: uppercase; list-style: none; }
+.testimonial__details summary::-webkit-details-marker { display: none; }
+.testimonial__details summary::after { content: "+"; font-size: 16px; font-weight: 700; line-height: 1; }
+.testimonial__details[open] summary::after { content: "\2212"; }
+.testimonial__details summary:hover { color: var(--ink); }
 .testimonial__story { margin: 12px 0; }
-.testimonial__person { margin-top: 12px; }
+.testimonial__person { margin: auto 0 0; padding-top: 18px; }
 .faq { gap: 40px; }
 .faq h2 { max-width: 340px; }
 .accordion article > button { padding-block: 18px; }
@@ -382,8 +391,6 @@ footer { padding-top: 36px; padding-bottom: 24px; }
   .method__steps p { margin-top: 8px; }
   .testimonials__grid { gap: 26px; }
   .testimonial blockquote { font-size: 21px; }
-  .salary-median h4 { font-size: 14px; }
-  .salary-median .salary-range__value { font-size: 26px; }
 }
 @media(max-width:560px) {
   .coach { grid-template-columns: 1fr; }
@@ -395,16 +402,18 @@ footer { padding-top: 36px; padding-bottom: 24px; }
 .hero__image { top: 0; left: 0; width: 100%; height: 100%; object-position: calc(100% + 24px) top; filter: none; mask-image: none; }
 .hero::after { content: ""; position: absolute; inset: 0; background: none; pointer-events: none; }
 .hero__copy { z-index: 1; padding-block: 48px; transform: none; }
-.hero h1 { max-width: 62%; font-size: clamp(42px,4.6vw,66px); position: relative; top: -24px; }
-.hero__accent { position: relative; white-space: nowrap; }
-.hero__accent::after { content: ""; position: absolute; left: 0; right: 0; bottom: .06em; height: .09em; background: var(--gold); }
+.hero h1 { max-width: 54%; font-size: clamp(45px,4.7vw,68px); position: relative; top: -24px; }
+.hero__soft { color: rgba(18,59,93,.62); font-weight: 650; }
+.hero__accent { color: var(--navy); font-weight: 800; }
 .hero .lead { max-width: 49%; color: var(--navy); font-size: clamp(18px,1.65vw,24px); margin: 24px 0 28px; }
 @media(max-width:1100px) {
   .hero { min-height: 0; color: var(--white); }
   .hero__image { width: 100%; height: 360px; object-position: calc(87% + 24px) top; mask-image: none; }
   .hero::after { background: none; }
   .hero__copy { padding: 280px 24px 34px; transform: none; }
-  .hero h1 { max-width: 100%; font-size: clamp(35px,8.7vw,48px); }
+  .hero h1 { max-width: 100%; font-size: clamp(38px,9.4vw,52px); }
+  .hero__soft { color: rgba(247,246,241,.82); }
+  .hero__accent { color: var(--white); }
   .hero .lead { max-width: 100%; color: var(--white); font-size: 18px; margin: 18px 0 22px; }
 }
 @media(prefers-reduced-motion: reduce) {
@@ -414,13 +423,13 @@ footer { padding-top: 36px; padding-bottom: 24px; }
 
 /* Owner's pre-shipping checklist: flat surfaces and visible offer rows. */
 .button, .button svg, .button--gold, .logo-strip__toggle,
-.salary-range__track, .salary-range__track > div,
 .student-video video { border-radius: 0; }
 .button, .brand-strip a { transition: none; }
 .button--gold, .button--gold:focus-visible,
 .program-options__cards .program-card--featured { box-shadow: none; }
 .button--gold:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
-.logo-strip img { mix-blend-mode: multiply; }
+.logo-strip, .logo-strip__toggle { background: #fff; }
+.logo-strip img { mix-blend-mode: normal; }
 .method__steps { grid-template-columns: 1fr; gap: 0; }
 .method__steps article { display: grid; grid-template-columns: 48px minmax(180px,.8fr) 1.4fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.25); }
 .method__steps h3, .method__steps p { margin: 0; }

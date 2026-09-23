@@ -95,15 +95,15 @@ function StudentVideo({ student }) {
 export function Header() {
   const [open, setOpen] = useState(false);
   const links = [
-    ["Programs", "#programs"],
-    ["The Method", "#method"],
-    ["Testimonials", "#testimonials"],
+    ["Programs", `${import.meta.env.BASE_URL}#programs`],
+    ["The Method", `${import.meta.env.BASE_URL}#method`],
+    ["Testimonials", `${import.meta.env.BASE_URL}#testimonials`],
     ["Blog", `${import.meta.env.BASE_URL}blog`],
     ["About", `${import.meta.env.BASE_URL}about`],
   ];
   return (
     <header className="site-header">
-      <a className="wordmark" href="#top" aria-label="The Pharma Coach home"><strong>THE PHARMA COACH</strong></a>
+      <a className="wordmark" href={`${import.meta.env.BASE_URL}#top`} aria-label="The Pharma Coach home"><strong>THE PHARMA COACH</strong></a>
       <button className="menu-button" aria-expanded={open} aria-controls="primary-nav" onClick={() => setOpen(!open)}>
         <span className="sr-only">Toggle navigation</span>{open ? <X size={25} /> : <List size={25} />}
       </button>

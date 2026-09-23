@@ -1,4 +1,5 @@
 const pharmaSource = "https://careers.amgen.com/en/job/new-york/specialty-representative-senior-specialty-representive-respiratory-biologic-poughkeepsie-ny/87/97936512208";
+import { Clock, House, Lightning } from "@phosphor-icons/react";
 const nursingSource = "https://www.bls.gov/ooh/healthcare/registered-nurses.htm";
 const salesSource = "https://www.bls.gov/ooh/sales/wholesale-and-manufacturing-sales-representatives.htm";
 const salaries = [
@@ -25,14 +26,22 @@ export default function CareerComparison() {
         <p className="comparison-note">BLS: <a href={nursingSource}>nursing</a> / <a href={salesSource}>wholesale and manufacturing sales</a>. Medians—not starting salaries or guaranteed income.</p>
       </div>
     </div>
-    <details className="workday-details">
-      <summary>What changes in your workday?</summary>
-      <div className="schedule-comparison__examples schedule-comparison__examples--three">
-        <article><p className="eyebrow">Nursing</p><h4>Patient care.<br />Physical demands.</h4><p>Bedside work can mean lifting patients, prolonged standing, and nights, weekends, or holidays. Office and school nursing can have more regular hours.</p><a href={nursingSource}>Nursing work environment</a></article>
-        <article><p className="eyebrow">Traditional B2B sales</p><h4>Prospecting.<br />Quota pressure.</h4><p>Customer acquisition, sales targets, and territory travel. Many wholesale/manufacturing reps work more than 40 hours a week.</p><a href={salesSource}>Sales work environment</a></article>
-        <article><p className="eyebrow">Pharma sales example</p><h4>Clinical conversations.<br />Territory ownership.</h4><p>Amgen’s specialty role combines provider relationships, performance targets, and territory travel, including occasional overnight training and meetings.</p><a href={pharmaSource}>Example pharma role</a></article>
+    <section className="demands-comparison" aria-labelledby="demands-title">
+      <h3 id="demands-title">What does it ask of your time?</h3>
+      <p className="comparison-note">Compare the trade-offs—not just the paycheck. These are work patterns, not measured scores or guaranteed hours at home.</p>
+      <div className="demands-grid">
+        {[
+          {name: "Nursing", source: nursingSource, rows: ["Hospital shifts can include nights, weekends and holidays.", "On-call work can interrupt time at home; schedules vary by setting.", "Patient care, prolonged standing and lifting."]},
+          {name: "Traditional B2B sales", source: salesSource, rows: ["Many wholesale/manufacturing reps work more than 40 hours a week.", "Large territories can require days or weeks away from home.", "Prospecting, sales quotas and customer needs."]},
+          {name: "Pharma sales example", source: pharmaSource, rows: ["Provider visits and territory responsibilities shape the workday.", "This Amgen role includes travel and occasional overnight meetings or training.", "Performance targets, clinical knowledge and provider relationships."]},
+        ].map(item => <article className="demands-card" key={item.name}>
+          <h4>{item.name}</h4>
+          <dl>{[[Clock, "Schedule"], [House, "Time away from home"], [Lightning, "Job demands"]].map(([Icon, label], index) => <div key={label}><dt><Icon size={24} aria-hidden="true" /><span>{label}</span></dt><dd>{item.rows[index]}</dd></div>)}</dl>
+          <a href={item.source}>See source</a>
+        </article>)}
       </div>
-    </details>
+      <p className="demands-takeaway">Before accepting an offer, ask: How many overnight trips? Any evenings or weekends? What are the territory and performance expectations?</p>
+    </section>
     <p className="comparison-note comparison-note--footer">A career change does not guarantee higher pay, fewer hours, or less stress. Compare actual offers and schedules.</p>
   </section>;
 }

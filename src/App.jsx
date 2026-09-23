@@ -96,6 +96,7 @@ function Header() {
     ["Programs", "#programs"],
     ["The Method", "#method"],
     ["Testimonials", "#testimonials"],
+    ["Blog", `${import.meta.env.BASE_URL}blog`],
     ["About", "#about"],
   ];
   return (

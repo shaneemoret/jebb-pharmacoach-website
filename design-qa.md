@@ -42,6 +42,8 @@ Focused review of the hero in the comparison image found the head crop and the b
 
 ## Follow-up polish
 
+Testimonial visibility correction: rechecked the live official success-stories page and confirmed the three local entries for Rochelle S., Emily T., and Alex J. Added a “Testimonials” navigation link and changed the section label from “Client stories” to “Testimonials.” The 777px in-app Browser render shows all three entries and a working anchor; the new navigation item fits without crowding or overflow. Quotes, summaries, source link, and booking CTA are unchanged.
+
 - If Jebb has approved original field or coaching photography, replace the generated editorial images before a production launch. This is not a blocker for the local design preview.
 - If Jebb supplies a genuine executive headshot, use it in place of the authentic candid crop; do not revive the synthetic lookalike.
 - The 390px program-heading scale could be reduced slightly in a future copy-polish pass, but it remains legible and does not hide controls.

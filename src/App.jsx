@@ -73,6 +73,7 @@ function Header() {
   const links = [
     ["Programs", "#programs"],
     ["The Method", "#method"],
+    ["Testimonials", "#testimonials"],
     ["About", "https://www.thepharmacoach.com/about"],
   ];
   return (
@@ -183,7 +184,7 @@ export function App() {
 
         <section id="testimonials" className="testimonials section-pad" aria-labelledby="testimonials-title">
           <div className="testimonials__intro">
-            <p className="eyebrow">Client stories</p>
+            <p className="eyebrow">Testimonials</p>
             <h2 id="testimonials-title">What clients say about working with Jebb.</h2>
             <p>Real career moves from sales, nursing and medical-sales backgrounds.</p>
           </div>

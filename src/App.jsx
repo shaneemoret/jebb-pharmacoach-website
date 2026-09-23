@@ -74,7 +74,7 @@ function Header() {
     ["Programs", "#programs"],
     ["The Method", "#method"],
     ["Testimonials", "#testimonials"],
-    ["About", "https://www.thepharmacoach.com/about"],
+    ["About", "#about"],
   ];
   return (
     <header className="site-header">
@@ -119,22 +119,16 @@ export function App() {
 
         <LogoStrip />
 
-        <section className="brand-strip" aria-label="What we help you do">
-          <a href="#problem"><span>01</span><strong>Understand the field</strong><p>See how your sales or healthcare experience translates to pharmaceutical sales.</p><ArrowRight size={19} aria-hidden="true" /></a>
-          <a href="#method"><span>02</span><strong>Build your strategy</strong><p>Position your strengths with the $100K Med Rep Method.</p><ArrowRight size={19} aria-hidden="true" /></a>
-          <a href="#programs"><span>03</span><strong>Make your move</strong><p>Choose the right level of coaching for your next career step.</p><ArrowRight size={19} aria-hidden="true" /></a>
-        </section>
-
         <section id="problem" className="problem section-pad">
           <div className="image-frame image-frame--portrait"><img src={`${A}pharma-nurse-work-from-home-v6-approved.png`} alt="Blonde healthcare professional planning her next career move at a laptop" /></div>
           <div className="problem__copy">
             <p className="eyebrow">Your background is not the problem</p>
-            <h2>Pharma hiring managers can’t select what they can’t see.</h2>
-            <p className="lead">You already know how to sell, care for people or teach complex ideas. Your application just isn’t translating those strengths into a pharma-ready story.</p>
+            <h2>Get help landing your next pharma sales role.</h2>
+            <p className="lead">Jebb helps you improve your résumé, build a networking strategy, and prepare for interviews. Show hiring managers how your sales or healthcare experience fits the job.</p>
             <ol className="number-list">
-              <li><span>01</span><div><strong>You already sell</strong><p>But your results and relationship skills are not connected to pharmaceutical value.</p></div></li>
-              <li><span>02</span><div><strong>You already understand healthcare</strong><p>But clinical experience alone does not prove you can win business.</p></div></li>
-              <li><span>03</span><div><strong>You already make complexity simple</strong><p>But your resume and interviews do not make that advantage obvious.</p></div></li>
+              <li><span>01</span><div><strong>Make your résumé relevant</strong><p>Show the experience and results that matter for the role you want.</p></div></li>
+              <li><span>02</span><div><strong>Know who to reach out to</strong><p>Build a focused approach to connecting with recruiters and hiring managers.</p></div></li>
+              <li><span>03</span><div><strong>Walk into interviews prepared</strong><p>Explain your strengths through clear examples from your own experience.</p></div></li>
             </ol>
           </div>
         </section>
@@ -166,18 +160,31 @@ export function App() {
             <article><span>02</span><h3>More control</h3><p>Pursue a field role with more ownership of your territory, schedule and professional relationships.</p></article>
             <article><span>03</span><h3>A better fit</h3><p>Use your science, relationship and communication strengths in a career built around influence.</p></article>
           </div>
-          <div className="photo-band">
-            <div className="photo-band__image"><img src={`${A}jebb-authentic-family-candid.jpg`} alt="Jebb Ruff in an authentic candid photograph" /></div>
-            <blockquote><p>Pharmaceutical sales rewards people who understand the science, earn trust and make complex information simple.</p><cite>The Pharma Coach approach</cite></blockquote>
+        </section>
+
+        <section id="about" className="coach section-pad" aria-labelledby="coach-title">
+          <div className="coach__portrait"><img src={`${A}jebb-official-about-portrait.webp`} alt="Jebb Ruff, The Pharma Coach" width="800" height="971" loading="lazy" /></div>
+          <div className="coach__copy">
+            <p className="eyebrow">Meet your coach</p>
+            <h2 id="coach-title">Jebb Ruff, MBA</h2>
+            <p className="coach__role">Medical sales hiring manager, sales trainer, and career coach.</p>
+            <p>Jebb built his career in pharmaceutical, medical device, and biotech sales. He has spent more than a decade interviewing and hiring medical sales professionals, giving him a view of what employers look for when they choose a candidate.</p>
+            <p>He also knows what it feels like to be on the outside: his own move into the industry took more than a year. Today, he helps professionals prepare for their next role through interview planning and practical sales coaching.</p>
+            <dl className="coach__credentials">
+              <div><dt>Since 2001</dt><dd>Career in medical sales</dd></div>
+              <div><dt>19 awards</dt><dd>President’s Club recognition</dd></div>
+              <div><dt>10+ years</dt><dd>Interviewing and hiring reps</dd></div>
+            </dl>
+            <a className="coach__source" href="https://www.thepharmacoach.com/about">Read Jebb’s full background<ArrowRight size={16} aria-hidden="true" /></a>
           </div>
         </section>
 
         <section id="method" className="method section-pad">
-          <div className="method__title"><p className="eyebrow eyebrow--light">The $100K Med Rep Method</p><h2>From “Could I do this?” to a focused pharmaceutical-sales plan.</h2></div>
+          <div className="method__title"><p className="eyebrow eyebrow--light">The $100K Med Rep Method</p><h2>How it works.</h2></div>
           <div className="method__steps">
-            <article><b>01</b><h3>Diagnose fit</h3><p>Confirm that pharmaceutical sales matches how you think, work and want to live.</p></article>
-            <article><b>02</b><h3>Translate</h3><p>Turn sales, clinical or teaching experience into a credible pharmaceutical story.</p></article>
-            <article><b>03</b><h3>Get selected</h3><p>Build the access, interviews and execution discipline required to compete.</p></article>
+            <article><b>01</b><p className="method__stage">Access</p><h3>Understand the field</h3><p>Learn what hiring managers look for and how your sales or healthcare experience fits a pharmaceutical sales role.</p></article>
+            <article><b>02</b><p className="method__stage">Strategy</p><h3>Build your strategy</h3><p>Focus your résumé, networking, and interview preparation on the roles you want.</p></article>
+            <article><b>03</b><p className="method__stage">Momentum</p><h3>Make your move</h3><p>Put your plan into practice with the level of training and coaching that fits your next career step.</p></article>
           </div>
           <Button />
         </section>

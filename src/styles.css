@@ -94,6 +94,16 @@ p { line-height: 1.55; }
 .photo-band blockquote p { font: 650 clamp(27px,3vw,46px)/1.2 var(--head); letter-spacing: -.04em; }
 .photo-band cite { font: 700 12px var(--head); letter-spacing: .15em; text-transform: uppercase; color: var(--navy); }
 .method { background: var(--navy); color: var(--white); }
+.coach { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: clamp(44px,6vw,88px); align-items: center; background: rgba(18,59,93,.055); }
+.coach__portrait { max-width: 500px; height: 100%; max-height: 680px; align-self: start; }
+.coach__portrait img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; object-position: center top; }
+.coach__copy h2 { color: var(--navy); }
+.coach__role { margin: 22px 0; color: var(--navy); font: 650 clamp(19px,1.7vw,24px)/1.4 var(--head); }
+.coach__copy > p:not(.eyebrow):not(.coach__role) { max-width: 690px; font-size: 18px; }
+.coach__credentials { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin: 32px 0; padding-top: 26px; border-top: 1px solid var(--line); }
+.coach__credentials dt { color: var(--navy); font: 800 clamp(19px,1.8vw,25px)/1.2 var(--head); }
+.coach__credentials dd { margin: 8px 0 0; color: var(--navy); font-size: 14px; line-height: 1.4; }
+.coach__source { display: inline-flex; align-items: center; gap: 12px; color: var(--navy); font-size: 15px; text-underline-offset: 4px; }
 .method__title { display: grid; grid-template-columns: .55fr 1.45fr; gap: 34px; align-items: start; }
 .method__title h2 { max-width: 950px; }
 .method__steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin: 54px 0 34px; background: rgba(255,255,255,.35); border: 1px solid rgba(255,255,255,.35); }
@@ -101,6 +111,8 @@ p { line-height: 1.55; }
 .method__steps b { color: var(--gold); font: 800 44px var(--head); }
 .method__steps h3 { margin-top: 26px; font-size: 26px; }
 .method__steps p { color: var(--white); }
+.method__steps .method__stage { margin: 24px 0 8px; color: var(--gold); font: 750 12px var(--head); text-transform: uppercase; letter-spacing: .15em; }
+.method__stage + h3 { margin-top: 0; }
 .method .button { background: var(--gold); border-color: var(--gold); color: var(--ink); }
 .testimonials { background: var(--white); }
 .testimonials__intro { display: grid; grid-template-columns: 1fr 1.5fr; column-gap: 60px; align-items: end; }
@@ -179,7 +191,9 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
   .hero .lead { max-width: 540px; font-size: 21px; }
   .brand-strip { grid-template-columns: 1fr; padding: 0 28px; }
   .brand-strip a { min-height: 138px; padding: 25px 0; border-bottom: 1px solid var(--line); }
-  .problem, .shift__inner, .faq { grid-template-columns: 1fr; }
+  .problem, .shift__inner, .faq, .coach { grid-template-columns: 1fr; }
+  .coach__portrait { width: 100%; max-width: 420px; }
+  .coach__portrait img { height: auto; min-height: 0; aspect-ratio: 800 / 971; }
   .problem .image-frame { max-width: 600px; }
   .image-frame img { height: min(600px,90vw); }
   .outcomes__intro, .method__title { grid-template-columns: 1fr; }
@@ -222,6 +236,7 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .7fr; gap: 55px; paddi
   .photo-band__image { width: 100%; height: 400px; }
   .photo-band blockquote { padding: 32px 24px; }
   .method__steps article { padding: 28px; }
+  .coach__credentials { gap: 14px; }
   .final-cta .button { width: 100%; }
   footer { grid-template-columns: 1fr 1fr; gap: 38px 22px; padding-inline: 24px; }
 }

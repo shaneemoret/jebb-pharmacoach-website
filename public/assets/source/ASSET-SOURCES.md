@@ -1,5 +1,7 @@
 # Asset sources
 
+- `jebb-official-about-portrait.webp` — portrait currently displayed beside Jebb's bio on https://www.thepharmacoach.com/about, retrieved 2026-09-22 from https://static.wixstatic.com/media/4d2730_82c6357134284d0aa9203665630b6e91~mv2.webp. Reused directly; no generated face or photo alteration. The new bio and credentials are paraphrased from that same official About page; these are Jebb's published claims, not independently audited credentials. The page's differing placement averages were not imported as a promised hiring deadline.
+
 - `pharma-nurse-work-from-home-v6-approved.png` — supplied and approved by the site owner on 2026-09-21.
 - `jebb-authentic-family-candid.jpg` — resized, metadata-stripped derivative of the candid `Career Coaching Business Coaching` iPhone photo published on the official [About Jebb Ruff](https://www.thepharmacoach.com/about) page, retrieved 2026-09-21. The original file's embedded location and device metadata were removed before repository inclusion.
 - `jebb-executive-portrait-review.png` — rejected AI-edited local review candidate derived from `jebb-authentic-family-candid.jpg`, using Jebb (the person on the right) as the identity reference. Wardrobe and background are synthetic; this is not a documentary photo or evidence of an actual photo shoot. Shanee rejected its likeness on 2026-09-22. It is no longer used on the page and must not be published.

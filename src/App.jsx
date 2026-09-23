@@ -8,6 +8,12 @@ const privacyUrl = "https://medrepcollege.com/privacy";
 const termsUrl = "https://medrepcollege.com/terms";
 const applicationUrl = "https://medrepcollege.com/apply-for-med-rep-college-now";
 const testimonialsUrl = "https://www.thepharmacoach.com/pharmaceutical-sales-success-stories";
+const videoTestimonialsUrl = "https://medrepcollege.com/mastermind-accelerator";
+const studentVideos = [
+  { name: "Lauren", path: "Business owner to pharmaceutical sales", file: "69ce8c24dd9155358d68e6c8.mov" },
+  { name: "Matthew R.", path: "Retail to medical device sales", file: "69b5c33b0e6afdda34f59a08.mov" },
+  { name: "Kara P.", path: "Advancing in pharmaceutical sales", file: "69b5c395302795ad60dfb409.mov" },
+];
 const officialLogos = [
   ["logo-01.jpeg", "Sanofi"],
   ["logo-02.png", "Edwards Lifesciences"],
@@ -162,6 +168,16 @@ export function App() {
           <div className="testimonials__intro">
             <h2 id="testimonials-title">Client results</h2>
           </div>
+          <div className="student-videos" aria-label="Student video testimonials">
+            {studentVideos.map(student => <article className="student-video" key={student.name}>
+              <video controls playsInline preload="metadata" aria-label={`${student.name}'s video testimonial`}>
+                <source src={`https://assets.cdn.filesafe.space/5Yn78yf8uYk9U7Fl1kJ2/media/${student.file}`} />
+                Your browser cannot play this video. <a href={videoTestimonialsUrl}>Watch on Med Rep College</a>.
+              </video>
+              <h3>{student.name}</h3><p>{student.path}</p>
+              <a href={videoTestimonialsUrl}>View original testimonial</a>
+            </article>)}
+          </div>
           <div className="testimonials__grid">
             {testimonials.map((item) => <article key={item.name} className="testimonial">
               <p className="testimonial__path">{item.path}</p>
@@ -170,7 +186,7 @@ export function App() {
               <p className="testimonial__person"><strong>{item.name}</strong><span>{item.location}</span></p>
             </article>)}
           </div>
-          <p className="testimonials__source">Excerpts and story summaries from <a href={testimonialsUrl}>The Pharma Coach’s client stories</a>. Individual results vary.</p>
+          <p className="testimonials__source">Videos and student labels from <a href={videoTestimonialsUrl}>Med Rep College</a>. Written excerpts and story summaries from <a href={testimonialsUrl}>The Pharma Coach’s client stories</a>. Individual results vary.</p>
         </section>
 
         <section className="faq section-pad">

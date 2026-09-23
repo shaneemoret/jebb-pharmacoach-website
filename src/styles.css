@@ -332,6 +332,12 @@ summary { cursor: pointer; font: 700 16px/1.5 var(--head); }
 .program-options > p { font-size: 14px; margin-bottom: 0; }
 @media(max-width:760px) { .program-options__cards { grid-template-columns: 1fr; } }
 .testimonials__grid { margin-top: 28px; }
+.student-videos { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; margin: 28px 0 40px; }
+.student-video video { display: block; width: 100%; aspect-ratio: 9 / 12; object-fit: contain; background: #0b0f14; border-radius: 6px; }
+.student-video h3 { font-size: 22px; margin-top: 16px; color: var(--navy); }
+.student-video p { font-size: 16px; margin: 8px 0; }
+.student-video > a { font-size: 13px; color: var(--navy); text-underline-offset: 3px; }
+@media(max-width:760px) { .student-videos { grid-template-columns: 1fr; gap: 28px; } .student-video video { max-height: 420px; } }
 .testimonial__path { margin-top: 0; }
 .testimonial__details { margin: 16px 0; }
 .testimonial__details summary { color: var(--navy); font: 600 14px var(--body); }

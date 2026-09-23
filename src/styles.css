@@ -345,6 +345,21 @@ footer { padding-top: 36px; padding-bottom: 24px; }
   .program-options__list strong { font-size: 20px; }
   .program-options__list h3 { font-size: 18px; }
 }
+/* Official portrait: keep Jebb's face unobscured, with copy on a navy field. */
+.hero { background: var(--navy); min-height: 610px; }
+.hero__image { top: 0; left: auto; right: 0; width: 52%; height: 100%; object-position: center top; filter: none; mask-image: linear-gradient(90deg,transparent,#000 30%); }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,var(--navy) 42%,rgba(18,59,93,.88) 49%,rgba(18,59,93,0) 67%); pointer-events: none; }
+.hero__copy { z-index: 1; padding-block: 48px; transform: none; }
+.hero h1 { max-width: 58%; font-size: clamp(42px,4.8vw,70px); }
+.hero .lead { max-width: 49%; font-size: clamp(18px,1.65vw,24px); margin: 24px 0 28px; }
+@media(max-width:760px) {
+  .hero { min-height: 0; }
+  .hero__image { width: 100%; height: 360px; object-position: center top; mask-image: none; }
+  .hero::after { background: linear-gradient(180deg,rgba(18,59,93,0) 180px,var(--navy) 350px); }
+  .hero__copy { padding: 280px 24px 34px; transform: none; }
+  .hero h1 { max-width: 100%; font-size: clamp(35px,8.7vw,48px); }
+  .hero .lead { max-width: 100%; font-size: 18px; margin: 18px 0 22px; }
+}
 @media(prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .button, .brand-strip a { transition: none; }

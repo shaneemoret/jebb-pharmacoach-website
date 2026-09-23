@@ -1,5 +1,4 @@
 const pharmaSource = "https://careers.amgen.com/en/job/new-york/specialty-representative-senior-specialty-representive-respiratory-biologic-poughkeepsie-ny/87/97936512208";
-import { Clock, House, Lightning } from "@phosphor-icons/react";
 const nursingSource = "https://www.bls.gov/ooh/healthcare/registered-nurses.htm";
 const salesSource = "https://www.bls.gov/ooh/sales/wholesale-and-manufacturing-sales-representatives.htm";
 const salaries = [
@@ -12,7 +11,8 @@ const money = value => new Intl.NumberFormat("en-US", { style: "currency", curre
 export default function CareerComparison() {
   return <section id="career-potential" className="career-comparison section-pad" aria-labelledby="career-potential-title">
     <div className="career-comparison__heading">
-      <h2 id="career-potential-title">Compare the paycheck.<br />And what the job asks of you.</h2>
+      <h2 id="career-potential-title">Make more money, without sacrificing lifestyle and family.</h2>
+      <p className="comparison-note">That’s the goal. Compare the pay and the day-to-day demands to find a role that fits your life.</p>
     </div>
     <div className="earnings-chart">
       <div className="earnings-chart__intro"><p>U.S. median annual wages, May 2025.</p><p className="comparison-note">Technical/scientific sales includes pharma and other products. This is not a pharma-only salary estimate.</p></div>
@@ -28,16 +28,16 @@ export default function CareerComparison() {
     </div>
     <section className="demands-comparison" aria-labelledby="demands-title">
       <h3 id="demands-title">What does it ask of your time?</h3>
-      <p className="comparison-note">Compare the trade-offs, not just the paycheck. These are work patterns, not measured scores or guaranteed hours at home.</p>
-      <div className="demands-grid">
+      <p className="comparison-note">Colors identify different demands. Bar lengths are not scores or measured hours away.</p>
+      <div className="demand-legend"><span className="demand-legend--schedule">Schedule</span><span className="demand-legend--away">Time away from home</span><span className="demand-legend--workload">Workload</span></div>
+      <div className="demand-bars">
         {[
-          {name: "Nursing", source: nursingSource, rows: ["Hospital shifts can include nights, weekends and holidays.", "On-call work can interrupt time at home; schedules vary by setting.", "Patient care, prolonged standing and lifting."]},
-          {name: "Traditional B2B sales", source: salesSource, rows: ["Many wholesale/manufacturing reps work more than 40 hours a week.", "Large territories can require days or weeks away from home.", "Prospecting, sales quotas and customer needs."]},
-          {name: "Pharma sales example", source: pharmaSource, rows: ["Provider visits and territory responsibilities shape the workday.", "This Amgen role includes travel and occasional overnight meetings or training.", "Performance targets, clinical knowledge and provider relationships."]},
-        ].map(item => <article className="demands-card" key={item.name}>
-          <h4>{item.name}</h4>
-          <dl>{[[Clock, "Schedule"], [House, "Time away from home"], [Lightning, "Job demands"]].map(([Icon, label], index) => <div key={label}><dt><Icon size={24} aria-hidden="true" /><span>{label}</span></dt><dd>{item.rows[index]}</dd></div>)}</dl>
-          <a href={item.source}>See source</a>
+          {name: "Nursing", source: nursingSource, rows: ["Hospital shifts: nights & weekends possible", "On-call interruptions possible", "Patient care, standing & lifting"]},
+          {name: "Traditional B2B sales", source: salesSource, rows: ["Many reps work 40+ hours", "Large territories: days or weeks away", "Prospecting & sales quotas"]},
+          {name: "Pharma sales example", source: pharmaSource, rows: ["Provider visits & territory schedule", "Territory travel + occasional overnights", "Clinical knowledge & sales targets"]},
+        ].map(item => <article className="demand-bar-row" key={item.name}>
+          <h4><a href={item.source}>{item.name}</a></h4>
+          <dl>{["Schedule", "Time away from home", "Workload"].map((label, index) => <div className={`demand-bar demand-bar--${index}`} key={label}><dt className="sr-only">{label}</dt><dd>{item.rows[index]}</dd></div>)}</dl>
         </article>)}
       </div>
       <p className="demands-takeaway">Before accepting an offer, ask: How many overnight trips? Any evenings or weekends? What are the territory and performance expectations?</p>

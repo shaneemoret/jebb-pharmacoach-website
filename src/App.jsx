@@ -91,7 +91,7 @@ function Header() {
 
 function LogoStrip() {
   return (
-    <div id="top" className="logo-strip" role="img" aria-label={`Industry logos shown on The Pharma Coach's official site: ${officialLogos.map(([, name]) => name).join(", ")}`}>
+    <div className="logo-strip" role="img" aria-label={`Industry logos shown on The Pharma Coach's official site: ${officialLogos.map(([, name]) => name).join(", ")}`}>
       <div className="logo-strip__track" aria-hidden="true">
         {[0, 1].map((copy) => <div className="logo-strip__group" key={copy}>
           {officialLogos.map(([file, name]) => <img key={file} src={`${A}official-logo-strip/${file}`} alt="" title={name} loading="eager" decoding="async" />)}
@@ -106,8 +106,7 @@ export function App() {
   return (
     <>
       <Header />
-      <LogoStrip />
-      <main>
+      <main id="top">
         <section className="hero" aria-labelledby="hero-title">
           <img className="hero__image" src={`${A}pharma-field-hero.png`} alt="Pharmaceutical sales professional arriving at a healthcare facility" />
           <div className="hero__copy">
@@ -116,6 +115,8 @@ export function App() {
             <Button />
           </div>
         </section>
+
+        <LogoStrip />
 
         <section className="brand-strip" aria-label="What we help you do">
           <a href="#problem"><span>01</span><strong>Understand the field</strong><p>See how your sales or healthcare experience translates to pharmaceutical sales.</p><ArrowRight size={19} aria-hidden="true" /></a>

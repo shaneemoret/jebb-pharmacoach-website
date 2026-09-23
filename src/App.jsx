@@ -144,15 +144,6 @@ export function App() {
 
         <LogoStrip />
 
-        <section className="results-strip" aria-label="Results reported by Med Rep College">
-          <dl>
-            <div><dt>650+</dt><dd>Medical-sales placements</dd></div>
-            <div><dt>83 days</dt><dd>Reported average to placement</dd></div>
-            <div><dt>$124,600</dt><dd>Reported average first-year OTE</dd></div>
-          </dl>
-          <p>Reported by <a href="https://www.thepharmacoach.com/about">Med Rep College</a> across pharmaceutical, medical device, dental, diagnostic and animal health sales. OTE is base salary plus commission at target.</p>
-        </section>
-
         <CareerComparison />
 
         <section id="about" className="coach section-pad" aria-labelledby="coach-title">
@@ -189,6 +180,13 @@ export function App() {
           <div className="testimonials__intro">
             <h2 id="testimonials-title">Client results</h2>
           </div>
+          <section className="results-strip" aria-label="Results reported by Med Rep College">
+            <dl>
+              <div><dt>650+</dt><dd>Medical-sales placements</dd></div>
+              <div><dt>83 days</dt><dd>Reported average to placement</dd></div>
+              <div><dt>$124,600</dt><dd>Reported average first-year OTE</dd></div>
+            </dl>
+          </section>
           <div className="student-videos" aria-label="Student video testimonials">
             {studentVideos.map(student => <article className="student-video" key={student.name}>
               <StudentVideo student={student} />

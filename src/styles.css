@@ -57,7 +57,7 @@ p { line-height: 1.55; }
 .results-strip dd { margin: 8px 0 0; font-size: 16px; }
 .results-strip p { max-width: 900px; margin: 26px auto 0; font-size: 12px; line-height: 1.6; text-align: center; opacity: .82; }
 .results-strip a { text-underline-offset: 3px; }
-.testimonials .results-strip { margin-top: 28px; padding: 28px 0; background: transparent; color: var(--navy); border-block: 1px solid var(--line); }
+.testimonials .results-strip { margin-top: 28px; padding: 28px 0; background: transparent; color: var(--navy); border: 0; }
 .testimonials .results-strip dt { color: var(--navy); }
 @media(max-width:560px) { .results-strip dl { grid-template-columns: 1fr; gap: 22px; justify-items: stretch; text-align: left; } .results-strip p { text-align: left; } .results-strip dl > div { display: grid; grid-template-columns: 135px 1fr; gap: 14px; align-items: center; } .results-strip dd { margin: 0; } }
 .hero { position: relative; display: flex; align-items: center; min-height: 610px; overflow: hidden; background: var(--ink); color: var(--white); }

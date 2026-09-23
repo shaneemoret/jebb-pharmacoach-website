@@ -83,7 +83,7 @@ function Header() {
   ];
   return (
     <header className="site-header">
-      <a className="wordmark" href="#top" aria-label="The Pharma Coach home"><span>THE</span><strong>PHARMA COACH</strong></a>
+      <a className="wordmark" href="#top" aria-label="The Pharma Coach home"><strong>THE PHARMA COACH</strong></a>
       <button className="menu-button" aria-expanded={open} aria-controls="primary-nav" onClick={() => setOpen(!open)}>
         <span className="sr-only">Toggle navigation</span>{open ? <X size={25} /> : <List size={25} />}
       </button>

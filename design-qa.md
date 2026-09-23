@@ -42,6 +42,8 @@ Focused review of the hero in the comparison image found the head crop and the b
 
 ## Follow-up polish
 
+Program-card styling correction: replaced the black featured card and transparent navy cards with three white cards carrying navy headings, prices, and body copy. The featured option uses a gold top rule and compact gold label. Title heights and price baselines align at the 777px preview width; mobile resets title height and stacks the cards. In-app Browser visual check at 777px and a clean 390 × 844 Playwright capture passed: all cards white/navy, no horizontal overflow, booking URL and all copy/prices unchanged. Build and diff check passed. Public site unchanged.
+
 Testimonial visibility correction: rechecked the live official success-stories page and confirmed the three local entries for Rochelle S., Emily T., and Alex J. Added a “Testimonials” navigation link and changed the section label from “Client stories” to “Testimonials.” The 777px in-app Browser render shows all three entries and a working anchor; the new navigation item fits without crowding or overflow. Quotes, summaries, source link, and booking CTA are unchanged.
 
 - If Jebb has approved original field or coaching photography, replace the generated editorial images before a production launch. This is not a blocker for the local design preview.

@@ -321,7 +321,6 @@ summary { cursor: pointer; font: 700 16px/1.5 var(--head); }
 .workday-details .schedule-comparison__examples { margin-top: 24px; }
 @media(max-width:620px) {
 }
-  repeating-linear-gradient(to top, transparent 0, transparent calc(50% - 1px), rgba(18,59,93,.09) calc(50% - 1px), rgba(18,59,93,.09) 50%); }
 @media(max-width:620px) {
 }
 .demands-comparison { margin-top: 36px; }

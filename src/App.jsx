@@ -136,7 +136,7 @@ export function App() {
         <section className="hero" aria-labelledby="hero-title">
           <img className="hero__image" src={`${A}jebb-banner-owner.png`} alt="Jebb Ruff, The Pharma Coach" fetchPriority="high" />
           <div className="hero__copy">
-            <h1 id="hero-title">Start or advance your career in pharmaceutical sales.</h1>
+            <h1 id="hero-title">Start or advance your career in <span className="hero__accent">pharmaceutical sales</span>.</h1>
             <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles and advance in the field.</p>
             <Button />
           </div>
@@ -150,7 +150,7 @@ export function App() {
             <div><dt>83 days</dt><dd>Reported average to placement</dd></div>
             <div><dt>$124,600</dt><dd>Reported average first-year OTE</dd></div>
           </dl>
-          <p>Reported by <a href="https://www.thepharmacoach.com/about">Med Rep College</a> across pharmaceutical, medical device, dental, diagnostic and animal health sales. OTE means base salary plus commission at target. Not independently verified; individual results vary.</p>
+          <p>Reported by <a href="https://www.thepharmacoach.com/about">Med Rep College</a> across pharmaceutical, medical device, dental, diagnostic and animal health sales. OTE is base salary plus commission at target.</p>
         </section>
 
         <CareerComparison />
@@ -204,7 +204,7 @@ export function App() {
               <p className="testimonial__person"><strong>{item.name}</strong><span>{item.location}</span></p>
             </article>)}
           </div>
-          <p className="testimonials__source">Videos and student labels from <a href={videoTestimonialsUrl}>Med Rep College</a>. Written excerpts and story summaries from <a href={testimonialsUrl}>The Pharma Coach’s client stories</a>. Individual results vary.</p>
+          <p className="testimonials__source">Videos and student labels from <a href={videoTestimonialsUrl}>Med Rep College</a>. Written excerpts from <a href={testimonialsUrl}>The Pharma Coach’s client stories</a>.</p>
         </section>
 
         <section className="faq section-pad">

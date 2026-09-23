@@ -6,16 +6,26 @@ const salaries = [
   { name: "Registered nursing", detail: "Registered nurses across work settings", value: 97550 },
   { name: "Technical & scientific sales", detail: "Includes pharmaceuticals and other technical products, not pharma alone", value: 104920 },
 ];
+const roles = [
+  { name: "Nursing", source: nursingSource },
+  { name: "Traditional B2B sales", source: salesSource },
+  { name: "Pharma sales example", source: pharmaSource, focus: true },
+];
+const demands = [
+  ["Schedule", ["Hospital shifts, including nights and weekends", "Many reps work more than 40 hours a week", "Provider visits on a territory schedule"]],
+  ["Time away from home", ["On-call work can interrupt time at home", "Large territories can mean days or weeks away", "Territory travel with occasional overnights"]],
+  ["Workload", ["Patient care, prolonged standing and lifting", "Prospecting and sales quotas", "Clinical knowledge and performance targets"]],
+];
 const money = value => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);
 
 export default function CareerComparison() {
   return <section id="career-potential" className="career-comparison section-pad" aria-labelledby="career-potential-title">
     <div className="career-comparison__heading">
       <h2 id="career-potential-title">Make more money, without sacrificing lifestyle and family.</h2>
-      <p className="comparison-note">That’s the goal. Compare the pay and the day-to-day demands to find a role that fits your life.</p>
+      <p className="career-comparison__deck">That’s the goal. Compare the pay and the day-to-day demands to find a role that fits your life.</p>
     </div>
     <div className="earnings-chart">
-      <div className="earnings-chart__intro"><p>U.S. median annual wages, May 2025.</p><p className="comparison-note">Technical/scientific sales includes pharma and other products. This is not a pharma-only salary estimate.</p></div>
+      <div className="earnings-chart__intro"><p>U.S. median annual wages, May 2025.</p><p className="comparison-note">Technical and scientific sales covers pharma alongside other products, so it is not a pharma-only figure.</p></div>
       <div className="earnings-chart__ranges">
         {salaries.map((salary, index) => <div className={`salary-range salary-median salary-median--${index}`} key={salary.name}>
           <h4>{salary.name}</h4>
@@ -23,23 +33,27 @@ export default function CareerComparison() {
           <div className="salary-range__track" aria-hidden="true"><div style={{ left: 0, width: `${salary.value / 120000 * 100}%` }} /></div>
         </div>)}
         <div className="earnings-chart__axis" aria-hidden="true"><span>$0</span><span>$60k</span><span>$120k</span></div>
-        <p className="comparison-note">BLS: <a href={nursingSource}>nursing</a> / <a href={salesSource}>wholesale and manufacturing sales</a>. These are medians, not starting salaries or guaranteed income.</p>
+        <p className="comparison-note">Source: U.S. Bureau of Labor Statistics, <a href={nursingSource}>nursing</a> and <a href={salesSource}>wholesale and manufacturing sales</a>. Medians, not starting pay.</p>
       </div>
     </div>
     <section className="demands-comparison" aria-labelledby="demands-title">
       <h3 id="demands-title">What does it ask of your time?</h3>
-      <p className="comparison-note">Colors identify different demands. Bar lengths are not scores or measured hours away.</p>
-      <div className="demand-legend"><span className="demand-legend--schedule">Schedule</span><span className="demand-legend--away">Time away from home</span><span className="demand-legend--workload">Workload</span></div>
-      <div className="demand-bars">
-        {[
-          {name: "Nursing", source: nursingSource, rows: ["Hospital shifts: nights & weekends possible", "On-call interruptions possible", "Patient care, standing & lifting"]},
-          {name: "Traditional B2B sales", source: salesSource, rows: ["Many reps work 40+ hours", "Large territories: days or weeks away", "Prospecting & sales quotas"]},
-          {name: "Pharma sales example", source: pharmaSource, rows: ["Provider visits & territory schedule", "Territory travel + occasional overnights", "Clinical knowledge & sales targets"]},
-        ].map(item => <article className="demand-bar-row" key={item.name}>
-          <h4><a href={item.source}>{item.name}</a></h4>
-          <dl>{["Schedule", "Time away from home", "Workload"].map((label, index) => <div className={`demand-bar demand-bar--${index}`} key={label}><dt className="sr-only">{label}</dt><dd>{item.rows[index]}</dd></div>)}</dl>
-        </article>)}
-      </div>
+      <p className="comparison-note">Work patterns as each source describes them. Not measured hours.</p>
+      <table className="demand-matrix">
+        <caption className="sr-only">Day-to-day demands compared across nursing, traditional B2B sales, and a pharma sales example</caption>
+        <thead>
+          <tr>
+            <th scope="col"><span className="sr-only">Demand</span></th>
+            {roles.map(role => <th scope="col" key={role.name} className={role.focus ? "is-focus" : undefined}><a href={role.source}>{role.name}</a></th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {demands.map(([label, cells]) => <tr key={label}>
+            <th scope="row">{label}</th>
+            {cells.map((cell, index) => <td key={index} className={roles[index].focus ? "is-focus" : undefined}>{cell}</td>)}
+          </tr>)}
+        </tbody>
+      </table>
     </section>
   </section>;
 }

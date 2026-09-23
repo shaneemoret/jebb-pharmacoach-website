@@ -51,19 +51,32 @@ export function About() {
   return (
     <>
       <Header />
-      <main className="about section-pad" id="top">
-        <header className="about__head">
-          <p className="eyebrow">About us</p>
-          <h1>{about.valueProp}</h1>
-        </header>
+      <main className="about" id="top">
+        <section className="about-hero">
+          <div className="about-hero__copy">
+            <p className="eyebrow eyebrow--light">About The Pharma Coach</p>
+            <h1>{about.headline}</h1>
+            <p className="about-hero__deck">{about.valueProp}</p>
+            <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
+          </div>
+          <div className="about-hero__portrait">
+            <img src={`${A}jebb-headshot-owner.png`} alt="Jebb Ruff, The Pharma Coach" width="1139" height="1381" fetchPriority="high" />
+          </div>
+          <dl className="about-hero__stats">
+            {about.credentials.map(([figure, label]) => (
+              <div key={label}><dt>{figure}</dt><dd>{label}</dd></div>
+            ))}
+          </dl>
+        </section>
 
-        <section className="about__block" aria-labelledby="about-does">
+        <section className="about-band about-band--paper" aria-labelledby="about-does">
           <h2 id="about-does">What The Pharma Coach does</h2>
-          <div className="about__grid">
+          <div className="about-cards">
             {about.services.map(service => (
               <article key={service.name}>
+                <p className="about-cards__price">{service.price}</p>
+                {service.tier && <p className="about-cards__tier">{service.tier}</p>}
                 <h3>{service.name}</h3>
-                <p className="about__price">{service.price}{service.tier ? ` · ${service.tier}` : ""}</p>
                 <p>{service.body}</p>
                 <a href={service.url}>See the details</a>
               </article>
@@ -71,22 +84,28 @@ export function About() {
           </div>
         </section>
 
-        <section className="about__block" aria-labelledby="about-different">
+        <section className="about-band about-band--navy" aria-labelledby="about-different">
           <h2 id="about-different">What makes The Pharma Coach different</h2>
-          <div className="about__grid about__grid--two">
-            {about.differentiators.map(item => (
-              <article key={item.name}><h3>{item.name}</h3><p>{item.body}</p></article>
+          <div className="about-steps">
+            {about.differentiators.map((item, index) => (
+              <article key={item.name}>
+                <b>{String(index + 1).padStart(2, "0")}</b>
+                <h3>{item.name}</h3>
+                <p>{item.body}</p>
+              </article>
             ))}
           </div>
         </section>
 
-        <section className="about__block" aria-labelledby="about-who">
+        <section className="about-band about-band--paper" aria-labelledby="about-who">
           <h2 id="about-who">Who uses The Pharma Coach</h2>
-          <ul className="about__list">{about.icp.map(item => <li key={item}>{item}</li>)}</ul>
+          <div className="about-who">
+            {about.icp.map(item => <article key={item}><p>{item}</p></article>)}
+          </div>
         </section>
 
-        <section className="about__block about__founder" aria-labelledby="about-team">
-          <div>
+        <section className="about-band about-band--white about-founder" aria-labelledby="about-team">
+          <div className="about-founder__copy">
             <h2 id="about-team">The team behind The Pharma Coach</h2>
             <h3>Jebb C. Ruff, MBA, founder</h3>
             <p>Jebb has worked in medical sales since 2001 and carried a bag before he coached anyone. He sold dermatology products for Allergan, and across his selling career he has earned 19 President's Club awards.</p>
@@ -99,41 +118,39 @@ export function About() {
               <a href="mailto:Jebb@ThePharmaCoach.com">Jebb@ThePharmaCoach.com</a>
             </p>
           </div>
-          <div className="about__portrait">
-            <img src={`${A}jebb-headshot-owner.png`} alt="Jebb Ruff, The Pharma Coach" width="1139" height="1381" loading="lazy" />
-          </div>
-        </section>
-
-        <section className="about__block" aria-labelledby="about-how">
-          <h2 id="about-how">How working with The Pharma Coach works</h2>
-          <div className="about__grid about__grid--two">
-            {about.how.map(step => (
-              <article key={step.name}><h3>{step.name}</h3><p>{step.body}</p></article>
+          <ol className="about-how">
+            {about.how.map((step, index) => (
+              <li key={step.name}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div><h3>{step.name}</h3><p>{step.body}</p></div>
+              </li>
             ))}
-          </div>
+          </ol>
         </section>
 
-        <section className="about__block" aria-labelledby="about-facts">
+        <section className="about-band about-band--paper" aria-labelledby="about-facts">
           <h2 id="about-facts">Key facts</h2>
-          <dl className="about__facts">
+          <dl className="about-facts">
             {about.keyFacts.map(([term, value]) => (
               <div key={term}><dt>{term}</dt><dd>{value}</dd></div>
             ))}
           </dl>
         </section>
 
-        <section className="about__block" aria-labelledby="about-faq">
+        <section className="about-band about-band--paper about-band--tight" aria-labelledby="about-faq">
           <h2 id="about-faq">Frequently asked questions</h2>
-          <div className="about__faq">
+          <div className="about-faq">
             {objections.map(([question, answer]) => (
               <article key={question}><h3>{question}</h3><p>{answer}</p></article>
             ))}
           </div>
         </section>
 
-        <section className="about__cta">
-          <h2>Start with a conversation.</h2>
-          <p>A 45-minute discovery call with Jebb. $25. Talk through your fit and your next step before choosing a programme.</p>
+        <section className="about-band about-band--navy about-cta">
+          <div>
+            <h2>Start with a conversation.</h2>
+            <p>A 45-minute discovery call with Jebb. $25. Talk through your fit and your next step before choosing a programme.</p>
+          </div>
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </section>
 

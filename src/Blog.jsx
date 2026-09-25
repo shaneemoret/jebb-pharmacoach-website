@@ -37,13 +37,32 @@ function TikTok({ video }) {
   );
 }
 
+export function BlogVisual({ post, size = "card" }) {
+  const topic = post.tags?.[0] || "Career advice";
+  return (
+    <div className={`blog-visual blog-visual--${size}`} aria-hidden="true">
+      <div className="blog-visual__topline">
+        <span>The Pharma Coach</span>
+        <span>Field notes / article</span>
+      </div>
+      <div className="blog-visual__copy">
+        <span className="blog-visual__topic">{topic}</span>
+        <strong>{post.title}</strong>
+      </div>
+      <div className="blog-visual__footer">
+        <span>Jebb Ruff</span>
+        <i aria-hidden="true" />
+        <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="" width="88" height="88" loading={size === "card" ? "lazy" : "eager"} />
+      </div>
+    </div>
+  );
+}
+
 function Card({ post }) {
   return (
     <article className="post-card">
-      <a className={`post-card__thumb${post.image ? "" : " post-card__thumb--blank"}`} href={blogHref(post.slug)} tabIndex={-1} aria-hidden="true">
-        {post.image
-          ? <img src={post.image} alt="" loading="lazy" decoding="async" />
-          : <span>The Pharma Coach</span>}
+      <a className="post-card__thumb" href={blogHref(post.slug)} tabIndex={-1} aria-hidden="true">
+        <BlogVisual post={post} />
       </a>
       <p className="post-card__meta">
         <time dateTime={post.published}>{longDate(post.published)}</time>
@@ -123,10 +142,13 @@ export function BlogPost({ slug }) {
           <h1>{post.title}</h1>
           {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
           <div className="post__authorline">
-            <img src={`${BASE}assets/source/jebb-official-about-portrait.webp`} alt="" width="52" height="52" />
+            <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="" width="52" height="52" />
             <div><strong>{post.author}</strong><p><time dateTime={post.published}>{longDate(post.published)}</time><span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
           </div>
         </header>
+        <div className="post__feature">
+          <BlogVisual post={post} size="feature" />
+        </div>
         <div className="post__layout">
       <article className="post__content">
         {introCount > 0 && <div className="post__intro">{post.body.slice(0, introCount).map((block, index) => <p key={index}>{block.text}</p>)}</div>}
@@ -151,7 +173,7 @@ export function BlogPost({ slug }) {
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </div>
         <section className="post__authorbio" aria-labelledby="post-author-heading">
-          <img src={`${BASE}assets/source/jebb-official-about-portrait.webp`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
+          <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
           <div>
             <p className="post__label">About the author</p>
             <h2 id="post-author-heading">Jebb Ruff</h2>

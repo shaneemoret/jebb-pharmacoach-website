@@ -17,3 +17,7 @@ npm run test:sites
 ```
 
 This repository is a development preview. It does not replace Wix commerce, bookings, forms, members, blog storage, or DNS. See `CUTOVER.md`.
+
+## Blog publishing
+
+Read and follow [`BLOG_STANDARD.md`](./BLOG_STANDARD.md) before adding, importing, rewriting, or changing a blog post. The automated blog-standard test is a release gate, not a substitute for editorial and responsive visual QA.

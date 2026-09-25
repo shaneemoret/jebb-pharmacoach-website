@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 import posts from "../src/posts.json" with { type: "json" };
+
+const blogSource = await readFile(new URL("../src/Blog.jsx", import.meta.url), "utf8");
+const standard = await readFile(new URL("../BLOG_STANDARD.md", import.meta.url), "utf8");
 
 test("normalized legacy articles expose real sections for article navigation", () => {
   const normalized = posts.filter(post => post.formatVersion === "editorial-v1");
@@ -23,4 +27,21 @@ test("the currently reviewed dermatologist article has editorial landmarks", () 
   assert.ok(post);
   assert.ok(post.body.filter(block => block.type === "h2").length >= 5);
   assert.ok(post.body.some(block => block.type === "list"));
+});
+
+test("every blog route inherits the branded visual and approved author headshot", () => {
+  assert.equal(posts.length, 22, "unexpected post count; review the complete library when it changes");
+  assert.match(blogSource, /<BlogVisual post=\{post\} \/>/);
+  assert.match(blogSource, /<BlogVisual post=\{post\} size="feature" \/>/);
+  assert.ok(!blogSource.includes("<img src={post.image}"), "legacy images must not bypass the branded thumbnail system");
+  assert.equal((blogSource.match(/jebb-headshot-owner\.png/g) || []).length, 3, "card visual, byline, and author bio must share the approved headshot");
+});
+
+test("the repository carries a durable blog standard for future agents", () => {
+  for (const requirement of [
+    "Every post must use the shared `BlogVisual` component",
+    "`jebb-headshot-owner.png`",
+    "Desktop and mobile visual QA",
+    "needs-editorial-rewrite",
+  ]) assert.ok(standard.includes(requirement), `BLOG_STANDARD.md is missing: ${requirement}`);
 });

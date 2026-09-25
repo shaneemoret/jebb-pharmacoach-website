@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { appendFileSync, copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -9,6 +9,7 @@ const shell = path.join(dist, "index.html");
 const posts = JSON.parse(readFileSync(path.join(root, "src", "posts.json"), "utf8"));
 const about = JSON.parse(readFileSync(path.join(root, "src", "about.json"), "utf8"));
 const migratedPages = JSON.parse(readFileSync(path.join(root, "src", "migrated-pages.json"), "utf8"));
+const legacyPosts = JSON.parse(readFileSync(path.join(root, "src", "legacy-posts.json"), "utf8"));
 const legacyRedirects = [
   ["free-medical-sales-training", "https://medrepcollege.com/access", "Free interview guide"],
   ["apply-for-pharmaceutical-sales-career-coaching", "https://medrepcollege.com/apply-for-med-rep-college-now", "Coaching application"],
@@ -226,4 +227,21 @@ for (const post of posts) {
   writeFileSync(path.join(markdownDirectory, "blog", `${post.slug}.md`), markdown);
 }
 
+// Old Wix article links (/post/<slug>) point at their new home. Cloudflare matches the exact
+// path, so each link is listed with and without a trailing slash. 302 marks a temporary home
+// that moves when the planned guide ships; 301 is the permanent destination.
+const legacyRedirectLines = legacyPosts.flatMap(({ from, to, status }) => [`${from} ${to} ${status}`, `${from}/ ${to} ${status}`]);
+appendFileSync(path.join(dist, "_redirects"), [
+  "",
+  "# Legacy Wix blog links, generated from src/legacy-posts.json",
+  ...legacyRedirectLines,
+  "/blog/categories/* /blog/ 301",
+  "/blog/tags/* /blog/ 301",
+  "/blog/hashtags/* /blog/ 301",
+  "/blog/page/* /blog/ 301",
+  "/post/* /blog/ 301",
+  "",
+].join("\n"));
+
+console.log(`Prepared ${legacyPosts.length} legacy article redirects.`);
 console.log(`Prepared ${posts.length + migratedPages.length + legacyRedirects.length + 2} Cloudflare Pages routes.`);

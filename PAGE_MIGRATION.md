@@ -8,10 +8,13 @@ The September 23 Wix census found 19 general page URLs in addition to blog posts
 
 | Previous route | New route | Status | Notes |
 | --- | --- | --- | --- |
-| `/academy` | `/academy` | Built and locally verified | Fast Track Academy page; current enrollment link returns HTTP 200. |
-| `/free-medical-sales-training` | `/free-medical-sales-training` | Built and locally verified | Free interview-training page; current guide link returns HTTP 200. |
-| `/apply-for-pharmaceutical-sales-career-coaching` | same | Built and locally verified | Current application path; current form destination returns HTTP 200. |
-| `/application` | alias of the application page | Built and locally verified | Older indexed application URL retained as a duplicate route with the current path as canonical. |
+| `/academy` and Fast Track | `/academy` | Built and locally verified | Program explanation is native; enrollment remains on the Med Rep College form. |
+| `/pricing-plans/pharmaceutical-sales-interview-help` and Mastermind | `/mastermind-accelerator` | Built and locally verified | Old site path is retained as an alias; enrollment remains on Med Rep College. |
+| `/pharmaceutical-sales-vip-mentorship` and VIP | `/vip-signature-access` | Built and locally verified | Old site path is retained as an alias; enrollment remains on Med Rep College. |
+| FAQ / `/medical-sales-faq` | `/faq` | Built and locally verified | Old label and path resolve to the new branded FAQ. |
+| `/free-medical-sales-training` | Med Rep College `/access` | Legacy form retained | New-site path redirects to the existing guide opt-in and delivery workflow. |
+| `/apply-for-pharmaceutical-sales-career-coaching` | Med Rep College application | Legacy form retained | New-site path redirects to the existing intake workflow. |
+| `/application` | Med Rep College application | Legacy form retained | Older alias redirects to the same existing intake workflow. |
 
 ## Already represented in the new site
 
@@ -25,12 +28,9 @@ The September 23 Wix census found 19 general page URLs in addition to blog posts
 
 | Previous route or label | Status | Migration note |
 | --- | --- | --- |
-| `/pricing-plans/pharmaceutical-sales-interview-help` (Mastermind) | Queued | Rebuild as a branded program page; send enrollment to the current Med Rep College destination. |
-| `/pharmaceutical-sales-vip-mentorship` | Queued | Preserve the ten-module outline, but recheck availability, pricing, guarantee language, and outcome claims before publication. |
 | `/pharmaceutical-sales-success-stories` | Queued | Reuse only testimonials and metrics already approved or sourced in the current repository. |
 | `/pharmaceutical-sales-strategy-call` | Queued | Preserve the booking intent and point to the current scheduling destination. |
-| FAQ | URL confirmation needed | The previous navigation exposed this page, but its canonical path still needs to be recovered. |
-| Interview Guides | URL confirmation needed | The previous navigation exposed this page; confirm the old canonical path and current guide inventory. |
+| Interview Guides beyond the free opt-in | URL confirmation needed | Confirm the old canonical paths and current guide inventory before migrating more resources. |
 | Pharmaceutical Sales Resume | URL confirmation needed | Recover the exact path before building the route. |
 | Sales representatives audience page | URL confirmation needed | Rebuild for B2B, B2C, inside-sales, and retail candidates. |
 | Clinical professionals audience page | URL confirmation needed | Rebuild for nurses and other clinical professionals. |
@@ -47,3 +47,17 @@ The September 23 Wix census found 19 general page URLs in addition to blog posts
 - Members, forms, Velo/custom code, analytics, and saved business history require explicit workflow replacement or a maintained external route.
 
 No deployment or production publication is part of this batch.
+
+## 2026-09-25 program and resource QA
+
+Acceptance sentence: the new site owns the three program explanations, FAQ, and career-advice hub; application, free-guide opt-in, enrollment, payment, and delivery continue through the existing Med Rep College forms.
+
+- Brand fidelity: compared the current program renders with the approved new-site desktop reference. Ink, navy, metallic gold, Manrope titles, Source Sans 3 body copy, square action treatment, restrained navigation, and split editorial hero remain aligned.
+- Copy and hierarchy: each program has one clear audience/format signal, one outcome-focused headline, three verified offer facts, two explanation sections, and one legacy enrollment action. No new placement or earnings promise was added.
+- Source boundary: Fast Track, Mastermind, and VIP details were checked against their current Med Rep College pages. Pricing and inclusions are labelled current-listed and paired with a verify-before-paying instruction.
+- Form boundary: `/free-medical-sales-training`, `/apply-for-pharmaceutical-sales-career-coaching`, and `/application` generate direct legacy-form redirects rather than replacement forms. Browser verification reached the existing intake form without submitting data.
+- Responsive behavior: IAB desktop and narrow mobile layouts were inspected for Fast Track, Mastermind, VIP, and FAQ. Navigation collapses to the mobile menu; the FAQ has no DOM overflow; the menu opens and exposes the legacy Apply destination. A separate headless-Chrome screenshot was used only to persist the desktop visual for `view_image`; its narrow macOS capture clamps CSS width and is not the mobile acceptance source.
+- Functional routes: homepage program links open the native trailing-slash pages; legacy Mastermind/VIP aliases build; blog remains native; FAQ is linked from the homepage footer.
+- Automated checks: Vite production build passed; Sites worker tests passed 4/4; migration and blog tests passed 18/18; `git diff --check` passed.
+
+Fidelity ledger: hero palette and type matched; image treatment matched; internal program navigation was corrected to trailing-slash static routes after the first browser pass; FAQ received a dedicated open-list treatment instead of generic bullets; legacy forms were removed from the new-site sitemap and converted to redirects. No material visual mismatch remains in the verified implementation.

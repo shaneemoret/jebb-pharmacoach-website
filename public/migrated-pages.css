@@ -172,6 +172,12 @@ img { display: block; max-width: 100%; }
 .migrated-step h3 { margin: 0; font-family: "Manrope Variable", Manrope, Arial, sans-serif; font-size: 1.28rem; }
 .migrated-step p { margin: 0; color: var(--slate); }
 
+.migrated-section--faq { align-items: start; }
+.migrated-faq { border-top: 1px solid var(--ink); }
+.migrated-faq article { padding: 28px 4px 30px; border-bottom: 1px solid var(--rule); }
+.migrated-faq h3 { margin: 0; color: var(--navy); font-family: "Manrope Variable", Manrope, Arial, sans-serif; font-size: clamp(1.15rem, 1.7vw, 1.45rem); line-height: 1.3; }
+.migrated-faq p { max-width: 720px; margin: 12px 0 0; color: var(--slate); }
+
 .migrated-cta {
   background: var(--navy);
   color: var(--white);

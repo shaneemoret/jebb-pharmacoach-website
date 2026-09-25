@@ -3,6 +3,7 @@ import about from "./about.json";
 import { Header, SiteFooter, BOOKING_URL, objections } from "./App.jsx";
 
 const A = `${import.meta.env.BASE_URL}assets/source/`;
+const BASE = import.meta.env.BASE_URL;
 
 // Organisation, founder and FAQ markup, so assistants and search engines can
 // quote the page accurately instead of guessing.
@@ -78,7 +79,7 @@ export function About() {
                 {service.tier && <p className="about-cards__tier">{service.tier}</p>}
                 <h3>{service.name}</h3>
                 <p>{service.body}</p>
-                <a href={service.url}>See the details</a>
+                <a href={service.path ? `${BASE}${service.path}/` : service.url}>See the details</a>
               </article>
             ))}
           </div>

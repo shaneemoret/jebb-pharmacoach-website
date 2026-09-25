@@ -1,6 +1,7 @@
 [
   {
     "slug": "academy",
+    "aliases": ["fast-track-academy"],
     "title": "Fast Track Academy",
     "description": "A self-paced route for professionals who want a structured plan for entering pharmaceutical and medical sales.",
     "kicker": "Self-paced coaching",
@@ -8,11 +9,11 @@
     "lead": "Fast Track Academy turns the pharmaceutical-sales job search into a clear sequence: choose the right roles, translate your experience, build relationships, and prepare for the interview before it arrives.",
     "image": "/assets/source/pharma-hcp-conversation.png",
     "imageAlt": "A pharmaceutical representative in conversation with a healthcare professional",
-    "sourceUrl": "https://www.thepharmacoach.com/academy",
+    "sourceUrl": "https://medrepcollege.com/fast-track",
     "facts": [
       ["10 weeks", "A focused, self-paced roadmap"],
-      ["3 stages", "Access, strategy, and momentum"],
-      ["$899", "Current listed program price; confirm before enrolling"]
+      ["On demand", "Training and workbooks for a flexible schedule"],
+      ["$899", "Current listed price; confirm before enrolling"]
     ],
     "sections": [
       {
@@ -36,97 +37,131 @@
       }
     ],
     "cta": {
-      "heading": "See whether the academy fits how you work.",
-      "body": "Review the current curriculum, inclusions, price, and terms before enrolling.",
-      "label": "View Fast Track Academy",
-      "url": "https://medrepcollege.com/fast-track"
+      "heading": "Ready to use the self-paced system?",
+      "body": "Enrollment and payment stay on Med Rep College. Review the current curriculum, access period, price, and terms before paying.",
+      "label": "Enroll in Fast Track",
+      "url": "https://medrepcollege.com/fast-track-checkout"
     }
   },
   {
-    "slug": "free-medical-sales-training",
-    "title": "Free Medical Sales Interview Training",
-    "description": "Free pharmaceutical-sales interview guidance for candidates who are applying but not converting conversations into offers.",
-    "kicker": "Free training",
-    "headline": "You are not lazy. You need a better interview strategy.",
-    "lead": "If recruiter calls keep ending without a next round, more applications will not solve the problem. Learn what hiring managers listen for and how to make your experience easier to understand.",
+    "slug": "mastermind-accelerator",
+    "aliases": ["pricing-plans/pharmaceutical-sales-interview-help"],
+    "title": "Mastermind Accelerator",
+    "description": "Live pharmaceutical-sales career coaching, structured feedback, and accountability for professionals actively pursuing medical-sales roles.",
+    "kicker": "Live coaching and accountability",
+    "headline": "Turn activity into a focused job-search strategy.",
+    "lead": "Mastermind Accelerator combines the self-paced $100K Med Rep Method with live coaching for candidates who want feedback while applications and interviews are happening.",
+    "image": "/assets/source/pharma-field-hero.png",
+    "imageAlt": "A pharmaceutical sales professional working in the field",
+    "sourceUrl": "https://medrepcollege.com/mastermind-accelerator",
+    "facts": [
+      ["10 weeks", "On-demand modules and preparation workbooks"],
+      ["5 sessions", "Live coaching listed in the current offer"],
+      ["$2,499", "Current listed price; confirm before enrolling"]
+    ],
+    "sections": [
+      {
+        "heading": "For candidates who need feedback, not more tabs open.",
+        "body": "Information is easy to collect. It is harder to know whether your resume, LinkedIn profile, networking, and interview answers make the right case. Mastermind adds live review and a weekly structure to the core training.",
+        "items": [
+          "The Fast Track curriculum and six months of portal access.",
+          "Resume and LinkedIn positioning for medical-sales recruiters.",
+          "Interview preparation and mock-interview feedback.",
+          "A structured roadmap for applications, networking, and follow-up."
+        ]
+      },
+      {
+        "heading": "Bring the real search into the room.",
+        "body": "Use each stage to make the next one stronger: clarify the role, improve the way you present your experience, and prepare before the next interview arrives.",
+        "steps": [
+          ["01", "Target", "Narrow the roles and employers that fit your background."],
+          ["02", "Position", "Make your resume, LinkedIn, and stories easier to understand."],
+          ["03", "Practice", "Use live feedback to prepare for the conversations ahead."]
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Want live support while you make the move?",
+      "body": "Enrollment and payment stay on Med Rep College. Confirm the current coaching schedule, access period, price, and terms before paying.",
+      "label": "Enroll in Mastermind",
+      "url": "https://medrepcollege.com/accelerator-checkout-page"
+    }
+  },
+  {
+    "slug": "vip-signature-access",
+    "aliases": ["pharmaceutical-sales-vip-mentorship"],
+    "title": "VIP Signature Access",
+    "description": "High-touch pharmaceutical-sales career coaching with a plan built around the candidate's background, interviews, and advancement goals.",
+    "kicker": "One-to-one coaching",
+    "headline": "Build the plan around your career, not the average candidate.",
+    "lead": "VIP Signature Access is the highest-touch Pharma Coach path for candidates who want direct, personalized support across positioning, networking, interviews, and sales-career growth.",
     "image": "/assets/source/jebb-headshot-owner.png",
     "imageAlt": "Jebb Ruff, The Pharma Coach",
-    "sourceUrl": "https://www.thepharmacoach.com/free-medical-sales-training",
+    "sourceUrl": "https://medrepcollege.com/vip-access",
     "facts": [
-      ["Free", "Start without choosing a paid program"],
-      ["Hiring lens", "Advice shaped by real interview decisions"],
-      ["Practical", "Use the guidance in your next conversation"]
+      ["12 sessions", "Personalized coaching listed in the current offer"],
+      ["1:1", "Direct, high-touch mentorship"],
+      ["$5,799", "Current listed price; confirm before enrolling"]
     ],
     "sections": [
       {
-        "heading": "The interview is testing more than your answers.",
-        "body": "Hiring teams are listening for judgment, relevance, preparation, and whether you can lead a clear conversation. The training helps you stop rambling, connect your background to the role, and show how you think.",
+        "heading": "Personal support for a specific move.",
+        "body": "This path is designed for candidates who want the job-search and interview strategy shaped around their actual background, timeline, and target roles rather than handled only through a shared curriculum.",
         "items": [
-          "Identify the part of your story that matters to this role.",
-          "Answer with enough detail to prove the point, then stop.",
-          "Translate patient care, teaching, retail, or B2B experience into territory value.",
-          "Prepare examples before the pressure of a live interview."
+          "The full $100K Med Rep Method curriculum.",
+          "One-to-one coaching and personalized career strategy.",
+          "Resume, networking, mock-interview, and brag-book support.",
+          "Sales training for candidates pursuing advancement after they enter the field."
         ]
       },
       {
-        "heading": "Use free guidance as a starting point.",
-        "body": "A guide can help you see the gaps. Your results still depend on the roles you pursue, your experience, the employer, and how consistently you execute.",
+        "heading": "Know the terms before you commit.",
+        "body": "The current enrollment page describes payment options and a conditional six-month money-back guarantee. Read the written eligibility, completion, timing, and refund terms on Med Rep College before paying; no page on this site promises a job or earnings result.",
         "steps": [
-          ["01", "Read", "Learn the structure hiring managers expect."],
-          ["02", "Rewrite", "Shape your examples around relevance and results."],
-          ["03", "Rehearse", "Practice until the answer sounds clear, not memorized."]
+          ["01", "Review", "Read the current inclusions, availability, and written terms."],
+          ["02", "Decide", "Confirm that the time, access, and coaching format fit your needs."],
+          ["03", "Enroll", "Complete payment and client details on the secure legacy form."]
         ]
       }
     ],
     "cta": {
-      "heading": "Start with the free interview guide.",
-      "body": "Get the current resource from Med Rep College and use it to prepare your next interview story.",
-      "label": "Get the free guide",
-      "url": "https://medrepcollege.com/access"
+      "heading": "Looking for Jebb's highest-touch support?",
+      "body": "Enrollment and payment stay on Med Rep College. Review current availability, payment options, guarantee conditions, and terms before paying.",
+      "label": "Review VIP enrollment",
+      "url": "https://medrepcollege.com/vip-access"
     }
   },
   {
-    "slug": "apply-for-pharmaceutical-sales-career-coaching",
-    "aliases": ["application"],
-    "title": "Apply to Work With Jebb",
-    "description": "Apply for pharmaceutical-sales career coaching with The Pharma Coach and choose the right level of support for your goals.",
-    "kicker": "Coaching application",
-    "headline": "Find the right support before you make another move.",
-    "lead": "The application helps Jebb understand where you are now, what kind of pharmaceutical or medical-sales role you want, and where the job search is breaking down.",
-    "image": "/assets/source/jebb-official-about-portrait.webp",
-    "imageAlt": "Jebb Ruff, pharmaceutical-sales career coach",
-    "sourceUrl": "https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching",
+    "slug": "faq",
+    "aliases": ["medical-sales-faq"],
+    "title": "Pharmaceutical Sales Career Coaching FAQ",
+    "description": "Straight answers about moving into pharmaceutical sales, choosing a Pharma Coach program, and keeping applications and enrollment on Med Rep College.",
+    "kicker": "Frequently asked questions",
+    "headline": "Understand the path before you choose support.",
+    "lead": "These answers explain what coaching can help with, what it cannot promise, and which parts of the journey still happen through Med Rep College.",
+    "image": "/assets/source/pharma-hcp-conversation.png",
+    "imageAlt": "A pharmaceutical representative speaking with a healthcare professional",
+    "sourceUrl": "https://medrepcollege.com/medical-sales-faq",
     "facts": [
-      ["Your background", "Clinical, sales, education, or another path"],
-      ["Your target", "The role, territory, and timeline you are pursuing"],
-      ["Your gap", "Resume, networking, interview, or advancement"]
+      ["3 paths", "Self-paced, live group, and one-to-one support"],
+      ["Legacy forms", "Applications, guide access, and enrollment remain on Med Rep College"],
+      ["No promise", "Hiring, salary, and timing depend on the employer and candidate"]
     ],
-    "sections": [
-      {
-        "heading": "A useful application starts with specifics.",
-        "body": "You do not need a perfect resume or a polished answer. You do need enough detail to make the next conversation useful. Be clear about the work you have done, the roles you want, and what has happened so far.",
-        "items": [
-          "Name the roles and companies you are targeting.",
-          "Share the experience you believe should translate.",
-          "Explain where the process stalls: applications, recruiter calls, or interviews.",
-          "Choose a timeline you can realistically support while working or studying."
-        ]
-      },
-      {
-        "heading": "Choose support after you understand the fit.",
-        "body": "The Pharma Coach offers self-paced, group, and high-touch options. Review the current inclusions, price, availability, and terms before you pay. Coaching does not guarantee a job, salary, or placement timeline.",
-        "steps": [
-          ["01", "Apply", "Share your goals and current situation."],
-          ["02", "Talk", "Use the discovery conversation to assess fit."],
-          ["03", "Choose", "Select support only after reviewing the current terms."]
-        ]
-      }
+    "faqs": [
+      ["Can I move into pharmaceutical sales without pharma experience?", "Some employers hire candidates from sales, healthcare, education, and other client-facing backgrounds. The work is to translate that experience into evidence that fits the role; each employer still sets its own requirements."],
+      ["Why am I applying but not getting interviews?", "Your target roles, resume, or networking may not make the fit clear. More applications do not fix weak positioning. Start by checking whether the role fits your background and whether your materials show relevant results."],
+      ["Can I do the program while working full time?", "The self-paced material is designed for working professionals, but live coaching and application work still require time. Review the current schedule and access period before enrolling."],
+      ["What is the difference between Fast Track, Mastermind, and VIP?", "Fast Track is self-paced. Mastermind adds live coaching and accountability. VIP adds the most personalized, one-to-one support. Current inclusions, availability, and terms are listed on each enrollment page."],
+      ["Does coaching guarantee a job or a particular salary?", "No. Employers control hiring and compensation, and results depend on the role, market, experience, and execution. Read all written program and refund terms before paying."],
+      ["Where do I apply for coaching?", "The application form remains on Med Rep College so the existing intake workflow keeps working. The new site explains the programs; the legacy system continues to collect the application."],
+      ["Where do I get the free interview guide?", "The guide opt-in remains on Med Rep College so the existing email and delivery workflow stays intact."],
+      ["Should I schedule a call before choosing a program?", "A discovery call can help you discuss fit and next steps before choosing support. Confirm the current price, duration, and cancellation terms on the booking page."]
     ],
     "cta": {
-      "heading": "Ready to tell Jebb where you are stuck?",
-      "body": "Complete the current Med Rep College application. Submission is a request to talk, not a promise of admission or results.",
-      "label": "Start the application",
-      "url": "https://medrepcollege.com/apply-for-med-rep-college-now"
+      "heading": "Still deciding what fits?",
+      "body": "Use a discovery call to discuss your background and next step before choosing a coaching program.",
+      "label": "Schedule a call",
+      "url": "https://medrepcollege.com/secure-your-spot"
     }
   }
 ]

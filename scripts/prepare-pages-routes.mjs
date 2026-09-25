@@ -15,6 +15,27 @@ for (const route of ["about", "blog", ...posts.map(({ slug }) => `blog/${slug}`)
   copyFileSync(shell, path.join(routeDirectory, "index.html"));
 }
 
+const escapeHtml = value => String(value).replace(/[&"<>]/g, char => ({
+  "&": "&amp;", '"': "&quot;", "<": "&lt;", ">": "&gt;",
+})[char]);
+
+// Each static article route needs its own initial HTML metadata for sharing and crawlers.
+for (const post of posts) {
+  const url = `https://thepharmacoach.com/blog/${post.slug}`;
+  const title = `${post.title} | The Pharma Coach`;
+  const image = new URL(post.image || "/assets/source/4310ea7e87b3a0cc-decoded.png", "https://thepharmacoach.com/").href;
+  const articleShell = readFileSync(shell, "utf8")
+    .replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`)
+    .replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escapeHtml(post.excerpt)}" />`)
+    .replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${escapeHtml(title)}" />`)
+    .replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${escapeHtml(post.excerpt)}" />`)
+    .replace(/<meta property="og:type"[^>]*>/, '<meta property="og:type" content="article" />')
+    .replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${escapeHtml(image)}" />`)
+    .replace(/<link rel="alternate"[^>]*>/, `<link rel="alternate" type="text/markdown" href="/markdown/blog/${post.slug}.md" />`)
+    .replace("  </head>", `    <link rel="canonical" href="${escapeHtml(post.canonical || url)}" />\n    <meta property="og:url" content="${escapeHtml(url)}" />\n  </head>`);
+  writeFileSync(path.join(dist, "blog", post.slug, "index.html"), articleShell);
+}
+
 const markdownDirectory = path.join(dist, "markdown");
 mkdirSync(path.join(markdownDirectory, "blog"), { recursive: true });
 

@@ -40,7 +40,7 @@ The September 23 Wix census found 19 general page URLs in addition to blog posts
 
 ## Separate parity lanes
 
-- Blog archive: the Wix census found 403 post URLs. The repository currently contains a smaller migrated set, so this remains a content-import and redirect project.
+- Blog archive: the Wix census found 403 post URLs. The repository currently contains 22 local posts. Two use the newer sourced article structure, six legacy posts have recoverable article structure, and fourteen are flattened social-style imports that remain in the editorial rewrite queue. The shared template now provides article navigation, an author bio, a guide CTA, and related articles; structural normalization restores real headings and lists without inventing new claims.
 - Store: 16 product URLs require product, checkout, payment, fulfillment, and customer-history decisions.
 - Bookings: 12 booking-service URLs require schedule, payment, cancellation, notification, and calendar parity.
 - Categories: 9 blog-category URLs require archive pages or redirects.

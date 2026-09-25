@@ -32,7 +32,7 @@ test("the currently reviewed dermatologist article has editorial landmarks", () 
 });
 
 test("every blog route inherits the branded visual and approved author headshot", () => {
-  assert.equal(posts.length, 34, "unexpected post count; review the complete library when it changes");
+  assert.equal(posts.length, 37, "unexpected post count; review the complete library when it changes");
   assert.match(blogSource, /<BlogVisual post=\{post\} \/>/);
   assert.match(blogSource, /<BlogVisual post=\{post\} size="feature" \/>/);
   assert.ok(!blogSource.includes("<img src={post.image}"), "legacy images must not bypass the branded thumbnail system");

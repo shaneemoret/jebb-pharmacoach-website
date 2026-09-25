@@ -32,7 +32,7 @@ test("the currently reviewed dermatologist article has editorial landmarks", () 
 });
 
 test("every blog route inherits the branded visual and approved author headshot", () => {
-  assert.equal(posts.length, 25, "unexpected post count; review the complete library when it changes");
+  assert.equal(posts.length, 34, "unexpected post count; review the complete library when it changes");
   assert.match(blogSource, /<BlogVisual post=\{post\} \/>/);
   assert.match(blogSource, /<BlogVisual post=\{post\} size="feature" \/>/);
   assert.ok(!blogSource.includes("<img src={post.image}"), "legacy images must not bypass the branded thumbnail system");
@@ -76,4 +76,25 @@ test("career-changer guides are complete, sourced articles", () => {
     assert.ok(!JSON.stringify(post.body).includes("\u2014"), `${slug} uses an em dash`);
   }
   assert.match(blogSource, /post\.sources\?\.map/);
+});
+
+test("every rewritten article is a complete, sourced, pharma-first page", () => {
+  const rewritten = posts.filter(post => post.editorialStatus === "standard-v1" && Array.isArray(post.sources));
+  assert.ok(rewritten.length >= 3, "expected rewritten articles");
+  for (const post of rewritten) {
+    const blocks = post.body;
+    assert.equal(blocks[0].type, "p", `${post.slug} must open with the answer`);
+    assert.ok(blocks.filter(block => block.type === "h2").length >= 4, `${post.slug} needs real sections`);
+    assert.ok(post.excerpt.length <= 220, `${post.slug} has an overlong excerpt`);
+    const text = JSON.stringify(blocks);
+    assert.ok(!/[\u2014\u2013]/.test(text), `${post.slug} uses an em or en dash`);
+    assert.ok(!/medrepcollege\.com|DM me/i.test(text), `${post.slug} carries a social-post call to action`);
+    let seenH2 = false;
+    for (const block of blocks) {
+      if (block.type === "h2") seenH2 = true;
+      if (block.type === "h3") assert.ok(seenH2, `${post.slug} has an h3 before any h2`);
+      if (block.type === "link") assert.ok(block.url.startsWith("/blog/") ? posts.some(item => block.url === `/blog/${item.slug}/`) : block.url.startsWith("https://"), `${post.slug} links to a missing page: ${block.url}`);
+    }
+    for (const source of post.sources) assert.match(source.url, /^https:\/\//);
+  }
 });

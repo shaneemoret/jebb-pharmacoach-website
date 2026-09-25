@@ -2,8 +2,10 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 import posts from "../src/posts.json" with { type: "json" };
+import { prepareArticleBlocks } from "../src/blogBlocks.js";
 
 const blogSource = await readFile(new URL("../src/Blog.jsx", import.meta.url), "utf8");
+const articleStyles = await readFile(new URL("../src/article.css", import.meta.url), "utf8");
 const standard = await readFile(new URL("../BLOG_STANDARD.md", import.meta.url), "utf8");
 
 test("normalized legacy articles expose real sections for article navigation", () => {
@@ -34,7 +36,21 @@ test("every blog route inherits the branded visual and approved author headshot"
   assert.match(blogSource, /<BlogVisual post=\{post\} \/>/);
   assert.match(blogSource, /<BlogVisual post=\{post\} size="feature" \/>/);
   assert.ok(!blogSource.includes("<img src={post.image}"), "legacy images must not bypass the branded thumbnail system");
-  assert.equal((blogSource.match(/jebb-headshot-owner\.png/g) || []).length, 3, "card visual, byline, and author bio must share the approved headshot");
+  assert.equal((blogSource.match(/jebb-headshot-owner\.png/g) || []).length, 2, "only the byline and author bio should use the approved headshot");
+  assert.ok(!blogSource.includes("blog-visual__topline"), "thumbnail topline must stay removed");
+  assert.ok(!blogSource.includes("blog-visual__footer"), "thumbnail footer and portrait must stay removed");
+  assert.ok(!blogSource.includes("post__guide"), "temporary interview-guide rail must stay removed");
+  assert.match(blogSource, /className="post__authorname" href=\{`\$\{BASE\}about`\}/);
+  assert.match(articleStyles, /object-position:\s*50% 0/);
+});
+
+test("rendered article lists always contain at least three items", () => {
+  for (const post of posts) {
+    const blocks = prepareArticleBlocks(post.body || []);
+    for (const block of blocks.filter(item => item.type === "list")) {
+      assert.ok(block.items.length >= 3, `${post.slug} renders an orphan list`);
+    }
+  }
 });
 
 test("the repository carries a durable blog standard for future agents", () => {
@@ -43,5 +59,7 @@ test("the repository carries a durable blog standard for future agents", () => {
     "`jebb-headshot-owner.png`",
     "Desktop and mobile visual QA",
     "needs-editorial-rewrite",
+    "at least three meaningful items",
+    "one-word fragments",
   ]) assert.ok(standard.includes(requirement), `BLOG_STANDARD.md is missing: ${requirement}`);
 });

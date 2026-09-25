@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prepare-pages-routes.mjs && node scripts/prepare-sites-build.mjs",
+    "build": "vite build && node scripts/prepare-pages-routes.mjs && node scripts/prepare-sites-build.mjs && node scripts/stamp-release.mjs",
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "import:posts": "node scripts/import-posts.mjs",

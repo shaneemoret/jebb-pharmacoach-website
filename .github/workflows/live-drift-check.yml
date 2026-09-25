@@ -1,0 +1,54 @@
+name: Live site matches GitHub
+
+# Fails (and GitHub emails the repository owner) when thepharmacoach.com is serving
+# something that did not come from the latest successful GitHub deploy of main.
+# That catches local uploads, Codex Sites publishes, and dashboard edits that bypass GitHub.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_run:
+    workflows: ["Deploy production to Cloudflare Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  compare:
+    name: Compare live commit with GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for the edge to settle after a deploy
+        if: github.event_name == 'workflow_run'
+        run: sleep 60
+
+      - name: Compare
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          expected=$(gh run list -R "$REPO" --workflow cloudflare-pages.yml --branch main --status success --limit 1 --json headSha --jq '.[0].headSha')
+          live_json=$(curl -fsS -H 'Cache-Control: no-cache' "https://thepharmacoach.com/version.json?ts=$(date +%s)" || true)
+          live=$(printf '%s' "$live_json" | jq -r '.commit // "missing"' 2>/dev/null || echo "missing")
+          source=$(printf '%s' "$live_json" | jq -r '.source // "missing"' 2>/dev/null || echo "missing")
+          echo "Last GitHub deploy of main: $expected"
+          echo "Live site reports:          $live ($source)"
+          if [ "$live" = "$expected" ] && [ "$source" = "github-actions" ]; then
+            echo "OK: the live site is the latest GitHub-deployed commit."
+            exit 0
+          fi
+          {
+            echo "## Live site does not match GitHub"
+            echo ""
+            echo "- Last successful GitHub deploy of main: \`$expected\`"
+            echo "- Live site reports: \`$live\` (source: \`$source\`)"
+            echo ""
+            echo "Something reached thepharmacoach.com without going through GitHub, or the site is serving an older deploy."
+            echo "Fix: re-run the latest 'Deploy production to Cloudflare Pages' workflow on main. If the live change was intended, open a pull request with that change so GitHub has it, then merge."
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "::error::Live site ($live, $source) does not match the last GitHub deploy of main ($expected)."
+          exit 1

@@ -173,9 +173,10 @@ export function BlogPost({ slug }) {
             <div className="post__authorlinks"><a href={`${BASE}about`}>Full profile</a><a href="https://www.tiktok.com/@entermedicalsales" target="_blank" rel="noreferrer">TikTok</a><a href={blogHref()}>All articles</a></div>
           </div>
         </section>
-        {(post.source || ftcSource) && <section className="post__sources" aria-label="Sources">
+        {(post.source || ftcSource || post.sources?.length > 0) && <section className="post__sources" aria-label="Sources">
           <h2>Sources</h2>
           <ul>
+            {post.sources?.map(source => <li key={source.url}>{source.label}, <a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}
             {ftcSource && <li>Federal Trade Commission, <a href={ftcSource.url} target="_blank" rel="noreferrer">Job Scams</a></li>}
             {post.source && <li>{post.source.label}, <a href={post.source.url} target="_blank" rel="noreferrer">original video</a></li>}
           </ul>

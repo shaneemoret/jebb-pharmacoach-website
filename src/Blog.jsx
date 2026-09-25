@@ -134,7 +134,7 @@ export function BlogPost({ slug }) {
           <h1>{post.title}</h1>
           {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
           <div className="post__authorline">
-            <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="" width="52" height="52" />
+            <img src={`${BASE}assets/source/jebb-headshot-owner-208.webp`} alt="" width="52" height="52" />
             <div><a className="post__authorname" href={`${BASE}about`}>{post.author}</a><p><time dateTime={post.published}>{longDate(post.published)}</time><span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
           </div>
         </header>
@@ -165,7 +165,7 @@ export function BlogPost({ slug }) {
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </div>
         <section className="post__authorbio" aria-labelledby="post-author-heading">
-          <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
+          <img src={`${BASE}assets/source/jebb-headshot-owner-208.webp`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
           <div>
             <p className="post__label">About the author</p>
             <h2 id="post-author-heading">Jebb Ruff</h2>

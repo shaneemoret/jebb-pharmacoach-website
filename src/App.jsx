@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight, List, X } from "@phosphor-icons/react";
 import CareerComparison from "./CareerComparison";
 
@@ -16,25 +16,25 @@ const studentVideos = [
   { name: "Kara P.", path: "Advancing in pharmaceutical sales", file: "69b5c395302795ad60dfb409.mov" },
 ];
 const officialLogos = [
-  ["logo-01.png", "Sanofi", 102, 34],
-  ["logo-02.png", "Edwards Lifesciences", 142, 25],
-  ["logo-03.png", "Lilly", 75, 42],
-  ["logo-04.png", "GSK", 99, 35],
-  ["logo-05.png", "Medtronic", 134, 26],
-  ["logo-06.png", "Cardinal Health", 82, 42],
-  ["logo-07.png", "Johnson & Johnson", 129, 27],
-  ["logo-08.png", "Amgen", 111, 31],
-  ["logo-09.png", "Bristol Myers Squibb", 150, 18],
-  ["logo-10.png", "Novartis", 61, 42],
-  ["logo-11.png", "Boehringer Ingelheim", 101, 34],
-  ["logo-12.png", "AbbVie", 132, 26],
-  ["logo-13.png", "Pfizer", 74, 42],
-  ["logo-14.png", "Henry Schein Dental", 138, 25],
-  ["logo-15.png", "Boston Scientific", 99, 35],
-  ["logo-16.png", "Merck", 106, 33],
-  ["logo-17.png", "AstraZeneca", 114, 31],
-  ["logo-18.png", "Stryker", 112, 31],
-  ["logo-19.png", "Abbott", 111, 31],
+  ["logo-01.webp", "Sanofi", 102, 34],
+  ["logo-02.webp", "Edwards Lifesciences", 142, 25],
+  ["logo-03.webp", "Lilly", 75, 42],
+  ["logo-04.webp", "GSK", 99, 35],
+  ["logo-05.webp", "Medtronic", 134, 26],
+  ["logo-06.webp", "Cardinal Health", 82, 42],
+  ["logo-07.webp", "Johnson & Johnson", 129, 27],
+  ["logo-08.webp", "Amgen", 111, 31],
+  ["logo-09.webp", "Bristol Myers Squibb", 150, 18],
+  ["logo-10.webp", "Novartis", 61, 42],
+  ["logo-11.webp", "Boehringer Ingelheim", 101, 34],
+  ["logo-12.webp", "AbbVie", 132, 26],
+  ["logo-13.webp", "Pfizer", 74, 42],
+  ["logo-14.webp", "Henry Schein Dental", 138, 25],
+  ["logo-15.webp", "Boston Scientific", 99, 35],
+  ["logo-16.webp", "Merck", 106, 33],
+  ["logo-17.webp", "AstraZeneca", 114, 31],
+  ["logo-18.webp", "Stryker", 112, 31],
+  ["logo-19.webp", "Abbott", 111, 31],
 ];
 
 const programs = [
@@ -82,12 +82,22 @@ function Button() {
 
 function StudentVideo({ student }) {
   const [state, setState] = useState("loading");
-  return <div className="student-video__media" aria-busy={state === "loading"}>
+  const [near, setNear] = useState(false);
+  const box = useRef(null);
+  // Only fetch the video once the testimonial is close to the screen; the files are several MB each.
+  useEffect(() => {
+    if (near || !box.current) return;
+    if (!("IntersectionObserver" in window)) { setNear(true); return; }
+    const io = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setNear(true); io.disconnect(); } }, { rootMargin: "400px" });
+    io.observe(box.current);
+    return () => io.disconnect();
+  }, [near]);
+  return <div ref={box} className="student-video__media" aria-busy={state === "loading"}>
     {state === "loading" && <div className="video-placeholder" role="status"><span>Loading {student.name}’s video</span><i /><i /></div>}
-    <video controls playsInline preload="metadata" aria-label={`${student.name}'s video testimonial`} onLoadedMetadata={() => setState("ready")} onError={() => setState("error")}>
+    {near && <video controls playsInline preload="metadata" aria-label={`${student.name}'s video testimonial`} onLoadedMetadata={() => setState("ready")} onError={() => setState("error")}>
       <source src={`https://assets.cdn.filesafe.space/5Yn78yf8uYk9U7Fl1kJ2/media/${student.file}`} onError={() => setState("error")} />
       Your browser cannot play this video. <a href={videoTestimonialsUrl}>Watch on Med Rep College</a>.
-    </video>
+    </video>}
     {state === "error" && <p className="video-placeholder" role="status">Video unavailable. <a href={videoTestimonialsUrl}>Watch the original</a>.</p>}
   </div>;
 }
@@ -122,7 +132,7 @@ function LogoStrip() {
       <button className="logo-strip__toggle" onClick={() => setPaused(!paused)} aria-label={paused ? "Play logo animation" : "Pause logo animation"}>{paused ? "Play" : "Pause"}</button>
       <div className="logo-strip__track" style={{ animationPlayState: paused ? "paused" : "running" }} aria-hidden="true">
         {[0, 1].map((copy) => <div className="logo-strip__group" key={copy}>
-          {officialLogos.map(([file, name, w, h]) => <img key={file} src={`${A}official-logo-strip/${file}`} alt="" title={name} loading="eager" decoding="async" style={{ "--lw": w, "--lh": h }} />)}
+          {officialLogos.map(([file, name, w, h]) => <img key={file} src={`${A}official-logo-strip/${file}`} alt="" title={name} loading="lazy" decoding="async" style={{ "--lw": w, "--lh": h }} />)}
         </div>)}
       </div>
     </div>
@@ -136,7 +146,7 @@ export function App() {
       <Header />
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
-          <img className="hero__image" src={`${A}jebb-banner-owner.png`} alt="Jebb Ruff, The Pharma Coach" fetchPriority="high" />
+          <img className="hero__image" src={`${A}jebb-banner-owner.webp`} alt="Jebb Ruff, The Pharma Coach" fetchPriority="high" />
           <div className="hero__copy">
             <h1 id="hero-title"><span className="hero__soft">Start your career in</span> <span className="hero__accent">pharmaceutical sales</span>.</h1>
             <p className="lead">Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles and advance in the field.</p>
@@ -149,7 +159,7 @@ export function App() {
         <CareerComparison />
 
         <section id="about" className="coach section-pad" aria-labelledby="coach-title">
-          <div className="coach__portrait"><img src={`${A}jebb-headshot-owner.png`} alt="Jebb Ruff, The Pharma Coach" width="1139" height="1381" loading="lazy" /></div>
+          <div className="coach__portrait"><img src={`${A}jebb-headshot-owner.webp`} alt="Jebb Ruff, The Pharma Coach" width="1139" height="1381" loading="lazy" /></div>
           <div className="coach__copy">
             <p className="eyebrow">Meet your coach</p>
             <h2 id="coach-title">Jebb Ruff, MBA</h2>

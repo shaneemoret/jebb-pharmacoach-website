@@ -21,9 +21,12 @@ The owner-stated best-fit groups are professionals with sales experience and a d
 
 ## Program paths
 
-- Fast Track Academy: https://medrepcollege.com/fast-track-checkout
-- Mastermind Accelerator: https://medrepcollege.com/accelerator-checkout-page
-- VIP Signature Access: https://medrepcollege.com/vip-access
+- Fast Track Academy: /academy
+- Mastermind Accelerator: /mastermind-accelerator
+- VIP Signature Access: /vip-signature-access
+- Frequently asked questions: /faq
 - Diagnosis call: https://medrepcollege.com/book-a-call-with-jebb
+
+Applications, free-guide delivery, enrollment, and payment remain on Med Rep College so the existing form workflows continue to operate.
 
 Pricing, availability, terms, earnings examples and placement results must be verified on the current official enrollment pages. Results vary; examples are not guarantees.

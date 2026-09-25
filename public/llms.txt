@@ -6,12 +6,23 @@ The Pharma Coach helps ambitious professionals position their existing experienc
 
 - Homepage: /
 - Markdown overview: /index.md
-- Academy: https://medrepcollege.com/fast-track
-- Mastermind: https://medrepcollege.com/mastermind-accelerator
-- VIP Access: https://medrepcollege.com/vip-access
+- Fast Track Academy: /academy
+- Mastermind Accelerator: /mastermind-accelerator
+- VIP Signature Access: /vip-signature-access
+- FAQ: /faq
 - Career advice: /blog
 - About: /about
 - Blog index: /blog
+
+## Legacy form workflows
+
+- Free interview guide form: https://medrepcollege.com/access
+- Coaching application form: https://medrepcollege.com/apply-for-med-rep-college-now
+- Fast Track enrollment: https://medrepcollege.com/fast-track-checkout
+- Mastermind enrollment: https://medrepcollege.com/accelerator-checkout-page
+- VIP enrollment: https://medrepcollege.com/vip-access
+
+The new site hosts the program explanations, FAQ, and career advice. Form submission, payment, intake, and guide delivery remain on Med Rep College.
 
 ## About
 

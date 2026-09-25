@@ -9,6 +9,11 @@ const shell = path.join(dist, "index.html");
 const posts = JSON.parse(readFileSync(path.join(root, "src", "posts.json"), "utf8"));
 const about = JSON.parse(readFileSync(path.join(root, "src", "about.json"), "utf8"));
 const migratedPages = JSON.parse(readFileSync(path.join(root, "src", "migrated-pages.json"), "utf8"));
+const legacyRedirects = [
+  ["free-medical-sales-training", "https://medrepcollege.com/access", "Free interview guide"],
+  ["apply-for-pharmaceutical-sales-career-coaching", "https://medrepcollege.com/apply-for-med-rep-college-now", "Coaching application"],
+  ["application", "https://medrepcollege.com/apply-for-med-rep-college-now", "Coaching application"],
+];
 
 for (const route of ["about", "blog", ...posts.map(({ slug }) => `blog/${slug}`)]) {
   const routeDirectory = path.join(dist, ...route.split("/"));
@@ -25,7 +30,7 @@ const appStylesheet = readFileSync(shell, "utf8").match(/<link rel="stylesheet"[
 function renderMigratedPage(page) {
   const canonical = `https://thepharmacoach.com/${page.slug}`;
   const facts = page.facts.map(([value, label]) => `<div class="migrated-fact"><strong>${escapeHtml(value)}</strong><span>${escapeHtml(label)}</span></div>`).join("");
-  const sections = page.sections.map((section, index) => {
+  const sections = (page.sections || []).map((section, index) => {
     const details = section.items
       ? `<ul class="migrated-list">${section.items.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
       : `<div class="migrated-steps">${section.steps.map(([number, title, text]) => `<article class="migrated-step"><b>${escapeHtml(number)}</b><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}</div>`;
@@ -34,6 +39,9 @@ function renderMigratedPage(page) {
       <div class="migrated-section__body"><p>${escapeHtml(section.body)}</p>${details}</div>
     </section>`;
   }).join("\n");
+  const faqs = page.faqs
+    ? `<section class="migrated-section migrated-section--faq"><h2>Questions, answered.</h2><div class="migrated-faq">${page.faqs.map(([question, answer]) => `<article><h3>${escapeHtml(question)}</h3><p>${escapeHtml(answer)}</p></article>`).join("")}</div></section>`
+    : "";
 
   return `<!doctype html>
 <html lang="en">
@@ -56,9 +64,9 @@ function renderMigratedPage(page) {
     <header class="migration-header">
       <a class="migration-wordmark" href="/">THE PHARMA COACH</a>
       <nav class="migration-nav" aria-label="Primary navigation">
-        <a href="/academy">Academy</a><a href="/blog">Career advice</a><a href="/about">About</a><a href="/application">Apply</a><a class="migration-nav__cta" href="https://medrepcollege.com/secure-your-spot">Schedule a call</a>
+        <a href="/#programs">Programs</a><a href="/blog/">Career advice</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="https://medrepcollege.com/apply-for-med-rep-college-now">Apply</a><a class="migration-nav__cta" href="https://medrepcollege.com/secure-your-spot">Schedule a call</a>
       </nav>
-      <details class="migration-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="/academy">Academy</a><a href="/blog">Career advice</a><a href="/about">About</a><a href="/application">Apply</a><a href="https://medrepcollege.com/secure-your-spot">Schedule a call</a></nav></details>
+      <details class="migration-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="/#programs">Programs</a><a href="/blog/">Career advice</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="https://medrepcollege.com/apply-for-med-rep-college-now">Apply</a><a href="https://medrepcollege.com/secure-your-spot">Schedule a call</a></nav></details>
     </header>
     <main>
       <section class="migrated-hero">
@@ -67,9 +75,10 @@ function renderMigratedPage(page) {
       </section>
       <section class="migrated-facts" aria-label="Page highlights">${facts}</section>
       ${sections}
+      ${faqs}
       <section class="migrated-cta"><div><h2>${escapeHtml(page.cta.heading)}</h2><p>${escapeHtml(page.cta.body)}</p></div><a class="migrated-button" href="${escapeHtml(page.cta.url)}">${escapeHtml(page.cta.label)} →</a></section>
     </main>
-    <footer class="migration-footer"><div><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete. Results vary; hiring, earnings, and placement examples are not guarantees.</p></div><nav aria-label="Footer"><a href="/about">About</a><a href="/blog">Career advice</a><a href="mailto:Jebb@ThePharmaCoach.com">Contact</a><a href="https://medrepcollege.com/privacy">Privacy</a><a href="https://medrepcollege.com/terms">Terms</a></nav></footer>
+    <footer class="migration-footer"><div><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete. Results vary; hiring, earnings, and placement examples are not guarantees.</p></div><nav aria-label="Footer"><a href="/academy/">Fast Track</a><a href="/mastermind-accelerator/">Mastermind</a><a href="/vip-signature-access/">VIP</a><a href="/faq/">FAQ</a><a href="/blog/">Career advice</a><a href="https://medrepcollege.com/access">Free guide</a><a href="https://medrepcollege.com/apply-for-med-rep-college-now">Apply</a><a href="mailto:Jebb@ThePharmaCoach.com">Contact</a></nav></footer>
   </body>
 </html>`;
 }
@@ -80,6 +89,13 @@ for (const page of migratedPages) {
     mkdirSync(routeDirectory, { recursive: true });
     writeFileSync(path.join(routeDirectory, "index.html"), renderMigratedPage(page));
   }
+}
+
+for (const [route, destination, label] of legacyRedirects) {
+  const routeDirectory = path.join(dist, route);
+  mkdirSync(routeDirectory, { recursive: true });
+  writeFileSync(path.join(routeDirectory, "index.html"), `<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>${escapeHtml(label)} | The Pharma Coach</title><link rel="canonical" href="${escapeHtml(destination)}" /><meta http-equiv="refresh" content="0; url=${escapeHtml(destination)}" /><script>window.location.replace(${JSON.stringify(destination)});</script></head><body><p>This form remains on Med Rep College. <a href="${escapeHtml(destination)}">Continue to ${escapeHtml(label)}</a>.</p></body></html>`);
 }
 
 // Each static article route needs its own initial HTML metadata for sharing and crawlers.
@@ -110,13 +126,19 @@ for (const page of migratedPages) {
     "",
     ...page.facts.map(([value, label]) => `- **${value}:** ${label}`),
     "",
-    ...page.sections.flatMap(section => [
+    ...(page.sections || []).flatMap(section => [
       `## ${section.heading}`,
       "",
       section.body,
       "",
       ...(section.items || []).map(item => `- ${item}`),
       ...(section.steps || []).map(([number, title, text]) => `${number}. **${title}:** ${text}`),
+      "",
+    ]),
+    ...(page.faqs || []).flatMap(([question, answer]) => [
+      `## ${question}`,
+      "",
+      answer,
       "",
     ]),
     `## ${page.cta.heading}`,
@@ -204,4 +226,4 @@ for (const post of posts) {
   writeFileSync(path.join(markdownDirectory, "blog", `${post.slug}.md`), markdown);
 }
 
-console.log(`Prepared ${posts.length + migratedPages.length + 2} Cloudflare Pages routes.`);
+console.log(`Prepared ${posts.length + migratedPages.length + legacyRedirects.length + 2} Cloudflare Pages routes.`);

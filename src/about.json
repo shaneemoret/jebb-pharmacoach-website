@@ -11,21 +11,24 @@
       "name": "Fast Track Academy",
       "price": "$899",
       "tier": "Self-paced",
-      "url": "https://medrepcollege.com/fast-track",
+      "url": "https://thepharmacoach.com/academy",
+      "path": "academy",
       "body": "A self-paced path for turning your current experience into a pharmaceutical-sales job search. Covers how hiring managers read a resume, how to target roles, and how to prepare for the interview."
     },
     {
       "name": "Mastermind Accelerator",
       "price": "$2,499",
       "tier": "Most popular",
-      "url": "https://medrepcollege.com/mastermind-accelerator",
+      "url": "https://thepharmacoach.com/mastermind-accelerator",
+      "path": "mastermind-accelerator",
       "body": "Weekly strategy, mentorship and accountability while you actively pursue roles. Built for candidates who want live feedback on applications and interviews as they happen."
     },
     {
       "name": "VIP Signature Access",
       "price": "$5,799",
       "tier": "High touch",
-      "url": "https://medrepcollege.com/vip-access",
+      "url": "https://thepharmacoach.com/vip-signature-access",
+      "path": "vip-signature-access",
       "body": "A customized career strategy with direct, high-touch mentorship from Jebb. For candidates who want the plan built around their specific background and timeline."
     }
   ],

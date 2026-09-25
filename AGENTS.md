@@ -5,7 +5,7 @@
 This site is live at https://thepharmacoach.com. The only way a change may reach it is:
 
 1. Make the change on a new branch in this repository (never directly on `main`).
-2. Run `npm run build`, `npm run test:sites`, and `node --test tests/migrated-pages.test.mjs tests/blog-standard.test.mjs tests/release-guard.test.mjs`. Check the changed pages on desktop and phone in a local preview.
+2. Run `npm run build`, `npm run test:sites`, and `node --test tests/migrated-pages.test.mjs tests/blog-standard.test.mjs tests/release-guard.test.mjs tests/legacy-redirects.test.mjs`. Check the changed pages on desktop and phone in a local preview.
 3. Commit, push the branch, and open a pull request against `main`. Describe what changed and attach before/after screenshots.
 4. Wait for the **Pull request checks** to pass. Show Jebb the change and get his explicit approval.
 5. Merge the pull request. GitHub Actions then builds, tests, and deploys that exact commit to Cloudflare Pages.

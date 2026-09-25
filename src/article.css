@@ -102,6 +102,19 @@
   max-width: 605px;
   min-width: min(325px, 100%);
 }
+.post__youtube {
+  width: min(100%, 605px);
+}
+.post__youtube iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: min(78vh, 780px);
+  border: 0;
+  background: var(--ink);
+}
+.post__video-fallback { margin: 10px 0 0; font-size: 14px; }
+.post__video-fallback a { color: var(--navy); text-underline-offset: 3px; }
 
 /* Article pages use the wider editorial layout from the supplied reference. */
 .post.section-pad { max-width: none; margin: 0; padding-top: clamp(42px, 5vw, 72px); }

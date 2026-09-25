@@ -19,6 +19,8 @@ const readingTime = post => {
     + (block.items ? block.items.join(" ").split(/\s+/).length : 0), 0);
   return `${Math.max(1, Math.ceil(words / 200))} min read`;
 };
+const headingSlug = text => text.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "section";
+const GUIDE_URL = "https://medrepcollege.com/access";
 
 function TikTok({ video }) {
   useEffect(() => {
@@ -92,23 +94,47 @@ export function BlogPost({ slug }) {
     );
   }
 
+  const seenHeadings = new Map();
+  const sections = post.body.map((block, index) => {
+    if (block.type !== "h2") return null;
+    const base = headingSlug(block.text);
+    const count = (seenHeadings.get(base) || 0) + 1;
+    seenHeadings.set(base, count);
+    return { id: count === 1 ? base : `${base}-${count}`, text: block.text, index };
+  }).filter(Boolean);
+  const sectionByIndex = new Map(sections.map(section => [section.index, section]));
+  const related = posts.filter(candidate => candidate.slug !== post.slug && candidate.body)
+    .sort((a, b) => Number(b.tags?.some(tag => post.tags?.includes(tag))) - Number(a.tags?.some(tag => post.tags?.includes(tag))))
+    .slice(0, 3);
+  const ftcSource = post.body.find(block => block.type === "link" && block.url?.startsWith("https://consumer.ftc.gov/articles/job-scams"));
+  const firstHeading = post.body.findIndex(block => block.type === "h2");
+  const introCount = post.video && firstHeading > 0 && post.body.slice(0, firstHeading).every(block => block.type === "p") ? firstHeading : 0;
+
   return (
     <>
     <Header />
     <main className="post section-pad" id="top">
-      <article>
-        <a className="post__back" href={blogHref()}>All posts</a>
-        <p className="post-card__meta">
-          <time dateTime={post.published}>{longDate(post.published)}</time>
-          <span>{readingTime(post)}</span>
-        </p>
-        <h1>{post.title}</h1>
-        {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
-        <p className="post__byline">By {post.author}</p>
-        {post.video && <TikTok video={post.video} />}
+      <div className="post__shell">
+        <nav className="post__breadcrumb" aria-label="Breadcrumb">
+          <a href={BASE}>Home</a><span aria-hidden="true">›</span><a href={blogHref()}>Blog</a><span aria-hidden="true">›</span><span>{post.tags?.[0] || "Career advice"}</span>
+        </nav>
+        <header className="post__header">
+          <p className="eyebrow">{post.tags?.[0] || "Career advice"}</p>
+          <h1>{post.title}</h1>
+          {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
+          <div className="post__authorline">
+            <img src={`${BASE}assets/source/jebb-official-about-portrait.webp`} alt="" width="52" height="52" />
+            <div><strong>{post.author}</strong><p><time dateTime={post.published}>{longDate(post.published)}</time><span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
+          </div>
+        </header>
+        <div className="post__layout">
+      <article className="post__content">
+        {introCount > 0 && <div className="post__intro">{post.body.slice(0, introCount).map((block, index) => <p key={index}>{block.text}</p>)}</div>}
+        {post.video && <figure className="post__videofigure"><TikTok video={post.video} /><figcaption>Jebb explains the certificate warning in his original <a href={post.video.url} target="_blank" rel="noreferrer">TikTok video</a>.</figcaption></figure>}
         <div className="post__body">
-          {post.body.map((block, index) => {
-            if (block.type === "h2") return <h2 key={index}>{block.text}</h2>;
+          {post.body.slice(introCount).map((block, offset) => {
+            const index = offset + introCount;
+            if (block.type === "h2") return <h2 id={sectionByIndex.get(index).id} key={index}>{block.text}</h2>;
             if (block.type === "h3") return <h3 key={index}>{block.text}</h3>;
             if (block.type === "list") {
               const List = block.ordered ? "ol" : "ul";
@@ -119,17 +145,47 @@ export function BlogPost({ slug }) {
             return <p key={index}>{block.text}</p>;
           })}
         </div>
-        {post.source && (
-          <p className="post__source">
-            {post.source.label}: <a href={post.source.url} target="_blank" rel="noreferrer">watch the original</a>.
-          </p>
-        )}
         <div className="post__cta">
           <h2>Want this applied to your own search?</h2>
           <p>Book a 45-minute discovery call with Jebb and talk through your next step.</p>
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </div>
+        <section className="post__authorbio" aria-labelledby="post-author-heading">
+          <img src={`${BASE}assets/source/jebb-official-about-portrait.webp`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
+          <div>
+            <p className="post__label">About the author</p>
+            <h2 id="post-author-heading">Jebb Ruff</h2>
+            <p>Jebb is a former pharmaceutical and medical device sales hiring manager, sales trainer, and career coach. Through The Pharma Coach, he helps people turn their experience into a practical plan for entering medical sales.</p>
+            <div className="post__authorlinks"><a href={`${BASE}about`}>Full profile</a><a href="https://www.tiktok.com/@entermedicalsales" target="_blank" rel="noreferrer">TikTok</a><a href={blogHref()}>All articles</a></div>
+          </div>
+        </section>
+        {(post.source || ftcSource) && <section className="post__sources" aria-label="Sources">
+          <h2>Sources</h2>
+          <ul>
+            {ftcSource && <li>Federal Trade Commission, <a href={ftcSource.url} target="_blank" rel="noreferrer">Job Scams</a></li>}
+            {post.source && <li>{post.source.label}, <a href={post.source.url} target="_blank" rel="noreferrer">original video</a></li>}
+          </ul>
+        </section>}
       </article>
+      <aside className="post__aside" aria-label="Article tools">
+        {sections.length > 0 && <nav className="post__toc" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>{sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.text}</a></li>)}</ol>
+        </nav>}
+        <div className="post__guide">
+          <p className="post__label">Free interview guide</p>
+          <p>Get Jebb's guide for preparing for your next pharmaceutical sales interview.</p>
+          <a href={GUIDE_URL}>Get the guide <span aria-hidden="true">→</span></a>
+        </div>
+      </aside>
+        </div>
+        {related.length > 0 && <section className="post__related" aria-labelledby="related-heading">
+          <div className="post__relatedhead"><h2 id="related-heading">More from Jebb</h2><a href={blogHref()}>All articles →</a></div>
+          <div className="post__relatedgrid">{related.map(item => <a className="post__relateditem" href={blogHref(item.slug)} key={item.slug}>
+            <span>Article · {readingTime(item)}</span><strong>{item.title}</strong><p>{item.excerpt}</p>
+          </a>)}</div>
+        </section>}
+      </div>
     </main>
     <SiteFooter />
     </>

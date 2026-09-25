@@ -70,7 +70,9 @@ function blockToMarkdown(block) {
   if (block.type === "p") return block.text;
   if (block.type === "h2") return `## ${block.text}`;
   if (block.type === "h3") return `### ${block.text}`;
-  if (block.type === "list") return block.items.map((item) => `- ${item}`).join("\n");
+  if (block.type === "list") return block.items.map((item, index) => `${block.ordered ? `${index + 1}.` : "-"} ${item}`).join("\n");
+  if (block.type === "quote") return `> ${block.text}`;
+  if (block.type === "link") return `[${block.text}](${block.url})`;
   throw new Error(`Unsupported blog block type: ${block.type}`);
 }
 

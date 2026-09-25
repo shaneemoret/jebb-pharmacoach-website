@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import posts from "./posts.json";
 import { Header, SiteFooter, BOOKING_URL } from "./App.jsx";
+import "./article.css";
 
 const BASE = import.meta.env.BASE_URL;
 export const blogHref = slug => `${BASE}blog${slug ? `/${slug}` : ""}`;
@@ -28,8 +29,8 @@ function TikTok({ video }) {
     document.body.appendChild(script);
   }, []);
   return (
-    <blockquote className="tiktok-embed post__video" cite={video.url} data-video-id={video.id}>
-      <section><a href={video.url} target="_blank" rel="noreferrer">Watch this on TikTok ({video.handle})</a></section>
+    <blockquote className="tiktok-embed post__video" cite={video.url} data-video-id={video.id} style={{ maxWidth: 605, minWidth: 325 }}>
+      <section><a href={video.url} target="_blank" rel="noreferrer">Watch the original video on TikTok ({video.handle})</a></section>
     </blockquote>
   );
 }
@@ -102,13 +103,19 @@ export function BlogPost({ slug }) {
           <span>{readingTime(post)}</span>
         </p>
         <h1>{post.title}</h1>
-        <p className="post__byline">{post.author}</p>
+        {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
+        <p className="post__byline">By {post.author}</p>
         {post.video && <TikTok video={post.video} />}
         <div className="post__body">
           {post.body.map((block, index) => {
             if (block.type === "h2") return <h2 key={index}>{block.text}</h2>;
             if (block.type === "h3") return <h3 key={index}>{block.text}</h3>;
-            if (block.type === "list") return <ul key={index}>{block.items.map((item, i) => <li key={i}>{item}</li>)}</ul>;
+            if (block.type === "list") {
+              const List = block.ordered ? "ol" : "ul";
+              return <List key={index}>{block.items.map((item, i) => <li key={i}>{item}</li>)}</List>;
+            }
+            if (block.type === "quote") return <blockquote className="post__quote" key={index}>{block.text}</blockquote>;
+            if (block.type === "link") return <p key={index}><a href={block.url} target={block.url.startsWith("http") ? "_blank" : undefined} rel={block.url.startsWith("http") ? "noreferrer" : undefined}>{block.text}</a></p>;
             return <p key={index}>{block.text}</p>;
           })}
         </div>

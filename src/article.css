@@ -1,0 +1,32 @@
+.post__dek {
+  max-width: 700px;
+  margin: 20px 0 0;
+  color: rgba(11, 15, 20, .75);
+  font-size: clamp(19px, 2vw, 24px);
+  line-height: 1.5;
+}
+
+.post__quote {
+  margin: 30px 0;
+  padding: 16px 24px;
+  border-left: 5px solid var(--gold);
+  background: rgba(18, 59, 93, .055);
+  color: var(--navy);
+  font: 700 clamp(20px, 2.3vw, 27px)/1.4 var(--head);
+}
+
+.post__body ol {
+  margin: 18px 0 0;
+  padding-left: 25px;
+}
+
+.post__body a {
+  color: var(--navy);
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+}
+
+.post__video {
+  max-width: 605px;
+  min-width: min(325px, 100%);
+}

@@ -36,7 +36,7 @@ test("every blog route inherits the branded visual and approved author headshot"
   assert.match(blogSource, /<BlogVisual post=\{post\} \/>/);
   assert.match(blogSource, /<BlogVisual post=\{post\} size="feature" \/>/);
   assert.ok(!blogSource.includes("<img src={post.image}"), "legacy images must not bypass the branded thumbnail system");
-  assert.equal((blogSource.match(/jebb-headshot-owner\.png/g) || []).length, 2, "only the byline and author bio should use the approved headshot");
+  assert.equal((blogSource.match(/jebb-headshot-owner(?:-\d+)?\.(?:png|webp)/g) || []).length, 2, "only the byline and author bio should use the approved headshot");
   assert.ok(!blogSource.includes("blog-visual__topline"), "thumbnail topline must stay removed");
   assert.ok(!blogSource.includes("blog-visual__footer"), "thumbnail footer and portrait must stay removed");
   assert.ok(!blogSource.includes("post__guide"), "temporary interview-guide rail must stay removed");

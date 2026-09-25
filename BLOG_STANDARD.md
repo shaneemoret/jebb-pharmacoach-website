@@ -6,7 +6,7 @@ This is the repository standard for every current and future article. Read it be
 
 - Every post must use the shared `BlogVisual` component on the blog index and as the article's featured visual. Do not render an imported Wix/social image directly as the finished thumbnail.
 - The visual must stay within the approved identity: inky black `#0B0F14`, white `#FFFFFF`, deep navy `#123B5D`, metallic gold `#D4AF37`, Manrope headings, and Source Sans 3 body copy.
-- Use `jebb-headshot-owner.png` in the byline and author bio, with the crop anchored to the top so his forehead is visible. Do not place a portrait inside the branded thumbnail and do not substitute the half-body About portrait in small circles.
+- Use `jebb-headshot-owner.png` in the byline and author bio (served as its compressed derivative `jebb-headshot-owner-208.webp`; never ship the multi-megabyte PNG to readers), with the crop anchored to the top so his forehead is visible. Do not place a portrait inside the branded thumbnail and do not substitute the half-body About portrait in small circles.
 - Every article must show a real featured visual between its header/byline and reading layout. Missing legacy media is never represented as a blank box.
 - Keep branded thumbnails editorial and simple: category plus title only. Do not add a decorative topline, "field notes" label, author footer, or face.
 - Treat old orange artwork and social-platform graphics as source material only. Redesign them into this system instead of mixing brands.
@@ -26,6 +26,8 @@ Every standards-compliant article needs:
 Do not invent facts to bulk up an archived post. Preserve recoverable legacy copy, but keep source-thin social imports marked `needs-editorial-rewrite` until they receive an evidence-backed rewrite. A branded template does not make an incomplete caption a finished article.
 
 ## Implementation rules
+
+- Ship images as compressed WebP sized for how they display. The original PNG stays in the repository as the source file.
 
 - Add content in `src/posts.json`; keep the reusable layout in `src/Blog.jsx` and `src/article.css`.
 - Keep the shared media treatment deterministic. One component update must propagate to every existing and future post.

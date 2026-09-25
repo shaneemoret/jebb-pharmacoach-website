@@ -61,7 +61,7 @@ export function About() {
             <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
           </div>
           <div className="about-hero__portrait">
-            <img src={`${A}jebb-headshot-owner.png`} alt="Jebb Ruff, The Pharma Coach" width="1139" height="1381" fetchPriority="high" />
+            <img src={`${A}jebb-headshot-owner.webp`} alt="Jebb Ruff, The Pharma Coach" width="1139" height="1381" fetchPriority="high" />
           </div>
           <dl className="about-hero__stats">
             {about.credentials.map(([figure, label]) => (

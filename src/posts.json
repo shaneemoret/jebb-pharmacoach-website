@@ -99,7 +99,8 @@
         "type": "p",
         "text": "You do not need a paid certificate to start a conversation about pharmaceutical sales. Build a strategy that shows a hiring manager how you will contribute. I share more practical advice in the video above and across The Pharma Coach blog."
       }
-    ]
+    ],
+    "editorialStatus": "standard-v1"
   },
   {
     "slug": "what-is-really-holding-you-back-from-a-medical-sales-job",
@@ -174,12 +175,13 @@
         "type": "p",
         "text": "Build the strategy that gets you noticed, trusted and hired. That is the order it happens in, and it does not start with another application."
       }
-    ]
+    ],
+    "editorialStatus": "standard-v1"
   },
   {
     "slug": "what-can-a-dermatologist-teach-you-about-succeeding-in-pharmaceutical-sales",
     "title": "What Can a Dermatologist Teach You About Succeeding in Pharmaceutical Sales?",
-    "excerpt": "Don't walk in trying to sell something. Walk in trying to understand something. \u2193\u2193\u2193 Ask. Listen. Dig deeper. Find the gap. Connect the problem to the right solution. Prove it with evidence. Add value. Earn trust. Follow up. Then ask for the next step.",
+    "excerpt": "Don't walk in trying to sell something. Walk in trying to understand. Ask, listen, find the gap, connect it to the right solution, add value, earn trust, follow up, and then ask for the next step.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-22",
     "tags": [
@@ -224,7 +226,7 @@
         "text": "If you're searching for a pharmaceutical sales job, this story is for you."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "The Mistake That Costs Pharma Reps (and Candidates)"
       },
       {
@@ -265,14 +267,10 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "Can this sales rep solve a problem for me?"
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "What I Did Differently With Dr. Novak"
       },
       {
@@ -284,24 +282,15 @@
         "text": "Instead, I got curious."
       },
       {
-        "type": "p",
-        "text": "\u21b3 How does she think about acne patients?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 What is already working?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Where does she still see frustration?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 What is important to her acne patients?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 What does her staff deal with every day?"
+        "type": "list",
+        "items": [
+          "How does she think about acne patients?",
+          "What is already working?",
+          "Where does she still see frustration?",
+          "What is important to her acne patients?",
+          "What does her staff deal with every day?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -332,7 +321,7 @@
         "text": "Rather than assume we had the answer, we explored what might be contributing to that dissatisfaction and whether there was an appropriate opportunity to better support those patients."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Overcoming \"We're Happy With What We Use.\""
       },
       {
@@ -372,8 +361,11 @@
         "text": "Nothing was fought."
       },
       {
-        "type": "p",
-        "text": "\u21b3 You simply learned something."
+        "type": "list",
+        "items": [
+          "You simply learned something."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -384,7 +376,7 @@
         "text": "Questions first. Answer second."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Your Customer Was Not in Your Training Class"
       },
       {
@@ -404,32 +396,17 @@
         "text": "They wake up thinking about:"
       },
       {
-        "type": "p",
-        "text": "\u2605 Patient outcomes"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Medical errors"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Prior authorizations"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Adherence"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Cost"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Staff workload"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Law suits"
+        "type": "list",
+        "items": [
+          "Patient outcomes",
+          "Medical errors",
+          "Prior authorizations",
+          "Adherence",
+          "Cost",
+          "Staff workload",
+          "Law suits"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -448,7 +425,7 @@
         "text": "That one shift separates \"the sales rep\" from a trusted resource."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Now Let's Talk About You"
       },
       {
@@ -457,58 +434,31 @@
       },
       {
         "type": "p",
-        "text": "The person hiring you is the customer."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 You are the product."
-      },
-      {
-        "type": "p",
-        "text": "And most candidates make the exact mistake I nearly made with Dr. Novak."
-      },
-      {
-        "type": "p",
-        "text": "They lead with what they want. A new six-figure pharmaceutical sales job with uncapped commission and a company car."
+        "text": "The person hiring you is the customer, and you are the product. Most candidates make the exact mistake I nearly made with Dr. Novak: they lead with what they want—a new six-figure pharmaceutical sales job with uncapped commission and a company car."
       },
       {
         "type": "p",
         "text": "The pharma sales hiring manager is thinking:"
       },
       {
-        "type": "p",
-        "text": "\u279f Can this candidate learn fast?"
-      },
-      {
-        "type": "p",
-        "text": "\u279f Can they communicate with credibility?"
-      },
-      {
-        "type": "p",
-        "text": "\u279f Can they build relationships?"
-      },
-      {
-        "type": "p",
-        "text": "\u279f Can they grow the territory?"
-      },
-      {
-        "type": "p",
-        "text": "\u279f Can they handle rejection?"
-      },
-      {
-        "type": "p",
-        "text": "\u279f Can they earn access?"
-      },
-      {
-        "type": "p",
-        "text": "\u279f Can they represent our company professionally?"
+        "type": "list",
+        "items": [
+          "Can this candidate learn fast?",
+          "Can they communicate with credibility?",
+          "Can they build relationships?",
+          "Can they grow the territory?",
+          "Can they handle rejection?",
+          "Can they earn access?",
+          "Can they represent our company professionally?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "That list is the gap you have to close."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Your Pharmaceutical Sales Resume Is a Sales Document"
       },
       {
@@ -544,24 +494,15 @@
         "text": "Show me:"
       },
       {
-        "type": "p",
-        "text": "\u2605 What problem you solved."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 What you improved."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 How you work with people."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Where you ranked."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 What obstacle you overcame."
+        "type": "list",
+        "items": [
+          "What problem you solved.",
+          "What you improved.",
+          "How you work with people.",
+          "Where you ranked.",
+          "What obstacle you overcame."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -576,7 +517,7 @@
         "text": "Your work experience is real. But if it is not translated into the language a hiring manager reads every day, they will not connect it to the role."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "A Pharmaceutical Sales Interview Is Not a Request for a Chance"
       },
       {
@@ -632,7 +573,7 @@
         "text": "The other sounds like a future top performer."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Hill's \"Extra Mile\" Is How Reps Get Remembered"
       },
       {
@@ -652,28 +593,16 @@
         "text": "The difference is usually small and consistent:"
       },
       {
-        "type": "p",
-        "text": "\u21b3 They prepare before the call."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 They remember past conversations."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 They follow up when they say they will."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 They understand the office, not just the physician."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 They respect everyone's time ."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 They plan the next interaction."
+        "type": "list",
+        "items": [
+          "They prepare before the call.",
+          "They remember past conversations.",
+          "They follow up when they say they will.",
+          "They understand the office, not just the physician.",
+          "They respect everyone's time .",
+          "They plan the next interaction."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -688,40 +617,16 @@
         "text": "Hiring managers watch for this before you are ever hired. It shows up in how you follow up, how you prepare, and how you communicate during the interview process."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Persistence Is Not the Same as Repetition"
       },
       {
         "type": "p",
-        "text": "Hill wrote a great deal about persistence. But in pharmaceutical sales, persistence does not mean repeating a message to someone who is not listening."
+        "text": "Hill wrote a great deal about persistence. But in pharmaceutical sales, persistence does not mean repeating a message to someone who is not listening. It means getting better. If you are not gaining traction, examine your targeting, timing, questions, message, preparation, and follow-up. Do not make more calls; make better calls."
       },
       {
         "type": "p",
-        "text": "It means getting better."
-      },
-      {
-        "type": "p",
-        "text": "If you are not gaining traction, examine your targeting, timing, questions, message, preparation, and follow-up."
-      },
-      {
-        "type": "p",
-        "text": "Do not make more calls."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Make better calls."
-      },
-      {
-        "type": "p",
-        "text": "Filling out job applications can feel like progress."
-      },
-      {
-        "type": "p",
-        "text": "You submit 20 applications, refresh your inbox, and wait."
-      },
-      {
-        "type": "p",
-        "text": "When nothing happens, you submit 20 more."
+        "text": "Filling out job applications can feel like progress. You submit 20 applications, refresh your inbox, and wait. When nothing happens, you submit 20 more."
       },
       {
         "type": "p",
@@ -736,7 +641,7 @@
         "text": "Until you identify that gap, more applications often produce more rejection."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Why I Start With a Diagnosis"
       },
       {
@@ -745,107 +650,28 @@
       },
       {
         "type": "p",
-        "text": "\"I need a new resume.\""
+        "text": "\"I need a new resume.\" Maybe. \"I need a pharmaceutical sales certificate.\" One hundred percent false. \"I need help with LinkedIn.\" Possibly. \u201cI need more sales experience.\u201d Probably not. \u201cI need the right connections.\u201d Could be. Those are all possible solutions, not a diagnosis."
       },
       {
         "type": "p",
-        "text": "Maybe."
+        "text": "The question to ask yourself is: What is keeping you out of pharmaceutical sales? That is why I built the Free Pharmaceutical Sales Career Assessment. It is a diagnostic tool."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Applying but not getting interviews? There is a gap.",
+          "Getting interviews but not offers? That is a different gap.",
+          "Not sure where to start? That is a third gap."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
-        "text": "\"I need a pharmaceutical sales certificate.\""
+        "text": "You do not need more generic advice. You need clarity about the problem you are solving. A six-figure career is on the other side of your specific problem."
       },
       {
-        "type": "p",
-        "text": "100% false!"
-      },
-      {
-        "type": "p",
-        "text": "\"I need help with LinkedIn.\""
-      },
-      {
-        "type": "p",
-        "text": "Possibly."
-      },
-      {
-        "type": "p",
-        "text": "\u201cI need more sales experience.\u201d"
-      },
-      {
-        "type": "p",
-        "text": "Probably not."
-      },
-      {
-        "type": "p",
-        "text": "\u201cI need the right connections.\u201d"
-      },
-      {
-        "type": "p",
-        "text": "Could be."
-      },
-      {
-        "type": "p",
-        "text": "Those are solutions."
-      },
-      {
-        "type": "p",
-        "text": "The question to ask yourself:"
-      },
-      {
-        "type": "p",
-        "text": "What is keeping you out of pharmaceutical sales?"
-      },
-      {
-        "type": "p",
-        "text": "That is why I built the Free Pharmaceutical Sales Career Assessment."
-      },
-      {
-        "type": "p",
-        "text": "It\u2019s a diagnostic tool."
-      },
-      {
-        "type": "p",
-        "text": "Applying but not getting interviews?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 There is a gap."
-      },
-      {
-        "type": "p",
-        "text": "Getting interviews but not offers?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 That is a different gap."
-      },
-      {
-        "type": "p",
-        "text": "Not sure where to start?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 That is a third gap."
-      },
-      {
-        "type": "p",
-        "text": "You do not need more generic advice."
-      },
-      {
-        "type": "p",
-        "text": "You need clarity about the problem you are solving."
-      },
-      {
-        "type": "p",
-        "text": "A six-figure career is on the other side of your specific problem."
-      },
-      {
-        "type": "p",
+        "type": "h2",
         "text": "Take the Free Pharmaceutical Sales Career Assessment"
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
       },
       {
         "type": "p",
@@ -856,7 +682,7 @@
         "text": "It will show you where you stand and where to focus next, and how to get there."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "What I Would Tell My Younger Self Before Walking Into That Busy Dermatology Clinic"
       },
       {
@@ -866,10 +692,6 @@
       {
         "type": "p",
         "text": "Walk in trying to understand something."
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
       },
       {
         "type": "p",
@@ -899,7 +721,9 @@
         "type": "p",
         "text": "Which is harder for most salespeople: asking the right question or listening to the answer?"
       }
-    ]
+    ],
+    "formatVersion": "editorial-v1",
+    "editorialStatus": "archive-normalized"
   },
   {
     "slug": "who-are-you-when-nobody-is-watching-in-pharmaceutical-sales",
@@ -1639,12 +1463,13 @@
         "type": "p",
         "text": "Share your Top 3 values in the comments."
       }
-    ]
+    ],
+    "editorialStatus": "archive-structured"
   },
   {
     "slug": "how-to-get-a-pharmaceutical-sales-interview-2",
     "title": "How to get a pharmaceutical sales interview",
-    "excerpt": "The \"Apply\" button is lying to you. You\u2019re doing everything \"right\" to land Pharma Sales interviews. \u27a8 Gathering information. \u27a8 Filling out applications. But your inbox is a graveyard of automated rejection emails. \u201cI\u2019ve applied to 35 roles this month...\u201d \u21b3 Silence. \u201cI finally got a recruiter screen...\u201d \u21b3 Ghosted. \u201cI was told to network, so I sent 50 LinkedIn invites...\u201d \u21b3 Ignored. If you aren't getting interviews, you don't have an \"information\" problem. You have a strategy problem.",
+    "excerpt": "The \"Apply\" button is lying to you. You\u2019re doing everything \"right\" to land Pharma Sales interviews.",
     "author": "The Pharma Coach",
     "published": "2026-09-21",
     "tags": [
@@ -1811,22 +1636,19 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "I created a free Medical Sales Interview Assessment to show you exactly where hiring managers are losing interest and what to fix before your next interview."
       },
       {
         "type": "p",
         "text": "https://medrepcollege.com/assessment"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "where-do-i-start-if-i-want-a-career-in-pharmaceutical-sales",
     "title": "Where Do I Start If I Want a Career in Pharmaceutical Sales?",
-    "excerpt": "To get hired in pharmaceutical sales, follow these 10 steps: 1. Self-Reflection: Take some time to reflect on your career goals, strengths, and areas for improvement. Understand what might be causing your feelings of being stuck. 2. Set Clear Goals: Define specific, achievable career goals. Having a clear direction will give you a sense of purpose and motivation. 3. Skill Enhancement: Identify the skills and knowledge gaps that might be holding you back. Invest in continuo",
+    "excerpt": "To get hired in pharmaceutical sales, follow these 10 steps: 1. Self-Reflection: Take some time to reflect on your career goals, strengths, and areas for improvement.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-20",
     "tags": [
@@ -1850,7 +1672,7 @@
         "text": "So let's fix that. Here is where I tell candidates to start, based on 22 years in this industry and having sat on the hiring side of the table."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Start By Understanding What the Job"
       },
       {
@@ -1862,7 +1684,7 @@
         "text": "This matters because a lot of aspiring candidates chase the idea of working in pharmaceutical sales (the six figure income, the company car, the flexible schedule) without understanding what the day to day work involves. It is relationship management, territory strategy, clinical fluency, and disciplined follow up. If that sounds appealing rather than draining, you are already ahead of half the people applying."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "The Fastest Starting Point: A Sales Foundation"
       },
       {
@@ -1898,7 +1720,7 @@
         "text": "Hiring managers in pharma and device sales are not looking for people who already know clinical terminology. They are looking for talented candidates who have already proven they can sell, and B2B sales experience is one of the clearest ways to prove that."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "The Medical Adjacent Starting Point"
       },
       {
@@ -1914,7 +1736,7 @@
         "text": "This translation piece is where most clinical candidates get stuck, and it is one of the biggest gaps I help close in my career coaching work."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Build Your Resume Around the Job You Want, Not the Job You Have"
       },
       {
@@ -1926,7 +1748,7 @@
         "text": "Your resume should be written around outcomes: what did you grow, what did you improve, what numbers moved because of you. If you managed a territory of accounts as a B2B rep, that number matters. If you led a patient education initiative that improved medication compliance as a nurse, that outcome matters. Hiring managers scanning a stack of resumes are looking for evidence of impact, not a list of duties."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Start Networking Before You Start Applying"
       },
       {
@@ -1938,7 +1760,7 @@
         "text": "Your starting point should include reaching out to current medical sales reps on LinkedIn, asking thoughtful questions, and requesting short informational conversations, not job leads. People in this industry remember who showed genuine curiosity about the work versus who simply asked for a favor. Start building these relationships months before you plan to apply, not the week after you get laid off or decide you are ready for a change."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Get Clear on Which Career You Are Targeting"
       },
       {
@@ -1954,7 +1776,7 @@
         "text": "Knowing your target category early saves you months of applying broadly and getting generic rejections."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "The Honest Starting Point Nobody Wants to Hear"
       },
       {
@@ -1969,12 +1791,14 @@
         "type": "p",
         "text": "If you are serious about pharmaceutical sales and want a structured path instead of guesswork, that is exactly what I built the $100K Med Rep Method around: Access, Strategy, and Momentum. You do not need to figure this out alone, and you do not need another six months of applying into silence to know if you are on the right track."
       }
-    ]
+    ],
+    "formatVersion": "editorial-v1",
+    "editorialStatus": "archive-normalized"
   },
   {
     "slug": "how-to-enter-pharmaceutical-sales-with-a-healthcare-background",
     "title": "How to enter pharmaceutical sales with a healthcare background",
-    "excerpt": "You\u2019re a physical therapist\u2026 So why can\u2019t you get a pharmaceutical sales interview? Here\u2019s the problem. You\u2019re selling your clinical knowledge instead of your business impact. Hiring managers already know you\u2019re smart. They want to know if you can influence physicians, build relationships, and grow a territory. That\u2019s why so many PTs get overlooked. Your experience isn\u2019t the problem. Your strategy is.",
+    "excerpt": "You\u2019re a physical therapist\u2026 So why can\u2019t you get a pharmaceutical sales interview?",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-19",
     "tags": [
@@ -2054,20 +1878,14 @@
         "text": "Before the $100K Med Rep Method, Ethan was missing the pieces that turn experience into interviews."
       },
       {
-        "type": "p",
-        "text": "\u279f A resume that read like a clinician."
-      },
-      {
-        "type": "p",
-        "text": "\u279f A clear story for why he belongs in pharma."
-      },
-      {
-        "type": "p",
-        "text": "\u279f A LinkedIn profile that talked about PT duties."
-      },
-      {
-        "type": "p",
-        "text": "\u279f A networking strategy that sounded like \u201chelp me,\u201d instead of \u201cI\u2019m ready.\u201d"
+        "type": "list",
+        "items": [
+          "A resume that read like a clinician.",
+          "A clear story for why he belongs in pharma.",
+          "A LinkedIn profile that talked about PT duties.",
+          "A networking strategy that sounded like \u201chelp me,\u201d instead of \u201cI\u2019m ready.\u201d"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2090,20 +1908,14 @@
         "text": "But Ethan had an access problem."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Access to recruiters."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Access to the interviews."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Access to hiring managers."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Access to six-figure job offers."
+        "type": "list",
+        "items": [
+          "Access to recruiters.",
+          "Access to the interviews.",
+          "Access to hiring managers.",
+          "Access to six-figure job offers."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2139,10 +1951,6 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "I created a free Pharma Sales Interview Assessment to show you exactly where hiring managers are losing interest and what to fix before your next interview."
       },
       {
@@ -2153,12 +1961,13 @@
         "type": "p",
         "text": "https://medrepcollege.com/assessment"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "how-do-i-get-hired-with-zero-pharmaceutical-experience",
     "title": "How do I get hired with zero pharmaceutical experience?",
-    "excerpt": "\"You can't rely on motivation to get hired in Pharma Sales.\" But what if you're just choosing the wrong habits? You've read books on habits. \u21b3 Get a spark. \u21b3 Build the plan. \u21b3 Set reminders. \u21b3 Ignored the reminders. Then\u2026forgot about it. And when that happens, we usually blame ourselves. \ufe0f \u201cToo many distractions.\u201d \ufe0f \u201cNo discipline.\u201d",
+    "excerpt": "\"You can't rely on motivation to get hired in Pharma Sales.\" But what if you're just choosing the wrong habits?",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-17",
     "tags": [
@@ -2198,16 +2007,13 @@
         "text": "If you're a nurse trying to transition into pharma sales \u2935"
       },
       {
-        "type": "p",
-        "text": "\u2605 It's not your cover letter."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 It's not your degree."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 It's not that you \"can't sell.\""
+        "type": "list",
+        "items": [
+          "It's not your cover letter.",
+          "It's not your degree.",
+          "It's not that you \"can't sell.\""
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2246,16 +2052,13 @@
         "text": "So how do RNs get hired in Pharma Sales?"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Target jobs jobs that interest you."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Revamp your resume to speak the industry\u2019s language."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Build an interview story that proves you can impact the business."
+        "type": "list",
+        "items": [
+          "Target jobs jobs that interest you.",
+          "Revamp your resume to speak the industry\u2019s language.",
+          "Build an interview story that proves you can impact the business."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2287,22 +2090,19 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "Click the link for you fast pass into a six-figure pharma sales career."
       },
       {
         "type": "p",
         "text": "https://www.thepharmacoach.com/pharmaceutical-sales-interview-guides"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "how-to-answer-why-pharmaceutical-sales",
     "title": "How to answer \u201cWhy pharmaceutical sales?\u201d",
-    "excerpt": "How to prepare for your first medical sales interview. Most people walk in unprepared and wonder why they didn't get the offer. Here's exactly what to do: 1. Research the company (deeply). Don't just skim the website. Know their products, their competitors, and their market position. Understand what makes them different and where they're growing. If you can't speak intelligently about what they do, you're already behind. 2. Understand the territory. Look up the hospitals and clinics in the ar",
+    "excerpt": "How to prepare for your first medical sales interview. Most people walk in unprepared and wonder why they didn't get the offer.",
     "author": "The Pharma Coach",
     "published": "2026-09-16",
     "tags": [
@@ -2411,22 +2211,19 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "Click the link for a discovery call and receive my Pharma Sales Insider Interview Toolkit."
       },
       {
         "type": "p",
         "text": "https://medrepcollege.com/book-a-call-with-jebb"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "how-should-you-handle-a-pharmaceutical-sales-interview",
     "title": "How Should You Handle a Pharmaceutical Sales Interview?",
-    "excerpt": "Pharmaceutical sales professionals don\u2019t wait for business to happen, they confidently ask for the next step, whether that means securing a follow-up meeting, or gaining commitment to change prescribing behavior. Your interview is the very first opportunity to show you already know how to do that.",
+    "excerpt": "Pharmaceutical sales professionals don\u2019t wait for business to happen, they confidently ask for the next step, whether that means securing a follow-up meeting, or gaining commitment to change prescribing behavior.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-15",
     "tags": [
@@ -2548,20 +2345,14 @@
         "text": "We're imagining you in front of physicians, nurses, and office managers. During the competitive interviews, you are proving:"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Can I trust her in the territory?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Can she grow the territory?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Can she learn complex information?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Would a physician want to do business with her?"
+        "type": "list",
+        "items": [
+          "Can I trust her in the territory?",
+          "Can she grow the territory?",
+          "Can she learn complex information?",
+          "Would a physician want to do business with her?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2584,20 +2375,14 @@
         "text": "Before you launch into your perfectly rehearsed \u201cwalk me through your resume,\u201d be human first."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Notice something in the room. Comment on it."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Ask how their week has been, and wait for the answer."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Find common ground before you share your talking points."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Smile. Relax your shoulders. Calmness = Confidence."
+        "type": "list",
+        "items": [
+          "Notice something in the room. Comment on it.",
+          "Ask how their week has been, and wait for the answer.",
+          "Find common ground before you share your talking points.",
+          "Smile. Relax your shoulders. Calmness = Confidence."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2628,20 +2413,14 @@
         "text": "Amanda had to unlearn this habit fast."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Listen for the problem hiding inside the hiring manager's question."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Ask a follow-up question instead of jumping straight to your story."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Get curious about the territory, the team, and the challenges they're facing."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Connect what they just said to something specific you've accomplished."
+        "type": "list",
+        "items": [
+          "Listen for the problem hiding inside the hiring manager's question.",
+          "Ask a follow-up question instead of jumping straight to your story.",
+          "Get curious about the territory, the team, and the challenges they're facing.",
+          "Connect what they just said to something specific you've accomplished."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2664,20 +2443,14 @@
         "text": "A pharmaceutical sales interview shouldn't feel like someone reciting answers off a laminated card. It should feel like a conversation with a person who happens to be great at their job."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Make eye contact, not the nervous kind."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Smile naturally it signals enthusiasm and professionalism."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Use appropriate humor when it fits the moment."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Give them a small window into what a physician would experience with you in the room."
+        "type": "list",
+        "items": [
+          "Make eye contact, not the nervous kind.",
+          "Smile naturally it signals enthusiasm and professionalism.",
+          "Use appropriate humor when it fits the moment.",
+          "Give them a small window into what a physician would experience with you in the room."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2704,20 +2477,14 @@
         "text": "Hiring managers could feel it."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Know specifically why this company and this territory interest you."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Understand the product, the competition, and the patient population."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Explain clearly what you bring to the business, not just what you want from it."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Be willing to evaluate whether the opportunity is right for you too."
+        "type": "list",
+        "items": [
+          "Know specifically why this company and this territory interest you.",
+          "Understand the product, the competition, and the patient population.",
+          "Explain clearly what you bring to the business, not just what you want from it.",
+          "Be willing to evaluate whether the opportunity is right for you too."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2748,24 +2515,15 @@
         "text": "Some of the most memorable moments in an interview come from the questions you ask, not the answers you give."
       },
       {
-        "type": "p",
-        "text": "\u21b3 What separates your top performing reps from your average ones?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 What's the biggest challenge facing this territory right now?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Where do you see the greatest opportunity for growth?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 What objections are physicians giving your team most often?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 What would you need to see from me to feel confident moving forward?"
+        "type": "list",
+        "items": [
+          "What separates your top performing reps from your average ones?",
+          "What's the biggest challenge facing this territory right now?",
+          "Where do you see the greatest opportunity for growth?",
+          "What objections are physicians giving your team most often?",
+          "What would you need to see from me to feel confident moving forward?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2792,20 +2550,14 @@
         "text": "Candidates do the professional version of this constantly, and it costs them the job."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Reconfirm your interest before you leave the room."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Ask directly where you stand in the process."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Address any hesitation or concerns head on instead of ignoring them."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Ask clearly about next steps and realistic timing."
+        "type": "list",
+        "items": [
+          "Reconfirm your interest before you leave the room.",
+          "Ask directly where you stand in the process.",
+          "Address any hesitation or concerns head on instead of ignoring them.",
+          "Ask clearly about next steps and realistic timing."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2828,24 +2580,15 @@
         "text": "Once she made that shift, her banking background stopped feeling like a liability and started sounding like exactly what it was: relevant experience that the manager cared about."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Banking client relationships became relationship development."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Hitting financial goals became performance accountability."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Difficult client conversations became consultative selling."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Problem solving under pressure became objection handling."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Years of earned trust became account credibility."
+        "type": "list",
+        "items": [
+          "Banking client relationships became relationship development.",
+          "Hitting financial goals became performance accountability.",
+          "Difficult client conversations became consultative selling.",
+          "Problem solving under pressure became objection handling.",
+          "Years of earned trust became account credibility."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2884,28 +2627,16 @@
         "text": "We don't just polish a resume and hope for the best. We work on the things hiring managers notice the moment you walk into the room:"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Your positioning and how you frame your background."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your interview strategy from the first handshake to the last question."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your working knowledge of the pharmaceutical or medical device industry."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 The quality of the questions you ask them."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your confidence, without tipping into arrogance."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your ability to close and ask for next steps."
+        "type": "list",
+        "items": [
+          "Your positioning and how you frame your background.",
+          "Your interview strategy from the first handshake to the last question.",
+          "Your working knowledge of the pharmaceutical or medical device industry.",
+          "The quality of the questions you ask them.",
+          "Your confidence, without tipping into arrogance.",
+          "Your ability to close and ask for next steps."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -2931,7 +2662,8 @@
         "type": "p",
         "text": "Tell me about it below, I'd like to hear your story."
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "choosing-the-right-online-pharmaceutical-sales-training-courses",
@@ -3235,12 +2967,13 @@
         "type": "p",
         "text": "Start exploring your options today and take control of your career path. The clock is ticking - why wait?"
       }
-    ]
+    ],
+    "editorialStatus": "archive-structured"
   },
   {
     "slug": "what-happens-when-you-re-the-least-experienced-person-in-the-room-medical-sales-career-lesson",
     "title": "What Happens When You\u2019re the Least Experienced Person in the Room? | Medical Sales Career Lesson",
-    "excerpt": "A Pathway for Aspiring Medical Sales Reps to Build Credibility I\u2019ve sat on both sides of the hiring table. So when I work with someone searching for a career in medical sales, or a client that wants a promotion, I am not providing a generic template. Instead, I\u2019m looking at their specific situation and providing the entire system, because getting hired and building a career requires all three of these working together:",
+    "excerpt": "A Pathway for Aspiring Medical Sales Reps to Build Credibility I\u2019ve sat on both sides of the hiring table.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-14",
     "tags": [
@@ -3305,8 +3038,11 @@
         "text": "Here is what got me there."
       },
       {
-        "type": "p",
-        "text": "1. Compassion Comes Before the Sale"
+        "type": "list",
+        "items": [
+          "Compassion Comes Before the Sale"
+        ],
+        "ordered": true
       },
       {
         "type": "p",
@@ -3353,40 +3089,28 @@
         "text": "When I entered Neurology, before I ever tried to \"sell\" anything, I had to learn:"
       },
       {
-        "type": "p",
-        "text": "\u27a8 What conditions these customers treated day to day?"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 Which type of patients they saw most often?"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 What their workflow looked like from morning to close?"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 Who influenced the clinical decision, and who influenced the purchase?"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 Who controlled the budget?"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 How a patient moved through the health system from referral to treatment?"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 Which accounts support my product, and which accounts were at risk?"
+        "type": "list",
+        "items": [
+          "What conditions these customers treated day to day?",
+          "Which type of patients they saw most often?",
+          "What their workflow looked like from morning to close?",
+          "Who influenced the clinical decision, and who influenced the purchase?",
+          "Who controlled the budget?",
+          "How a patient moved through the health system from referral to treatment?",
+          "Which accounts support my product, and which accounts were at risk?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "That last one matters more than people think. You do not need to know everything on day one. However, you should know what is going on in the territory."
       },
       {
-        "type": "p",
-        "text": "2. Credibility Has to Be Earned Before It Can Be Used"
+        "type": "list",
+        "items": [
+          "Credibility Has to Be Earned Before It Can Be Used"
+        ],
+        "ordered": true
       },
       {
         "type": "p",
@@ -3417,16 +3141,13 @@
         "text": "I leaned on three simple questions constantly:"
       },
       {
-        "type": "p",
-        "text": "1. Why does this matter to this specific customer? Why would changing something improve their situation?"
-      },
-      {
-        "type": "p",
-        "text": "2. How does this problem affect their day, their patients, their outcomes? How does this fit into their existing workflow?"
-      },
-      {
-        "type": "p",
-        "text": "3. What does the data say? What does this customer need right now? What is the realistic next step?"
+        "type": "list",
+        "items": [
+          "Why does this matter to this specific customer? Why would changing something improve their situation?",
+          "How does this problem affect their day, their patients, their outcomes? How does this fit into their existing workflow?",
+          "What does the data say? What does this customer need right now? What is the realistic next step?"
+        ],
+        "ordered": true
       },
       {
         "type": "p",
@@ -3437,16 +3158,13 @@
         "text": "A mentor taught me a communication principle that changed the way I sell, interview, and lead conversations: the power of three. Instead of overwhelming people with every detail, organize your message around three ideas they can remember."
       },
       {
-        "type": "p",
-        "text": "\u27a8 The need"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 The evidence"
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 The path forward"
+        "type": "list",
+        "items": [
+          "The need",
+          "The evidence",
+          "The path forward"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -3457,8 +3175,11 @@
         "text": "That is credibility. Not talking more. Making every minute of the conversation worth their time."
       },
       {
-        "type": "p",
-        "text": "3. Character Is Built When No One Is Watching"
+        "type": "list",
+        "items": [
+          "Character Is Built When No One Is Watching"
+        ],
+        "ordered": true
       },
       {
         "type": "p",
@@ -3485,31 +3206,22 @@
         "text": "What happens next is professional momentum at work\u2026"
       },
       {
-        "type": "p",
-        "text": "\u27a8 Customers start opening their doors."
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 They return your messages without being chased."
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 They provide their cell phone number."
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 They ask what you think."
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 They introduce you to someone else in the building."
+        "type": "list",
+        "items": [
+          "Customers start opening their doors.",
+          "They return your messages without being chased.",
+          "They provide their cell phone number.",
+          "They ask what you think.",
+          "They introduce you to someone else in the building."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "That is the moment access starts to compound on itself, and it changes the entire trajectory of a territory."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Starting Over Isn't Starting From Zero"
       },
       {
@@ -3529,16 +3241,13 @@
         "text": "This is the exact distinction I want every career changer reading this to hear."
       },
       {
-        "type": "p",
-        "text": "\u2605 A nurse does not start from zero."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 A B2B sales rep does not start from zero."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 A teacher, a dental hygienist, a pharmacy tech, none of them start from zero."
+        "type": "list",
+        "items": [
+          "A nurse does not start from zero.",
+          "A B2B sales rep does not start from zero.",
+          "A teacher, a dental hygienist, a pharmacy tech, none of them start from zero."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -3557,7 +3266,7 @@
         "text": "Small actions stop feeling small and start becoming a reputation."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "A Pathway for Aspiring Medical Sales Reps to Build Credibility"
       },
       {
@@ -3569,16 +3278,13 @@
         "text": "Instead, I\u2019m looking at their specific situation and providing the entire system, because getting hired and building a career requires all three of these working together:"
       },
       {
-        "type": "p",
-        "text": "\u2605 Access: Who needs to know you exist? Who can open a door for you? How do you create conversations in a market where 300 talented candidates apply?"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Strategy: Which companies should you target? How do you position your background so a hiring manager sees the value immediately? How do you turn your existing skills into business language they trust?"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Momentum: What are you doing this week to move forward? Who are you talking to? What are you learning and improving right now, today?"
+        "type": "list",
+        "items": [
+          "Access: Who needs to know you exist? Who can open a door for you? How do you create conversations in a market where 300 talented candidates apply?",
+          "Strategy: Which companies should you target? How do you position your background so a hiring manager sees the value immediately? How do you turn your existing skills into business language they trust?",
+          "Momentum: What are you doing this week to move forward? Who are you talking to? What are you learning and improving right now, today?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -3593,7 +3299,7 @@
         "text": "This is the foundation of the $100K Med Rep Method."
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "One Question Before You Go"
       },
       {
@@ -3660,12 +3366,14 @@
         "type": "p",
         "text": "What is the one thing you did in those first few weeks that helped you earn trust the fastest?"
       }
-    ]
+    ],
+    "formatVersion": "editorial-v1",
+    "editorialStatus": "archive-normalized"
   },
   {
     "slug": "pharmaceutical-sales-representative-resume",
     "title": "Pharmaceutical sales representative resume",
-    "excerpt": "Tired of your Pharma resume getting lost in the pile? Here's a 7-step guide to get eyes on YOUR resume. Let's break it down by section, from top to bottom: 1) Personal Info - Put your contact information front and centre. - Keep your email address professional. - Don't use RoryLovesCats2012@hotmail .com. 2) Professional Summary - Start with a bang! - Write a punchy summary that grabs attention. - Tell your story or someone else will tell it for you. - Use keywords and be concise.",
+    "excerpt": "Tired of your Pharma resume getting lost in the pile? Here's a 7-step guide to get eyes on YOUR resume.",
     "author": "The Pharma Coach",
     "published": "2026-09-13",
     "tags": [
@@ -3714,64 +3422,88 @@
         "text": "Location"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Do you live in the territory?"
+        "type": "list",
+        "items": [
+          "Do you live in the territory?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Summary"
       },
       {
-        "type": "p",
-        "text": "\u21b3 This is your billboard, make it count."
+        "type": "list",
+        "items": [
+          "This is your billboard, make it count."
+        ],
+        "ordered": false
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "Company Name"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Help me understand your experience"
+        "type": "list",
+        "items": [
+          "Help me understand your experience"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Title"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Use specific, relevant job titles."
+        "type": "list",
+        "items": [
+          "Use specific, relevant job titles."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Dates"
       },
       {
-        "type": "p",
-        "text": "\u21b3 I\u2019m looking for career progression and patterns."
+        "type": "list",
+        "items": [
+          "I\u2019m looking for career progression and patterns."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Metrics"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Show your numbers! Revenue. Rankings. Quota."
+        "type": "list",
+        "items": [
+          "Show your numbers! Revenue. Rankings. Quota."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Education"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Degree, training, leadership, athletics."
+        "type": "list",
+        "items": [
+          "Degree, training, leadership, athletics."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Skills"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Don\u2019t tell me you\u2019re competitive. Prove it."
+        "type": "list",
+        "items": [
+          "Don\u2019t tell me you\u2019re competitive. Prove it."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -3811,10 +3543,6 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "Click the link for a free Pharma Sales Insider Guide."
       },
       {
@@ -3825,12 +3553,13 @@
         "type": "p",
         "text": "https://medrepcollege.com/access"
       }
-    ]
+    ],
+    "editorialStatus": "archive-structured"
   },
   {
     "slug": "what-certificates-do-i-need-to-enter-pharmaceutical-sales",
     "title": "What certificates do I need to enter pharmaceutical sales",
-    "excerpt": "In 2026, Taylor sat at her desk at Republic Distribution, scrolling LinkedIn and dreaming of a pharmaceutical sales career. She wanted the six-figure income. She wanted the company car. She wanted to work side-by-side with healthcare professionals. So, she did what thousands of aspiring reps do\u2026 She bought a pharmaceutical sales certificate (CNPR). Months later, nothing had changed\u2026except her bank account. No interviews. No offers. Just more rejection emails. Instead of wasting more time\u2026",
+    "excerpt": "In 2026, Taylor sat at her desk at Republic Distribution, scrolling LinkedIn and dreaming of a pharmaceutical sales career.",
     "author": "The Pharma Coach",
     "published": "2026-09-12",
     "tags": [
@@ -3902,8 +3631,11 @@
         "text": "Bonus."
       },
       {
-        "type": "p",
-        "text": "\u21b3 How many list a CNPR or PRC certification?"
+        "type": "list",
+        "items": [
+          "How many list a CNPR or PRC certification?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -3934,8 +3666,11 @@
         "text": "\u27a4 Skills?"
       },
       {
-        "type": "p",
-        "text": "\u2605 Is a pharmaceutical sales certificate listed as a requirement?"
+        "type": "list",
+        "items": [
+          "Is a pharmaceutical sales certificate listed as a requirement?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -3950,16 +3685,22 @@
         "text": "Do two uncomfortable Google searches:"
       },
       {
-        "type": "p",
-        "text": "\u21b3\u201cCNPR scam\u201d"
+        "type": "list",
+        "items": [
+          "\u201cCNPR scam\u201d"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Then:"
       },
       {
-        "type": "p",
-        "text": "\u21b3\u201cfake pharmaceutical sales companies recruiters Reddit.\u201d"
+        "type": "list",
+        "items": [
+          "\u201cfake pharmaceutical sales companies recruiters Reddit.\u201d"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4006,12 +3747,11 @@
         "text": "650+ clients placed in medical sales."
       },
       {
-        "type": "p",
-        "text": "\u2605 Are you ambitious? Want more?"
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
+        "type": "list",
+        "items": [
+          "Are you ambitious? Want more?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4021,12 +3761,13 @@
         "type": "p",
         "text": "https://www.thepharmacoach.com"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "what-is-holding-you-back-from-success-in-medical-sales",
     "title": "What Is Holding You Back From Success in Medical Sales?",
-    "excerpt": "Free information creates awareness. Free gives you a starting point. But free has a shadow side. \u21b3 What costs nothing often gets valued at nothing.",
+    "excerpt": "Free information creates awareness. Free gives you a starting point. But free has a shadow side. What costs nothing often gets valued at nothing.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-10",
     "tags": [],
@@ -4078,16 +3819,15 @@
         "text": "But free has a shadow side."
       },
       {
-        "type": "p",
-        "text": "\u21b3 What costs nothing often gets valued at nothing."
+        "type": "list",
+        "items": [
+          "What costs nothing often gets valued at nothing."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Meet Jessica."
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
       },
       {
         "type": "p",
@@ -4122,8 +3862,11 @@
         "text": "Free gave her information."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Not personalized strategy."
+        "type": "list",
+        "items": [
+          "Not personalized strategy."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4166,23 +3909,23 @@
         "text": "650+ clients placed in medical sales."
       },
       {
-        "type": "p",
-        "text": "\u2605 Are you ambitious? Want more?"
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
+        "type": "list",
+        "items": [
+          "Are you ambitious? Want more?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Check the comments for a free Pharma Sales Insider Guide."
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "how-to-break-into-pharma-sales-in-4-steps",
     "title": "How to break into Pharma Sales in 4 steps",
-    "excerpt": "Applying to 100 Pharma Sales jobs is probably why you still don\u2019t have interviews. I know that sounds backwards. Most people think the problem is volume. \u201cApply to more jobs.\u201d \u201cSomething will stick.\u201d But here\u2019s what actually happens: You become just another r\u00e9sum\u00e9 in a pile of 300. No strategy. No positioning. No differentiation. And hiring managers can feel that. When I talk to candidates who are stuck, I hear the same thing: \u201cI\u2019ve applied everywhere.\u201d \u201cI\u2019m doing everything I can.\u201d",
+    "excerpt": "Applying to 100 Pharma Sales jobs is probably why you still don\u2019t have interviews.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-09",
     "tags": [
@@ -4286,7 +4029,7 @@
         "text": "A phrase they repeat during the races:"
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "\u201cPush. Push.\u201d"
       },
       {
@@ -4351,18 +4094,15 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "Check the comments for a free Pharma Sales Insider Guide."
       }
-    ]
+    ],
+    "editorialStatus": "archive-structured"
   },
   {
     "slug": "is-a-college-degree-enough-to-get-hired-in-medical-sales",
     "title": "Is a College Degree Enough to Get Hired in Medical Sales?",
-    "excerpt": "Become a Medical Sales Representative Your college degree got you to this point. Late nights. Early mornings. Dedication. Your degree is the starting line. It\u2019s a real accomplishment. Don\u2019t let anyone tell you otherwise. But the starting line isn\u2019t the finish line, and nobody handed you a map for what comes next.",
+    "excerpt": "Become a Medical Sales Representative Your college degree got you to this point. Late nights.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-09",
     "tags": [
@@ -4447,36 +4187,18 @@
         "text": "But almost nobody understands your specific problem."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Your parents love you, but they\u2019ve likely never hired a medical sales representative."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your college advisor means well, but they\u2019ve never decided who gets the offer and who gets the rejection email."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your professor knows your GPA, not what a sales director listens for in an interview."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your roommate tells you to \u201capply everywhere.\u201d"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Your cousin says \u201ctry pharma, my buddy makes bank.\u201d"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Someone on Reddit tells you to buy a certification."
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 A good looking Med Rep on TikTok tells you to \u201cjust network.\u201d"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 ChatGPT hands you another 17-item checklist."
+        "type": "list",
+        "items": [
+          "Your parents love you, but they\u2019ve likely never hired a medical sales representative.",
+          "Your college advisor means well, but they\u2019ve never decided who gets the offer and who gets the rejection email.",
+          "Your professor knows your GPA, not what a sales director listens for in an interview.",
+          "Your roommate tells you to \u201capply everywhere.\u201d",
+          "Your cousin says \u201ctry pharma, my buddy makes bank.\u201d",
+          "Someone on Reddit tells you to buy a certification.",
+          "A good looking Med Rep on TikTok tells you to \u201cjust network.\u201d",
+          "ChatGPT hands you another 17-item checklist."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4567,12 +4289,12 @@
         "text": "And 68 recent grads I\u2019ve personally mentored, out of biology, kinesiology, business and communications programs, didn\u2019t close that gap by applying harder."
       },
       {
-        "type": "p",
-        "text": "\u2605 They closed the gap by turning their experience into the exact language hiring managers listen for."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 They learned how to position their experience so hiring managers could immediately see their value."
+        "type": "list",
+        "items": [
+          "They closed the gap by turning their experience into the exact language hiring managers listen for.",
+          "They learned how to position their experience so hiring managers could immediately see their value."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4603,7 +4325,7 @@
         "text": "Then they tell me what they\u2019ve been hearing on LinkedIn:"
       },
       {
-        "type": "p",
+        "type": "h2",
         "text": "\u201cGo work at ADP. Go work at Cintas. Get a CNPR.\u201d"
       },
       {
@@ -4611,16 +4333,13 @@
         "text": "That\u2019s where the guessing starts."
       },
       {
-        "type": "p",
-        "text": "\u27a8 Some candidates trust Google and spend $500 on certificates."
-      },
-      {
-        "type": "p",
-        "text": "\u27a8 Others spend $20,000 to sit in a classroom and learn about anatomy. Hoping their instructor will connect them with an opportunity."
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Certifications do not make you hirable."
+        "type": "list",
+        "items": [
+          "Some candidates trust Google and spend $500 on certificates.",
+          "Others spend $20,000 to sit in a classroom and learn about anatomy. Hoping their instructor will connect them with an opportunity.",
+          "Certifications do not make you hirable."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4825,8 +4544,11 @@
         "text": "It\u2019s that \u201cI played D1 soccer\u201d isn\u2019t a story."
       },
       {
-        "type": "p",
-        "text": "\u21b3 It\u2019s a fact."
+        "type": "list",
+        "items": [
+          "It\u2019s a fact."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4973,8 +4695,11 @@
         "text": "Nobody tells you the next step, so your medical sales job search stalls out."
       },
       {
-        "type": "p",
-        "text": "\u2605 This is the difference between information and strategy."
+        "type": "list",
+        "items": [
+          "This is the difference between information and strategy."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4985,8 +4710,11 @@
         "text": "A hiring manager built strategy tells you how, when, in what order, and why."
       },
       {
-        "type": "p",
-        "text": "\u2605 Hired!"
+        "type": "list",
+        "items": [
+          "Hired!"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -4997,32 +4725,26 @@
         "text": "Before You Keep Scrolling, Answer These Five Questions"
       },
       {
-        "type": "p",
-        "text": "1. Would a hiring manager who looked at your resume for 10 seconds immediately understand why you belong in medical sales?"
-      },
-      {
-        "type": "p",
-        "text": "2. Could you explain why medical sales in a way that makes a hiring manager believe you understand the business, not just that you want a six-figure career?"
-      },
-      {
-        "type": "p",
-        "text": "3. Can you explain the difference between pharmaceutical sales and medical device sales, and why your background makes sense for the specific role you\u2019re pursuing?"
-      },
-      {
-        "type": "p",
-        "text": "4. If you were sitting across from me with 50 other qualified applicants behind you, could you give me a specific reason to choose you?"
-      },
-      {
-        "type": "p",
-        "text": "5. And if I asked you, \u201cWhat have you done to prove you can sell, compete, influence, handle rejection, and produce results?\u201d, could you give me three strong examples that will convince the hiring manager that you are the right fit for the territory?"
+        "type": "list",
+        "items": [
+          "Would a hiring manager who looked at your resume for 10 seconds immediately understand why you belong in medical sales?",
+          "Could you explain why medical sales in a way that makes a hiring manager believe you understand the business, not just that you want a six-figure career?",
+          "Can you explain the difference between pharmaceutical sales and medical device sales, and why your background makes sense for the specific role you\u2019re pursuing?",
+          "If you were sitting across from me with 50 other qualified applicants behind you, could you give me a specific reason to choose you?",
+          "And if I asked you, \u201cWhat have you done to prove you can sell, compete, influence, handle rejection, and produce results?\u201d, could you give me three strong examples that will convince the hiring manager that you are the right fit for the territory?"
+        ],
+        "ordered": true
       },
       {
         "type": "p",
         "text": "If you hesitated on any of those, don\u2019t ignore it."
       },
       {
-        "type": "p",
-        "text": "\u21b3 You just found a gap."
+        "type": "list",
+        "items": [
+          "You just found a gap."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5037,24 +4759,15 @@
         "text": "Medical sales careers offer what most first careers can\u2019t:"
       },
       {
-        "type": "p",
-        "text": "\u2605 Six-figure earning potential"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Uncapped commission in many roles"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Company car in many field positions"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 Strong benefits and autonomy"
-      },
-      {
-        "type": "p",
-        "text": "\u2605 A clear path to grow your income"
+        "type": "list",
+        "items": [
+          "Six-figure earning potential",
+          "Uncapped commission in many roles",
+          "Company car in many field positions",
+          "Strong benefits and autonomy",
+          "A clear path to grow your income"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5066,10 +4779,6 @@
       },
       {
         "type": "p",
-        "text": "\u2193\u2193\u2193"
-      },
-      {
-        "type": "p",
         "text": "If you could land a $75K medical sales role but spend another year guessing, applying randomly, and waiting for something to happen, that year could represent $75,000 in delayed income."
       },
       {
@@ -5077,8 +4786,11 @@
         "text": "Two years?"
       },
       {
-        "type": "p",
-        "text": "\u21b3 $150,000."
+        "type": "list",
+        "items": [
+          "$150,000."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5097,8 +4809,11 @@
         "text": "When a decision feels emotional, do the math."
       },
       {
-        "type": "p",
-        "text": "\u21b3 The math tells the truth."
+        "type": "list",
+        "items": [
+          "The math tells the truth."
+        ],
+        "ordered": false
       },
       {
         "type": "h3",
@@ -5117,24 +4832,15 @@
         "text": "Inside Fast Track Academy, you gain clarity and become the candidate hiring managers notice:"
       },
       {
-        "type": "p",
-        "text": "1. Turn your college experience into a medical sales story that makes hiring managers pay attention."
-      },
-      {
-        "type": "p",
-        "text": "2. Stop \u201cnetworking\u201d randomly. Build relationships with the right people who can open doors."
-      },
-      {
-        "type": "p",
-        "text": "3. Walk into interviews knowing exactly how to sell your background, answer tough questions, and earn the next step."
-      },
-      {
-        "type": "p",
-        "text": "4. See your candidacy through a hiring manager\u2019s eyes so you understand why you\u2019re getting overlooked."
-      },
-      {
-        "type": "p",
-        "text": "5. Replace months of trial and error with a proven roadmap that creates access, strategy, and momentum toward your first medical sales interview."
+        "type": "list",
+        "items": [
+          "Turn your college experience into a medical sales story that makes hiring managers pay attention.",
+          "Stop \u201cnetworking\u201d randomly. Build relationships with the right people who can open doors.",
+          "Walk into interviews knowing exactly how to sell your background, answer tough questions, and earn the next step.",
+          "See your candidacy through a hiring manager\u2019s eyes so you understand why you\u2019re getting overlooked.",
+          "Replace months of trial and error with a proven roadmap that creates access, strategy, and momentum toward your first medical sales interview."
+        ],
+        "ordered": true
       },
       {
         "type": "p",
@@ -5145,8 +4851,11 @@
         "text": "Against a first-year income potential north of $75K with uncapped commission and benefits."
       },
       {
-        "type": "p",
-        "text": "\u2605 Access + Strategy + Momentum = Hired!"
+        "type": "list",
+        "items": [
+          "Access + Strategy + Momentum = Hired!"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5220,7 +4929,8 @@
         "type": "p",
         "text": "Drop it below. I read every comment."
       }
-    ]
+    ],
+    "editorialStatus": "archive-structured"
   },
   {
     "slug": "why-isn-t-your-next-promotion-finding-you-in-medical-sales",
@@ -5579,12 +5289,13 @@
         "type": "p",
         "text": "What is the biggest thing standing between you and your next move in pharmaceutical sales?"
       }
-    ]
+    ],
+    "editorialStatus": "archive-structured"
   },
   {
     "slug": "best-pharmaceutical-sales-courses-or-coaching-program",
     "title": "Best pharmaceutical sales courses or coaching program",
-    "excerpt": "Here are the 3 things that finally helped me secure a medical sales job offer. (And why my clients have an advantage) \u25aa\ufe0fDecide what you want. Not \u201cget my foot in the door.\u201d The exact role. The exact territory. The exact specialty. \u2570\u2508\u27a4 Clarity build confidence. \u25aa\ufe0fExtra mile strategy. Learn the drug. Learn the disease state. Learn how reps make impact. \u2570\u2508\u27a4 This is where most candidates fall behind.",
+    "excerpt": "Here are the 3 things that finally helped me secure a medical sales job offer. (And why my clients have an advantage) \u25aa\ufe0fDecide what you want.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-08",
     "tags": [
@@ -5644,36 +5355,36 @@
         "text": "Land the interview"
       },
       {
-        "type": "p",
-        "text": "\u21b3 Who do I need to know just to get a shot?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Why does my resume disappear into a black hole?"
+        "type": "list",
+        "items": [
+          "Who do I need to know just to get a shot?",
+          "Why does my resume disappear into a black hole?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Survive the interview gauntlet"
       },
       {
-        "type": "p",
-        "text": "\u21b3 What does the manager need to hear?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 How do I stand out during the interview?"
+        "type": "list",
+        "items": [
+          "What does the manager need to hear?",
+          "How do I stand out during the interview?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
         "text": "Grow the territory"
       },
       {
-        "type": "p",
-        "text": "\u21b3 How do I earn the trust of a physician?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 How do I turn a \u201cno\u201d into a \u201cyes?\u201d"
+        "type": "list",
+        "items": [
+          "How do I earn the trust of a physician?",
+          "How do I turn a \u201cno\u201d into a \u201cyes?\u201d"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5735,12 +5446,13 @@
         "type": "p",
         "text": "https://medrepcollege.com/mastermind-accelerator"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "how-to-write-a-pharmaceutical-sales-resume-3",
     "title": "How to write a pharmaceutical sales resume",
-    "excerpt": "The pharmaceutical sales candidates who get hired never sound desperate. They sound ready. Most applicants think hiring managers want experience. That sounds right. But what we are really searching for is proof. Proof you can walk into a territory and grow it. Proof you\u2019ll represent their brand with authority. Proof you already think like the rep we\u2019re trying to hire. That\u2019s why hundreds of qualified candidates apply every week, and only a few ever get a callback. It\u2019s not about who",
+    "excerpt": "The pharmaceutical sales candidates who get hired never sound desperate. They sound ready.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-07",
     "tags": [
@@ -5792,16 +5504,13 @@
         "text": "More applications will never fix:"
       },
       {
-        "type": "p",
-        "text": "\u279f A resume that lists duties instead of proving value."
-      },
-      {
-        "type": "p",
-        "text": "\u279f An interview strategy that does not get the offer."
-      },
-      {
-        "type": "p",
-        "text": "\u279f A story that never puts you in the territory in their mind."
+        "type": "list",
+        "items": [
+          "A resume that lists duties instead of proving value.",
+          "An interview strategy that does not get the offer.",
+          "A story that never puts you in the territory in their mind."
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5840,12 +5549,11 @@
         "text": "650+ clients placed in medical sales."
       },
       {
-        "type": "p",
-        "text": "\u2605 Are you ambitious? Want more?"
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
+        "type": "list",
+        "items": [
+          "Are you ambitious? Want more?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5855,12 +5563,13 @@
         "type": "p",
         "text": "https://medrepcollege.com/award-winning-resume-service"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "help-me-rewrite-my-resume-to-highlight-transferable-skills-for-pharmaceutical-sales",
     "title": "Help me rewrite my resume to highlight transferable skills for pharmaceutical sales",
-    "excerpt": "Create a $100K+ Pharma Sales r\u00e9sum\u00e9 in 5 simple steps (steal the template below): 1\ufe0f\u20e3 Contact Details \u21b3 Name, location, email, cell, LinkedIn URL. 2\ufe0f\u20e3 Career Accomplishments/Summary \u21b3 3-5 bullet points of your most RELEVANT career highlights. Pro Tip: You can focus on the role OR industry OR company (examples below) \u2022 Role focus: \"Recruited 500+ clinical and non-clinical staff in 2 years\" \u2022 INDUSTRY focus: \"Hired 200+ physicians for a digital healthcare service\"",
+    "excerpt": "Create a $100K+ Pharma Sales r\u00e9sum\u00e9 in 5 simple steps (steal the template below): 1\ufe0f\u20e3 Contact Details Name, location, email, cell, LinkedIn URL.",
     "author": "The Pharma Coach",
     "published": "2026-09-06",
     "tags": [
@@ -5940,12 +5649,11 @@
         "text": "650+ clients placed in medical sales."
       },
       {
-        "type": "p",
-        "text": "\u2605 Are you ambitious? Want more?"
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
+        "type": "list",
+        "items": [
+          "Are you ambitious? Want more?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -5955,12 +5663,13 @@
         "type": "p",
         "text": "https://medrepcollege.com/access"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   },
   {
     "slug": "how-do-i-get-hired-in-pharmaceutical-sales-2",
     "title": "How do I get hired in pharmaceutical sales?",
-    "excerpt": "Do you have an upcoming Pharma Sales Job Interview? Interviews generate excitement and nervousness. You are being evaluated by a stranger. It\u2019s a job you really want! These under-the-radar interview strategies, helped me earn 15 promotions: Settle my jitters. - Show up early and do 20 jumping jacks. Avoid being a robot. - Have a conversation and make the manager smile. Network with purpose. - Be part of the team, prior to becoming a member of the team.",
+    "excerpt": "Do you have an upcoming Pharma Sales Job Interview? Interviews generate excitement and nervousness.",
     "author": "Jebb C. Ruff, MBA",
     "published": "2026-09-05",
     "tags": [
@@ -6024,24 +5733,15 @@
         "text": "As a hiring manager, I\u2019m not looking for a polished resume. I\u2019m looking for proof you can handle the reality of the job."
       },
       {
-        "type": "p",
-        "text": "\u21b3 Can you perform when nobody is watching?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Can you hear \u201cno\u201d all day and come back sharper tomorrow?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Can you take direct feedback without making excuses?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Can you earn trust with busy physicians, NPs, and nurses?"
-      },
-      {
-        "type": "p",
-        "text": "\u21b3 Can you own a mistake before it becomes someone else\u2019s problem?"
+        "type": "list",
+        "items": [
+          "Can you perform when nobody is watching?",
+          "Can you hear \u201cno\u201d all day and come back sharper tomorrow?",
+          "Can you take direct feedback without making excuses?",
+          "Can you earn trust with busy physicians, NPs, and nurses?",
+          "Can you own a mistake before it becomes someone else\u2019s problem?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -6084,12 +5784,11 @@
         "text": "650+ clients placed in medical sales."
       },
       {
-        "type": "p",
-        "text": "\u2605 Are you ambitious? Want more?"
-      },
-      {
-        "type": "p",
-        "text": "\u2193\u2193\u2193"
+        "type": "list",
+        "items": [
+          "Are you ambitious? Want more?"
+        ],
+        "ordered": false
       },
       {
         "type": "p",
@@ -6099,6 +5798,7 @@
         "type": "p",
         "text": "https://medrepcollege.com/book-a-call-with-jebb"
       }
-    ]
+    ],
+    "editorialStatus": "needs-editorial-rewrite"
   }
 ]

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import posts from "./posts.json";
 import { Header, SiteFooter, BOOKING_URL } from "./App.jsx";
+import { prepareArticleBlocks } from "./blogBlocks.js";
 import "./article.css";
 
 const BASE = import.meta.env.BASE_URL;
@@ -14,13 +15,12 @@ const longDate = value => {
 };
 const readingTime = post => {
   if (!post.body) return null;
-  const words = post.body.reduce((total, block) =>
+  const words = prepareArticleBlocks(post.body).reduce((total, block) =>
     total + (block.text ? block.text.split(/\s+/).length : 0)
     + (block.items ? block.items.join(" ").split(/\s+/).length : 0), 0);
   return `${Math.max(1, Math.ceil(words / 200))} min read`;
 };
 const headingSlug = text => text.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "section";
-const GUIDE_URL = "https://medrepcollege.com/access";
 
 function TikTok({ video }) {
   useEffect(() => {
@@ -37,13 +37,23 @@ function TikTok({ video }) {
   );
 }
 
+export function BlogVisual({ post, size = "card" }) {
+  const topic = post.tags?.[0] || "Career advice";
+  return (
+    <div className={`blog-visual blog-visual--${size}`} aria-hidden="true">
+      <div className="blog-visual__copy">
+        <span className="blog-visual__topic">{topic}</span>
+        <strong>{post.title}</strong>
+      </div>
+    </div>
+  );
+}
+
 function Card({ post }) {
   return (
     <article className="post-card">
-      <a className={`post-card__thumb${post.image ? "" : " post-card__thumb--blank"}`} href={blogHref(post.slug)} tabIndex={-1} aria-hidden="true">
-        {post.image
-          ? <img src={post.image} alt="" loading="lazy" decoding="async" />
-          : <span>The Pharma Coach</span>}
+      <a className="post-card__thumb" href={blogHref(post.slug)} tabIndex={-1} aria-hidden="true">
+        <BlogVisual post={post} />
       </a>
       <p className="post-card__meta">
         <time dateTime={post.published}>{longDate(post.published)}</time>
@@ -94,8 +104,9 @@ export function BlogPost({ slug }) {
     );
   }
 
+  const articleBody = prepareArticleBlocks(post.body);
   const seenHeadings = new Map();
-  const sections = post.body.map((block, index) => {
+  const sections = articleBody.map((block, index) => {
     if (block.type !== "h2") return null;
     const base = headingSlug(block.text);
     const count = (seenHeadings.get(base) || 0) + 1;
@@ -106,9 +117,9 @@ export function BlogPost({ slug }) {
   const related = posts.filter(candidate => candidate.slug !== post.slug && candidate.body)
     .sort((a, b) => Number(b.tags?.some(tag => post.tags?.includes(tag))) - Number(a.tags?.some(tag => post.tags?.includes(tag))))
     .slice(0, 3);
-  const ftcSource = post.body.find(block => block.type === "link" && block.url?.startsWith("https://consumer.ftc.gov/articles/job-scams"));
-  const firstHeading = post.body.findIndex(block => block.type === "h2");
-  const introCount = post.video && firstHeading > 0 && post.body.slice(0, firstHeading).every(block => block.type === "p") ? firstHeading : 0;
+  const ftcSource = articleBody.find(block => block.type === "link" && block.url?.startsWith("https://consumer.ftc.gov/articles/job-scams"));
+  const firstHeading = articleBody.findIndex(block => block.type === "h2");
+  const introCount = post.video && firstHeading > 0 && articleBody.slice(0, firstHeading).every(block => block.type === "p") ? firstHeading : 0;
 
   return (
     <>
@@ -123,16 +134,19 @@ export function BlogPost({ slug }) {
           <h1>{post.title}</h1>
           {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
           <div className="post__authorline">
-            <img src={`${BASE}assets/source/jebb-official-about-portrait.webp`} alt="" width="52" height="52" />
-            <div><strong>{post.author}</strong><p><time dateTime={post.published}>{longDate(post.published)}</time><span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
+            <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="" width="52" height="52" />
+            <div><a className="post__authorname" href={`${BASE}about`}>{post.author}</a><p><time dateTime={post.published}>{longDate(post.published)}</time><span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
           </div>
         </header>
+        <div className="post__feature">
+          <BlogVisual post={post} size="feature" />
+        </div>
         <div className="post__layout">
       <article className="post__content">
-        {introCount > 0 && <div className="post__intro">{post.body.slice(0, introCount).map((block, index) => <p key={index}>{block.text}</p>)}</div>}
+        {introCount > 0 && <div className="post__intro">{articleBody.slice(0, introCount).map((block, index) => <p key={index}>{block.text}</p>)}</div>}
         {post.video && <figure className="post__videofigure"><TikTok video={post.video} /><figcaption>Jebb explains the certificate warning in his original <a href={post.video.url} target="_blank" rel="noreferrer">TikTok video</a>.</figcaption></figure>}
         <div className="post__body">
-          {post.body.slice(introCount).map((block, offset) => {
+          {articleBody.slice(introCount).map((block, offset) => {
             const index = offset + introCount;
             if (block.type === "h2") return <h2 id={sectionByIndex.get(index).id} key={index}>{block.text}</h2>;
             if (block.type === "h3") return <h3 key={index}>{block.text}</h3>;
@@ -151,7 +165,7 @@ export function BlogPost({ slug }) {
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </div>
         <section className="post__authorbio" aria-labelledby="post-author-heading">
-          <img src={`${BASE}assets/source/jebb-official-about-portrait.webp`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
+          <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
           <div>
             <p className="post__label">About the author</p>
             <h2 id="post-author-heading">Jebb Ruff</h2>
@@ -172,11 +186,6 @@ export function BlogPost({ slug }) {
           <h2>On this page</h2>
           <ol>{sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.text}</a></li>)}</ol>
         </nav>}
-        <div className="post__guide">
-          <p className="post__label">Free interview guide</p>
-          <p>Get Jebb's guide for preparing for your next pharmaceutical sales interview.</p>
-          <a href={GUIDE_URL}>Get the guide <span aria-hidden="true">→</span></a>
-        </div>
       </aside>
         </div>
         {related.length > 0 && <section className="post__related" aria-labelledby="related-heading">

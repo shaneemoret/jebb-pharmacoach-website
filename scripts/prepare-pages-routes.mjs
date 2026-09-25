@@ -222,6 +222,7 @@ for (const post of posts) {
     `By ${post.author} · ${post.published}`,
     "",
     ...post.body.flatMap((block) => [blockToMarkdown(block), ""]),
+    ...(post.sources?.length ? ["## Sources", "", ...post.sources.map(source => `- ${source.label}, [${source.title}](${source.url})`), ""] : []),
     ...(post.source?.url ? [`[Original source](${post.source.url})`, ""] : []),
   ].join("\n");
   writeFileSync(path.join(markdownDirectory, "blog", `${post.slug}.md`), markdown);

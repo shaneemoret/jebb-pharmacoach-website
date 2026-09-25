@@ -8,6 +8,7 @@ const dist = path.join(root, "dist", "client");
 const shell = path.join(dist, "index.html");
 const posts = JSON.parse(readFileSync(path.join(root, "src", "posts.json"), "utf8"));
 const about = JSON.parse(readFileSync(path.join(root, "src", "about.json"), "utf8"));
+const migratedPages = JSON.parse(readFileSync(path.join(root, "src", "migrated-pages.json"), "utf8"));
 
 for (const route of ["about", "blog", ...posts.map(({ slug }) => `blog/${slug}`)]) {
   const routeDirectory = path.join(dist, ...route.split("/"));
@@ -18,6 +19,68 @@ for (const route of ["about", "blog", ...posts.map(({ slug }) => `blog/${slug}`)
 const escapeHtml = value => String(value).replace(/[&"<>]/g, char => ({
   "&": "&amp;", '"': "&quot;", "<": "&lt;", ">": "&gt;",
 })[char]);
+
+const appStylesheet = readFileSync(shell, "utf8").match(/<link rel="stylesheet"[^>]*>/)?.[0] || "";
+
+function renderMigratedPage(page) {
+  const canonical = `https://thepharmacoach.com/${page.slug}`;
+  const facts = page.facts.map(([value, label]) => `<div class="migrated-fact"><strong>${escapeHtml(value)}</strong><span>${escapeHtml(label)}</span></div>`).join("");
+  const sections = page.sections.map((section, index) => {
+    const details = section.items
+      ? `<ul class="migrated-list">${section.items.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
+      : `<div class="migrated-steps">${section.steps.map(([number, title, text]) => `<article class="migrated-step"><b>${escapeHtml(number)}</b><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`).join("")}</div>`;
+    return `<section class="migrated-section${index % 2 ? " migrated-section--mist" : ""}">
+      <h2>${escapeHtml(section.heading)}</h2>
+      <div class="migrated-section__body"><p>${escapeHtml(section.body)}</p>${details}</div>
+    </section>`;
+  }).join("\n");
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>${escapeHtml(page.title)} | The Pharma Coach</title>
+    <meta name="description" content="${escapeHtml(page.description)}" />
+    <link rel="canonical" href="${canonical}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="${escapeHtml(page.title)} | The Pharma Coach" />
+    <meta property="og:description" content="${escapeHtml(page.description)}" />
+    <meta property="og:url" content="${canonical}" />
+    ${appStylesheet}
+    <link rel="stylesheet" href="/migrated-pages.css" />
+    <link rel="alternate" type="text/markdown" href="/markdown/${escapeHtml(page.slug)}.md" />
+    <script src="/migrated-pages.js" defer></script>
+  </head>
+  <body>
+    <header class="migration-header">
+      <a class="migration-wordmark" href="/">THE PHARMA COACH</a>
+      <nav class="migration-nav" aria-label="Primary navigation">
+        <a href="/academy">Academy</a><a href="/blog">Career advice</a><a href="/about">About</a><a href="/application">Apply</a><a class="migration-nav__cta" href="https://medrepcollege.com/secure-your-spot">Schedule a call</a>
+      </nav>
+      <details class="migration-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="/academy">Academy</a><a href="/blog">Career advice</a><a href="/about">About</a><a href="/application">Apply</a><a href="https://medrepcollege.com/secure-your-spot">Schedule a call</a></nav></details>
+    </header>
+    <main>
+      <section class="migrated-hero">
+        <div class="migrated-hero__copy"><p class="migrated-kicker">${escapeHtml(page.kicker)}</p><h1>${escapeHtml(page.headline)}</h1><p class="migrated-hero__lead">${escapeHtml(page.lead)}</p></div>
+        <div class="migrated-hero__media"><img src="${escapeHtml(page.image)}" alt="${escapeHtml(page.imageAlt)}" /></div>
+      </section>
+      <section class="migrated-facts" aria-label="Page highlights">${facts}</section>
+      ${sections}
+      <section class="migrated-cta"><div><h2>${escapeHtml(page.cta.heading)}</h2><p>${escapeHtml(page.cta.body)}</p></div><a class="migrated-button" href="${escapeHtml(page.cta.url)}">${escapeHtml(page.cta.label)} →</a></section>
+    </main>
+    <footer class="migration-footer"><div><strong>THE PHARMA COACH</strong><p>Pharmaceutical-sales career coaching for professionals ready to reposition their experience and compete. Results vary; hiring, earnings, and placement examples are not guarantees.</p></div><nav aria-label="Footer"><a href="/about">About</a><a href="/blog">Career advice</a><a href="mailto:Jebb@ThePharmaCoach.com">Contact</a><a href="https://medrepcollege.com/privacy">Privacy</a><a href="https://medrepcollege.com/terms">Terms</a></nav></footer>
+  </body>
+</html>`;
+}
+
+for (const page of migratedPages) {
+  for (const route of [page.slug, ...(page.aliases || [])]) {
+    const routeDirectory = path.join(dist, route);
+    mkdirSync(routeDirectory, { recursive: true });
+    writeFileSync(path.join(routeDirectory, "index.html"), renderMigratedPage(page));
+  }
+}
 
 // Each static article route needs its own initial HTML metadata for sharing and crawlers.
 for (const post of posts) {
@@ -38,6 +101,35 @@ for (const post of posts) {
 
 const markdownDirectory = path.join(dist, "markdown");
 mkdirSync(path.join(markdownDirectory, "blog"), { recursive: true });
+
+for (const page of migratedPages) {
+  const markdown = [
+    `# ${page.title}`,
+    "",
+    page.lead,
+    "",
+    ...page.facts.map(([value, label]) => `- **${value}:** ${label}`),
+    "",
+    ...page.sections.flatMap(section => [
+      `## ${section.heading}`,
+      "",
+      section.body,
+      "",
+      ...(section.items || []).map(item => `- ${item}`),
+      ...(section.steps || []).map(([number, title, text]) => `${number}. **${title}:** ${text}`),
+      "",
+    ]),
+    `## ${page.cta.heading}`,
+    "",
+    page.cta.body,
+    "",
+    `[${page.cta.label}](${page.cta.url})`,
+    "",
+    "Results vary. Hiring, earnings, and placement examples are not guarantees.",
+    "",
+  ].join("\n");
+  writeFileSync(path.join(markdownDirectory, `${page.slug}.md`), markdown);
+}
 
 const sections = (heading, entries) => [
   `## ${heading}`,
@@ -112,4 +204,4 @@ for (const post of posts) {
   writeFileSync(path.join(markdownDirectory, "blog", `${post.slug}.md`), markdown);
 }
 
-console.log(`Prepared ${posts.length + 2} Cloudflare Pages routes.`);
+console.log(`Prepared ${posts.length + migratedPages.length + 2} Cloudflare Pages routes.`);

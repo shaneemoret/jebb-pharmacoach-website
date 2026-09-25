@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "academy",
+    "title": "Fast Track Academy",
+    "description": "A self-paced route for professionals who want a structured plan for entering pharmaceutical and medical sales.",
+    "kicker": "Self-paced coaching",
+    "headline": "Stop collecting advice. Start following a plan.",
+    "lead": "Fast Track Academy turns the pharmaceutical-sales job search into a clear sequence: choose the right roles, translate your experience, build relationships, and prepare for the interview before it arrives.",
+    "image": "/assets/source/pharma-hcp-conversation.png",
+    "imageAlt": "A pharmaceutical representative in conversation with a healthcare professional",
+    "sourceUrl": "https://www.thepharmacoach.com/academy",
+    "facts": [
+      ["10 weeks", "A focused, self-paced roadmap"],
+      ["3 stages", "Access, strategy, and momentum"],
+      ["$899", "Current listed program price; confirm before enrolling"]
+    ],
+    "sections": [
+      {
+        "heading": "Built for the part nobody explains.",
+        "body": "You can be qualified and still look invisible to a hiring manager. The academy focuses on the gap between having useful experience and presenting it as evidence that you can succeed in a pharmaceutical-sales territory.",
+        "items": [
+          "Choose target roles that fit your background instead of applying everywhere.",
+          "Turn clinical, sales, teaching, or customer-facing experience into commercial proof.",
+          "Build a networking plan that puts a name and story behind your application.",
+          "Practice interview answers with a clear beginning, point, and finish."
+        ]
+      },
+      {
+        "heading": "A practical route forward.",
+        "body": "The work is designed to move in order. First make the opportunity visible, then build the strategy, then create the momentum to keep going when the process gets competitive.",
+        "steps": [
+          ["01", "Access", "Find the right roles, people, and conversations."],
+          ["02", "Strategy", "Position your experience for the job you want."],
+          ["03", "Momentum", "Apply, prepare, follow up, and improve with intention."]
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "See whether the academy fits how you work.",
+      "body": "Review the current curriculum, inclusions, price, and terms before enrolling.",
+      "label": "View Fast Track Academy",
+      "url": "https://medrepcollege.com/fast-track"
+    }
+  },
+  {
+    "slug": "free-medical-sales-training",
+    "title": "Free Medical Sales Interview Training",
+    "description": "Free pharmaceutical-sales interview guidance for candidates who are applying but not converting conversations into offers.",
+    "kicker": "Free training",
+    "headline": "You are not lazy. You need a better interview strategy.",
+    "lead": "If recruiter calls keep ending without a next round, more applications will not solve the problem. Learn what hiring managers listen for and how to make your experience easier to understand.",
+    "image": "/assets/source/jebb-headshot-owner.png",
+    "imageAlt": "Jebb Ruff, The Pharma Coach",
+    "sourceUrl": "https://www.thepharmacoach.com/free-medical-sales-training",
+    "facts": [
+      ["Free", "Start without choosing a paid program"],
+      ["Hiring lens", "Advice shaped by real interview decisions"],
+      ["Practical", "Use the guidance in your next conversation"]
+    ],
+    "sections": [
+      {
+        "heading": "The interview is testing more than your answers.",
+        "body": "Hiring teams are listening for judgment, relevance, preparation, and whether you can lead a clear conversation. The training helps you stop rambling, connect your background to the role, and show how you think.",
+        "items": [
+          "Identify the part of your story that matters to this role.",
+          "Answer with enough detail to prove the point, then stop.",
+          "Translate patient care, teaching, retail, or B2B experience into territory value.",
+          "Prepare examples before the pressure of a live interview."
+        ]
+      },
+      {
+        "heading": "Use free guidance as a starting point.",
+        "body": "A guide can help you see the gaps. Your results still depend on the roles you pursue, your experience, the employer, and how consistently you execute.",
+        "steps": [
+          ["01", "Read", "Learn the structure hiring managers expect."],
+          ["02", "Rewrite", "Shape your examples around relevance and results."],
+          ["03", "Rehearse", "Practice until the answer sounds clear, not memorized."]
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Start with the free interview guide.",
+      "body": "Get the current resource from Med Rep College and use it to prepare your next interview story.",
+      "label": "Get the free guide",
+      "url": "https://medrepcollege.com/access"
+    }
+  },
+  {
+    "slug": "apply-for-pharmaceutical-sales-career-coaching",
+    "aliases": ["application"],
+    "title": "Apply to Work With Jebb",
+    "description": "Apply for pharmaceutical-sales career coaching with The Pharma Coach and choose the right level of support for your goals.",
+    "kicker": "Coaching application",
+    "headline": "Find the right support before you make another move.",
+    "lead": "The application helps Jebb understand where you are now, what kind of pharmaceutical or medical-sales role you want, and where the job search is breaking down.",
+    "image": "/assets/source/jebb-official-about-portrait.webp",
+    "imageAlt": "Jebb Ruff, pharmaceutical-sales career coach",
+    "sourceUrl": "https://www.thepharmacoach.com/apply-for-pharmaceutical-sales-career-coaching",
+    "facts": [
+      ["Your background", "Clinical, sales, education, or another path"],
+      ["Your target", "The role, territory, and timeline you are pursuing"],
+      ["Your gap", "Resume, networking, interview, or advancement"]
+    ],
+    "sections": [
+      {
+        "heading": "A useful application starts with specifics.",
+        "body": "You do not need a perfect resume or a polished answer. You do need enough detail to make the next conversation useful. Be clear about the work you have done, the roles you want, and what has happened so far.",
+        "items": [
+          "Name the roles and companies you are targeting.",
+          "Share the experience you believe should translate.",
+          "Explain where the process stalls: applications, recruiter calls, or interviews.",
+          "Choose a timeline you can realistically support while working or studying."
+        ]
+      },
+      {
+        "heading": "Choose support after you understand the fit.",
+        "body": "The Pharma Coach offers self-paced, group, and high-touch options. Review the current inclusions, price, availability, and terms before you pay. Coaching does not guarantee a job, salary, or placement timeline.",
+        "steps": [
+          ["01", "Apply", "Share your goals and current situation."],
+          ["02", "Talk", "Use the discovery conversation to assess fit."],
+          ["03", "Choose", "Select support only after reviewing the current terms."]
+        ]
+      }
+    ],
+    "cta": {
+      "heading": "Ready to tell Jebb where you are stuck?",
+      "body": "Complete the current Med Rep College application. Submission is a request to talk, not a promise of admission or results.",
+      "label": "Start the application",
+      "url": "https://medrepcollege.com/apply-for-med-rep-college-now"
+    }
+  }
+]

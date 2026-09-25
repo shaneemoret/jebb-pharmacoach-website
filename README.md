@@ -16,7 +16,9 @@ npm run build
 npm run test:sites
 ```
 
-This repository is a development preview. It does not replace Wix commerce, bookings, forms, members, blog storage, or DNS. See `CUTOVER.md`.
+The `main` branch is the production source of truth. Every push to `main` is built, tested, and deployed to the existing `jebb-pharmacoach-website` Cloudflare Pages project by `.github/workflows/cloudflare-pages.yml`. Cloudflare deployments remain available as rollback targets, and each production deployment is tied to the Git commit recorded by GitHub Actions.
+
+The separate `pages.yml` workflow publishes the GitHub Pages development preview. Commerce, bookings, forms, members, and other remaining parity lanes are tracked in `CUTOVER.md`.
 
 ## Blog publishing
 

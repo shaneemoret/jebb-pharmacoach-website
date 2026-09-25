@@ -39,7 +39,7 @@ jobs:
       - name: Run release tests
         run: |
           npm run test:sites
-          node --test tests/migrated-pages.test.mjs tests/blog-standard.test.mjs
+          node --test tests/migrated-pages.test.mjs tests/blog-standard.test.mjs tests/release-guard.test.mjs
 
       - name: Deploy exact commit to Cloudflare Pages
         uses: cloudflare/wrangler-action@v4

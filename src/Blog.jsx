@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import posts from "./posts.json";
 import { Header, SiteFooter, BOOKING_URL } from "./App.jsx";
 import { prepareArticleBlocks } from "./blogBlocks.js";
+import { canonicalYouTubeUrl, normalizeYouTubeVideoId, youtubeEmbedUrl } from "./videoEmbeds.js";
 import "./article.css";
 
 const BASE = import.meta.env.BASE_URL;
@@ -35,6 +36,33 @@ function TikTok({ video }) {
       <section><a href={video.url} target="_blank" rel="noreferrer">Watch the original video on TikTok ({video.handle})</a></section>
     </blockquote>
   );
+}
+
+function YouTube({ video, title }) {
+  const id = normalizeYouTubeVideoId(video.id || video.url);
+  const canonical = canonicalYouTubeUrl(id || video.url) || video.url;
+  const embed = youtubeEmbedUrl(id);
+  if (!embed) {
+    return <p className="post__video-fallback"><a href={canonical} target="_blank" rel="noreferrer">Watch the original video on YouTube</a></p>;
+  }
+  return (
+    <div className="post__youtube">
+      <iframe
+        src={embed}
+        title={`YouTube video: ${title}`}
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        referrerPolicy="strict-origin-when-cross-origin"
+      />
+      <p className="post__video-fallback"><a href={canonical} target="_blank" rel="noreferrer">Watch on YouTube</a></p>
+    </div>
+  );
+}
+
+function ArticleVideo({ post }) {
+  if (post.video.platform === "youtube") return <YouTube video={post.video} title={post.title} />;
+  return <TikTok video={post.video} />;
 }
 
 export function BlogVisual({ post, size = "card" }) {
@@ -144,7 +172,7 @@ export function BlogPost({ slug }) {
         <div className="post__layout">
       <article className="post__content">
         {introCount > 0 && <div className="post__intro">{articleBody.slice(0, introCount).map((block, index) => <p key={index}>{block.text}</p>)}</div>}
-        {post.video && <figure className="post__videofigure"><TikTok video={post.video} /><figcaption>Jebb explains the certificate warning in his original <a href={post.video.url} target="_blank" rel="noreferrer">TikTok video</a>.</figcaption></figure>}
+        {post.video && <figure className="post__videofigure"><ArticleVideo post={post} /><figcaption>Jebb explains this topic in his original <a href={post.video.url} target="_blank" rel="noreferrer">{post.video.platform === "youtube" ? "YouTube video" : "TikTok video"}</a>.</figcaption></figure>}
         <div className="post__body">
           {articleBody.slice(introCount).map((block, offset) => {
             const index = offset + introCount;

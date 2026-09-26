@@ -1,0 +1,9 @@
+#analytics-choice { position: fixed; z-index: 1000; bottom: 1rem; left: 1rem; right: 1rem; max-width: 44rem; padding: 1rem 1.25rem; color: #fff; background: #0B0F14; border: 1px solid #D4AF37; box-shadow: 0 5px 30px #0005; font: 16px/1.5 'Source Sans 3 Variable', sans-serif; }
+#analytics-choice[hidden] { display: none; }
+#analytics-choice p { margin: 0 0 .8rem; }
+#analytics-choice a { color: #D4AF37; text-decoration: underline; }
+#analytics-choice div { display: flex; gap: .75rem; flex-wrap: wrap; }
+#analytics-choice button { padding: .55rem 1rem; border: 1px solid #D4AF37; color: #fff; background: transparent; cursor: pointer; font: inherit; }
+#analytics-choice button[data-choice="granted"] { color: #0B0F14; background: #D4AF37; }
+#analytics-settings { display: block; margin: 0; padding: .7rem 1.5rem; border: 0; width: 100%; text-align: left; color: #fff; background: #0B0F14; font: 14px/1.5 sans-serif; text-decoration: underline; cursor: pointer; }
+#analytics-choice button:focus-visible, #analytics-settings:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }

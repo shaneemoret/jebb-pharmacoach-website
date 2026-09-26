@@ -33,6 +33,11 @@ function varyOnAccept(response) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.hostname === 'www.thepharmacoach.com') {
+      url.hostname = 'thepharmacoach.com';
+      url.protocol = 'https:';
+      return Response.redirect(url.href, 301);
+    }
     const source = markdownPath(url.pathname);
     const negotiable = source && (request.method === "GET" || request.method === "HEAD");
 
@@ -41,6 +46,7 @@ export default {
       if (asset.ok) {
         const markdown = await asset.text();
         const headers = varyOnAccept(asset);
+        if (url.hostname.endsWith('.pages.dev')) headers.set('X-Robots-Tag', 'noindex, nofollow');
         headers.set("Content-Type", "text/markdown; charset=utf-8");
         headers.set("X-Markdown-Tokens", String(Math.ceil(markdown.length / 4)));
         headers.delete("Content-Length");
@@ -53,11 +59,15 @@ export default {
     }
 
     const response = await env.ASSETS.fetch(request);
-    if (!negotiable) return response;
+    const headers = varyOnAccept(response);
+    if (url.hostname.endsWith('.pages.dev')) headers.set('X-Robots-Tag', 'noindex, nofollow');
+    // The global static Link header is wrong on article and program pages.
+    if (!source) headers.delete('Link');
+    else headers.set('Link', `<${source}>; rel="alternate"; type="text/markdown"`);
     return new Response(response.body, {
       status: response.status,
       statusText: response.statusText,
-      headers: varyOnAccept(response),
+      headers,
     });
   },
 };

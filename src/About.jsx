@@ -5,48 +5,6 @@ import { Header, SiteFooter, BOOKING_URL, objections } from "./App.jsx";
 const A = `${import.meta.env.BASE_URL}assets/source/`;
 const BASE = import.meta.env.BASE_URL;
 
-// Organisation, founder and FAQ markup, so assistants and search engines can
-// quote the page accurately instead of guessing.
-const structuredData = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      name: "The Pharma Coach, LLC",
-      description: about.valueProp,
-      url: "https://thepharmacoach.com/",
-      email: "Jebb@ThePharmaCoach.com",
-      founder: { "@type": "Person", name: "Jebb C. Ruff, MBA" },
-      sameAs: [
-        "https://www.linkedin.com/company/the-pharma-coach/",
-        "https://www.instagram.com/pharma_coach_jebb_ruff_mba/",
-        "https://www.tiktok.com/@entermedicalsales",
-      ],
-      makesOffer: about.services.map(service => ({
-        "@type": "Offer",
-        name: service.name,
-        price: service.price.replace(/[^0-9.]/g, ""),
-        priceCurrency: "USD",
-        url: service.url,
-      })),
-    },
-    {
-      "@type": "Person",
-      name: "Jebb C. Ruff, MBA",
-      jobTitle: "Medical sales hiring manager, sales trainer and career coach",
-      worksFor: { "@type": "Organization", name: "The Pharma Coach, LLC" },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: objections.map(([question, answer]) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: { "@type": "Answer", text: answer },
-      })),
-    },
-  ],
-};
-
 export function About() {
   useEffect(() => { document.title = "About The Pharma Coach | Jebb C. Ruff, MBA"; }, []);
   return (
@@ -155,7 +113,14 @@ export function About() {
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </section>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        {/* Organization and founder data are generated in the initial HTML. */}
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: objections.map(([question, answer]) => ({
+            '@type': 'Question', name: question,
+            acceptedAnswer: { '@type': 'Answer', text: answer },
+          })),
+        })}</script>
       </main>
       <SiteFooter />
     </>

@@ -30,4 +30,5 @@ jobs:
       - name: Run release tests
         run: |
           npm run test:sites
+          npm run test:migration
           node --test tests/migrated-pages.test.mjs tests/blog-standard.test.mjs tests/release-guard.test.mjs tests/legacy-redirects.test.mjs

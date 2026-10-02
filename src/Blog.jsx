@@ -22,6 +22,29 @@ const readingTime = post => {
 };
 const headingSlug = text => text.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "section";
 
+const authorProfile = post => {
+  const name = (post.author || "The Pharma Coach").trim();
+  if (name === "Jebb C. Ruff, MBA") return {
+    name,
+    kind: "jebb",
+    href: `${BASE}about`,
+    label: "Jebb Ruff",
+    bio: "Jebb is a former pharmaceutical and medical device sales hiring manager, sales trainer, and career coach. Through The Pharma Coach, he helps people turn their experience into a practical plan for entering medical sales.",
+  };
+  if (name.toLowerCase() === "the pharma coach") return {
+    name: "The Pharma Coach",
+    kind: "organization",
+    label: "The Pharma Coach editorial team",
+    bio: "This article was originally published by The Pharma Coach. The archive record identifies the organization as the author rather than an individual contributor.",
+  };
+  return {
+    name,
+    kind: "contributor",
+    label: name,
+    bio: `This article was originally published in The Pharma Coach archive under the byline ${name}. The archived source record does not include a verified contributor biography.`,
+  };
+};
+
 function InlineText({ runs, text }) {
   if (!runs) return text;
   return runs.map((run, index) => {
@@ -131,6 +154,7 @@ export function BlogPost({ slug }) {
   }
 
   const articleBody = prepareArticleBlocks(post.body);
+  const author = authorProfile(post);
   const seenHeadings = new Map();
   const sections = articleBody.map((block, index) => {
     if (block.type !== "h2") return null;
@@ -160,8 +184,8 @@ export function BlogPost({ slug }) {
           <h1>{post.title}</h1>
           {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
           <div className="post__authorline">
-            <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="" width="52" height="52" />
-            <div><a className="post__authorname" href={`${BASE}about`}>{post.author}</a><p><time dateTime={post.published}>{longDate(post.published)}</time><span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
+            {author.kind === "jebb" && <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="" width="52" height="52" />}
+            <div>{author.href ? <a className="post__authorname" href={author.href}>{author.name}</a> : <span className="post__authorname">{author.name}</span>}<p><time dateTime={post.published}>{longDate(post.published)}</time>{post.modified && <><span aria-hidden="true"> · </span>Updated <time dateTime={post.modified}>{longDate(post.modified)}</time></>}<span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
           </div>
         </header>
         <div className="post__feature">
@@ -192,13 +216,13 @@ export function BlogPost({ slug }) {
           <p>Book a 45-minute discovery call with Jebb and talk through your next step.</p>
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </div>
-        <section className="post__authorbio" aria-labelledby="post-author-heading">
-          <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
+        <section className={`post__authorbio${author.kind === "jebb" ? "" : " post__authorbio--text"}`} aria-labelledby="post-author-heading">
+          {author.kind === "jebb" && <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />}
           <div>
             <h2 id="post-author-heading">About the author</h2>
-            <p className="post__label">Jebb Ruff</p>
-            <p>Jebb is a former pharmaceutical and medical device sales hiring manager, sales trainer, and career coach. Through The Pharma Coach, he helps people turn their experience into a practical plan for entering medical sales.</p>
-            <div className="post__authorlinks"><a href={`${BASE}about`}>Full profile</a><a href="https://www.tiktok.com/@entermedicalsales" target="_blank" rel="noreferrer">TikTok</a><a href={blogHref()}>All articles</a></div>
+            <p className="post__label">{author.label}</p>
+            <p>{author.bio}</p>
+            <div className="post__authorlinks">{author.kind === "jebb" && <><a href={`${BASE}about`}>Full profile</a><a href="https://www.tiktok.com/@entermedicalsales" target="_blank" rel="noreferrer">TikTok</a></>}<a href={blogHref()}>All articles</a></div>
           </div>
         </section>
         {post.editorialNote && <p className="post__editorial-note">{post.editorialNote}</p>}

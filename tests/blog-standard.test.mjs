@@ -20,8 +20,7 @@ test("normalized legacy articles expose real sections for article navigation", (
 
 test("flattened social imports are not mislabeled as standard articles", () => {
   const needsRewrite = posts.filter(post => post.editorialStatus === "needs-editorial-rewrite");
-  assert.ok(needsRewrite.length > 0, "expected raw social-style imports to remain in the rewrite queue");
-  for (const post of needsRewrite) assert.equal(post.formatVersion, undefined);
+  assert.equal(needsRewrite.length, 0, "no raw social-style imports may remain in the rewrite queue");
 });
 
 test("the currently reviewed dermatologist article has editorial landmarks", () => {
@@ -32,7 +31,7 @@ test("the currently reviewed dermatologist article has editorial landmarks", () 
 });
 
 test("every blog route inherits the branded visual and approved author headshot", () => {
-  assert.equal(posts.length, 23, "unexpected post count; review the complete library when it changes");
+  assert.equal(posts.length, 407, "unexpected post count; review the complete library when it changes");
   assert.match(blogSource, /<BlogVisual post=\{post\} \/>/);
   assert.match(blogSource, /<BlogVisual post=\{post\} size="feature" \/>/);
   assert.ok(!blogSource.includes("<img src={post.image}"), "legacy images must not bypass the branded thumbnail system");

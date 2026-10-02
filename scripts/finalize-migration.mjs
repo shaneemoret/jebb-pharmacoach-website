@@ -25,7 +25,7 @@ const routes = [
 ];
 
 for (const page of routes) {
-  const file = path.join(dist, page.slug, 'index.html');
+  const file = path.join(dist, decodeURIComponent(page.slug), 'index.html');
   const url = origin + '/' + (page.slug ? page.slug + '/' : '');
   const title = page.title.includes('The Pharma Coach') ? page.title : page.title + ' | The Pharma Coach';
   let html = readFileSync(file, 'utf8');
@@ -93,7 +93,7 @@ writeFileSync(path.join(dist, '404.html'), `<!doctype html><html lang="en"><head
 // The secondary GitHub Pages build is a preview, not another search destination.
 if (process.env.GITHUB_PAGES) {
   for (const page of routes) {
-    const file = path.join(dist, page.slug, 'index.html');
+    const file = path.join(dist, decodeURIComponent(page.slug), 'index.html');
     writeFileSync(file, readFileSync(file, 'utf8').replace('</head>', '<meta name="robots" content="noindex, nofollow"></head>'));
   }
 }

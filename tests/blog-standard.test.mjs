@@ -32,7 +32,7 @@ test("the currently reviewed dermatologist article has editorial landmarks", () 
 });
 
 test("every blog route inherits the branded visual and approved author headshot", () => {
-  assert.equal(posts.length, 22, "unexpected post count; review the complete library when it changes");
+  assert.equal(posts.length, 25, "unexpected post count; review the complete library when it changes");
   assert.match(blogSource, /<BlogVisual post=\{post\} \/>/);
   assert.match(blogSource, /<BlogVisual post=\{post\} size="feature" \/>/);
   assert.ok(!blogSource.includes("<img src={post.image}"), "legacy images must not bypass the branded thumbnail system");
@@ -62,4 +62,18 @@ test("the repository carries a durable blog standard for future agents", () => {
     "at least three meaningful items",
     "one-word fragments",
   ]) assert.ok(standard.includes(requirement), `BLOG_STANDARD.md is missing: ${requirement}`);
+});
+
+test("career-changer guides are complete, sourced articles", () => {
+  for (const slug of ["nurse-to-pharmaceutical-sales", "b2b-sales-to-pharmaceutical-sales", "teacher-to-pharmaceutical-sales"]) {
+    const post = posts.find(item => item.slug === slug);
+    assert.ok(post, `${slug} is missing`);
+    assert.equal(post.editorialStatus, "standard-v1");
+    assert.ok(post.excerpt.length <= 220, `${slug} has an overlong excerpt`);
+    assert.ok(post.body.filter(block => block.type === "h2").length >= 5, `${slug} needs real sections`);
+    assert.ok(post.sources?.length > 0, `${slug} cites no sources`);
+    for (const source of post.sources) assert.match(source.url, /^https:\/\//);
+    assert.ok(!JSON.stringify(post.body).includes("\u2014"), `${slug} uses an em dash`);
+  }
+  assert.match(blogSource, /post\.sources\?\.map/);
 });

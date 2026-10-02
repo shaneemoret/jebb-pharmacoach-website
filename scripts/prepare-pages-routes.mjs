@@ -17,7 +17,7 @@ const legacyRedirects = [
 ];
 
 for (const route of ["about", "blog", ...posts.map(({ slug }) => `blog/${slug}`)]) {
-  const routeDirectory = path.join(dist, ...route.split("/"));
+  const routeDirectory = path.join(dist, ...decodeURIComponent(route).split("/"));
   mkdirSync(routeDirectory, { recursive: true });
   copyFileSync(shell, path.join(routeDirectory, "index.html"));
 }
@@ -113,7 +113,7 @@ for (const post of posts) {
     .replace(/<meta property="og:image"[^>]*>/, `<meta property="og:image" content="${escapeHtml(image)}" />`)
     .replace(/<link rel="alternate"[^>]*>/, `<link rel="alternate" type="text/markdown" href="/markdown/blog/${post.slug}.md" />`)
     .replace("  </head>", `    <link rel="canonical" href="${escapeHtml(post.canonical || url)}" />\n    <meta property="og:url" content="${escapeHtml(url)}" />\n  </head>`);
-  writeFileSync(path.join(dist, "blog", post.slug, "index.html"), articleShell);
+  writeFileSync(path.join(dist, "blog", decodeURIComponent(post.slug), "index.html"), articleShell);
 }
 
 const markdownDirectory = path.join(dist, "markdown");
@@ -203,11 +203,14 @@ const blogIndex = [
 writeFileSync(path.join(markdownDirectory, "blog.md"), blogIndex);
 
 function blockToMarkdown(block) {
-  if (block.type === "p") return block.text;
-  if (block.type === "h2") return `## ${block.text}`;
-  if (block.type === "h3") return `### ${block.text}`;
-  if (block.type === "list") return block.items.map((item, index) => `${block.ordered ? `${index + 1}.` : "-"} ${item}`).join("\n");
-  if (block.type === "quote") return `> ${block.text}`;
+  const inline = (runs, text) => runs ? runs.map(run => run.url ? `[${run.text}](${run.url})` : run.text).join('') : text;
+  const text = inline(block.runs, block.text);
+  if (block.type === "p") return text;
+  if (block.type === "h2") return `## ${text}`;
+  if (block.type === "h3") return `### ${text}`;
+  if (block.type === "list") return block.items.map((item, index) => `${block.ordered ? `${index + 1}.` : "-"} ${inline(block.richItems?.[index], item)}`).join("\n");
+  if (block.type === "quote") return `> ${text}`;
+  if (block.type === "image") return `![${block.text || ''}](${block.url})`;
   if (block.type === "link") return `[${block.text}](${block.url})`;
   throw new Error(`Unsupported blog block type: ${block.type}`);
 }
@@ -224,7 +227,7 @@ for (const post of posts) {
     ...post.body.flatMap((block) => [blockToMarkdown(block), ""]),
     ...(post.source?.url ? [`[Original source](${post.source.url})`, ""] : []),
   ].join("\n");
-  writeFileSync(path.join(markdownDirectory, "blog", `${post.slug}.md`), markdown);
+  writeFileSync(path.join(markdownDirectory, "blog", `${decodeURIComponent(post.slug)}.md`), markdown);
 }
 
 // Old Wix article links (/post/<slug>) point at their new home. Cloudflare matches the exact

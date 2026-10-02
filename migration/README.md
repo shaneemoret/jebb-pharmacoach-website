@@ -1,0 +1,15 @@
+# Wix archive restoration — October 2, 2026
+
+Acceptance: account for every old Wix post URL, preserve recoverable original content and existing new-site articles, and restore a direct article destination for each old link.
+
+Source: the live Wix origin at 185.230.63.107, using HTTPS with the original www.thepharmacoach.com hostname. The current blog-posts sitemap lists 404 unique URLs. The historical redirect map contains the same set, with two résumé paths percent-encoded. Normalize these before deduplication.
+
+Result: 384 original articles restored, 20 source URLs already represented by existing articles, zero missing source bodies. The existing 22 site articles are unchanged, giving 406 articles in total. `wix-archive-manifest.json` records each source URL, outcome, SHA-256 and source-text word count. Article records retain their original publication date and source provenance. The importer verifies the full source text word sequence before accepting a body.
+
+Two pages (advice-for-aspiring-medical-sales-reps and medical-sales-hiring-manager-thoughts-during-an-interview) initially returned HTTP 200 with a Wix widget error. Re-fetching with a migration-recheck query recovered both. Never substitute a metadata description for missing article text.
+
+Run `python scripts/restore-wix-archive.py SNAPSHOT_DIRECTORY` with beautifulsoup4 installed. The snapshot directory must contain `wix-fetch-manifest.json` and `wix-html/<sha256-of-source-url>.html`. The raw public HTML snapshot is held in the task work directory, not committed because it includes hundreds of megabytes of Wix runtime markup. Re-running updates only prior restored records with `legacySource`; editorially authored existing records are preserved.
+
+Original media stays on the Wix CDN, with videos linked to their original media URL. Do not remove the original media hosting until assets have been copied and verified separately. Recovering old copy does not certify it against the current article standard: restored posts carry `needs-editorial-rewrite`, not `standard-v1`. This owner-requested complete restoration supersedes the earlier selective migration proposal for this branch only; reconcile open editorial PRs before merging them.
+
+Publication requires approval and the GitHub production workflow in AGENTS.md. This branch alone does not change the live website.

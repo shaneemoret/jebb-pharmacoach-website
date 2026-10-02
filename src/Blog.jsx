@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import posts from "./posts.json";
 import { Header, SiteFooter, BOOKING_URL } from "./App.jsx";
 import { prepareArticleBlocks } from "./blogBlocks.js";
@@ -21,6 +21,16 @@ const readingTime = post => {
   return `${Math.max(1, Math.ceil(words / 200))} min read`;
 };
 const headingSlug = text => text.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "section";
+
+function InlineText({ runs, text }) {
+  if (!runs) return text;
+  return runs.map((run, index) => {
+    let content = run.text;
+    if (run.bold) content = <strong>{content}</strong>;
+    if (run.italic) content = <em>{content}</em>;
+    return run.url ? <a key={index} href={run.url}>{content}</a> : <span key={index}>{content}</span>;
+  });
+}
 
 function TikTok({ video }) {
   useEffect(() => {
@@ -66,6 +76,11 @@ function Card({ post }) {
 }
 
 export function BlogIndex() {
+  const [query, setQuery] = useState("");
+  const [page, setPage] = useState(0);
+  const matches = posts.filter(post => `${post.title} ${post.excerpt}`.toLowerCase().includes(query.trim().toLowerCase()));
+  const pageSize = 24;
+  const pageCount = Math.max(1, Math.ceil(matches.length / pageSize));
   return (
     <>
     <Header />
@@ -75,7 +90,18 @@ export function BlogIndex() {
         <h1>Articles to help you land a pharma sales rep job.</h1>
         <p className="lead">Practical pieces from Jebb on resumes, interviews and the moves that get candidates in front of hiring managers.</p>
       </header>
-      <div className="post-list">{posts.map(post => <Card post={post} key={post.slug} />)}</div>
+      <div className="blog__search">
+        <label htmlFor="article-search">Find an article</label>
+        <input id="article-search" type="search" value={query} placeholder="Search by topic or title" onChange={event => { setQuery(event.target.value); setPage(0); }} />
+        <p role="status">{matches.length} articles{query.trim() ? " found" : " in the library"}</p>
+      </div>
+      <div className="post-list">{matches.slice(page * pageSize, (page + 1) * pageSize).map(post => <Card post={post} key={post.slug} />)}</div>
+      {matches.length === 0 && <p>No articles match that search. Try another topic.</p>}
+      {pageCount > 1 && <nav className="blog__pagination" aria-label="Article pages">
+        <button type="button" disabled={page === 0} onClick={() => setPage(page - 1)}>Previous</button>
+        <span>Page {page + 1} of {pageCount}</span>
+        <button type="button" disabled={page + 1 === pageCount} onClick={() => setPage(page + 1)}>Next</button>
+      </nav>}
     </main>
     <SiteFooter />
     </>
@@ -143,20 +169,21 @@ export function BlogPost({ slug }) {
         </div>
         <div className="post__layout">
       <article className="post__content">
-        {introCount > 0 && <div className="post__intro">{articleBody.slice(0, introCount).map((block, index) => <p key={index}>{block.text}</p>)}</div>}
+        {introCount > 0 && <div className="post__intro">{articleBody.slice(0, introCount).map((block, index) => <p key={index}><InlineText {...block} /></p>)}</div>}
         {post.video && <figure className="post__videofigure"><TikTok video={post.video} /><figcaption>Jebb explains the certificate warning in his original <a href={post.video.url} target="_blank" rel="noreferrer">TikTok video</a>.</figcaption></figure>}
         <div className="post__body">
           {articleBody.slice(introCount).map((block, offset) => {
             const index = offset + introCount;
-            if (block.type === "h2") return <h2 id={sectionByIndex.get(index).id} key={index}>{block.text}</h2>;
-            if (block.type === "h3") return <h3 key={index}>{block.text}</h3>;
+            if (block.type === "h2") return <h2 id={sectionByIndex.get(index).id} key={index}><InlineText {...block} /></h2>;
+            if (block.type === "h3") return <h3 key={index}><InlineText {...block} /></h3>;
+            if (block.type === "image") return <figure className="post__archive-image" key={index}><img src={block.url} alt={block.text || ""} loading="lazy" /></figure>;
             if (block.type === "list") {
               const List = block.ordered ? "ol" : "ul";
-              return <List key={index}>{block.items.map((item, i) => <li key={i}>{item}</li>)}</List>;
+              return <List key={index}>{block.items.map((item, i) => <li key={i}><InlineText text={item} runs={block.richItems?.[i]} /></li>)}</List>;
             }
-            if (block.type === "quote") return <blockquote className="post__quote" key={index}>{block.text}</blockquote>;
+            if (block.type === "quote") return <blockquote className="post__quote" key={index}><InlineText {...block} /></blockquote>;
             if (block.type === "link") return <p key={index}><a href={block.url} target={block.url.startsWith("http") ? "_blank" : undefined} rel={block.url.startsWith("http") ? "noreferrer" : undefined}>{block.text}</a></p>;
-            return <p key={index}>{block.text}</p>;
+            return <p key={index}><InlineText {...block} /></p>;
           })}
         </div>
         <div className="post__cta">

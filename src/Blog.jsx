@@ -195,15 +195,17 @@ export function BlogPost({ slug }) {
         <section className="post__authorbio" aria-labelledby="post-author-heading">
           <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />
           <div>
-            <p className="post__label">About the author</p>
-            <h2 id="post-author-heading">Jebb Ruff</h2>
+            <h2 id="post-author-heading">About the author</h2>
+            <p className="post__label">Jebb Ruff</p>
             <p>Jebb is a former pharmaceutical and medical device sales hiring manager, sales trainer, and career coach. Through The Pharma Coach, he helps people turn their experience into a practical plan for entering medical sales.</p>
             <div className="post__authorlinks"><a href={`${BASE}about`}>Full profile</a><a href="https://www.tiktok.com/@entermedicalsales" target="_blank" rel="noreferrer">TikTok</a><a href={blogHref()}>All articles</a></div>
           </div>
         </section>
-        {(post.source || ftcSource) && <section className="post__sources" aria-label="Sources">
+        {post.editorialNote && <p className="post__editorial-note">{post.editorialNote}</p>}
+        {(post.source || ftcSource || post.sources?.length > 0) && <section className="post__sources" aria-label="Sources">
           <h2>Sources</h2>
           <ul>
+            {post.sources?.map(source => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></li>)}
             {ftcSource && <li>Federal Trade Commission, <a href={ftcSource.url} target="_blank" rel="noreferrer">Job Scams</a></li>}
             {post.source && <li>{post.source.label}, <a href={post.source.url} target="_blank" rel="noreferrer">original video</a></li>}
           </ul>

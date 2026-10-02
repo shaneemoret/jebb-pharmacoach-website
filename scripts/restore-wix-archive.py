@@ -91,7 +91,7 @@ def main():
             receipt.update(sourceSha256=post['legacySource']['sha256'],textWords=post['legacySource']['textWords'])
             if slug in by_slug:
                 receipt['status']='restored-original' if by_slug[slug].get('legacySource') else 'existing-post-preserved'
-                if by_slug[slug].get('legacySource'): by_slug[slug]=post
+                if by_slug[slug].get('legacySource') and not by_slug[slug].get('editorialRevision'): by_slug[slug]=post
             else:
                 by_slug[slug]=post
                 receipt['status']='restored-original'

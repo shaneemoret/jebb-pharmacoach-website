@@ -30,8 +30,17 @@ test('every recovered source resolves to its own article, metadata, Markdown and
     if (row.status === 'restored-original') {
       assert.equal(post.legacySource.textVerified, true);
       assert.equal(post.legacySource.sha256, row.sourceSha256);
-      assert.equal(post.editorialStatus, 'needs-editorial-rewrite');
-      assert.equal(post.formatVersion, undefined);
+      if (post.editorialRevision) {
+        const originals = JSON.parse(readFileSync(new URL('../migration/editorial-originals.json', import.meta.url), 'utf8'));
+        const original = originals.find(item => item.slug === post.slug);
+        assert.equal(original?.legacySource.sha256, row.sourceSha256);
+        assert.equal(original.editorialStatus, 'needs-editorial-rewrite');
+        assert.equal(post.editorialStatus, 'editorial-draft');
+        assert.equal(post.formatVersion, 'editorial-v1');
+      } else {
+        assert.equal(post.editorialStatus, 'needs-editorial-rewrite');
+        assert.equal(post.formatVersion, undefined);
+      }
       assert.match(post.published, /^\d{4}-\d{2}-\d{2}$/);
       for (const block of post.body) {
         for (const run of [...(block.runs || []), ...(block.richItems || []).flat()]) {

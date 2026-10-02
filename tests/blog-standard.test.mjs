@@ -20,8 +20,7 @@ test("normalized legacy articles expose real sections for article navigation", (
 
 test("flattened social imports are not mislabeled as standard articles", () => {
   const needsRewrite = posts.filter(post => post.editorialStatus === "needs-editorial-rewrite");
-  assert.ok(needsRewrite.length > 0, "expected raw social-style imports to remain in the rewrite queue");
-  for (const post of needsRewrite) assert.equal(post.formatVersion, undefined);
+  assert.equal(needsRewrite.length, 0, "no raw social-style imports may remain in the rewrite queue");
 });
 
 test("the currently reviewed dermatologist article has editorial landmarks", () => {

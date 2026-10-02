@@ -31,7 +31,8 @@ test('every recovered source resolves to its own article, metadata, Markdown and
       assert.equal(post.legacySource.textVerified, true);
       assert.equal(post.legacySource.sha256, row.sourceSha256);
       if (post.editorialRevision) {
-        const originals = JSON.parse(readFileSync(new URL('../migration/editorial-originals.json', import.meta.url), 'utf8'));
+        const originalFile = post.editorialRevision.originalFile || 'migration/editorial-originals.json';
+        const originals = JSON.parse(readFileSync(new URL(`../${originalFile}`, import.meta.url), 'utf8'));
         const original = originals.find(item => item.slug === post.slug);
         assert.equal(original?.legacySource.sha256, row.sourceSha256);
         assert.equal(original.editorialStatus, 'needs-editorial-rewrite');

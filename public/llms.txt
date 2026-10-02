@@ -30,7 +30,7 @@ The /about page is the reference page for this business: what The Pharma Coach d
 
 ## Blog
 
-The /blog index lists Jebb's published posts. Every post is hosted on this site at /blog/<slug>. Posts adapted from Jebb's social video link to the original clip.
+The /blog index lists Jebb's published posts. Every post is hosted on this site at /blog/<slug>. The newest post, "How to Build Credibility in Medical Sales When You're New to the Specialty," is at /blog/how-to-build-credibility-in-medical-sales. Posts adapted from Jebb's social video link to the original clip.
 
 ## Important qualification
 

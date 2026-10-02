@@ -16,6 +16,12 @@ const organization = {
   url: origin + '/', sameAs: profiles.map(p => p.url),
   founder: { '@type': 'Person', '@id': origin + '/about/#jebb', name: 'Jebb C. Ruff, MBA' },
 };
+const articleAuthor = page => {
+  const name = (page.author || 'The Pharma Coach').trim();
+  if (name === 'Jebb C. Ruff, MBA') return { '@type': 'Person', '@id': origin + '/about/#jebb', name, url: origin + '/about/' };
+  if (name.toLowerCase() === 'the pharma coach') return { '@id': organization['@id'] };
+  return { '@type': 'Person', '@id': page.canonical + '#archive-author', name };
+};
 const routes = [
   { slug: '', title: 'Start Your Career in Pharmaceutical Sales', description: 'Start or advance your career in pharmaceutical sales with practical coaching for nurses, healthcare professionals, and sales reps.' },
   { slug: 'about', title: 'About The Pharma Coach | Jebb C. Ruff, MBA', description: 'Meet Jebb Ruff, medical sales hiring manager, sales trainer and founder of The Pharma Coach. Explore his background and coaching approach.' },
@@ -35,8 +41,8 @@ for (const page of routes) {
   const graph = [organization];
   if (page.article) graph.push({
     '@type': 'BlogPosting', '@id': url + '#article', headline: page.title, description: page.description,
-    url, mainEntityOfPage: url, datePublished: page.published, image,
-    author: { '@type': 'Person', '@id': origin + '/about/#jebb', name: page.author || 'Jebb Ruff', url: origin + '/about/' },
+    url, mainEntityOfPage: url, datePublished: page.published, ...(page.modified ? { dateModified: page.modified } : {}), image,
+    author: articleAuthor(page),
     publisher: { '@id': organization['@id'] },
   });
   if (page.slug === 'about') graph.push({
@@ -72,7 +78,7 @@ for (const page of routes) {
 }
 
 // Derived from published routes, never from a hand-maintained Wix-era list.
-writeFileSync(path.join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map(p => `  <url><loc>${origin}/${p.slug ? p.slug + '/' : ''}</loc></url>`).join('\n')}\n</urlset>\n`);
+writeFileSync(path.join(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map(p => `  <url><loc>${origin}/${p.slug ? p.slug + '/' : ''}</loc>${p.article ? `<lastmod>${p.modified || p.published}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`);
 
 const aliases = pages.flatMap(p => (p.aliases || []).map(alias => [alias, '/' + p.slug + '/']));
 const redirects = [

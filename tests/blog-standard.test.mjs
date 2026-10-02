@@ -9,7 +9,7 @@ const articleStyles = await readFile(new URL("../src/article.css", import.meta.u
 const standard = await readFile(new URL("../BLOG_STANDARD.md", import.meta.url), "utf8");
 
 test("normalized legacy articles expose real sections for article navigation", () => {
-  const normalized = posts.filter(post => post.formatVersion === "editorial-v1");
+  const normalized = posts.filter(post => post.formatVersion?.startsWith("editorial-v"));
   assert.ok(normalized.length > 0, "expected normalized imported articles");
   for (const post of normalized) {
     assert.ok(post.body.some(block => block.type === "h2"), `${post.slug} has no section heading`);
@@ -39,7 +39,8 @@ test("every blog route inherits the branded visual and approved author headshot"
   assert.ok(!blogSource.includes("blog-visual__topline"), "thumbnail topline must stay removed");
   assert.ok(!blogSource.includes("blog-visual__footer"), "thumbnail footer and portrait must stay removed");
   assert.ok(!blogSource.includes("post__guide"), "temporary interview-guide rail must stay removed");
-  assert.match(blogSource, /className="post__authorname" href=\{`\$\{BASE\}about`\}/);
+  assert.match(blogSource, /const authorProfile = post =>/);
+  assert.match(blogSource, /author\.kind === "jebb"/);
   assert.match(articleStyles, /object-position:\s*50% 0/);
 });
 

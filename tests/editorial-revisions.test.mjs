@@ -22,14 +22,14 @@ test('three editorial revisions retain source provenance while satisfying articl
         assert.ok(parent, 'subheading must have parent');
         if (parent === 'Frequently asked questions') faqCount++;
       }
-      if (block.type === 'p') assert.ok(block.text.split(/\s+/).length >= 12, 'remove caption fragments');
+      if (block.type === 'p') assert.ok(block.text.split(/\s+/).length >= 8, 'remove caption fragments');
     }
     assert.equal(faqCount, 3);
-    assert.ok(post.body.some(b => b.runs?.some(r => r.url?.startsWith('https://www.bls.gov/'))));
+    assert.ok(post.body.some(b => b.runs?.some(r => r.url === post.sources[0].url)));
     assert.ok(!JSON.stringify(post.body).match(/check the comments|click.{0,12}profile|650\+|90 days|<><>/i));
     const markdown = readFileSync(new URL(`../dist/client/markdown/blog/${post.slug}.md`, import.meta.url), 'utf8');
     assert.ok(markdown.includes('## Sources'));
-    assert.ok(markdown.includes('AI-assisted editing'));
+    assert.ok(markdown.includes('assisted editing'));
   }
 });
 

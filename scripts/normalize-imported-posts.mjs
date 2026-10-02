@@ -81,6 +81,7 @@ let lists = 0;
 
 const normalized = posts.map(post => {
   if (!post.body) return post;
+  if (post.formatVersion === "editorial-v2" && post.editorialRevision) return post;
   if (post.formatVersion === "editorial-v1") {
     const body = normalizeBody(post.body);
     const sectionCount = body.filter(block => block.type === "h2").length;

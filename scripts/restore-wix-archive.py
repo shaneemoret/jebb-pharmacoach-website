@@ -99,6 +99,20 @@ def main():
             receipt.update(status='needs-source-recovery',reason=str(e))
         report.append(receipt)
     posts=sorted(by_slug.values(),key=lambda p:p.get('published',''),reverse=True)
+    # Re-importing a source snapshot must not restore retired-host dependencies.
+    media_manifest=ROOT/'migration/blog-media-manifest.json'
+    if media_manifest.exists():
+        media_map={row['original']:row['local'] for row in json.loads(media_manifest.read_text())}
+        def localize(value):
+            if isinstance(value,dict): return {k:localize(v) for k,v in value.items()}
+            if isinstance(value,list): return [localize(v) for v in value]
+            return media_map.get(value,value) if isinstance(value,str) else value
+        posts=localize(posts)
+        for post in posts:
+            for block in post.get('body',[]):
+                if block.get('url','').startswith('/assets/blog-archive/') and block['url'].endswith('.mp4'):
+                    block['type']='video'
+                    block['text']='Watch video'
     (ROOT/'src/posts.json').write_text(json.dumps(posts,ensure_ascii=False,indent=2)+'\n')
     legacy=json.loads((ROOT/'src/legacy-posts.json').read_text())
     known={p['from']:p for p in legacy}

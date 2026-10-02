@@ -177,6 +177,7 @@ export function BlogPost({ slug }) {
             if (block.type === "h2") return <h2 id={sectionByIndex.get(index).id} key={index}><InlineText {...block} /></h2>;
             if (block.type === "h3") return <h3 key={index}><InlineText {...block} /></h3>;
             if (block.type === "image") return <figure className="post__archive-image" key={index}><img src={block.url} alt={block.text || ""} loading="lazy" /></figure>;
+            if (block.type === "video") return <figure className="post__archive-video" key={index}><video controls preload="metadata" playsInline src={block.url} aria-label={block.text || post.title} /><figcaption><a href={block.url}>Open video</a></figcaption></figure>;
             if (block.type === "list") {
               const List = block.ordered ? "ol" : "ul";
               return <List key={index}>{block.items.map((item, i) => <li key={i}><InlineText text={item} runs={block.richItems?.[i]} /></li>)}</List>;

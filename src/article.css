@@ -175,6 +175,9 @@
 /* Original in-article media remains separate from the branded featured visual. */
 .post__archive-image { margin: 1.5rem 0; }
 .post__archive-image img { display: block; max-width: 100%; height: auto; margin-inline: auto; }
+.post__archive-video { margin: 1.5rem 0; }
+.post__archive-video video { display: block; width: 100%; max-height: 75vh; background: #0B0F14; }
+.post__archive-video figcaption { margin-top: .5rem; font-size: .9rem; }
 .post__body { overflow-wrap: anywhere; }
 .blog__search { margin: 2rem 0; max-width: 40rem; }
 .blog__search label { display: block; font-weight: 700; margin-bottom: .5rem; }

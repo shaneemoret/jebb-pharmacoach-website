@@ -211,6 +211,7 @@ function blockToMarkdown(block) {
   if (block.type === "list") return block.items.map((item, index) => `${block.ordered ? `${index + 1}.` : "-"} ${inline(block.richItems?.[index], item)}`).join("\n");
   if (block.type === "quote") return `> ${text}`;
   if (block.type === "image") return `![${block.text || ''}](${block.url})`;
+  if (block.type === "video") return `[${block.text || 'Watch video'}](${block.url})`;
   if (block.type === "link") return `[${block.text}](${block.url})`;
   throw new Error(`Unsupported blog block type: ${block.type}`);
 }

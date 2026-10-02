@@ -35,9 +35,9 @@ test('every recovered source resolves to its own article, metadata, Markdown and
       assert.match(post.published, /^\d{4}-\d{2}-\d{2}$/);
       for (const block of post.body) {
         for (const run of [...(block.runs || []), ...(block.richItems || []).flat()]) {
-          if (run.url) assert.match(run.url, /^(https?:|mailto:|tel:)/);
+          if (run.url) assert.match(run.url, /^(https?:|mailto:|tel:|\/assets\/blog-archive\/)/);
         }
-        if (block.type === 'image') assert.match(block.url, /^https:\/\//);
+        if (block.type === 'image' || block.type === 'video') assert.match(block.url, /^\/assets\/blog-archive\//);
       }
     }
   }

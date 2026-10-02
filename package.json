@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "import:posts": "node scripts/import-posts.mjs",
-    "test:migration": "node --test tests/post-migration.test.mjs tests/analytics.test.mjs tests/wix-archive.test.mjs"
+    "test:migration": "node --test tests/post-migration.test.mjs tests/analytics.test.mjs tests/wix-archive.test.mjs tests/blog-media.test.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.3.0",

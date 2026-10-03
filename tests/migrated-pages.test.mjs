@@ -47,3 +47,12 @@ for (const [route, destination] of legacyFormRoutes) {
     assert.doesNotMatch(html, /migrated-pages\.css/);
   });
 }
+
+for (const route of ["vip-signature-access", "pharmaceutical-sales-vip-mentorship", "faq", "medical-sales-faq"]) {
+  test(`${route} presents the current VIP commitment without the retired refund`, () => {
+    const html = readFileSync(new URL(`../dist/client/${route}/index.html`, import.meta.url), "utf8");
+    assert.match(html, /Offer in Hand Commitment/);
+    assert.match(html, /work with Jebb until you get hired/);
+    assert.doesNotMatch(html, /six.month|money.back|refund terms/i);
+  });
+}

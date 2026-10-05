@@ -36,8 +36,8 @@ test('every recovered source resolves to its own article, metadata, Markdown and
         const original = originals.find(item => item.slug === post.slug);
         assert.equal(original?.legacySource.sha256, row.sourceSha256);
         assert.equal(original.editorialStatus, 'needs-editorial-rewrite');
-        assert.equal(post.editorialStatus, 'editorial-draft');
-        assert.equal(post.formatVersion, 'editorial-v1');
+        assert.equal(post.editorialStatus, 'editorial-review-ready');
+        assert.equal(post.formatVersion, 'editorial-v2');
       } else {
         assert.equal(post.editorialStatus, 'needs-editorial-rewrite');
         assert.equal(post.formatVersion, undefined);

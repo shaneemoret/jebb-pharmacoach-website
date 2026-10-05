@@ -2,7 +2,9 @@
 
 ## Release rule: every change goes through GitHub (read first, no exceptions)
 
-This site is live at https://thepharmacoach.com. The only way a change may reach it is:
+This site is live at https://thepharmacoach.com. When Jebb or Melissa says "publish," "post," "put it up," or "go live" about a blog, article, or page, this repository is the destination. Published means it opens at a `thepharmacoach.com` address after the steps below; a link on any other domain is not published.
+
+The only way a change may reach the site is:
 
 1. Make the change on a new branch in this repository (never directly on `main`).
 2. Run `npm run build`, `npm run test:sites`, and `node --test tests/migrated-pages.test.mjs tests/blog-standard.test.mjs tests/release-guard.test.mjs tests/legacy-redirects.test.mjs`. Check the changed pages on desktop and phone in a local preview.
@@ -15,13 +17,15 @@ Never do any of these, even if asked to "just update the site quickly":
 
 - Never run `wrangler pages deploy`, `npx wrangler ...deploy`, or any other deploy command from this computer.
 - Never use Cloudflare's dashboard Direct Upload, drag-and-drop upload, or "Create deployment".
-- Never publish with Codex Sites, the `.openai/hosting.json` handoff, or any other hosting tool.
+- Never publish with Codex Sites, the `.openai/hosting.json` handoff, Claude artifacts or published pages, a ChatGPT or canvas share link, or any other hosting tool. Never hand Jebb a link on another domain as the published result.
 - Never edit files, DNS, redirects, or page rules in the Cloudflare dashboard as a substitute for a code change.
 - Never push directly to `main`, force-push, rewrite history, or delete branches that hold released work.
 
 Why: GitHub is the site's memory. A change that skips GitHub has no history, cannot be reviewed, and is erased by the next normal release. Going through GitHub means every version of the site is recorded and any change can be undone.
 
 If a task seems to require a shortcut, stop and tell Jebb what is blocking the pull request route. Do not work around it.
+
+A new article or page uses this site's existing layout and brand (see "Owner-approved visual direction" below and `BLOG_STANDARD.md`). Do not build a separately styled HTML page. When Jebb asks to see a mockup, show the real page in the local preview of the branch, on desktop and phone.
 
 ### Undoing a change (rollback)
 

@@ -47,6 +47,8 @@ components:
     padding: "14px 18px"
 ---
 
+> **Superseded palette and fonts.** The colors and typeface listed in this file (blue, lime, Public Sans) are an earlier direction. The approved brand is in `AGENTS.md` under "Owner-approved visual direction": inky black `#0B0F14`, white `#FFFFFF`, deep navy `#123B5D`, metallic gold `#D4AF37`, Manrope headings, Source Sans 3 body. Where this file disagrees, `AGENTS.md` wins.
+
 # Design System: The Pharma Coach
 
 ## Overview

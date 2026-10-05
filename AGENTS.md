@@ -2,20 +2,36 @@
 
 ## Release rule: every change goes through GitHub (read first, no exceptions)
 
-This site is live at https://thepharmacoach.com. The only way a change may reach it is:
+This site is live at https://thepharmacoach.com. When Jebb or Melissa says "publish," "post," "put it up," or "go live" about a blog, article, or page, this repository is the destination. Published means it opens at a `thepharmacoach.com` address after the steps below; a link on any other domain is not published.
+
+The only way a change may reach the site is:
 
 1. Make the change on a new branch in this repository (never directly on `main`).
 2. Run `npm run build`, `npm run test:sites`, and `node --test tests/migrated-pages.test.mjs tests/blog-standard.test.mjs tests/release-guard.test.mjs tests/legacy-redirects.test.mjs`. Check the changed pages on desktop and phone in a local preview.
 3. Commit, push the branch, and open a pull request against `main`. Describe what changed and attach before/after screenshots.
-4. Wait for the **Pull request checks** to pass. Show Jebb the change and get his explicit approval.
+4. Wait for the **Pull request checks** to pass. If they fail, fix the cause and push again; do not ask Jebb what to do about a failing check.
 5. Merge the pull request. GitHub Actions then builds, tests, and deploys that exact commit to Cloudflare Pages.
 6. Confirm the release: the **Deploy production to Cloudflare Pages** run succeeded, `https://thepharmacoach.com/version.json` shows the merge commit with `"source": "github-actions"`, and the changed page looks right on the live site.
+
+### Approval: his request is the approval. Finish the job without asking again.
+
+When Jebb or Melissa asked for the change ("publish this," "post it," "add this article," "put it on the site," "go live," "merge it"), that request is the approval for the whole release. Do steps 1 through 6 in one go, in the same turn, and end by giving him the live `thepharmacoach.com` link.
+
+- Never stop at a prepared branch or an open pull request and report "not live yet." A publish request is finished only when step 6 passes.
+- Never ask "should I merge?", "do you want me to open the pull request?", or "ready to deploy?". Opening the pull request, waiting for checks, merging, and confirming the live page are your job.
+- The checks and the deploy each take a minute or two. "Expected, waiting for status to be reported," "queued," and "in progress" all mean still running, so keep waiting and check again. Never report a running check as stuck or blocked. Come back to Jebb only when the page is live, or when a check has actually failed and you could not fix it yourself.
+- Jebb is not technical. Do not use the words branch, commit, pull request, merge, check, or GitHub Actions with him, and do not explain them. Tell him what is live and give the link. If something is still running, wait for it yourself and then report.
+
+Ask before merging only in these two cases, once, with the local preview and one yes-or-no question:
+
+- He asked only to see a draft or a mockup, and has not yet said to publish it.
+- The change is not something he or Melissa asked for (your own suggestion, or a branch prepared by someone else that he has not seen).
 
 Never do any of these, even if asked to "just update the site quickly":
 
 - Never run `wrangler pages deploy`, `npx wrangler ...deploy`, or any other deploy command from this computer.
 - Never use Cloudflare's dashboard Direct Upload, drag-and-drop upload, or "Create deployment".
-- Never publish with Codex Sites, the `.openai/hosting.json` handoff, or any other hosting tool.
+- Never publish with Codex Sites, the `.openai/hosting.json` handoff, Claude artifacts or published pages, a ChatGPT or canvas share link, or any other hosting tool. Never hand Jebb a link on another domain as the published result.
 - Never edit files, DNS, redirects, or page rules in the Cloudflare dashboard as a substitute for a code change.
 - Never push directly to `main`, force-push, rewrite history, or delete branches that hold released work.
 
@@ -23,9 +39,11 @@ Why: GitHub is the site's memory. A change that skips GitHub has no history, can
 
 If a task seems to require a shortcut, stop and tell Jebb what is blocking the pull request route. Do not work around it.
 
+A new article or page uses this site's existing layout and brand (see "Owner-approved visual direction" below and `BLOG_STANDARD.md`). Do not build a separately styled HTML page. When Jebb asks to see a mockup, show the real page in the local preview of the branch, on desktop and phone.
+
 ### Undoing a change (rollback)
 
-- Normal rollback: open a pull request that reverts the bad commit (`git revert <commit>` on a new branch), let checks pass, get Jebb's approval, merge. The site returns to the earlier version in about a minute.
+- Normal rollback: open a pull request that reverts the bad commit (`git revert <commit>` on a new branch), let checks pass and merge (his request to undo the change is the approval). The site returns to the earlier version in about a minute.
 - Emergency only (the live site is broken right now): in Cloudflare Pages, project `jebb-pharmacoach-website`, Deployments, choose the last good deployment and use **Rollback**. Then immediately open the revert pull request above so GitHub matches what is live again. The "Live site matches GitHub" check will keep failing until it does.
 
 ### Alarm

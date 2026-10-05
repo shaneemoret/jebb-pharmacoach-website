@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import posts from "./posts.json";
 import { Header, SiteFooter, BOOKING_URL } from "./App.jsx";
 import { prepareArticleBlocks } from "./blogBlocks.js";
 import "./article.css";
 
 const BASE = import.meta.env.BASE_URL;
 export const blogHref = slug => `${BASE}blog${slug ? `/${slug}` : ""}`;
-export const findPost = slug => posts.find(post => post.slug === slug);
+const readEmbeddedData = id => {
+  const node = document.getElementById(id);
+  return node ? JSON.parse(node.textContent) : null;
+};
 
 const longDate = value => {
   if (!value) return "";
@@ -90,7 +92,7 @@ function Card({ post }) {
       </a>
       <p className="post-card__meta">
         <time dateTime={post.published}>{longDate(post.published)}</time>
-        <span>{readingTime(post)}</span>
+        <span>{post.readingTime || readingTime(post)}</span>
       </p>
       <h2><a href={blogHref(post.slug)}>{post.title}</a></h2>
       <p className="post-card__excerpt">{post.excerpt}</p>
@@ -99,6 +101,7 @@ function Card({ post }) {
 }
 
 export function BlogIndex() {
+  const posts = readEmbeddedData("blog-index-data") || [];
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(0);
   const matches = posts.filter(post => `${post.title} ${post.excerpt}`.toLowerCase().includes(query.trim().toLowerCase()));
@@ -108,6 +111,7 @@ export function BlogIndex() {
     <>
     <Header />
     <main className="blog section-pad" id="top">
+      <nav className="post__breadcrumb" aria-label="Breadcrumb"><a href={BASE}>Home</a><span aria-hidden="true">›</span><span>Blog</span></nav>
       <header className="blog__head">
         <p className="eyebrow">Career advice</p>
         <h1>Articles to help you land a pharma sales rep job.</h1>
@@ -132,7 +136,8 @@ export function BlogIndex() {
 }
 
 export function BlogPost({ slug }) {
-  const post = findPost(slug);
+  const data = readEmbeddedData("blog-post-data") || {};
+  const post = data.post?.slug === slug ? data.post : null;
   useEffect(() => {
     if (post) document.title = `${post.title} | The Pharma Coach`;
   }, [post]);
@@ -164,9 +169,7 @@ export function BlogPost({ slug }) {
     return { id: count === 1 ? base : `${base}-${count}`, text: block.text, index };
   }).filter(Boolean);
   const sectionByIndex = new Map(sections.map(section => [section.index, section]));
-  const related = posts.filter(candidate => candidate.slug !== post.slug && candidate.body)
-    .sort((a, b) => Number(b.tags?.some(tag => post.tags?.includes(tag))) - Number(a.tags?.some(tag => post.tags?.includes(tag))))
-    .slice(0, 3);
+  const related = data.related || [];
   const ftcSource = articleBody.find(block => block.type === "link" && block.url?.startsWith("https://consumer.ftc.gov/articles/job-scams"));
   const firstHeading = articleBody.findIndex(block => block.type === "h2");
   const introCount = post.video && firstHeading > 0 && articleBody.slice(0, firstHeading).every(block => block.type === "p") ? firstHeading : 0;
@@ -184,7 +187,7 @@ export function BlogPost({ slug }) {
           <h1>{post.title}</h1>
           {post.excerpt && <p className="post__dek">{post.excerpt}</p>}
           <div className="post__authorline">
-            {author.kind === "jebb" && <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="" width="52" height="52" />}
+            {author.kind === "jebb" && <img src={`${BASE}assets/source/jebb-headshot-owner.webp`} alt="" width="52" height="52" />}
             <div>{author.href ? <a className="post__authorname" href={author.href}>{author.name}</a> : <span className="post__authorname">{author.name}</span>}<p><time dateTime={post.published}>{longDate(post.published)}</time>{post.modified && <><span aria-hidden="true"> · </span>Updated <time dateTime={post.modified}>{longDate(post.modified)}</time></>}<span aria-hidden="true"> · </span>{readingTime(post)}</p></div>
           </div>
         </header>
@@ -200,7 +203,7 @@ export function BlogPost({ slug }) {
             const index = offset + introCount;
             if (block.type === "h2") return <h2 id={sectionByIndex.get(index).id} key={index}><InlineText {...block} /></h2>;
             if (block.type === "h3") return <h3 key={index}><InlineText {...block} /></h3>;
-            if (block.type === "image") return <figure className="post__archive-image" key={index}><img src={block.url} alt={block.text || ""} loading="lazy" /></figure>;
+            if (block.type === "image") return <figure className="post__archive-image" key={index}><img src={block.url} alt={block.text || ""} width={block.width} height={block.height} loading="lazy" /></figure>;
             if (block.type === "video") return <figure className="post__archive-video" key={index}><video controls preload="metadata" playsInline src={block.url} aria-label={block.text || post.title} /><figcaption><a href={block.url}>Open video</a></figcaption></figure>;
             if (block.type === "list") {
               const List = block.ordered ? "ol" : "ul";
@@ -217,7 +220,7 @@ export function BlogPost({ slug }) {
           <a className="button button--gold" href={BOOKING_URL}>Schedule a call</a>
         </div>
         <section className={`post__authorbio${author.kind === "jebb" ? "" : " post__authorbio--text"}`} aria-labelledby="post-author-heading">
-          {author.kind === "jebb" && <img src={`${BASE}assets/source/jebb-headshot-owner.png`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />}
+          {author.kind === "jebb" && <img src={`${BASE}assets/source/jebb-headshot-owner.webp`} alt="Jebb Ruff" width="104" height="104" loading="lazy" />}
           <div>
             <h2 id="post-author-heading">About the author</h2>
             <p className="post__label">{author.label}</p>
@@ -245,7 +248,7 @@ export function BlogPost({ slug }) {
         {related.length > 0 && <section className="post__related" aria-labelledby="related-heading">
           <div className="post__relatedhead"><h2 id="related-heading">More from Jebb</h2><a href={blogHref()}>All articles →</a></div>
           <div className="post__relatedgrid">{related.map(item => <a className="post__relateditem" href={blogHref(item.slug)} key={item.slug}>
-            <span>Article · {readingTime(item)}</span><strong>{item.title}</strong><p>{item.excerpt}</p>
+            <span>Article · {item.readingTime || readingTime(item)}</span><strong>{item.title}</strong><p>{item.excerpt}</p>
           </a>)}</div>
         </section>}
       </div>

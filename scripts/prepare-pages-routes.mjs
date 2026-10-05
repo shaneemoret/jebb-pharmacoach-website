@@ -71,8 +71,8 @@ function renderMigratedPage(page) {
     </header>
     <main>
       <section class="migrated-hero">
-        <div class="migrated-hero__copy"><p class="migrated-kicker">${escapeHtml(page.kicker)}</p><h1>${escapeHtml(page.headline)}</h1><p class="migrated-hero__lead">${escapeHtml(page.lead)}</p></div>
-        <div class="migrated-hero__media"><img src="${escapeHtml(page.image)}" alt="${escapeHtml(page.imageAlt)}" /></div>
+        <div class="migrated-hero__copy"><nav class="post__breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>${escapeHtml(page.title)}</span></nav><p class="migrated-kicker">${escapeHtml(page.kicker)}</p><h1>${escapeHtml(page.headline)}</h1><p class="migrated-hero__lead">${escapeHtml(page.lead)}</p></div>
+        <div class="migrated-hero__media"><img src="${escapeHtml(page.image)}" alt="${escapeHtml(page.imageAlt)}" width="${page.imageWidth}" height="${page.imageHeight}" /></div>
       </section>
       <section class="migrated-facts" aria-label="Page highlights">${facts}</section>
       ${sections}
@@ -103,7 +103,7 @@ for (const [route, destination, label] of legacyRedirects) {
 for (const post of posts) {
   const url = `https://thepharmacoach.com/blog/${post.slug}`;
   const title = `${post.title} | The Pharma Coach`;
-  const image = new URL(post.image || "/assets/source/4310ea7e87b3a0cc-decoded.png", "https://thepharmacoach.com/").href;
+  const image = new URL(post.image || "/assets/source/social-share-default.jpg", "https://thepharmacoach.com/").href;
   const articleShell = readFileSync(shell, "utf8")
     .replace(/<title>[^<]*<\/title>/, `<title>${escapeHtml(title)}</title>`)
     .replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${escapeHtml(post.excerpt)}" />`)

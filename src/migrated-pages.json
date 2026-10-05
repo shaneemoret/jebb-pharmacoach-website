@@ -7,7 +7,9 @@
     "kicker": "Self-paced coaching",
     "headline": "Stop collecting advice. Start following a plan.",
     "lead": "Fast Track Academy turns the pharmaceutical-sales job search into a clear sequence: choose the right roles, translate your experience, build relationships, and prepare for the interview before it arrives.",
-    "image": "/assets/source/pharma-hcp-conversation.png",
+    "image": "/assets/source/pharma-hcp-conversation.webp",
+    "imageWidth": 1402,
+    "imageHeight": 1122,
     "imageAlt": "A pharmaceutical representative in conversation with a healthcare professional",
     "sourceUrl": "https://medrepcollege.com/fast-track",
     "facts": [
@@ -51,7 +53,9 @@
     "kicker": "Live coaching and accountability",
     "headline": "Turn activity into a focused job-search strategy.",
     "lead": "Mastermind Accelerator combines the self-paced $100K Med Rep Method with live coaching for candidates who want feedback while applications and interviews are happening.",
-    "image": "/assets/source/pharma-field-hero.png",
+    "image": "/assets/source/pharma-field-hero.webp",
+    "imageWidth": 1672,
+    "imageHeight": 941,
     "imageAlt": "A pharmaceutical sales professional working in the field",
     "sourceUrl": "https://medrepcollege.com/mastermind-accelerator",
     "facts": [
@@ -95,7 +99,9 @@
     "kicker": "One-to-one coaching",
     "headline": "Build the plan around your career, not the average candidate.",
     "lead": "VIP Signature Access is the highest-touch Pharma Coach path for candidates who want direct, personalized support across positioning, networking, interviews, and sales-career growth.",
-    "image": "/assets/source/jebb-headshot-owner.png",
+    "image": "/assets/source/jebb-headshot-owner.webp",
+    "imageWidth": 1139,
+    "imageHeight": 1381,
     "imageAlt": "Jebb Ruff, The Pharma Coach",
     "sourceUrl": "https://medrepcollege.com/vip-access",
     "facts": [
@@ -139,7 +145,9 @@
     "kicker": "Frequently asked questions",
     "headline": "Understand the path before you choose support.",
     "lead": "These answers explain what coaching can help with, what it cannot promise, and which parts of the journey still happen through Med Rep College.",
-    "image": "/assets/source/pharma-hcp-conversation.png",
+    "image": "/assets/source/pharma-hcp-conversation.webp",
+    "imageWidth": 1402,
+    "imageHeight": 1122,
     "imageAlt": "A pharmaceutical representative speaking with a healthcare professional",
     "sourceUrl": "https://medrepcollege.com/medical-sales-faq",
     "facts": [

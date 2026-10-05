@@ -6,7 +6,7 @@ This is the repository standard for every current and future article. Read it be
 
 - Every post must use the shared `BlogVisual` component on the blog index and as the article's featured visual. Do not render an imported Wix/social image directly as the finished thumbnail.
 - The visual must stay within the approved identity: inky black `#0B0F14`, white `#FFFFFF`, deep navy `#123B5D`, metallic gold `#D4AF37`, Manrope headings, and Source Sans 3 body copy.
-- Use `jebb-headshot-owner.png` in the byline and author bio, with the crop anchored to the top so his forehead is visible. Do not place a portrait inside the branded thumbnail and do not substitute the half-body About portrait in small circles.
+- Use `jebb-headshot-owner.webp` in the byline and author bio, with the crop anchored to the top so his forehead is visible. Do not place a portrait inside the branded thumbnail and do not substitute the half-body About portrait in small circles.
 - Every article must show a real featured visual between its header/byline and reading layout. Missing legacy media is never represented as a blank box.
 - Keep branded thumbnails editorial and simple: category plus title only. Do not add a decorative topline, "field notes" label, author footer, or face.
 - Treat old orange artwork and social-platform graphics as source material only. Redesign them into this system instead of mixing brands.

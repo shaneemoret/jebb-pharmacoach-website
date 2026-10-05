@@ -4,6 +4,8 @@ Audit date: October 5, 2026
 Scope: The Pharma Coach GitHub and Cloudflare site, including all 414 canonical sitemap URLs  
 Release state: implemented and locally verified on `codex/jebb-seo-hardening-oct05`; awaiting review, merge, Cloudflare deployment, and public verification
 
+Checklist count: 22 of 28 are implemented and locally verified. Five require an owner account or the deployed production site. Google Business Profile is conditional on whether Jebb qualifies as an in-person or service-area business.
+
 ## Applied and verified in the build
 
 1. **Server-rendered content:** all 414 canonical pages now include useful headings and body content in the first HTML response. The 410 empty SPA shells are removed.

@@ -4,15 +4,19 @@ import test from "node:test";
 import posts from "../src/posts.json" with { type: "json" };
 import originals from "../migration/editorial-originals-all.json" with { type: "json" };
 import reviews from "../migration/editorial-review-manifest.json" with { type: "json" };
+import redirects from "../src/legacy-posts.json" with { type: "json" };
 
 const revised = posts.filter(post => post.editorialRevision?.originalFile === "migration/editorial-originals-all.json");
+const consolidated = new Set(redirects.filter(entry => entry.decision === "seo-consolidated").map(entry => entry.from.slice("/post/".length)));
+const liveOriginals = originals.filter(original => !consolidated.has(original.slug));
+const liveReviews = reviews.filter(review => !consolidated.has(review.slug));
 const blockedCopy = /check the comments|click.{0,20}profile|link in (?:my |the )?bio|\bdm me\b|medrepcollege|six.figure|uncapped commission|650\+|90 days/iu;
 
 test("the complete remaining archive received an auditable editorial pass", () => {
   assert.equal(originals.length, 392);
-  assert.equal(reviews.length, 392);
-  assert.equal(revised.length, 392);
-  assert.equal(new Set(reviews.map(review => review.slug)).size, 392);
+  assert.equal(liveReviews.length, 373);
+  assert.equal(revised.length, 373);
+  assert.equal(new Set(liveReviews.map(review => review.slug)).size, 373);
   assert.equal(posts.filter(post => post.editorialStatus === "needs-editorial-rewrite").length, 0);
 });
 
@@ -40,7 +44,7 @@ test("every revised article has answer-first copy, semantic sections, FAQs and a
 });
 
 test("original dates, authors, slugs and source receipts remain intact", () => {
-  for (const original of originals) {
+  for (const original of liveOriginals) {
     const post = revised.find(item => item.slug === original.slug);
     assert.ok(post, original.slug);
     assert.equal(post.slug, original.slug);
@@ -51,7 +55,7 @@ test("original dates, authors, slugs and source receipts remain intact", () => {
 });
 
 test("per-article review manifest records the checks and correction flags", () => {
-  for (const review of reviews) {
+  for (const review of liveReviews) {
     assert.ok(review.originalWords >= 0, review.slug);
     assert.ok(review.revisedWords >= 300, review.slug);
     assert.ok(review.headings >= 4, review.slug);

@@ -39,6 +39,6 @@ test('every former Wix media reference has a verified Git-tracked-ready build as
 
 test('original video embeds play from this site instead of linking to Wix', () => {
   const videos = posts.flatMap(post => post.body.filter(block => block.type === 'video'));
-  assert.equal(videos.length, 28);
+  assert.equal(videos.length, 27);
   for (const video of videos) assert.match(video.url, /^\/assets\/blog-archive\/[a-f0-9]+\.mp4$/);
 });

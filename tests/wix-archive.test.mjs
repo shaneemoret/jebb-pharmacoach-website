@@ -7,6 +7,7 @@ import posts from '../src/posts.json' with { type: 'json' };
 import manifest from '../migration/wix-archive-manifest.json' with { type: 'json' };
 import redirects from '../src/legacy-posts.json' with { type: 'json' };
 const dist = fileURLToPath(new URL('../dist/client/', import.meta.url));
+const consolidated = new Set(redirects.filter(entry => entry.decision === 'seo-consolidated').map(entry => entry.from.slice('/post/'.length)));
 
 test('all 404 unique source URLs have recovered bodies or preserved existing articles', () => {
   assert.equal(manifest.length, 404);
@@ -20,8 +21,15 @@ test('every recovered source resolves to its own article, metadata, Markdown and
   const sitemap = readFileSync(path.join(dist, 'sitemap.xml'), 'utf8');
   for (const row of manifest) {
     const post = posts.find(post => post.slug === row.slug);
+    const redirect = redirects.find(entry => entry.from === '/post/' + row.slug);
+    if (consolidated.has(row.slug)) {
+      assert.equal(post, undefined, row.slug);
+      assert.ok(redirect.to.startsWith('/blog/'), row.slug);
+      assert.ok(!sitemap.includes(`/blog/${row.slug}/`), row.slug);
+      continue;
+    }
     assert.ok(post?.body?.length, row.slug);
-    assert.equal(redirects.find(entry => entry.from === '/post/' + row.slug)?.to, '/blog/' + row.slug + '/');
+    assert.equal(redirect?.to, '/blog/' + row.slug + '/');
     const html = readFileSync(path.join(dist, 'blog', decodeURIComponent(row.slug), 'index.html'), 'utf8');
     assert.ok(html.includes(`href="https://thepharmacoach.com/blog/${row.slug}/"`), row.slug);
     assert.ok(sitemap.includes(`/blog/${row.slug}/`), row.slug);

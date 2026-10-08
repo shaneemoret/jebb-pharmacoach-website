@@ -32,6 +32,7 @@ test('every sitemap URL has matching canonical, one analytics loader and valid s
 test('About and blog index have distinct initial metadata; 404 never presents homepage', () => {
   assert.match(read('about/index.html'), /<title>About The Pharma Coach/);
   assert.match(read('blog/index.html'), /<title>Pharmaceutical Sales Career Advice/);
+  assert.match(read('index.html'), /property="og:image" content="https:\/\/thepharmacoach\.com\/assets\/social\/homepage-share-card\.png"/);
   assert.match(read('404.html'), /name="robots" content="noindex"/);
   assert.doesNotMatch(read('404.html'), /id="root"|analytics.js/);
 });

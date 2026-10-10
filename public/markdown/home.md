@@ -2,7 +2,7 @@
 
 Jebb helps nurses, healthcare professionals, and sales reps land pharmaceutical sales rep roles and advance in the field.
 
-[Schedule a call](https://medrepcollege.com/secure-your-spot)
+[Schedule a call](https://medrepcollege.com/book-a-call-with-jebb)
 
 ## Make more money, without sacrificing lifestyle and family.
 
@@ -72,6 +72,6 @@ The discovery call is $25 for 45 minutes with Jebb. Discuss your fit and next st
 
 ## Take the next step.
 
-A 45-minute discovery call with Jebb costs $25. Discuss your fit and next steps before choosing a coaching program. [Schedule a call](https://medrepcollege.com/secure-your-spot).
+A 45-minute discovery call with Jebb costs $25. Discuss your fit and next steps before choosing a coaching program. [Schedule a call](https://medrepcollege.com/book-a-call-with-jebb).
 
 [About](/about) · [Blog](/blog)

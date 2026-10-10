@@ -43,7 +43,7 @@ test('aliases and form handoffs have server-side permanent redirects', () => {
     ['fast-track-academy', '/academy/'], ['medical-sales-faq', '/faq/'],
     ['application', 'https://medrepcollege.com/apply-for-med-rep-college-now'],
     ['free-medical-sales-training', 'https://medrepcollege.com/access'],
-    ['pharmaceutical-sales-strategy-call', 'https://medrepcollege.com/secure-your-spot'],
+    ['pharmaceutical-sales-strategy-call', 'https://medrepcollege.com/book-a-call-with-jebb'],
   ]) for (const suffix of ['', '/']) assert.ok(redirects.includes(`/${from}${suffix} ${to} 301`));
 });
 

@@ -5,7 +5,7 @@ import CareerComparison from "./CareerComparison";
 import { Counter } from "./Counter.jsx";
 import socialProfiles from "./social-profiles.json";
 const A = `${import.meta.env.BASE_URL}assets/source/`;
-const bookingUrl = "https://medrepcollege.com/secure-your-spot";
+const bookingUrl = "https://medrepcollege.com/book-a-call-with-jebb";
 export const BOOKING_URL = bookingUrl;
 const privacyUrl = "https://medrepcollege.com/privacy";
 const termsUrl = "https://medrepcollege.com/terms";

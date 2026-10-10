@@ -65,9 +65,9 @@ function renderMigratedPage(page) {
     <header class="migration-header">
       <a class="migration-wordmark" href="/">THE PHARMA COACH</a>
       <nav class="migration-nav" aria-label="Primary navigation">
-        <a href="/#programs">Programs</a><a href="/blog/">Career advice</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="https://medrepcollege.com/apply-for-med-rep-college-now">Apply</a><a class="migration-nav__cta" href="https://medrepcollege.com/secure-your-spot">Schedule a call</a>
+        <a href="/#programs">Programs</a><a href="/blog/">Career advice</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="https://medrepcollege.com/apply-for-med-rep-college-now">Apply</a><a class="migration-nav__cta" href="https://medrepcollege.com/book-a-call-with-jebb">Schedule a call</a>
       </nav>
-      <details class="migration-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="/#programs">Programs</a><a href="/blog/">Career advice</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="https://medrepcollege.com/apply-for-med-rep-college-now">Apply</a><a href="https://medrepcollege.com/secure-your-spot">Schedule a call</a></nav></details>
+      <details class="migration-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="/#programs">Programs</a><a href="/blog/">Career advice</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="https://medrepcollege.com/apply-for-med-rep-college-now">Apply</a><a href="https://medrepcollege.com/book-a-call-with-jebb">Schedule a call</a></nav></details>
     </header>
     <main>
       <section class="migrated-hero">

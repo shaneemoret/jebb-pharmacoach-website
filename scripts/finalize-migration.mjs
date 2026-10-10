@@ -85,7 +85,7 @@ const redirects = [
   ['free-medical-sales-training', 'https://medrepcollege.com/access'],
   ['apply-for-pharmaceutical-sales-career-coaching', 'https://medrepcollege.com/apply-for-med-rep-college-now'],
   ['application', 'https://medrepcollege.com/apply-for-med-rep-college-now'],
-  ['pharmaceutical-sales-strategy-call', 'https://medrepcollege.com/secure-your-spot'],
+  ['pharmaceutical-sales-strategy-call', 'https://medrepcollege.com/book-a-call-with-jebb'],
   ['pharmaceutical-sales-success-stories', '/#testimonials'],
   ['contact', '/about/#about-team'],
 ];

@@ -59,10 +59,10 @@ test('withdrawal stops events and reloads the loaded tag', () => {
 });
 test('booking clicks measure intent without claiming completed leads or revenue', () => {
   const b = browser('granted');
-  const link = { href: 'https://medrepcollege.com/secure-your-spot?email=private@example.com', closest: () => null };
+  const link = { href: 'https://medrepcollege.com/book-a-call-with-jebb?email=private@example.com', closest: () => null };
   b.handlers.click({ target: { closest: () => link } });
   const events = b.commands().filter(c => c[0] === 'event');
   assert.equal(events.at(-1)[1], 'schedule_call_click');
-  assert.equal(events.at(-1)[2].link_url, 'https://medrepcollege.com/secure-your-spot');
+  assert.equal(events.at(-1)[2].link_url, 'https://medrepcollege.com/book-a-call-with-jebb');
   assert.ok(!events.some(c => ['generate_lead', 'purchase'].includes(c[1])));
 });
